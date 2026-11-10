@@ -1,5 +1,6 @@
 package com.example.cravewise.ui.recipe
 
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.BreakfastDining
 import androidx.compose.material.icons.outlined.Cake
@@ -33,8 +34,16 @@ val FlavorScores.dominant: Flavor
 
 /** [RecipeCard] for a domain [RecipeSummary], with the placeholder art applied. */
 @Composable
-fun RecipeSummaryCard(recipe: RecipeSummary, onClick: () -> Unit, modifier: Modifier = Modifier) {
+fun RecipeSummaryCard(
+    recipe: RecipeSummary,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    matchPercent: Int? = null,
+    footer: (@Composable ColumnScope.() -> Unit)? = null,
+) {
     RecipeCard(
+        matchPercent = matchPercent,
+        footer = footer,
         title = recipe.title,
         cuisine = recipe.cuisine,
         minutes = recipe.totalMinutes,

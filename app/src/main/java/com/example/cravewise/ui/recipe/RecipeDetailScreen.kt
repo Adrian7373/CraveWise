@@ -20,7 +20,9 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.outlined.AddCircleOutline
 import androidx.compose.material.icons.outlined.Eco
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.People
@@ -47,6 +49,8 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.cravewise.domain.PantryMatcher
+import com.example.cravewise.domain.model.Pantry
 import com.example.cravewise.domain.model.Recipe
 import com.example.cravewise.ui.designsystem.AllergenNotice
 import com.example.cravewise.ui.designsystem.CraveButton
@@ -126,15 +130,22 @@ fun RecipeDetailScreen(
                     onAction = onBack,
                 )
             }
-            else -> RecipeContent(recipe, padding, onBrowseCuisine)
+            else -> RecipeContent(recipe, state.pantry, padding, onBrowseCuisine)
         }
     }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun RecipeContent(recipe: Recipe, padding: PaddingValues, onBrowseCuisine: (String) -> Unit) {
+private fun RecipeContent(recipe: Recipe, pantry: Pantry, padding: PaddingValues, onBrowseCuisine: (String) -> Unit) {
     val summary = recipe.summary
+    // Have/missing marks only make sense once the user has listed something.
+    val match = if (pantry.isEmpty) {
+        null
+    } else {
+        val catalog = recipe.ingredients.associate { it.ingredient.id to it.ingredient }
+        PantryMatcher.matchRecipe(summary, recipe.ingredients.map { it.ingredient.id }, catalog, pantry)
+    }
     LazyColumn(
         contentPadding = PaddingValues(
             start = 20.dp,
@@ -180,11 +191,14 @@ private fun RecipeContent(recipe: Recipe, padding: PaddingValues, onBrowseCuisin
         item("ingredients-header") {
             SectionHeader(
                 "Ingredients",
-                eyebrow = "Serves ${recipe.servings}",
+                eyebrow = buildString {
+                    append("Serves ${recipe.servings}")
+                    if (match != null) append(" · You have ${match.have.size} of ${match.total}")
+                },
                 modifier = Modifier.padding(top = 16.dp),
             )
         }
-        item("ingredients") { IngredientList(recipe) }
+        item("ingredients") { IngredientList(recipe, pantry.takeUnless { it.isEmpty }) }
         item("steps-header") {
             SectionHeader(
                 "Method",
@@ -247,7 +261,7 @@ private fun Fact(icon: ImageVector, value: String, label: String, modifier: Modi
 }
 
 @Composable
-private fun IngredientList(recipe: Recipe) {
+private fun IngredientList(recipe: Recipe, pantry: Pantry?) {
     CraveSurface(Modifier.fillMaxWidth(), hardShadow = false) {
         Column(Modifier.padding(horizontal = 16.dp)) {
             recipe.ingredients.forEachIndexed { i, line ->
@@ -264,6 +278,16 @@ private fun IngredientList(recipe: Recipe) {
                         style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier.weight(1f),
                     )
+                    if (pantry != null) {
+                        val have = pantry.owns(line.ingredient)
+                        Spacer(Modifier.width(8.dp))
+                        Icon(
+                            if (have) Icons.Filled.CheckCircle else Icons.Outlined.AddCircleOutline,
+                            contentDescription = if (have) "You have this" else "Missing",
+                            tint = if (have) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
                 }
             }
         }
@@ -307,7 +331,12 @@ private fun SourceCredit(recipe: Recipe) {
 @Composable
 private fun RecipeDetailPreview() = CraveWiseTheme {
     RecipeDetailScreen(
-        state = RecipeDetailUiState(isLoading = false, recipe = PreviewRecipes.recipe, isFavorite = true),
+        state = RecipeDetailUiState(
+            isLoading = false,
+            recipe = PreviewRecipes.recipe,
+            isFavorite = true,
+            pantry = Pantry(listOf("beef", "lemon")),
+        ),
         onBack = {}, onToggleFavorite = {}, onBrowseCuisine = {},
     )
 }

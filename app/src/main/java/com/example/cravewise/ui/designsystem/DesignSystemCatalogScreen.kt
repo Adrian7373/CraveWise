@@ -20,6 +20,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.DarkMode
 import androidx.compose.material.icons.outlined.Eco
 import androidx.compose.material.icons.outlined.Kitchen
@@ -280,6 +282,25 @@ private fun ChipSection() {
                 )
             }
         }
+        Text("Removable (pantry items)", style = MaterialTheme.typography.labelLarge)
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            var pantry by remember { mutableStateOf(listOf("Garlic", "Soy sauce", "Egg")) }
+            pantry.forEach { item ->
+                CraveChip(
+                    text = item,
+                    selected = true,
+                    onClick = { pantry = pantry - item },
+                    trailingIcon = Icons.Outlined.Close,
+                    trailingIconDescription = "Remove $item",
+                )
+            }
+            CraveChip(
+                text = "Scallion",
+                selected = false,
+                onClick = { if ("Scallion" !in pantry) pantry = pantry + "Scallion" },
+                leading = { Icon(Icons.Outlined.Add, contentDescription = null, modifier = Modifier.size(16.dp)) },
+            )
+        }
         FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             CraveTag("Vegetarian", icon = Icons.Outlined.Eco)
             CraveTag("Gluten-free")
@@ -321,8 +342,15 @@ private fun CardSection() {
             spiceLevel = 3,
             art = Icons.Outlined.RamenDining,
             accent = flavor.spicy,
-            matchPercent = 92,
+            matchPercent = 71,
             onClick = {},
+            footer = {
+                Text("You have 5 of 7. Missing:", style = MaterialTheme.typography.labelLarge)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    IngredientPill("Chili oil", have = false)
+                    IngredientPill("Bok choy", have = false)
+                }
+            },
         )
         RecipeCard(
             title = "Chicken Adobo",

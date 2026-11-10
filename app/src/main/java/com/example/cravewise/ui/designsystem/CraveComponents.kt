@@ -11,6 +11,7 @@ import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,6 +24,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.LocalFireDepartment
@@ -57,6 +60,7 @@ import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -192,7 +196,10 @@ fun CraveButton(
 // Chips & tags
 // ---------------------------------------------------------------------------------------------
 
-/** Selectable filter chip (flavors, cuisines, diets, quiz answers). Selected = saffron + shadow. */
+/**
+ * Selectable filter chip (flavors, cuisines, diets, quiz answers). Selected = saffron + shadow.
+ * A [trailingIcon] (e.g. Close on a removable pantry item) replaces the selected check mark.
+ */
 @Composable
 fun CraveChip(
     text: String,
@@ -200,6 +207,8 @@ fun CraveChip(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     leading: (@Composable () -> Unit)? = null,
+    trailingIcon: ImageVector? = null,
+    trailingIconDescription: String? = null,
 ) {
     val cs = MaterialTheme.colorScheme
     CraveSurface(
@@ -215,7 +224,7 @@ fun CraveChip(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             when {
-                selected -> {
+                selected && trailingIcon == null -> {
                     Icon(Icons.Filled.Check, contentDescription = null, modifier = Modifier.size(16.dp))
                     Spacer(Modifier.width(6.dp))
                 }
@@ -225,6 +234,10 @@ fun CraveChip(
                 }
             }
             Text(text, style = MaterialTheme.typography.labelLarge)
+            if (trailingIcon != null) {
+                Spacer(Modifier.width(6.dp))
+                Icon(trailingIcon, contentDescription = trailingIconDescription, modifier = Modifier.size(16.dp))
+            }
         }
     }
 }
@@ -416,6 +429,8 @@ fun RecipeCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     matchPercent: Int? = null,
+    /** Extra rows under the meta line, e.g. missing-ingredient pills on pantry results. */
+    footer: (@Composable ColumnScope.() -> Unit)? = null,
 ) {
     val extras = CraveTheme.extras
     CraveSurface(onClick = onClick, modifier = modifier.fillMaxWidth()) {
@@ -441,6 +456,10 @@ fun RecipeCard(
                     Spacer(Modifier.weight(1f))
                     SpiceMeter(spiceLevel, iconSize = 14.dp)
                 }
+                if (footer != null) {
+                    Spacer(Modifier.height(6.dp))
+                    footer()
+                }
             }
         }
     }
@@ -465,16 +484,21 @@ fun CraveSearchField(
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     placeholder: String = "Try \"something salty\"",
+    /** Called on the keyboard's action key. Null keeps the default (Enter does nothing). */
+    onSubmit: (() -> Unit)? = null,
+    leadingIcon: ImageVector = Icons.Outlined.Search,
 ) {
     val cs = MaterialTheme.colorScheme
     CraveSurface(modifier = modifier.fillMaxWidth(), shape = CraveTheme.extras.buttonShape) {
         Row(Modifier.height(56.dp).padding(horizontal = 18.dp), verticalAlignment = Alignment.CenterVertically) {
-            Icon(Icons.Outlined.Search, contentDescription = null, tint = cs.onSurfaceVariant)
+            Icon(leadingIcon, contentDescription = null, tint = cs.onSurfaceVariant)
             Spacer(Modifier.width(12.dp))
             BasicTextField(
                 value = value,
                 onValueChange = onValueChange,
                 singleLine = true,
+                keyboardOptions = if (onSubmit != null) KeyboardOptions(imeAction = ImeAction.Done) else KeyboardOptions.Default,
+                keyboardActions = KeyboardActions(onDone = onSubmit?.let { submit -> { submit() } }),
                 textStyle = MaterialTheme.typography.bodyLarge.copy(color = cs.onSurface),
                 cursorBrush = SolidColor(cs.primary),
                 modifier = Modifier.weight(1f),

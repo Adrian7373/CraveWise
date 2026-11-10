@@ -74,7 +74,12 @@ fun CraveWiseAppRoot() {
                 onOpenFavorites = { navigator.navigate(FavoritesRoute) },
             )
         }
-        entry<PantryRoute> { PantryScreen() }
+        entry<PantryRoute> {
+            PantryScreen(
+                onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
+                onBrowse = { navigator.navigate(BrowseRoute()) },
+            )
+        }
         entry<SearchRoute> { SearchScreen() }
         entry<ShoppingRoute> { ShoppingListScreen() }
         entry<ProfileRoute> {
