@@ -14,17 +14,20 @@ import androidx.room.TypeConverters
         RecipeTagEntity::class,
         DatasetMetaEntity::class,
         FavoriteEntity::class,
+        PantryItemEntity::class,
     ],
-    version = 2,
+    version = 3,
     exportSchema = true,
     autoMigrations = [
         AutoMigration(from = 1, to = 2), // + favorites
+        AutoMigration(from = 2, to = 3), // + pantry_items
     ],
 )
 @TypeConverters(Converters::class)
 abstract class CraveDatabase : RoomDatabase() {
     abstract fun catalogDao(): CatalogDao
     abstract fun favoritesDao(): FavoritesDao
+    abstract fun pantryDao(): PantryDao
 
     companion object {
         const val NAME = "cravewise.db"

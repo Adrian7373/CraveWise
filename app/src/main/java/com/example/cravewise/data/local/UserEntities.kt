@@ -14,3 +14,10 @@ data class FavoriteEntity(
     @PrimaryKey val recipeId: String,
     val addedAtEpochMs: Long,
 )
+
+/** An ingredient the user says they have. Ids dropped from the dataset are ignored by matching. */
+@Entity(tableName = "pantry_items")
+data class PantryItemEntity(
+    @PrimaryKey val ingredientId: String,
+    val addedAtEpochMs: Long,
+)

@@ -28,6 +28,15 @@ data class RecipeDetailRow(
     val lines: List<IngredientLineWithIngredient>,
 )
 
+data class IngredientWithSynonyms(
+    @Embedded val ingredient: IngredientEntity,
+    @Relation(parentColumn = "id", entityColumn = "ingredientId")
+    val synonyms: List<IngredientSynonymEntity>,
+)
+
+/** One (recipe, ingredient) pair, for pantry matching without loading full recipes. */
+data class RecipeIngredientRef(val recipeId: String, val ingredientId: String)
+
 @Dao
 abstract class CatalogDao {
 
@@ -39,8 +48,13 @@ abstract class CatalogDao {
     @Query("SELECT * FROM recipes WHERE id = :id")
     abstract fun observeRecipeDetail(id: String): Flow<RecipeDetailRow?>
 
+    @Transaction
     @Query("SELECT * FROM ingredients ORDER BY name COLLATE NOCASE")
-    abstract fun observeIngredients(): Flow<List<IngredientEntity>>
+    abstract fun observeIngredientsWithSynonyms(): Flow<List<IngredientWithSynonyms>>
+
+    /** Every recipe's ingredient ids, in recipe order. */
+    @Query("SELECT recipeId, ingredientId FROM recipe_ingredients ORDER BY recipeId, position")
+    abstract fun observeRecipeIngredientRefs(): Flow<List<RecipeIngredientRef>>
 
     @Query("SELECT ingredientId FROM ingredient_synonyms WHERE synonym = :normalized")
     abstract suspend fun findIngredientIdBySynonym(normalized: String): String?

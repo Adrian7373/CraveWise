@@ -44,9 +44,16 @@ class OfflineRecipeRepository @Inject constructor(
             .map { it?.toDomain() }
 
     override fun observeIngredients(): Flow<List<Ingredient>> =
-        dao.observeIngredients()
+        dao.observeIngredientsWithSynonyms()
             .onStart { seeder.ensureSeeded() }
-            .map { list -> list.map(IngredientEntity::toDomain) }
+            .map { list ->
+                list.map { row -> row.ingredient.toDomain(row.synonyms.mapTo(mutableSetOf()) { it.synonym }) }
+            }
+
+    override fun observeRecipeIngredientIds(): Flow<Map<String, List<String>>> =
+        dao.observeRecipeIngredientRefs()
+            .onStart { seeder.ensureSeeded() }
+            .map { refs -> refs.groupBy({ it.recipeId }, { it.ingredientId }) }
 
     override suspend fun resolveIngredientId(text: String): String? {
         seeder.ensureSeeded()
@@ -76,8 +83,9 @@ private fun summaryOf(recipe: RecipeEntity, tags: List<RecipeTagEntity>) = Recip
 
 private fun RecipeWithTags.toSummary() = summaryOf(recipe, tags)
 
-private fun IngredientEntity.toDomain() = Ingredient(
+private fun IngredientEntity.toDomain(synonyms: Set<String> = emptySet()) = Ingredient(
     id = id, name = name, aisle = aisle, allergens = allergens, isPantryStaple = isPantryStaple,
+    synonyms = synonyms,
 )
 
 private fun RecipeDetailRow.toDomain() = Recipe(

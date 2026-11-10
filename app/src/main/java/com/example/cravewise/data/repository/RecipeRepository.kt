@@ -12,7 +12,11 @@ interface RecipeRepository {
     /** One recipe with ingredients and steps; emits null if the id is unknown. */
     fun observeRecipe(id: String): Flow<Recipe?>
 
+    /** The ingredient catalog, name-sorted, with normalized synonyms filled in. */
     fun observeIngredients(): Flow<List<Ingredient>>
+
+    /** Recipe id → its ingredient ids in recipe order, for pantry matching. */
+    fun observeRecipeIngredientIds(): Flow<Map<String, List<String>>>
 
     /** Resolves typed text ("Scallions") to a canonical ingredient id via synonyms, or null. */
     suspend fun resolveIngredientId(text: String): String?

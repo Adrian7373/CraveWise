@@ -16,7 +16,28 @@ data class Ingredient(
     val aisle: Aisle,
     val allergens: Set<Allergen>,
     val isPantryStaple: Boolean,
+    /** Normalized (lower-case) name + synonyms, for the pantry picker. Empty where not loaded. */
+    val synonyms: Set<String> = emptySet(),
 )
+
+/**
+ * What the user says they have. [ingredientIds] is newest first. With [assumeStaples] on,
+ * ingredients flagged `isPantryStaple` (salt, oil, ...) count as owned without being listed.
+ */
+data class Pantry(
+    val ingredientIds: List<String> = emptyList(),
+    val assumeStaples: Boolean = true,
+) {
+    private val idSet: Set<String> = ingredientIds.toHashSet()
+
+    /** Explicitly listed by the user (staples not included). */
+    fun contains(ingredientId: String): Boolean = ingredientId in idSet
+
+    fun owns(ingredient: Ingredient): Boolean =
+        ingredient.id in idSet || (assumeStaples && ingredient.isPantryStaple)
+
+    val isEmpty: Boolean get() = ingredientIds.isEmpty()
+}
 
 /**
  * One ingredient line. Show [rawMeasure] (original units); [amount]/[unit] are the parsed form
