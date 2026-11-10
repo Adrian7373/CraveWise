@@ -1,0 +1,35 @@
+id,name,synonyms,aisle,allergens,contains,protein,pantry_staple,reviewed,notes
+basil,Basil,Basil Leaves|Fresh Basil,produce,,,,0,0,
+bacon,Bacon,Bacon Rashers|Streaky Bacon,meat_seafood,,pork,pork,0,0,
+beef,Beef,Mixed Beef Cuts|Beef Steak,meat_seafood,,meat,beef,0,0,
+black_pepper,Black Pepper,Pepper|Ground Black Pepper,spices,,,,1,0,
+butter,Butter,Unsalted Butter|Salted Butter,dairy_eggs,milk,dairy,,1,0,
+bread,Bread,White Bread|Bread Slices,bakery,gluten,,,0,0,BRAND-DEPENDENT: may also contain milk/soy/sesame
+chicken,Chicken,Chicken Pieces|Whole Chicken,meat_seafood,,poultry,chicken,0,0,
+chorizo,Chorizo,Chorizo Sausage,meat_seafood,,pork,pork,0,0,BRAND-DEPENDENT: some contain milk or sulphites
+double_cream,Double Cream,Heavy Cream|Whipping Cream,dairy_eggs,milk,dairy,,0,0,
+egg,Egg,Eggs|Large Eggs|Free-range Eggs,dairy_eggs,eggs,egg,egg,1,0,
+egg_yolk,Egg Yolk,Egg Yolks,dairy_eggs,eggs,egg,egg,0,0,
+garlic,Garlic,Garlic Clove|Garlic Cloves,produce,,,,1,0,
+ginger,Ginger,Fresh Ginger|Ginger Root,produce,,,,0,0,
+ginger_cordial,Ginger Cordial,,beverages,sulphites,,,0,0,BRAND-DEPENDENT: preservative; listed conservatively
+lemon,Lemon,Lemons,produce,,,,0,0,
+meringue_nests,Meringue Nests,Meringue,bakery,eggs,egg,,0,0,
+mint,Mint,Fresh Mint|Mint Leaves,produce,,,,0,0,
+morcilla,Morcilla,Black Pudding|Blood Sausage,meat_seafood,gluten,pork,pork,0,0,BRAND-DEPENDENT: some are rice-based (no gluten); listed conservatively
+olive_oil,Olive Oil,Extra Virgin Olive Oil,pantry,,,,1,0,
+onion,Onion,Onions|Brown Onion|Yellow Onion,produce,,,,1,0,
+oyster_sauce,Oyster Sauce,,condiments,molluscs|gluten|soy,shellfish,,0,0,BRAND-DEPENDENT: most contain wheat + soy
+parmesan,Parmesan,Parmesan Cheese|Parmigiano Reggiano|Grated Parmesan,dairy_eggs,milk,dairy,,0,0,
+pecorino,Pecorino,Pecorino Romano,dairy_eggs,milk,dairy,,0,0,
+potato_starch,Potato Starch,,pantry,,,,0,0,
+red_chilli,Red Chilli,Red Chili|Red Chile|Red Chillies,produce,,,,0,0,
+sake,Sake,,beverages,,alcohol,,0,0,
+salt,Salt,Sea Salt|Table Salt,spices,,,,1,0,
+spaghetti,Spaghetti,Dried Spaghetti,pantry,gluten,,,0,0,
+soy_sauce,Soy Sauce,Light Soy Sauce,condiments,soy|gluten,,,1,0,Tamari is usually gluten-free; keep separate id
+strawberries,Strawberries,Strawberry,produce,,,,0,0,
+sugar,Sugar,Granulated Sugar|White Sugar|Caster Sugar,pantry,,,,1,0,
+tomato,Tomato,Tomatoes,produce,,,,0,0,
+vegetable_oil,Vegetable Oil,Cooking Oil|Sunflower Oil,pantry,,,,1,0,
+water,Water,,other,,,,1,0,

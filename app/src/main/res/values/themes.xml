@@ -1,0 +1,4 @@
+<resources>
+    <!-- Window-level theme only; all UI theming lives in Compose (ui/theme/Theme.kt). -->
+    <style name="Theme.CraveWise" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
