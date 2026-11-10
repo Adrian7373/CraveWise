@@ -20,6 +20,7 @@ class CookbookTest {
     ) = RecipeSummary(
         id = id, title = id, cuisine = cuisine, totalMinutes = minutes, difficulty = Difficulty.Easy,
         flavor = FlavorScores(0, 0, 0, 0, 0, 0), mealTypes = mealTypes, proteins = emptySet(), diets = diets,
+        allergens = emptySet(),
     )
 
     private val pasta = recipe("pasta", diets = setOf(Diet.Vegetarian))

@@ -19,6 +19,7 @@ class PantryMatcherTest {
     private fun recipe(id: String) = RecipeSummary(
         id = id, title = id, cuisine = "Any", totalMinutes = 10, difficulty = Difficulty.Easy,
         flavor = FlavorScores(0, 0, 0, 0, 0, 0), mealTypes = setOf(MealType.Main), proteins = emptySet(), diets = emptySet(),
+        allergens = emptySet(),
     )
 
     private val catalog = listOf(
