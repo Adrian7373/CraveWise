@@ -46,6 +46,7 @@ fun BrowseScreen(
     route: BrowseRoute,
     onBack: () -> Unit,
     onRecipeClick: (String) -> Unit,
+    onOpenProfile: () -> Unit,
     viewModel: BrowseViewModel = hiltViewModel<BrowseViewModel, BrowseViewModel.Factory>(
         creationCallback = { it.create(route) },
     ),
@@ -61,6 +62,7 @@ fun BrowseScreen(
             onToggleDiet = viewModel::toggleDiet,
             onToggleQuick = viewModel::toggleQuick,
             onClearFilters = viewModel::clearFilters,
+            onOpenProfile = onOpenProfile,
         ),
     )
 }
@@ -73,6 +75,7 @@ class BrowseActions(
     val onToggleDiet: (Diet) -> Unit,
     val onToggleQuick: () -> Unit,
     val onClearFilters: () -> Unit,
+    val onOpenProfile: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -165,7 +168,16 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     }
                 }
             }
-            if (state.results.isEmpty()) {
+            if (state.results.isEmpty() && state.hiddenByProfile) {
+                item("empty") {
+                    ViaEmptyState(
+                        title = "Hidden by your profile",
+                        body = "There are recipes here, but they don't fit your food profile. Loosen a filter, or check your profile settings.",
+                        actionLabel = "Review my profile",
+                        onAction = actions.onOpenProfile,
+                    )
+                }
+            } else if (state.results.isEmpty()) {
                 item("empty") {
                     ViaEmptyState(
                         title = "Nothing on this menu",
@@ -198,7 +210,7 @@ private fun ChipRow(content: LazyListScope.() -> Unit) {
     )
 }
 
-private val previewActions = BrowseActions({}, {}, {}, {}, {}, {}, {})
+private val previewActions = BrowseActions({}, {}, {}, {}, {}, {}, {}, {})
 
 @CravePreviews
 @Composable
@@ -224,6 +236,21 @@ private fun BrowseEmptyPreview() = CraveWiseTheme {
             filter = BrowseFilter(cuisine = "Thai", diets = setOf(Diet.Vegan)),
             mealTypes = listOf(MealType.Main),
             cuisines = listOf("Thai"),
+        ),
+        actions = previewActions,
+    )
+}
+
+@CravePreviews
+@Composable
+private fun BrowseHiddenByProfilePreview() = CraveWiseTheme {
+    BrowseScreen(
+        state = BrowseUiState(
+            isLoading = false,
+            filter = BrowseFilter(mealType = MealType.Dessert),
+            mealTypes = listOf(MealType.Main),
+            cuisines = listOf("Thai"),
+            hiddenByProfile = true,
         ),
         actions = previewActions,
     )

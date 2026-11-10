@@ -1,6 +1,9 @@
 package com.example.cravewise.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -10,12 +13,16 @@ import androidx.compose.material.icons.outlined.Kitchen
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
@@ -38,6 +45,7 @@ import com.example.cravewise.ui.cookbook.BrowseScreen
 import com.example.cravewise.ui.cookbook.FavoritesScreen
 import com.example.cravewise.ui.designsystem.DesignSystemCatalogScreen
 import com.example.cravewise.ui.home.HomeScreen
+import com.example.cravewise.ui.onboarding.OnboardingScreen
 import com.example.cravewise.ui.pantry.PantryScreen
 import com.example.cravewise.ui.profile.ProfileScreen
 import com.example.cravewise.ui.quiz.DecideQuizScreen
@@ -55,13 +63,26 @@ private val TOP_LEVEL_DESTINATIONS: Map<NavKey, TopLevelDestination> = linkedMap
     ProfileRoute to TopLevelDestination(Icons.Outlined.Person, "Profile"),
 )
 
+/** Shows onboarding on first run, then the tabbed app. */
 @Composable
-fun CraveWiseAppRoot() {
+fun CraveWiseAppRoot(appViewModel: AppViewModel = hiltViewModel()) {
+    val onboardingComplete by appViewModel.onboardingComplete.collectAsStateWithLifecycle()
+    when (onboardingComplete) {
+        // Brief: DataStore answers almost at once. A plain canvas avoids flashing onboarding.
+        null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
+        false -> OnboardingScreen()
+        true -> CraveWiseTabs()
+    }
+}
+
+@Composable
+private fun CraveWiseTabs() {
     val navigationState = rememberNavigationState(
         startRoute = HomeRoute,
         topLevelRoutes = TOP_LEVEL_DESTINATIONS.keys,
     )
     val navigator = remember(navigationState) { Navigator(navigationState) }
+    val openProfile: () -> Unit = { navigator.navigate(ProfileRoute) }
 
     val entryProvider = entryProvider<NavKey> {
         entry<HomeRoute> {
@@ -72,12 +93,14 @@ fun CraveWiseAppRoot() {
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { route -> navigator.navigate(route) },
                 onOpenFavorites = { navigator.navigate(FavoritesRoute) },
+                onOpenProfile = openProfile,
             )
         }
         entry<PantryRoute> {
             PantryScreen(
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { navigator.navigate(BrowseRoute()) },
+                onOpenProfile = openProfile,
             )
         }
         entry<SearchRoute> { SearchScreen() }
@@ -93,6 +116,7 @@ fun CraveWiseAppRoot() {
                 route = key,
                 onBack = navigator::goBack,
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
+                onOpenProfile = openProfile,
             )
         }
         entry<FavoritesRoute> {
@@ -100,10 +124,17 @@ fun CraveWiseAppRoot() {
                 onBack = navigator::goBack,
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { navigator.navigate(BrowseRoute()) },
+                onOpenProfile = openProfile,
             )
         }
         entry<DesignCatalogRoute> { DesignSystemCatalogScreen(onBack = navigator::goBack) }
-        entry<DecideQuizRoute> { DecideQuizScreen(onBack = navigator::goBack) }
+        entry<DecideQuizRoute> {
+            DecideQuizScreen(
+                onBack = navigator::goBack,
+                onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
+                onOpenProfile = openProfile,
+            )
+        }
         entry<RecipeDetailRoute> { key ->
             RecipeDetailScreen(
                 recipeId = key.recipeId,

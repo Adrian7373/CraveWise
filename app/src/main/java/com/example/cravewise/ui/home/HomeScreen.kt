@@ -21,6 +21,7 @@ import androidx.compose.material.icons.outlined.Cake
 import androidx.compose.material.icons.outlined.Cookie
 import androidx.compose.material.icons.outlined.DinnerDining
 import androidx.compose.material.icons.outlined.Kitchen
+import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material.icons.outlined.Quiz
 import androidx.compose.material.icons.outlined.RiceBowl
 import androidx.compose.material.icons.outlined.Search
@@ -43,6 +44,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cravewise.domain.model.MealType
 import com.example.cravewise.navigation.BrowseRoute
+import com.example.cravewise.ui.designsystem.CraveButton
+import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
@@ -60,6 +63,7 @@ fun HomeScreen(
     onRecipeClick: (String) -> Unit,
     onBrowse: (BrowseRoute) -> Unit,
     onOpenFavorites: () -> Unit,
+    onOpenProfile: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -71,6 +75,7 @@ fun HomeScreen(
         onRecipeClick = onRecipeClick,
         onBrowse = onBrowse,
         onOpenFavorites = onOpenFavorites,
+        onOpenProfile = onOpenProfile,
     )
 }
 
@@ -84,6 +89,7 @@ fun HomeScreen(
     onRecipeClick: (String) -> Unit,
     onBrowse: (BrowseRoute) -> Unit,
     onOpenFavorites: () -> Unit,
+    onOpenProfile: () -> Unit,
 ) {
     val cs = MaterialTheme.colorScheme
     val gutter = Modifier.padding(horizontal = 20.dp)
@@ -105,7 +111,22 @@ fun HomeScreen(
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            item { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.", gutter) }
+            if (state.askSpice) {
+                item("via") {
+                    Column(gutter, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        ViaSays("How brave is your tongue? Set your spice level and I'll keep the heat just right.")
+                        CraveButton(
+                            "Set my spice level",
+                            onClick = onOpenProfile,
+                            variant = CraveButtonVariant.Outline,
+                            icon = Icons.Outlined.LocalFireDepartment,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                }
+            } else {
+                item("via") { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.", gutter) }
+            }
             item {
                 Text(
                     "What are we cooking today?",
@@ -275,6 +296,16 @@ private fun HomeScreenPreview() = CraveWiseTheme {
             cuisines = listOf("British", "Filipino", "Italian", "Japanese", "Thai"),
         ),
         onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {},
-        onBrowse = {}, onOpenFavorites = {},
+        onBrowse = {}, onOpenFavorites = {}, onOpenProfile = {},
+    )
+}
+
+@CravePreviews
+@Composable
+private fun HomeAskSpicePreview() = CraveWiseTheme {
+    HomeScreen(
+        state = HomeUiState(isLoading = false, featured = PreviewRecipes.summaries, askSpice = true),
+        onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {},
+        onBrowse = {}, onOpenFavorites = {}, onOpenProfile = {},
     )
 }

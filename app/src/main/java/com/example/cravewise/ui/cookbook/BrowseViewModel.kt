@@ -2,6 +2,7 @@ package com.example.cravewise.ui.cookbook
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cravewise.data.repository.ProfileGateSource
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.domain.BrowseFilter
 import com.example.cravewise.domain.Cookbook
@@ -27,6 +28,8 @@ data class BrowseUiState(
     /** Filter options that have at least one recipe in the catalog. */
     val mealTypes: List<MealType> = emptyList(),
     val cuisines: List<String> = emptyList(),
+    /** Recipes matched the filters but the profile hid all of them. */
+    val hiddenByProfile: Boolean = false,
 ) {
     /** "Italian mains", "Desserts", "Thai", or "Cookbook" when unfiltered by category. */
     val title: String
@@ -51,17 +54,29 @@ data class BrowseUiState(
 class BrowseViewModel @AssistedInject constructor(
     @Assisted route: BrowseRoute,
     repository: RecipeRepository,
+    gateSource: ProfileGateSource,
 ) : ViewModel() {
 
     private val filter = MutableStateFlow(BrowseFilter(mealType = route.mealType, cuisine = route.cuisine))
 
-    val uiState: StateFlow<BrowseUiState> = combine(repository.observeRecipeSummaries(), filter) { all, f ->
+    val uiState: StateFlow<BrowseUiState> = combine(
+        repository.observeRecipeSummaries(),
+        filter,
+        gateSource.observe(),
+    ) { all, f, gate ->
+        val matched = Cookbook.filter(all, f)
+        val results = gate.recipes(matched) // profile hard filters last
+        val allowed = gate.recipes(all)
         BrowseUiState(
             isLoading = false,
             filter = f,
-            results = Cookbook.filter(all, f),
-            mealTypes = Cookbook.mealTypes(all).map { it.value },
-            cuisines = Cookbook.cuisines(all).map { it.value },
+            results = results,
+            // Keep the active selection visible even if the profile hides all of its recipes.
+            mealTypes = (Cookbook.mealTypes(allowed).map { it.value } + listOfNotNull(f.mealType))
+                .distinct().sortedBy { it.ordinal },
+            cuisines = Cookbook.cuisines(allowed).map { it.value }
+                .let { if (f.cuisine != null && f.cuisine !in it) listOf(f.cuisine) + it else it },
+            hiddenByProfile = results.isEmpty() && matched.isNotEmpty(),
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), BrowseUiState(filter = filter.value))
 

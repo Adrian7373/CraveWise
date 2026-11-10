@@ -4,7 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.FavoritesRepository
 import com.example.cravewise.data.repository.PantryRepository
+import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.RecipeRepository
+import com.example.cravewise.domain.ProfileConflict
+import com.example.cravewise.domain.ProfileFilter
 import com.example.cravewise.domain.model.Pantry
 import com.example.cravewise.domain.model.Recipe
 import dagger.assisted.Assisted
@@ -26,6 +29,8 @@ data class RecipeDetailUiState(
     val isFavorite: Boolean = false,
     /** Drives the have/missing marks on ingredients. Marks are hidden while the pantry is empty. */
     val pantry: Pantry = Pantry(),
+    /** Why this recipe breaks the food profile; empty if it fits. */
+    val conflicts: List<ProfileConflict> = emptyList(),
 )
 
 @HiltViewModel(assistedFactory = RecipeDetailViewModel.Factory::class)
@@ -34,14 +39,24 @@ class RecipeDetailViewModel @AssistedInject constructor(
     recipes: RecipeRepository,
     private val favorites: FavoritesRepository,
     pantry: PantryRepository,
+    profiles: ProfileRepository,
 ) : ViewModel() {
 
     val uiState: StateFlow<RecipeDetailUiState> = combine(
         recipes.observeRecipe(recipeId),
         favorites.observeFavoriteIds().map { recipeId in it }.distinctUntilChanged(),
         pantry.observePantry(),
-    ) { recipe, isFavorite, pantryState ->
-        RecipeDetailUiState(isLoading = false, recipe = recipe, isFavorite = isFavorite, pantry = pantryState)
+        profiles.observeProfile(),
+    ) { recipe, isFavorite, pantryState, profile ->
+        RecipeDetailUiState(
+            isLoading = false,
+            recipe = recipe,
+            isFavorite = isFavorite,
+            pantry = pantryState,
+            conflicts = recipe?.let { r ->
+                ProfileFilter.conflicts(r.summary, r.ingredients.map { it.ingredient.id }, profile)
+            }.orEmpty(),
+        )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), RecipeDetailUiState())
 
     fun toggleFavorite() {

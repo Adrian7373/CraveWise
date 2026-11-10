@@ -30,6 +30,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Search
@@ -391,6 +392,31 @@ fun AllergenNotice(allergens: List<String>, modifier: Modifier = Modifier) {
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }
+            }
+        }
+    }
+}
+
+/**
+ * Shown on a recipe that breaks the user's food profile (reachable only via an old link or a
+ * favorite, since lists hide these). Safety info: errorContainer + block icon, never color alone.
+ */
+@Composable
+fun ProfileConflictNotice(reasons: List<String>, modifier: Modifier = Modifier) {
+    val cs = MaterialTheme.colorScheme
+    CraveSurface(
+        modifier = modifier.fillMaxWidth(),
+        shape = MaterialTheme.shapes.medium,
+        color = cs.errorContainer,
+        contentColor = cs.onErrorContainer,
+        hardShadow = false,
+    ) {
+        Row(Modifier.padding(16.dp), verticalAlignment = Alignment.Top) {
+            Icon(Icons.Outlined.Block, contentDescription = null, modifier = Modifier.size(24.dp))
+            Spacer(Modifier.width(12.dp))
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("Doesn't fit your profile", style = MaterialTheme.typography.titleMedium)
+                reasons.forEach { Text("• $it", style = MaterialTheme.typography.bodyLarge) }
             }
         }
     }

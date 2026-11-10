@@ -413,6 +413,7 @@ private fun SafetySection() {
         SectionHeader("Safety notices", eyebrow = "09 · Allergens")
         AllergenNotice(listOf("Gluten", "Milk", "Eggs"))
         AllergenNotice(emptyList())
+        ProfileConflictNotice(listOf("Contains Peanuts, which you avoid", "Not Vegetarian", "Heat 4/5, above your limit of 2"))
     }
 }
 

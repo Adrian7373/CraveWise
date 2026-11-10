@@ -4,6 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.PantryRepository
+import com.example.cravewise.data.repository.ProfileGateSource
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.domain.IngredientSearch
 import com.example.cravewise.domain.PantryMatcher
@@ -32,6 +33,8 @@ data class PantryUiState(
     /** Popular non-staples not yet listed. */
     val quickAdd: List<Ingredient> = emptyList(),
     val results: PantryResults = PantryResults(),
+    /** Recipes matched the pantry but the profile hid all of them. */
+    val hiddenByProfile: Boolean = false,
 ) {
     val hasPantry: Boolean get() = pantryItems.isNotEmpty()
 }
@@ -51,6 +54,7 @@ class PantryViewModel @Inject constructor(
     recipes: RecipeRepository,
     private val pantry: PantryRepository,
     private val savedState: SavedStateHandle,
+    gateSource: ProfileGateSource,
 ) : ViewModel() {
 
     private val query = savedState.getStateFlow(KEY_QUERY, "")
@@ -64,13 +68,24 @@ class PantryViewModel @Inject constructor(
 
     private val pantryState = pantry.observePantry()
 
-    /** Matching doesn't depend on the query, so typing never re-runs it. */
-    private val results = combine(catalog, pantryState) { c, p ->
-        PantryMatcher.match(c.recipes, c.recipeIngredients, c.byId, p)
+    /**
+     * Matching doesn't depend on the query, so typing never re-runs it. Profile hard filters are
+     * applied to the ranked buckets afterwards (never folded into the score).
+     */
+    private val results = combine(catalog, pantryState, gateSource.observe()) { c, p, gate ->
+        val ranked = PantryMatcher.match(c.recipes, c.recipeIngredients, c.byId, p)
+        val safe = PantryResults(
+            cookNow = gate.filter(ranked.cookNow) { it.recipe },
+            almostThere = gate.filter(ranked.almostThere) { it.recipe },
+            needsShopping = gate.filter(ranked.needsShopping) { it.recipe },
+        )
+        safe to (safe.isEmpty && !ranked.isEmpty)
     }
 
     val uiState: StateFlow<PantryUiState> =
-        combine(catalog, pantryState, results, query) { c, p, results, q -> buildState(c, p, results, q) }
+        combine(catalog, pantryState, results, query) { c, p, (results, hidden), q ->
+            buildState(c, p, results, q).copy(hiddenByProfile = hidden)
+        }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), PantryUiState())
 
     fun onQueryChange(text: String) {

@@ -59,6 +59,10 @@ import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.CraveTag
 import com.example.cravewise.ui.designsystem.FlavorProfile
+import com.example.cravewise.ui.designsystem.ProfileConflictNotice
+import com.example.cravewise.ui.profile.describe
+import com.example.cravewise.domain.ProfileConflict
+import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.SpiceMeter
 import com.example.cravewise.ui.designsystem.ViaEmptyState
@@ -130,14 +134,20 @@ fun RecipeDetailScreen(
                     onAction = onBack,
                 )
             }
-            else -> RecipeContent(recipe, state.pantry, padding, onBrowseCuisine)
+            else -> RecipeContent(recipe, state.pantry, state.conflicts, padding, onBrowseCuisine)
         }
     }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun RecipeContent(recipe: Recipe, pantry: Pantry, padding: PaddingValues, onBrowseCuisine: (String) -> Unit) {
+private fun RecipeContent(
+    recipe: Recipe,
+    pantry: Pantry,
+    conflicts: List<ProfileConflict>,
+    padding: PaddingValues,
+    onBrowseCuisine: (String) -> Unit,
+) {
     val summary = recipe.summary
     // Have/missing marks only make sense once the user has listed something.
     val match = if (pantry.isEmpty) {
@@ -156,6 +166,12 @@ private fun RecipeContent(recipe: Recipe, pantry: Pantry, padding: PaddingValues
         verticalArrangement = Arrangement.spacedBy(16.dp),
         modifier = Modifier.fillMaxSize(),
     ) {
+        if (conflicts.isNotEmpty()) {
+            item("conflicts") {
+                val names = recipe.ingredients.associate { it.ingredient.id to it.ingredient.name }
+                ProfileConflictNotice(conflicts.map { c -> c.describe { id -> names[id] ?: id } })
+            }
+        }
         item("hero") { RecipeHero(recipe) }
         item("title") {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -336,6 +352,7 @@ private fun RecipeDetailPreview() = CraveWiseTheme {
             recipe = PreviewRecipes.recipe,
             isFavorite = true,
             pantry = Pantry(listOf("beef", "lemon")),
+            conflicts = listOf(ProfileConflict.ContainsAllergen(Allergen.Soy), ProfileConflict.HatedIngredient("garlic")),
         ),
         onBack = {}, onToggleFavorite = {}, onBrowseCuisine = {},
     )

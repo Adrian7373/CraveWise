@@ -36,10 +36,11 @@ fun FavoritesScreen(
     onBack: () -> Unit,
     onRecipeClick: (String) -> Unit,
     onBrowse: () -> Unit,
+    onOpenProfile: () -> Unit,
     viewModel: FavoritesViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
-    FavoritesScreen(state, onBack, onRecipeClick, onBrowse)
+    FavoritesScreen(state, onBack, onRecipeClick, onBrowse, onOpenProfile)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,6 +50,7 @@ fun FavoritesScreen(
     onBack: () -> Unit,
     onRecipeClick: (String) -> Unit,
     onBrowse: () -> Unit,
+    onOpenProfile: () -> Unit,
 ) {
     val cs = MaterialTheme.colorScheme
     Scaffold(
@@ -68,6 +70,17 @@ fun FavoritesScreen(
         when {
             state.isLoading -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
+            }
+            state.favorites.isEmpty() && state.hiddenByProfile -> Box(
+                Modifier.fillMaxSize().padding(padding),
+                contentAlignment = Alignment.Center,
+            ) {
+                ViaEmptyState(
+                    title = "Hidden by your profile",
+                    body = "Your saved recipes don't fit your current food profile, so I've tucked them away.",
+                    actionLabel = "Review my profile",
+                    onAction = onOpenProfile,
+                )
             }
             state.favorites.isEmpty() -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 ViaEmptyState(
@@ -98,11 +111,17 @@ fun FavoritesScreen(
 @CravePreviews
 @Composable
 private fun FavoritesPreview() = CraveWiseTheme {
-    FavoritesScreen(FavoritesUiState(isLoading = false, favorites = PreviewRecipes.summaries), {}, {}, {})
+    FavoritesScreen(FavoritesUiState(isLoading = false, favorites = PreviewRecipes.summaries), {}, {}, {}, {})
 }
 
 @CravePreviews
 @Composable
 private fun FavoritesEmptyPreview() = CraveWiseTheme {
-    FavoritesScreen(FavoritesUiState(isLoading = false), {}, {}, {})
+    FavoritesScreen(FavoritesUiState(isLoading = false), {}, {}, {}, {})
+}
+
+@CravePreviews
+@Composable
+private fun FavoritesHiddenPreview() = CraveWiseTheme {
+    FavoritesScreen(FavoritesUiState(isLoading = false, hiddenByProfile = true), {}, {}, {}, {})
 }

@@ -3,6 +3,7 @@ package com.example.cravewise.ui.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.FavoritesRepository
+import com.example.cravewise.data.repository.ProfileGateSource
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.domain.Cookbook
 import com.example.cravewise.domain.model.MealType
@@ -22,22 +23,32 @@ data class HomeUiState(
     val mealTypes: List<MealType> = emptyList(),
     /** Most-stocked cuisines first, capped for Home. */
     val cuisines: List<String> = emptyList(),
+    /** Spice tolerance was never set: Via nudges until it is. */
+    val askSpice: Boolean = false,
 )
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     recipes: RecipeRepository,
     favorites: FavoritesRepository,
+    gateSource: ProfileGateSource,
 ) : ViewModel() {
 
     val uiState: StateFlow<HomeUiState> =
-        combine(recipes.observeRecipeSummaries(), favorites.observeFavoriteIds()) { all, favoriteIds ->
+        combine(
+            recipes.observeRecipeSummaries(),
+            favorites.observeFavoriteIds(),
+            gateSource.observe(),
+        ) { all, favoriteIds, gate ->
+            // Categories come from what the profile allows, so no chip leads to an empty screen.
+            val allowed = gate.recipes(all)
             HomeUiState(
                 isLoading = false,
-                featured = Cookbook.quickPicks(all, FEATURED_COUNT),
-                favorites = Cookbook.favorites(all, favoriteIds).take(FAVORITES_COUNT),
-                mealTypes = Cookbook.mealTypes(all).map { it.value },
-                cuisines = Cookbook.cuisines(all).take(CUISINE_COUNT).map { it.value },
+                featured = gate.recipes(Cookbook.quickPicks(all, Int.MAX_VALUE)).take(FEATURED_COUNT),
+                favorites = gate.recipes(Cookbook.favorites(all, favoriteIds)).take(FAVORITES_COUNT),
+                mealTypes = Cookbook.mealTypes(allowed).map { it.value },
+                cuisines = Cookbook.cuisines(allowed).take(CUISINE_COUNT).map { it.value },
+                askSpice = !gate.profile.isSpiceSet,
             )
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
 

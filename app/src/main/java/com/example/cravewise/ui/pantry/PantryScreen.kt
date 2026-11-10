@@ -61,6 +61,7 @@ import com.example.cravewise.ui.theme.CraveWiseTheme
 fun PantryScreen(
     onRecipeClick: (String) -> Unit,
     onBrowse: () -> Unit,
+    onOpenProfile: () -> Unit,
     viewModel: PantryViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -75,6 +76,7 @@ fun PantryScreen(
             onAssumeStaples = viewModel::setAssumeStaples,
             onRecipeClick = onRecipeClick,
             onBrowse = onBrowse,
+            onOpenProfile = onOpenProfile,
         ),
     )
 }
@@ -88,6 +90,7 @@ class PantryActions(
     val onAssumeStaples: (Boolean) -> Unit,
     val onRecipeClick: (String) -> Unit,
     val onBrowse: () -> Unit,
+    val onOpenProfile: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -144,7 +147,7 @@ fun PantryScreen(state: PantryUiState, actions: PantryActions) {
                 item("basics") { BasicsToggle(state.assumeStaples, state.staples, actions.onAssumeStaples) }
             }
             if (state.hasPantry) {
-                results(state.results, showAllShopping, { showAllShopping = !showAllShopping }, actions)
+                results(state.results, state.hiddenByProfile, showAllShopping, { showAllShopping = !showAllShopping }, actions)
             }
         }
     }
@@ -238,10 +241,22 @@ private fun BasicsToggle(assume: Boolean, staples: List<Ingredient>, onChange: (
 
 private fun LazyListScope.results(
     results: PantryResults,
+    hiddenByProfile: Boolean,
     showAllShopping: Boolean,
     onToggleShowAll: () -> Unit,
     actions: PantryActions,
 ) {
+    if (results.isEmpty && hiddenByProfile) {
+        item("empty") {
+            ViaEmptyState(
+                title = "Hidden by your profile",
+                body = "Your ingredients do match some recipes, but none of them fit your food profile. Add more ingredients, or check your profile.",
+                actionLabel = "Review my profile",
+                onAction = actions.onOpenProfile,
+            )
+        }
+        return
+    }
     if (results.isEmpty) {
         item("empty") {
             ViaEmptyState(
@@ -332,7 +347,7 @@ private const val SHOPPING_PREVIEW = 3
 // Previews
 // ---------------------------------------------------------------------------------------------
 
-private val previewActions = PantryActions({}, {}, {}, {}, {}, {}, {}, {})
+private val previewActions = PantryActions({}, {}, {}, {}, {}, {}, {}, {}, {})
 
 private object PreviewPantry {
     private val lines = PreviewRecipes.recipe.ingredients
