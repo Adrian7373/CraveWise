@@ -10,7 +10,9 @@ CraveWise is a single-module Android app (`:app`, package `com.example.cravewise
 - **"Help me decide" quiz** covering cuisine, allergies, hated ingredients, spice tolerance, proteins, etc.
 - **Smart search**, e.g. "something salty".
 
-Current state: Phases 0–2 are done (shell, Room data layer + seed, cookbook). Home, browse/category (`BrowseRoute`), recipe detail and favorites (`FavoritesRoute`) are real; Pantry, Search, Shopping and the Profile/quiz content are still placeholders.
+Current state: Phases 0–3 are done (shell, Room data layer + seed, cookbook, pantry match). Home, browse/category (`BrowseRoute`), recipe detail, favorites (`FavoritesRoute`) and the My Kitchen pantry tab are real; Search, Shopping and the Profile/quiz content are still placeholders.
+
+Pantry match: `domain/PantryMatcher` (pure, ID-based, buckets Cook now / Almost there (1–2 missing) / Needs a shop) and `domain/IngredientSearch` (type-ahead over names + synonyms). The pantry list is the `pantry_items` Room table; the "assume basics" (`isPantryStaple`) toggle is in DataStore (`user_prefs`). Phase 4 profile hard filters must be applied to `PantryMatcher.match` output, after ranking.
 
 ## Commands (Windows / PowerShell, run from repo root)
 

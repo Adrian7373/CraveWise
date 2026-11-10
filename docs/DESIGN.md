@@ -56,13 +56,13 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 |---|---|
 | `CraveSurface` | The base for **every** custom container: outline, sticker shadow, press-in |
 | `CraveButton` (`Primary` / `Secondary` / `Outline`) | All buttons except top-bar icons and inline `TextButton` links |
-| `CraveChip`, `FlavorChip` | Selectable filters and quiz answers |
+| `CraveChip`, `FlavorChip` | Selectable filters and quiz answers. Pass `trailingIcon` (e.g. Close) for removable items like pantry ingredients; it replaces the selected check |
 | `CraveTag` | Static info (diet, cuisine, allergen). Flat, no shadow |
 | `IngredientPill` | Have (filled + check) vs. missing (outlined + add) |
 | `SpiceMeter`, `FlavorProfile`, `MatchBadge` | Recipe data display |
 | `AllergenNotice` | A recipe's allergen summary (error colors + icon), or a neutral "none listed, check labels" note |
-| `RecipeCard` | Any recipe in a list (browse, pantry results, search) |
-| `CraveSearchField` | Free-text search input |
+| `RecipeCard` | Any recipe in a list (browse, pantry results, search). Optional `matchPercent` badge and `footer` slot (e.g. missing-ingredient pills) |
+| `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard's Done key (e.g. add the top pantry suggestion) |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |
 | `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results states |
 
