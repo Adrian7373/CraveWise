@@ -10,9 +10,11 @@ CraveWise is a single-module Android app (`:app`, package `com.example.cravewise
 - **"Help me decide" quiz** covering cuisine, allergies, hated ingredients, spice tolerance, proteins, etc.
 - **Smart search**, e.g. "something salty".
 
-Current state: Phases 0–3 are done (shell, Room data layer + seed, cookbook, pantry match). Home, browse/category (`BrowseRoute`), recipe detail, favorites (`FavoritesRoute`) and the My Kitchen pantry tab are real; Search, Shopping and the Profile/quiz content are still placeholders.
+Current state: Phases 0–4 are done (shell, Room data layer + seed, cookbook, pantry match, profile + quiz). Home, browse/category (`BrowseRoute`), recipe detail, favorites (`FavoritesRoute`), the My Kitchen pantry tab, onboarding, the Profile tab and the "Help me decide" quiz are real; Search and Shopping are still placeholders.
 
-Pantry match: `domain/PantryMatcher` (pure, ID-based, buckets Cook now / Almost there (1–2 missing) / Needs a shop) and `domain/IngredientSearch` (type-ahead over names + synonyms). The pantry list is the `pantry_items` Room table; the "assume basics" (`isPantryStaple`) toggle is in DataStore (`user_prefs`). Phase 4 profile hard filters must be applied to `PantryMatcher.match` output, after ranking.
+Pantry match: `domain/PantryMatcher` (pure, ID-based, buckets Cook now / Almost there (1–2 missing) / Needs a shop) and `domain/IngredientSearch` (type-ahead over names + synonyms). The pantry list is the `pantry_items` Room table; the "assume basics" (`isPantryStaple`) toggle is in DataStore (`user_prefs`).
+
+Profile (Phase 4): `FoodProfile` = allergens, diets, hated ingredient ids, `maxSpice` (null = never set → Home nudges; 5 = any heat). Allergens/diets/spice/onboarding flag live in DataStore; hated ingredients in the `hated_ingredients` Room table (`ProfileRepository`). **All four are hard filters, hidden everywhere**: every list VM gets a `ProfileGate` from `ProfileGateSource` and applies `gate.recipes(...)`/`gate.filter(...)` as the LAST step (after Cookbook filters, `PantryMatcher.match`, `DecideQuiz.rank`, and later search). When the gate empties a non-empty list, show a "Hidden by your profile" `ViaEmptyState` linking to Profile. Recipe detail stays reachable and shows `ProfileConflictNotice`. Onboarding (`ui/onboarding`) is a skippable first-run flow gated by `AppViewModel` in `CraveWiseAppRoot`; it and the Profile tab share `ProfileViewModel` + the editors in `ui/profile/ProfileSections.kt`. The quiz (`domain/DecideQuiz`) narrows by meal type + time, scores cravings/mood/protein/pantry, and is fresh on every visit.
 
 ## Commands (Windows / PowerShell, run from repo root)
 
