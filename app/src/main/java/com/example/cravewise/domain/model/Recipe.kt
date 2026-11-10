@@ -65,6 +65,12 @@ data class RecipeSummary(
     val proteins: Set<Protein>,
     /** Derived from ingredients at import (DietRules). Safe to use as a hard filter. */
     val diets: Set<Diet>,
+    /**
+     * Derived from ingredients at import (DietRules). Safe to use as a hard filter. Required on
+     * purpose: a summary built without allergens must not silently pass the profile filter.
+     */
+    val allergens: Set<Allergen>,
+    val moods: Set<Mood> = emptySet(),
 ) {
     val spiceLevel: Int get() = flavor.spicy
 }
@@ -75,9 +81,6 @@ data class Recipe(
     val prepMinutes: Int,
     val cookMinutes: Int,
     val textures: Set<Texture>,
-    val moods: Set<Mood>,
-    /** Derived from ingredients at import (DietRules). Safe to use as a hard filter. */
-    val allergens: Set<Allergen>,
     val ingredients: List<RecipeIngredientLine>,
     val steps: List<String>,
     val imageUrl: String?,
@@ -87,4 +90,6 @@ data class Recipe(
     val id: String get() = summary.id
     val title: String get() = summary.title
     val diets: Set<Diet> get() = summary.diets
+    val allergens: Set<Allergen> get() = summary.allergens
+    val moods: Set<Mood> get() = summary.moods
 }

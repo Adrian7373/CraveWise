@@ -10,11 +10,14 @@ import com.example.cravewise.data.local.CatalogDao
 import com.example.cravewise.data.local.CraveDatabase
 import com.example.cravewise.data.local.FavoritesDao
 import com.example.cravewise.data.local.PantryDao
+import com.example.cravewise.data.local.ProfileDao
 import com.example.cravewise.data.repository.FavoritesRepository
 import com.example.cravewise.data.repository.OfflineFavoritesRepository
 import com.example.cravewise.data.repository.OfflinePantryRepository
+import com.example.cravewise.data.repository.OfflineProfileRepository
 import com.example.cravewise.data.repository.OfflineRecipeRepository
 import com.example.cravewise.data.repository.PantryRepository
+import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.data.seed.AssetSeedFileReader
 import com.example.cravewise.data.seed.SeedFileReader
@@ -51,6 +54,9 @@ object DatabaseModule {
     @Provides
     fun providePantryDao(db: CraveDatabase): PantryDao = db.pantryDao()
 
+    @Provides
+    fun provideProfileDao(db: CraveDatabase): ProfileDao = db.profileDao()
+
     /** Small user settings. Lists and anything joined against the catalog live in Room. */
     @Provides
     @Singleton
@@ -80,4 +86,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindPantryRepository(impl: OfflinePantryRepository): PantryRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindProfileRepository(impl: OfflineProfileRepository): ProfileRepository
 }

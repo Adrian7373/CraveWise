@@ -21,3 +21,10 @@ data class PantryItemEntity(
     @PrimaryKey val ingredientId: String,
     val addedAtEpochMs: Long,
 )
+
+/** An ingredient the user never wants to see (profile hard filter). */
+@Entity(tableName = "hated_ingredients")
+data class HatedIngredientEntity(
+    @PrimaryKey val ingredientId: String,
+    val addedAtEpochMs: Long,
+)

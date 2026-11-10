@@ -79,6 +79,8 @@ private fun summaryOf(recipe: RecipeEntity, tags: List<RecipeTagEntity>) = Recip
     mealTypes = tags.values(TagType.MealType, MealType.serializer(), MealType.entries),
     proteins = tags.values(TagType.Protein, Protein.serializer(), Protein.entries),
     diets = tags.values(TagType.Diet, Diet.serializer(), Diet.entries),
+    allergens = tags.values(TagType.Allergen, Allergen.serializer(), Allergen.entries),
+    moods = tags.values(TagType.Mood, Mood.serializer(), Mood.entries),
 )
 
 private fun RecipeWithTags.toSummary() = summaryOf(recipe, tags)
@@ -94,8 +96,6 @@ private fun RecipeDetailRow.toDomain() = Recipe(
     prepMinutes = recipe.prepMinutes,
     cookMinutes = recipe.cookMinutes,
     textures = tags.values(TagType.Texture, Texture.serializer(), Texture.entries),
-    moods = tags.values(TagType.Mood, Mood.serializer(), Mood.entries),
-    allergens = tags.values(TagType.Allergen, Allergen.serializer(), Allergen.entries),
     ingredients = lines.sortedBy { it.line.position }.map { (line, ingredient) ->
         RecipeIngredientLine(
             ingredient = ingredient.toDomain(),
