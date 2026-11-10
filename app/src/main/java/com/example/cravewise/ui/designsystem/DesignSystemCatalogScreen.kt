@@ -115,6 +115,7 @@ fun DesignSystemCatalogScreen(
                 item("inputs") { InputSection() }
                 item("cards") { CardSection() }
                 item("via") { ViaSection() }
+                item("safety") { SafetySection() }
             }
         }
     }
@@ -378,6 +379,15 @@ private fun ViaSection() {
     }
 }
 
+@Composable
+private fun SafetySection() {
+    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        SectionHeader("Safety notices", eyebrow = "09 · Allergens")
+        AllergenNotice(listOf("Gluten", "Milk", "Eggs"))
+        AllergenNotice(emptyList())
+    }
+}
+
 // ---------------------------------------------------------------------------------------------
 // Previews
 // ---------------------------------------------------------------------------------------------
@@ -431,3 +441,7 @@ private fun RecipeCardPreview() = CravePreviewSurface {
 @CravePreviews
 @Composable
 private fun ViaPreview() = CravePreviewSurface { ViaSection() }
+
+@CravePreviews
+@Composable
+private fun AllergenNoticePreview() = CravePreviewSurface { SafetySection() }

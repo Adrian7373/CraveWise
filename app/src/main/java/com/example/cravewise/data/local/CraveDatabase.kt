@@ -1,5 +1,6 @@
 package com.example.cravewise.data.local
 
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
@@ -12,13 +13,18 @@ import androidx.room.TypeConverters
         RecipeIngredientEntity::class,
         RecipeTagEntity::class,
         DatasetMetaEntity::class,
+        FavoriteEntity::class,
     ],
-    version = 1,
+    version = 2,
     exportSchema = true,
+    autoMigrations = [
+        AutoMigration(from = 1, to = 2), // + favorites
+    ],
 )
 @TypeConverters(Converters::class)
 abstract class CraveDatabase : RoomDatabase() {
     abstract fun catalogDao(): CatalogDao
+    abstract fun favoritesDao(): FavoritesDao
 
     companion object {
         const val NAME = "cravewise.db"

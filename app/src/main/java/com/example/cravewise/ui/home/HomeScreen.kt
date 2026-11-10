@@ -2,6 +2,8 @@ package com.example.cravewise.ui.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,12 +12,19 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowForward
+import androidx.compose.material.icons.outlined.BreakfastDining
+import androidx.compose.material.icons.outlined.Cake
+import androidx.compose.material.icons.outlined.Cookie
+import androidx.compose.material.icons.outlined.DinnerDining
 import androidx.compose.material.icons.outlined.Kitchen
 import androidx.compose.material.icons.outlined.Quiz
+import androidx.compose.material.icons.outlined.RiceBowl
 import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Tapas
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -32,19 +41,15 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.cravewise.domain.model.Difficulty
-import com.example.cravewise.domain.model.FlavorScores
 import com.example.cravewise.domain.model.MealType
-import com.example.cravewise.domain.model.Protein
-import com.example.cravewise.domain.model.RecipeSummary
+import com.example.cravewise.navigation.BrowseRoute
+import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
-import com.example.cravewise.ui.designsystem.RecipeCard
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ViaSays
-import com.example.cravewise.ui.recipe.artIcon
-import com.example.cravewise.ui.recipe.dominant
-import com.example.cravewise.ui.theme.CraveTheme
+import com.example.cravewise.ui.recipe.PreviewRecipes
+import com.example.cravewise.ui.recipe.RecipeSummaryCard
 import com.example.cravewise.ui.theme.CraveWiseTheme
 
 @Composable
@@ -53,28 +58,35 @@ fun HomeScreen(
     onHelpMeDecide: () -> Unit,
     onSmartSearch: () -> Unit,
     onRecipeClick: (String) -> Unit,
+    onBrowse: (BrowseRoute) -> Unit,
+    onOpenFavorites: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     HomeScreen(
-        featured = state.featured,
+        state = state,
         onCookWithWhatIHave = onCookWithWhatIHave,
         onHelpMeDecide = onHelpMeDecide,
         onSmartSearch = onSmartSearch,
         onRecipeClick = onRecipeClick,
+        onBrowse = onBrowse,
+        onOpenFavorites = onOpenFavorites,
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
-    featured: List<RecipeSummary>,
+    state: HomeUiState,
     onCookWithWhatIHave: () -> Unit,
     onHelpMeDecide: () -> Unit,
     onSmartSearch: () -> Unit,
     onRecipeClick: (String) -> Unit,
+    onBrowse: (BrowseRoute) -> Unit,
+    onOpenFavorites: () -> Unit,
 ) {
     val cs = MaterialTheme.colorScheme
+    val gutter = Modifier.padding(horizontal = 20.dp)
     Scaffold(
         containerColor = cs.background,
         topBar = {
@@ -84,21 +96,21 @@ fun HomeScreen(
             )
         },
     ) { padding ->
+        // No horizontal content padding so the favorites strip can scroll edge to edge;
+        // every other item applies the 20dp gutter itself.
         LazyColumn(
             contentPadding = PaddingValues(
-                start = 20.dp,
-                end = 20.dp,
                 top = padding.calculateTopPadding() + 8.dp,
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            item { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.") }
+            item { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.", gutter) }
             item {
                 Text(
                     "What are we cooking today?",
                     style = MaterialTheme.typography.headlineMedium,
-                    modifier = Modifier.padding(top = 8.dp),
+                    modifier = gutter.padding(top = 8.dp),
                 )
             }
             item {
@@ -109,6 +121,7 @@ fun HomeScreen(
                     container = cs.primary,
                     content = cs.onPrimary,
                     onClick = onCookWithWhatIHave,
+                    modifier = gutter,
                 )
             }
             item {
@@ -119,6 +132,7 @@ fun HomeScreen(
                     container = cs.secondaryContainer,
                     content = cs.onSecondaryContainer,
                     onClick = onHelpMeDecide,
+                    modifier = gutter,
                 )
             }
             item {
@@ -129,26 +143,97 @@ fun HomeScreen(
                     container = cs.tertiaryContainer,
                     content = cs.onTertiaryContainer,
                     onClick = onSmartSearch,
+                    modifier = gutter,
                 )
             }
-            if (featured.isNotEmpty()) {
-                item { SectionHeader("Quick picks", modifier = Modifier.padding(top = 8.dp)) }
+
+            if (state.favorites.isNotEmpty()) {
+                item("favorites-header") {
+                    SectionHeader(
+                        "Your favorites",
+                        actionLabel = "See all",
+                        onAction = onOpenFavorites,
+                        modifier = gutter.padding(top = 16.dp),
+                    )
+                }
+                item("favorites") {
+                    LazyRow(
+                        contentPadding = PaddingValues(horizontal = 20.dp),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    ) {
+                        items(state.favorites, key = { it.id }) { recipe ->
+                            RecipeSummaryCard(
+                                recipe,
+                                onClick = { onRecipeClick(recipe.id) },
+                                modifier = Modifier.width(260.dp),
+                            )
+                        }
+                    }
+                }
             }
-            items(featured, key = { it.id }) { recipe ->
-                RecipeCard(
-                    title = recipe.title,
-                    cuisine = recipe.cuisine,
-                    minutes = recipe.totalMinutes,
-                    difficulty = recipe.difficulty.label,
-                    spiceLevel = recipe.spiceLevel,
-                    art = recipe.artIcon,
-                    accent = CraveTheme.extras.flavor[recipe.flavor.dominant],
-                    onClick = { onRecipeClick(recipe.id) },
-                )
+
+            if (state.mealTypes.isNotEmpty()) {
+                item("meals-header") {
+                    SectionHeader(
+                        "Browse by meal",
+                        eyebrow = "Cookbook",
+                        actionLabel = "See all",
+                        onAction = { onBrowse(BrowseRoute()) },
+                        modifier = gutter.padding(top = 16.dp),
+                    )
+                }
+                item("meals") {
+                    FlowRow(
+                        modifier = gutter,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        state.mealTypes.forEach { type ->
+                            CraveChip(
+                                type.label,
+                                selected = false,
+                                onClick = { onBrowse(BrowseRoute(mealType = type)) },
+                                leading = { Icon(type.icon, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                            )
+                        }
+                    }
+                }
+            }
+
+            if (state.cuisines.isNotEmpty()) {
+                item("cuisines-header") { SectionHeader("Cuisines", modifier = gutter.padding(top = 8.dp)) }
+                item("cuisines") {
+                    FlowRow(
+                        modifier = gutter,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        state.cuisines.forEach { cuisine ->
+                            CraveChip(cuisine, selected = false, onClick = { onBrowse(BrowseRoute(cuisine = cuisine)) })
+                        }
+                    }
+                }
+            }
+
+            if (state.featured.isNotEmpty()) {
+                item("quick-header") { SectionHeader("Quick picks", modifier = gutter.padding(top = 16.dp)) }
+            }
+            items(state.featured, key = { "quick-${it.id}" }) { recipe ->
+                RecipeSummaryCard(recipe, onClick = { onRecipeClick(recipe.id) }, modifier = gutter)
             }
         }
     }
 }
+
+private val MealType.icon: ImageVector
+    get() = when (this) {
+        MealType.Breakfast -> Icons.Outlined.BreakfastDining
+        MealType.Main -> Icons.Outlined.DinnerDining
+        MealType.Side -> Icons.Outlined.RiceBowl
+        MealType.Starter -> Icons.Outlined.Tapas
+        MealType.Dessert -> Icons.Outlined.Cake
+        MealType.Snack -> Icons.Outlined.Cookie
+    }
 
 @Composable
 private fun FeatureCard(
@@ -158,12 +243,13 @@ private fun FeatureCard(
     container: Color,
     content: Color,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     CraveSurface(
         onClick = onClick,
         color = container,
         contentColor = content,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
     ) {
         Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
             Icon(icon, contentDescription = null, modifier = Modifier.size(32.dp))
@@ -180,18 +266,15 @@ private fun FeatureCard(
 @CravePreviews
 @Composable
 private fun HomeScreenPreview() = CraveWiseTheme {
-    HomeScreen(featured = previewRecipes, onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {})
+    HomeScreen(
+        state = HomeUiState(
+            isLoading = false,
+            featured = PreviewRecipes.summaries,
+            favorites = listOf(PreviewRecipes.etonMess, PreviewRecipes.bistek),
+            mealTypes = listOf(MealType.Breakfast, MealType.Main, MealType.Dessert, MealType.Snack),
+            cuisines = listOf("British", "Filipino", "Italian", "Japanese", "Thai"),
+        ),
+        onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {},
+        onBrowse = {}, onOpenFavorites = {},
+    )
 }
-
-private val previewRecipes = listOf(
-    RecipeSummary(
-        id = "mdb-1", title = "Bistek", cuisine = "Filipino", totalMinutes = 35, difficulty = Difficulty.Easy,
-        flavor = FlavorScores(salty = 4, sweet = 1, sour = 3, bitter = 0, umami = 4, spicy = 0),
-        mealTypes = setOf(MealType.Main), proteins = setOf(Protein.Beef),
-    ),
-    RecipeSummary(
-        id = "mdb-2", title = "Thai beef stir-fry", cuisine = "Thai", totalMinutes = 20, difficulty = Difficulty.Easy,
-        flavor = FlavorScores(salty = 3, sweet = 2, sour = 1, bitter = 0, umami = 3, spicy = 4),
-        mealTypes = setOf(MealType.Main), proteins = setOf(Protein.Beef),
-    ),
-)

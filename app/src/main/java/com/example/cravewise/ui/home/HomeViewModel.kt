@@ -2,37 +2,48 @@ package com.example.cravewise.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cravewise.data.repository.FavoritesRepository
 import com.example.cravewise.data.repository.RecipeRepository
+import com.example.cravewise.domain.Cookbook
 import com.example.cravewise.domain.model.MealType
 import com.example.cravewise.domain.model.RecipeSummary
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 data class HomeUiState(
     val isLoading: Boolean = true,
     val featured: List<RecipeSummary> = emptyList(),
+    /** Newest first, capped for the Home strip. */
+    val favorites: List<RecipeSummary> = emptyList(),
+    val mealTypes: List<MealType> = emptyList(),
+    /** Most-stocked cuisines first, capped for Home. */
+    val cuisines: List<String> = emptyList(),
 )
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    repository: RecipeRepository,
+    recipes: RecipeRepository,
+    favorites: FavoritesRepository,
 ) : ViewModel() {
 
-    val uiState: StateFlow<HomeUiState> = repository.observeRecipeSummaries()
-        .map { recipes -> HomeUiState(isLoading = false, featured = pickFeatured(recipes)) }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
+    val uiState: StateFlow<HomeUiState> =
+        combine(recipes.observeRecipeSummaries(), favorites.observeFavoriteIds()) { all, favoriteIds ->
+            HomeUiState(
+                isLoading = false,
+                featured = Cookbook.quickPicks(all, FEATURED_COUNT),
+                favorites = Cookbook.favorites(all, favoriteIds).take(FAVORITES_COUNT),
+                mealTypes = Cookbook.mealTypes(all).map { it.value },
+                cuisines = Cookbook.cuisines(all).take(CUISINE_COUNT).map { it.value },
+            )
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
 
     private companion object {
         const val FEATURED_COUNT = 6
-
-        /** Quick, non-dessert picks first. Full browsing arrives in Phase 2. */
-        fun pickFeatured(recipes: List<RecipeSummary>): List<RecipeSummary> =
-            recipes.filter { MealType.Dessert !in it.mealTypes }
-                .sortedWith(compareBy({ it.totalMinutes }, { it.title }))
-                .take(FEATURED_COUNT)
+        const val FAVORITES_COUNT = 10
+        const val CUISINE_COUNT = 10
     }
 }

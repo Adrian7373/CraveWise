@@ -60,6 +60,7 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `CraveTag` | Static info (diet, cuisine, allergen). Flat, no shadow |
 | `IngredientPill` | Have (filled + check) vs. missing (outlined + add) |
 | `SpiceMeter`, `FlavorProfile`, `MatchBadge` | Recipe data display |
+| `AllergenNotice` | A recipe's allergen summary (error colors + icon), or a neutral "none listed, check labels" note |
 | `RecipeCard` | Any recipe in a list (browse, pantry results, search) |
 | `CraveSearchField` | Free-text search input |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |

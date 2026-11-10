@@ -27,9 +27,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SignalCellularAlt
+import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -333,6 +335,49 @@ fun FlavorProfile(scores: Map<Flavor, Int>, modifier: Modifier = Modifier) {
                     textAlign = TextAlign.End,
                     modifier = Modifier.width(24.dp),
                 )
+            }
+        }
+    }
+}
+
+/**
+ * Allergen summary for a recipe. Non-empty = errorContainer + warning icon (never color alone).
+ * Empty = a neutral note that still tells people to check labels: absence is derived from the
+ * ingredient list, not guaranteed.
+ */
+@Composable
+fun AllergenNotice(allergens: List<String>, modifier: Modifier = Modifier) {
+    val cs = MaterialTheme.colorScheme
+    val contains = allergens.isNotEmpty()
+    CraveSurface(
+        modifier = modifier.fillMaxWidth(),
+        shape = MaterialTheme.shapes.medium,
+        color = if (contains) cs.errorContainer else cs.surfaceContainer,
+        contentColor = if (contains) cs.onErrorContainer else cs.onSurfaceVariant,
+        hardShadow = false,
+    ) {
+        Row(Modifier.padding(16.dp), verticalAlignment = Alignment.Top) {
+            Icon(
+                if (contains) Icons.Outlined.WarningAmber else Icons.Outlined.Info,
+                contentDescription = null,
+                modifier = Modifier.size(24.dp),
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                if (contains) {
+                    Text("Contains allergens", style = MaterialTheme.typography.titleMedium)
+                    Text(allergens.joinToString(" · "), style = MaterialTheme.typography.bodyLarge)
+                    Text(
+                        "Based on the listed ingredients. Always check packaging.",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                } else {
+                    Text("No common allergens listed", style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        "None of the 14 major allergens appear in the ingredient list. Packaged items can still contain them, so check labels.",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                }
             }
         }
     }

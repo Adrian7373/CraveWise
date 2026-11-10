@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import com.example.cravewise.data.local.CatalogDao
 import com.example.cravewise.data.local.CraveDatabase
+import com.example.cravewise.data.local.FavoritesDao
+import com.example.cravewise.data.repository.FavoritesRepository
+import com.example.cravewise.data.repository.OfflineFavoritesRepository
 import com.example.cravewise.data.repository.OfflineRecipeRepository
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.data.seed.AssetSeedFileReader
@@ -36,6 +39,9 @@ object DatabaseModule {
     fun provideCatalogDao(db: CraveDatabase): CatalogDao = db.catalogDao()
 
     @Provides
+    fun provideFavoritesDao(db: CraveDatabase): FavoritesDao = db.favoritesDao()
+
+    @Provides
     @IoDispatcher
     fun provideIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
 }
@@ -50,4 +56,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindRecipeRepository(impl: OfflineRecipeRepository): RecipeRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindFavoritesRepository(impl: OfflineFavoritesRepository): FavoritesRepository
 }

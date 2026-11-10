@@ -42,6 +42,8 @@ data class RecipeSummary(
     val flavor: FlavorScores,
     val mealTypes: Set<MealType>,
     val proteins: Set<Protein>,
+    /** Derived from ingredients at import (DietRules). Safe to use as a hard filter. */
+    val diets: Set<Diet>,
 ) {
     val spiceLevel: Int get() = flavor.spicy
 }
@@ -55,8 +57,6 @@ data class Recipe(
     val moods: Set<Mood>,
     /** Derived from ingredients at import (DietRules). Safe to use as a hard filter. */
     val allergens: Set<Allergen>,
-    /** Derived from ingredients at import (DietRules). Safe to use as a hard filter. */
-    val diets: Set<Diet>,
     val ingredients: List<RecipeIngredientLine>,
     val steps: List<String>,
     val imageUrl: String?,
@@ -65,4 +65,5 @@ data class Recipe(
 ) {
     val id: String get() = summary.id
     val title: String get() = summary.title
+    val diets: Set<Diet> get() = summary.diets
 }
