@@ -10,11 +10,15 @@ CraveWise is a single-module Android app (`:app`, package `com.example.cravewise
 - **"Help me decide" quiz** covering cuisine, allergies, hated ingredients, spice tolerance, proteins, etc.
 - **Smart search**, e.g. "something salty".
 
-Current state: Phases 0–4 are done (shell, Room data layer + seed, cookbook, pantry match, profile + quiz). Home, browse/category (`BrowseRoute`), recipe detail, favorites (`FavoritesRoute`), the My Kitchen pantry tab, onboarding, the Profile tab and the "Help me decide" quiz are real; Search and Shopping are still placeholders.
+Current state: Phases 0–5 and 6a are done (shell, Room data layer + seed, cookbook, pantry match, profile + quiz, shopping list, lexicon + full-text smart search). Every tab and screen is real. Phase 6b (on-device vector search) and optional LLM query parsing are next.
 
 Pantry match: `domain/PantryMatcher` (pure, ID-based, buckets Cook now / Almost there (1–2 missing) / Needs a shop) and `domain/IngredientSearch` (type-ahead over names + synonyms). The pantry list is the `pantry_items` Room table; the "assume basics" (`isPantryStaple`) toggle is in DataStore (`user_prefs`).
 
 Profile (Phase 4): `FoodProfile` = allergens, diets, hated ingredient ids, `maxSpice` (null = never set → Home nudges; 5 = any heat). Allergens/diets/spice/onboarding flag live in DataStore; hated ingredients in the `hated_ingredients` Room table (`ProfileRepository`). **All four are hard filters, hidden everywhere**: every list VM gets a `ProfileGate` from `ProfileGateSource` and applies `gate.recipes(...)`/`gate.filter(...)` as the LAST step (after Cookbook filters, `PantryMatcher.match`, `DecideQuiz.rank`, and later search). When the gate empties a non-empty list, show a "Hidden by your profile" `ViaEmptyState` linking to Profile. Recipe detail stays reachable and shows `ProfileConflictNotice`. Onboarding (`ui/onboarding`) is a skippable first-run flow gated by `AppViewModel` in `CraveWiseAppRoot`; it and the Profile tab share `ProfileViewModel` + the editors in `ui/profile/ProfileSections.kt`. The quiz (`domain/DecideQuiz`) narrows by meal type + time, scores cravings/mood/protein/pantry, and is fresh on every visit.
+
+Shopping (Phase 5): Room tables `shopping_items` (one row per ingredient id, or `custom:<name>` for free text; name/aisle snapshot) and `shopping_shares` (one row per source: recipe id + line position, or `""` for manual adds; cascades only to items). `ShoppingDao` holds the transactional ops (idempotent add, remove a recipe's share + orphan cleanup, Done shopping → pantry, clear) and each returns a `ShoppingSnapshot` for undo. `domain/ShoppingQuantities` merges amounts (mass and volume convert; other units sum only with themselves; unparsed text is appended), and `domain/ShoppingList` groups rows by aisle in `STORE_WALK` order with a checked "basket" plus share text. You can add from recipe detail ("Add N missing", using the same `Pantry.owns` rule so staples are skipped, plus a per-ingredient toggle), from Pantry "Almost there" cards, or by hand on the Shopping tab. The tab badge (`AppViewModel.shoppingToBuyCount`) counts unchecked items. The "For these recipes" strip goes through `ProfileGate`; items themselves are never hidden. No servings scaling yet (Phase 7).
+
+Smart search (Phase 6a), in `domain/search/`: `QueryParser` (built once per catalog) turns text into a `SearchQuery` using the fixed `SearchLexicon` (flavors, textures, moods, meal types, diets, proteins, allergens, time, difficulty, "with what I have", negators like "no"/"without"/"-free") plus catalog cuisines and an ingredient index. Phrases match longest-first, and fixed entries beat cuisines, which beat ingredients. Ingredient words cover their head-noun family ("mushroom" → shiitake mushrooms, but "rice" ≠ rice vinegar). Unknown words become full-text terms. `SmartSearch.search` treats meal type, cuisine, diet, time, difficulty, exclusions and pantry as hard filters, and scores wants: a result must match at least one want, and results split into best (all wants) and close matches. Full text is the Room FTS4 table `recipe_fts` (Porter, prefix queries; title, cuisine, ingredient names + raw wording). It's derived data: `CatalogDao.rebuildSearchIndex()` runs inside `replaceCatalog`, and `SeedImporter` rebuilds it when its count drifts from `recipes`. `SearchRepository` sanitizes FTS input and keeps recent searches in DataStore. `SearchViewModel` applies `ProfileGate` last. Vectors (6b) must stay on-device (local-only), not pgvector.
 
 ## Commands (Windows / PowerShell, run from repo root)
 
@@ -73,7 +77,7 @@ MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't ex
   3. Pantry match
   4. Profile + quiz
   5. Shopping list
-  6. Smart search
+  6. Smart search (6a lexicon + FTS done; 6b on-device vectors; optional LLM parsing)
   7. Polish (cook mode, timers, servings scaling)
 - **Before public release:** TheMealDB-derived content is acceptable for testers but must be replaced or rewritten.
 

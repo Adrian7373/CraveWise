@@ -63,7 +63,7 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `AllergenNotice` | A recipe's allergen summary (error colors + icon), or a neutral "none listed, check labels" note |
 | `ProfileConflictNotice` | Recipe detail banner when a recipe breaks the user's food profile (error colors + block icon, one bullet per reason) |
 | `RecipeCard` | Any recipe in a list (browse, pantry results, search). Optional `matchPercent` badge and `footer` slot (e.g. missing-ingredient pills) |
-| `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard's Done key (e.g. add the top pantry suggestion) |
+| `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard action key (e.g. add the top pantry suggestion; `imeAction` picks Done/Search), and `onClear` to show a × while there's text |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |
 | `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results states |
 
