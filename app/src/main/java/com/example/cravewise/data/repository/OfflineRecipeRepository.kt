@@ -81,6 +81,7 @@ private fun summaryOf(recipe: RecipeEntity, tags: List<RecipeTagEntity>) = Recip
     diets = tags.values(TagType.Diet, Diet.serializer(), Diet.entries),
     allergens = tags.values(TagType.Allergen, Allergen.serializer(), Allergen.entries),
     moods = tags.values(TagType.Mood, Mood.serializer(), Mood.entries),
+    textures = tags.values(TagType.Texture, Texture.serializer(), Texture.entries),
 )
 
 private fun RecipeWithTags.toSummary() = summaryOf(recipe, tags)

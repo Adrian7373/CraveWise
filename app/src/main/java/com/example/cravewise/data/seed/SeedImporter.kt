@@ -72,7 +72,10 @@ class SeedImporter @Inject constructor(
                     check(dataset.version == manifest.version) {
                         "manifest says v${manifest.version} but ${manifest.file} is v${dataset.version}"
                     }
-                    import(dataset)
+                    import(dataset) // also rebuilds the search index
+                } else if (dao.searchIndexCount() != dao.recipeCount()) {
+                    // Search index is derived data: fill it after the v6 migration, or if it drifted.
+                    dao.rebuildSearchIndex()
                 }
                 upToDate = true
                 needsSeed

@@ -71,6 +71,7 @@ data class RecipeSummary(
      */
     val allergens: Set<Allergen>,
     val moods: Set<Mood> = emptySet(),
+    val textures: Set<Texture> = emptySet(),
 ) {
     val spiceLevel: Int get() = flavor.spicy
 }

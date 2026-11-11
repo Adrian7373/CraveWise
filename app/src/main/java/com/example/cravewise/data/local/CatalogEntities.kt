@@ -1,7 +1,10 @@
 package com.example.cravewise.data.local
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Fts4
+import androidx.room.FtsOptions
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.example.cravewise.domain.model.Aisle
@@ -103,6 +106,21 @@ data class RecipeTagEntity(
     val recipeId: String,
     val type: TagType,
     val value: String,
+)
+
+/**
+ * Full-text index over the catalog for smart search (title, cuisine and ingredient names, Porter
+ * stemmed). Derived data: rebuilt from the catalog tables by [CatalogDao.rebuildSearchIndex] on
+ * every re-seed, and when its row count drifts from `recipes` (e.g. right after the v6 migration).
+ */
+@Fts4(tokenizer = FtsOptions.TOKENIZER_PORTER, notIndexed = ["recipeId"])
+@Entity(tableName = "recipe_fts")
+data class RecipeFtsEntity(
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "rowid") val rowId: Int = 0,
+    val recipeId: String,
+    val title: String,
+    val cuisine: String,
+    val ingredients: String,
 )
 
 /** Single row recording which bundled dataset version the catalog currently holds. */

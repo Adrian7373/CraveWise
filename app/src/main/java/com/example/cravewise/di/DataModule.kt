@@ -11,14 +11,19 @@ import com.example.cravewise.data.local.CraveDatabase
 import com.example.cravewise.data.local.FavoritesDao
 import com.example.cravewise.data.local.PantryDao
 import com.example.cravewise.data.local.ProfileDao
+import com.example.cravewise.data.local.ShoppingDao
 import com.example.cravewise.data.repository.FavoritesRepository
 import com.example.cravewise.data.repository.OfflineFavoritesRepository
 import com.example.cravewise.data.repository.OfflinePantryRepository
 import com.example.cravewise.data.repository.OfflineProfileRepository
 import com.example.cravewise.data.repository.OfflineRecipeRepository
+import com.example.cravewise.data.repository.OfflineSearchRepository
+import com.example.cravewise.data.repository.OfflineShoppingRepository
 import com.example.cravewise.data.repository.PantryRepository
 import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.RecipeRepository
+import com.example.cravewise.data.repository.SearchRepository
+import com.example.cravewise.data.repository.ShoppingRepository
 import com.example.cravewise.data.seed.AssetSeedFileReader
 import com.example.cravewise.data.seed.SeedFileReader
 import dagger.Binds
@@ -57,6 +62,9 @@ object DatabaseModule {
     @Provides
     fun provideProfileDao(db: CraveDatabase): ProfileDao = db.profileDao()
 
+    @Provides
+    fun provideShoppingDao(db: CraveDatabase): ShoppingDao = db.shoppingDao()
+
     /** Small user settings. Lists and anything joined against the catalog live in Room. */
     @Provides
     @Singleton
@@ -90,4 +98,12 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindProfileRepository(impl: OfflineProfileRepository): ProfileRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindShoppingRepository(impl: OfflineShoppingRepository): ShoppingRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindSearchRepository(impl: OfflineSearchRepository): SearchRepository
 }

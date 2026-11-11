@@ -62,6 +62,36 @@ abstract class CatalogDao {
     @Query("SELECT COUNT(*) FROM recipes")
     abstract suspend fun recipeCount(): Int
 
+    /** Recipe ids whose FTS row matches [match] (FTS4 MATCH syntax, e.g. `title:curr*`). */
+    @Query("SELECT recipeId FROM recipe_fts WHERE recipe_fts MATCH :match")
+    abstract suspend fun searchRecipeIds(match: String): List<String>
+
+    @Query("SELECT COUNT(*) FROM recipe_fts")
+    abstract suspend fun searchIndexCount(): Int
+
+    /** Rebuilds the full-text index from the catalog tables. */
+    @Transaction
+    open suspend fun rebuildSearchIndex() {
+        clearSearchIndex()
+        fillSearchIndex()
+    }
+
+    @Query("DELETE FROM recipe_fts")
+    protected abstract suspend fun clearSearchIndex()
+
+    // Ingredient text = canonical name + the recipe's own wording ("spring onions"), so both match.
+    @Query(
+        """
+        INSERT INTO recipe_fts (recipeId, title, cuisine, ingredients)
+        SELECT r.id, r.title, r.cuisine, COALESCE(
+            (SELECT group_concat(i.name || ' ' || ri.rawName, ' ')
+             FROM recipe_ingredients ri JOIN ingredients i ON i.id = ri.ingredientId
+             WHERE ri.recipeId = r.id), '')
+        FROM recipes r
+        """,
+    )
+    protected abstract suspend fun fillSearchIndex()
+
     @Query("SELECT * FROM dataset_meta WHERE id = 0")
     abstract suspend fun datasetMeta(): DatasetMetaEntity?
 
@@ -84,6 +114,7 @@ abstract class CatalogDao {
         insertLines(lines)
         insertTags(tags)
         upsertMeta(meta)
+        rebuildSearchIndex()
     }
 
     @Query("DELETE FROM recipes") // cascades to recipe_ingredients and recipe_tags
