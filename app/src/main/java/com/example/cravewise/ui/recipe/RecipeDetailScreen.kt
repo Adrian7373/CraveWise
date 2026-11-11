@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -22,7 +23,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.automirrored.filled.PlaylistAddCheck
 import androidx.compose.material.icons.outlined.AddCircleOutline
+import androidx.compose.material.icons.outlined.AddShoppingCart
+import androidx.compose.material.icons.outlined.RemoveShoppingCart
 import androidx.compose.material.icons.outlined.Eco
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.People
@@ -84,7 +88,22 @@ fun RecipeDetailScreen(
         onBack = onBack,
         onToggleFavorite = viewModel::toggleFavorite,
         onBrowseCuisine = onBrowseCuisine,
+        shopping = ShoppingCallbacks(
+            onAddMissing = viewModel::addMissingToShoppingList,
+            onRemoveRecipe = viewModel::removeFromShoppingList,
+            onToggleIngredient = viewModel::toggleShoppingItem,
+        ),
     )
+}
+
+class ShoppingCallbacks(
+    val onAddMissing: () -> Unit,
+    val onRemoveRecipe: () -> Unit,
+    val onToggleIngredient: (String) -> Unit,
+) {
+    companion object {
+        val None = ShoppingCallbacks({}, {}, {})
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -94,6 +113,7 @@ fun RecipeDetailScreen(
     onBack: () -> Unit,
     onToggleFavorite: () -> Unit,
     onBrowseCuisine: (String) -> Unit,
+    shopping: ShoppingCallbacks = ShoppingCallbacks.None,
 ) {
     val cs = MaterialTheme.colorScheme
     Scaffold(
@@ -134,7 +154,7 @@ fun RecipeDetailScreen(
                     onAction = onBack,
                 )
             }
-            else -> RecipeContent(recipe, state.pantry, state.conflicts, padding, onBrowseCuisine)
+            else -> RecipeContent(recipe, state, padding, onBrowseCuisine, shopping)
         }
     }
 }
@@ -143,11 +163,13 @@ fun RecipeDetailScreen(
 @Composable
 private fun RecipeContent(
     recipe: Recipe,
-    pantry: Pantry,
-    conflicts: List<ProfileConflict>,
+    state: RecipeDetailUiState,
     padding: PaddingValues,
     onBrowseCuisine: (String) -> Unit,
+    shopping: ShoppingCallbacks,
 ) {
+    val pantry = state.pantry
+    val conflicts = state.conflicts
     val summary = recipe.summary
     // Have/missing marks only make sense once the user has listed something.
     val match = if (pantry.isEmpty) {
@@ -214,7 +236,8 @@ private fun RecipeContent(
                 modifier = Modifier.padding(top = 16.dp),
             )
         }
-        item("ingredients") { IngredientList(recipe, pantry.takeUnless { it.isEmpty }) }
+        item("ingredients") { IngredientList(recipe, pantry, state.onShoppingList, shopping.onToggleIngredient) }
+        item("shopping") { ShoppingButton(state, shopping) }
         item("steps-header") {
             SectionHeader(
                 "Method",
@@ -276,13 +299,41 @@ private fun Fact(icon: ImageVector, value: String, label: String, modifier: Modi
     }
 }
 
+/** "Add N missing" while anything you lack isn't listed yet; otherwise a way to take it back off. */
 @Composable
-private fun IngredientList(recipe: Recipe, pantry: Pantry?) {
+private fun ShoppingButton(state: RecipeDetailUiState, shopping: ShoppingCallbacks) {
+    val missing = state.missingNotListed.size
+    when {
+        missing > 0 -> CraveButton(
+            if (missing == 1) "Add 1 missing to shopping list" else "Add $missing missing to shopping list",
+            onClick = shopping.onAddMissing,
+            icon = Icons.Outlined.AddShoppingCart,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        state.onShoppingList.isNotEmpty() -> CraveButton(
+            "Remove from shopping list",
+            onClick = shopping.onRemoveRecipe,
+            variant = CraveButtonVariant.Outline,
+            icon = Icons.Outlined.RemoveShoppingCart,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+private fun IngredientList(
+    recipe: Recipe,
+    pantry: Pantry,
+    onShoppingList: Set<String>,
+    onToggleShopping: (String) -> Unit,
+) {
+    val cs = MaterialTheme.colorScheme
     CraveSurface(Modifier.fillMaxWidth(), hardShadow = false) {
-        Column(Modifier.padding(horizontal = 16.dp)) {
+        Column(Modifier.padding(start = 16.dp, end = 4.dp)) {
             recipe.ingredients.forEachIndexed { i, line ->
-                if (i > 0) HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
-                Row(Modifier.padding(vertical = 12.dp), verticalAlignment = Alignment.Top) {
+                if (i > 0) HorizontalDivider(color = cs.outlineVariant, modifier = Modifier.padding(end = 12.dp))
+                val have = pantry.owns(line.ingredient)
+                Row(Modifier.heightIn(min = 48.dp).padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                     Text(
                         line.rawMeasure,
                         style = MaterialTheme.typography.labelLarge,
@@ -294,15 +345,29 @@ private fun IngredientList(recipe: Recipe, pantry: Pantry?) {
                         style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier.weight(1f),
                     )
-                    if (pantry != null) {
-                        val have = pantry.owns(line.ingredient)
-                        Spacer(Modifier.width(8.dp))
-                        Icon(
-                            if (have) Icons.Filled.CheckCircle else Icons.Outlined.AddCircleOutline,
-                            contentDescription = if (have) "You have this" else "Missing",
-                            tint = if (have) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.size(20.dp),
-                        )
+                    when {
+                        // Have-marks only make sense once the user has listed something.
+                        have && !pantry.isEmpty -> Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) {
+                            Icon(
+                                Icons.Filled.CheckCircle,
+                                contentDescription = "You have this",
+                                tint = cs.tertiary,
+                                modifier = Modifier.size(20.dp),
+                            )
+                        }
+                        have -> Spacer(Modifier.width(48.dp))
+                        else -> {
+                            val listed = line.ingredient.id in onShoppingList
+                            val name = line.ingredient.name
+                            IconButton(onClick = { onToggleShopping(line.ingredient.id) }) {
+                                Icon(
+                                    if (listed) Icons.AutoMirrored.Filled.PlaylistAddCheck else Icons.Outlined.AddCircleOutline,
+                                    contentDescription = if (listed) "$name is on your shopping list. Remove" else "Missing. Add $name to shopping list",
+                                    tint = if (listed) cs.primary else cs.onSurfaceVariant,
+                                    modifier = Modifier.size(22.dp),
+                                )
+                            }
+                        }
                     }
                 }
             }
@@ -353,6 +418,7 @@ private fun RecipeDetailPreview() = CraveWiseTheme {
             isFavorite = true,
             pantry = Pantry(listOf("beef", "lemon")),
             conflicts = listOf(ProfileConflict.ContainsAllergen(Allergen.Soy), ProfileConflict.HatedIngredient("garlic")),
+            onShoppingList = setOf("soy_sauce"),
         ),
         onBack = {}, onToggleFavorite = {}, onBrowseCuisine = {},
     )

@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.PantryRepository
 import com.example.cravewise.data.repository.ProfileGateSource
 import com.example.cravewise.data.repository.RecipeRepository
+import com.example.cravewise.data.repository.ShoppingRepository
+import com.example.cravewise.domain.PantryMatch
 import com.example.cravewise.domain.IngredientSearch
 import com.example.cravewise.domain.PantryMatcher
 import com.example.cravewise.domain.PantryResults
@@ -35,6 +37,8 @@ data class PantryUiState(
     val results: PantryResults = PantryResults(),
     /** Recipes matched the pantry but the profile hid all of them. */
     val hiddenByProfile: Boolean = false,
+    /** Recipe ids with anything on the shopping list ("Almost there" quick add). */
+    val recipesOnShoppingList: Set<String> = emptySet(),
 ) {
     val hasPantry: Boolean get() = pantryItems.isNotEmpty()
 }
@@ -55,6 +59,7 @@ class PantryViewModel @Inject constructor(
     private val pantry: PantryRepository,
     private val savedState: SavedStateHandle,
     gateSource: ProfileGateSource,
+    private val shopping: ShoppingRepository,
 ) : ViewModel() {
 
     private val query = savedState.getStateFlow(KEY_QUERY, "")
@@ -83,8 +88,8 @@ class PantryViewModel @Inject constructor(
     }
 
     val uiState: StateFlow<PantryUiState> =
-        combine(catalog, pantryState, results, query) { c, p, (results, hidden), q ->
-            buildState(c, p, results, q).copy(hiddenByProfile = hidden)
+        combine(catalog, pantryState, results, query, shopping.observeRecipeIds()) { c, p, (results, hidden), q, onList ->
+            buildState(c, p, results, q).copy(hiddenByProfile = hidden, recipesOnShoppingList = onList)
         }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), PantryUiState())
 
@@ -118,6 +123,12 @@ class PantryViewModel @Inject constructor(
 
     fun setAssumeStaples(assume: Boolean) {
         viewModelScope.launch { pantry.setAssumeStaples(assume) }
+    }
+
+    /** Puts a match's missing ingredients (with the recipe's amounts) on the shopping list. */
+    fun addMissingToShoppingList(match: PantryMatch) {
+        val ids = match.missing.mapTo(LinkedHashSet()) { it.id }
+        viewModelScope.launch { shopping.addFromRecipe(match.recipe.id, ids) }
     }
 
     private fun buildState(c: PantryCatalog, p: Pantry, results: PantryResults, q: String): PantryUiState {

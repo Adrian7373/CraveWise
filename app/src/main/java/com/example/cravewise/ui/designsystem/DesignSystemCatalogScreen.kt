@@ -322,9 +322,12 @@ private fun ChipSection() {
 @Composable
 private fun InputSection() {
     var query by remember { mutableStateOf("") }
+    var filled by remember { mutableStateOf("creamy and quick") }
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         SectionHeader("Inputs", eyebrow = "06 · Search")
         CraveSearchField(value = query, onValueChange = { query = it })
+        // With onClear: a × appears while there's text (Search tab).
+        CraveSearchField(value = filled, onValueChange = { filled = it }, onClear = { filled = "" })
     }
 }
 

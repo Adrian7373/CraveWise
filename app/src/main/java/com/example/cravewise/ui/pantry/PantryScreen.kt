@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -17,7 +18,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.PlaylistAddCheck
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.AddShoppingCart
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -45,6 +48,8 @@ import com.example.cravewise.domain.PantryMatch
 import com.example.cravewise.domain.PantryMatcher
 import com.example.cravewise.domain.PantryResults
 import com.example.cravewise.domain.model.Ingredient
+import com.example.cravewise.ui.designsystem.CraveButton
+import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSearchField
@@ -62,6 +67,7 @@ fun PantryScreen(
     onRecipeClick: (String) -> Unit,
     onBrowse: () -> Unit,
     onOpenProfile: () -> Unit,
+    onOpenShopping: () -> Unit,
     viewModel: PantryViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -77,6 +83,8 @@ fun PantryScreen(
             onRecipeClick = onRecipeClick,
             onBrowse = onBrowse,
             onOpenProfile = onOpenProfile,
+            onAddToShopping = viewModel::addMissingToShoppingList,
+            onOpenShopping = onOpenShopping,
         ),
     )
 }
@@ -91,6 +99,8 @@ class PantryActions(
     val onRecipeClick: (String) -> Unit,
     val onBrowse: () -> Unit,
     val onOpenProfile: () -> Unit,
+    val onAddToShopping: (PantryMatch) -> Unit = {},
+    val onOpenShopping: () -> Unit = {},
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -147,7 +157,7 @@ fun PantryScreen(state: PantryUiState, actions: PantryActions) {
                 item("basics") { BasicsToggle(state.assumeStaples, state.staples, actions.onAssumeStaples) }
             }
             if (state.hasPantry) {
-                results(state.results, state.hiddenByProfile, showAllShopping, { showAllShopping = !showAllShopping }, actions)
+                results(state, showAllShopping, { showAllShopping = !showAllShopping }, actions)
             }
         }
     }
@@ -240,13 +250,13 @@ private fun BasicsToggle(assume: Boolean, staples: List<Ingredient>, onChange: (
 }
 
 private fun LazyListScope.results(
-    results: PantryResults,
-    hiddenByProfile: Boolean,
+    state: PantryUiState,
     showAllShopping: Boolean,
     onToggleShowAll: () -> Unit,
     actions: PantryActions,
 ) {
-    if (results.isEmpty && hiddenByProfile) {
+    val results = state.results
+    if (results.isEmpty && state.hiddenByProfile) {
         item("empty") {
             ViaEmptyState(
                 title = "Hidden by your profile",
@@ -270,7 +280,7 @@ private fun LazyListScope.results(
     }
     bucket("cook-now", "Cook now", "Nothing missing", results.cookNow, actions)
     val almost = PantryMatcher.ALMOST_THERE_MAX_MISSING
-    bucket("almost", "Almost there", "Missing 1–$almost", results.almostThere, actions)
+    bucket("almost", "Almost there", "Missing 1–$almost", results.almostThere, actions, onShoppingList = state.recipesOnShoppingList)
 
     val shopping = results.needsShopping
     val visible = if (showAllShopping) shopping else shopping.take(SHOPPING_PREVIEW)
@@ -300,6 +310,8 @@ private fun LazyListScope.bucket(
     count: Int = matches.size,
     actionLabel: String? = null,
     onAction: () -> Unit = {},
+    /** Non-null turns on the "Add to shopping list" quick action, marking recipes already on it. */
+    onShoppingList: Set<String>? = null,
 ) {
     if (matches.isEmpty()) return
     item("$key-header") {
@@ -312,13 +324,37 @@ private fun LazyListScope.bucket(
         )
     }
     items(matches, key = { "$key-${it.recipe.id}" }) { match ->
-        MatchCard(match, onClick = { actions.onRecipeClick(match.recipe.id) })
+        MatchCard(
+            match,
+            onClick = { actions.onRecipeClick(match.recipe.id) },
+            shoppingAction = onShoppingList?.let { listed ->
+                {
+                    if (match.recipe.id in listed) {
+                        CraveButton(
+                            "On your shopping list",
+                            onClick = actions.onOpenShopping,
+                            variant = CraveButtonVariant.Outline,
+                            icon = Icons.AutoMirrored.Outlined.PlaylistAddCheck,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    } else {
+                        CraveButton(
+                            if (match.missing.size == 1) "Add 1 to shopping list" else "Add ${match.missing.size} to shopping list",
+                            onClick = { actions.onAddToShopping(match) },
+                            variant = CraveButtonVariant.Secondary,
+                            icon = Icons.Outlined.AddShoppingCart,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                }
+            },
+        )
     }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun MatchCard(match: PantryMatch, onClick: () -> Unit) {
+private fun MatchCard(match: PantryMatch, onClick: () -> Unit, shoppingAction: (@Composable () -> Unit)? = null) {
     RecipeSummaryCard(
         recipe = match.recipe,
         onClick = onClick,
@@ -335,6 +371,10 @@ private fun MatchCard(match: PantryMatch, onClick: () -> Unit) {
             if (match.missing.isNotEmpty()) {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     match.missing.forEach { IngredientPill(it.name, have = false) }
+                }
+                if (shoppingAction != null) {
+                    Spacer(Modifier.height(4.dp))
+                    shoppingAction()
                 }
             }
         },

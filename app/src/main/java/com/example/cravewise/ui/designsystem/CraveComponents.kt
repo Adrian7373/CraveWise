@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Search
@@ -38,6 +39,7 @@ import androidx.compose.material.icons.outlined.SignalCellularAlt
 import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -513,6 +515,9 @@ fun CraveSearchField(
     /** Called on the keyboard's action key. Null keeps the default (Enter does nothing). */
     onSubmit: (() -> Unit)? = null,
     leadingIcon: ImageVector = Icons.Outlined.Search,
+    /** Non-null shows a clear (×) button while there's text. */
+    onClear: (() -> Unit)? = null,
+    imeAction: ImeAction = ImeAction.Done,
 ) {
     val cs = MaterialTheme.colorScheme
     CraveSurface(modifier = modifier.fillMaxWidth(), shape = CraveTheme.extras.buttonShape) {
@@ -523,8 +528,9 @@ fun CraveSearchField(
                 value = value,
                 onValueChange = onValueChange,
                 singleLine = true,
-                keyboardOptions = if (onSubmit != null) KeyboardOptions(imeAction = ImeAction.Done) else KeyboardOptions.Default,
-                keyboardActions = KeyboardActions(onDone = onSubmit?.let { submit -> { submit() } }),
+                keyboardOptions = if (onSubmit != null) KeyboardOptions(imeAction = imeAction) else KeyboardOptions.Default,
+                keyboardActions = onSubmit?.let { submit -> KeyboardActions(onDone = { submit() }, onSearch = { submit() }) }
+                    ?: KeyboardActions.Default,
                 textStyle = MaterialTheme.typography.bodyLarge.copy(color = cs.onSurface),
                 cursorBrush = SolidColor(cs.primary),
                 modifier = Modifier.weight(1f),
@@ -537,6 +543,11 @@ fun CraveSearchField(
                     }
                 },
             )
+            if (onClear != null && value.isNotEmpty()) {
+                IconButton(onClick = onClear, modifier = Modifier.offset(x = 12.dp)) {
+                    Icon(Icons.Outlined.Close, contentDescription = "Clear search", tint = cs.onSurfaceVariant)
+                }
+            }
         }
     }
 }

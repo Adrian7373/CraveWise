@@ -12,6 +12,8 @@ import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Kitchen
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -71,12 +73,13 @@ fun CraveWiseAppRoot(appViewModel: AppViewModel = hiltViewModel()) {
         // Brief: DataStore answers almost at once. A plain canvas avoids flashing onboarding.
         null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
         false -> OnboardingScreen()
-        true -> CraveWiseTabs()
+        true -> CraveWiseTabs(appViewModel)
     }
 }
 
 @Composable
-private fun CraveWiseTabs() {
+private fun CraveWiseTabs(appViewModel: AppViewModel) {
+    val shoppingCount by appViewModel.shoppingToBuyCount.collectAsStateWithLifecycle()
     val navigationState = rememberNavigationState(
         startRoute = HomeRoute,
         topLevelRoutes = TOP_LEVEL_DESTINATIONS.keys,
@@ -101,10 +104,18 @@ private fun CraveWiseTabs() {
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { navigator.navigate(BrowseRoute()) },
                 onOpenProfile = openProfile,
+                onOpenShopping = { navigator.navigate(ShoppingRoute) },
             )
         }
-        entry<SearchRoute> { SearchScreen() }
-        entry<ShoppingRoute> { ShoppingListScreen() }
+        entry<SearchRoute> {
+            SearchScreen(
+                onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
+                onBrowse = { navigator.navigate(BrowseRoute()) },
+                onOpenProfile = openProfile,
+                onOpenKitchen = { navigator.navigate(PantryRoute) },
+            )
+        }
+        entry<ShoppingRoute> { ShoppingListScreen(onBrowse = { navigator.navigate(BrowseRoute()) }) }
         entry<ProfileRoute> {
             ProfileScreen(
                 onOpenFavorites = { navigator.navigate(FavoritesRoute) },
@@ -152,7 +163,15 @@ private fun CraveWiseTabs() {
                     NavigationBarItem(
                         selected = route == navigationState.topLevelRoute,
                         onClick = { navigator.navigate(route) },
-                        icon = { Icon(destination.icon, contentDescription = null) },
+                        icon = {
+                            if (route == ShoppingRoute && shoppingCount > 0) {
+                                BadgedBox(badge = { Badge { Text(if (shoppingCount > 99) "99+" else "$shoppingCount") } }) {
+                                    Icon(destination.icon, contentDescription = null)
+                                }
+                            } else {
+                                Icon(destination.icon, contentDescription = null)
+                            }
+                        },
                         label = { Text(destination.label) },
                     )
                 }
