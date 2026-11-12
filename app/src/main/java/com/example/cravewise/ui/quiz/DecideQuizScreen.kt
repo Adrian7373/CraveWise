@@ -47,6 +47,7 @@ import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.FlavorChip
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ViaEmptyState
@@ -146,7 +147,7 @@ fun DecideQuizScreen(state: DecideQuizUiState, actions: QuizActions) {
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.readableWidth(),
         ) {
             if (state.showResults) results(state, actions) else question(state, actions)
         }

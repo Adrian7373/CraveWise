@@ -31,6 +31,7 @@ import com.example.cravewise.domain.model.FoodProfile
 import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ViaSays
 import com.example.cravewise.ui.theme.CraveWiseTheme
@@ -98,7 +99,7 @@ fun ProfileScreen(state: ProfileUiState, actions: ProfileActions) {
                 bottom = padding.calculateBottomPadding() + 32.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.readableWidth(),
         ) {
             item("via") {
                 ViaSays("Tell me what to keep off your plate. I'll hide those recipes everywhere in the app.")

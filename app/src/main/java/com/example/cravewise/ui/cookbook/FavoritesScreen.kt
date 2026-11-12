@@ -5,8 +5,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
@@ -25,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.cravewise.ui.designsystem.CraveLayout
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.ViaEmptyState
 import com.example.cravewise.ui.recipe.PreviewRecipes
@@ -90,14 +92,17 @@ fun FavoritesScreen(
                     onAction = onBrowse,
                 )
             }
-            else -> LazyColumn(
+            // Adaptive grid: one column on phones and in a tablet's list pane, more when full-width.
+            else -> LazyVerticalGrid(
+                columns = GridCells.Adaptive(CraveLayout.CardMinWidth),
                 contentPadding = PaddingValues(
-                    start = 20.dp,
-                    end = 20.dp,
+                    start = CraveLayout.Gutter,
+                    end = CraveLayout.Gutter,
                     top = padding.calculateTopPadding() + 4.dp,
                     bottom = padding.calculateBottomPadding() + 24.dp,
                 ),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier.fillMaxSize(),
             ) {
                 items(state.favorites, key = { it.id }) { recipe ->

@@ -48,6 +48,7 @@ import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ViaSays
@@ -110,6 +111,7 @@ fun HomeScreen(
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.readableWidth(),
         ) {
             if (state.askSpice) {
                 item("via") {

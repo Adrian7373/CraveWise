@@ -73,6 +73,7 @@ import com.example.cravewise.domain.model.RecipeSummary
 import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveChip
 import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.CraveSearchField
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.SectionHeader
@@ -173,7 +174,7 @@ fun ShoppingListScreen(state: ShoppingUiState, actions: ShoppingActions) {
                 bottom = padding.calculateBottomPadding() + 32.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.readableWidth(),
         ) {
             item("search") {
                 CraveSearchField(

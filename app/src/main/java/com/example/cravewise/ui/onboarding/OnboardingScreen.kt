@@ -35,6 +35,7 @@ import com.example.cravewise.domain.model.FoodProfile
 import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.ViaSays
 import com.example.cravewise.ui.profile.AllergyEditor
 import com.example.cravewise.ui.profile.DietEditor
@@ -147,7 +148,7 @@ fun OnboardingScreen(
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.readableWidth(),
         ) {
             item("progress") {
                 LinearProgressIndicator(

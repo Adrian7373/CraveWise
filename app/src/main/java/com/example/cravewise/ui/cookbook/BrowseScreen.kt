@@ -7,9 +7,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyGridScope
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -27,6 +31,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layout
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -35,6 +41,7 @@ import com.example.cravewise.domain.model.Diet
 import com.example.cravewise.domain.model.MealType
 import com.example.cravewise.navigation.BrowseRoute
 import com.example.cravewise.ui.designsystem.CraveChip
+import com.example.cravewise.ui.designsystem.CraveLayout
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.ViaEmptyState
 import com.example.cravewise.ui.recipe.PreviewRecipes
@@ -103,15 +110,21 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
             return@Scaffold
         }
         val filter = state.filter
-        LazyColumn(
+        // Adaptive grid: one column on phones and in a tablet's list pane, more when full-width.
+        // Headers span every column; chip rows bleed past the gutter so they scroll edge to edge.
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(CraveLayout.CardMinWidth),
             contentPadding = PaddingValues(
+                start = CraveLayout.Gutter,
+                end = CraveLayout.Gutter,
                 top = padding.calculateTopPadding() + 4.dp,
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.fillMaxSize(),
         ) {
-            item("meal-types") {
+            fullWidthItem("meal-types") {
                 ChipRow {
                     item { CraveChip("All meals", filter.mealType == null, onClick = { actions.onMealType(null) }) }
                     items(state.mealTypes) { type ->
@@ -123,7 +136,7 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     }
                 }
             }
-            item("cuisines") {
+            fullWidthItem("cuisines") {
                 ChipRow {
                     item { CraveChip("All cuisines", filter.cuisine == null, onClick = { actions.onCuisine(null) }) }
                     items(state.cuisines) { cuisine ->
@@ -135,7 +148,7 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     }
                 }
             }
-            item("diets") {
+            fullWidthItem("diets") {
                 ChipRow {
                     item {
                         CraveChip(
@@ -149,9 +162,9 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     }
                 }
             }
-            item("count") {
+            fullWidthItem("count") {
                 Row(
-                    Modifier.fillMaxWidth().padding(start = 20.dp, end = 8.dp),
+                    Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     val n = state.results.size
@@ -169,7 +182,7 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                 }
             }
             if (state.results.isEmpty() && state.hiddenByProfile) {
-                item("empty") {
+                fullWidthItem("empty") {
                     ViaEmptyState(
                         title = "Hidden by your profile",
                         body = "There are recipes here, but they don't fit your food profile. Loosen a filter, or check your profile settings.",
@@ -178,7 +191,7 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     )
                 }
             } else if (state.results.isEmpty()) {
-                item("empty") {
+                fullWidthItem("empty") {
                     ViaEmptyState(
                         title = "Nothing on this menu",
                         body = "No recipes tick every box yet. Loosen a filter and I'll dig through the cookbook again.",
@@ -188,26 +201,35 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                 }
             }
             items(state.results, key = { it.id }) { recipe ->
-                RecipeSummaryCard(
-                    recipe,
-                    onClick = { actions.onRecipeClick(recipe.id) },
-                    modifier = Modifier.padding(horizontal = 20.dp),
-                )
+                RecipeSummaryCard(recipe, onClick = { actions.onRecipeClick(recipe.id) })
             }
         }
     }
 }
 
-/** Edge-to-edge horizontal chip row aligned to the 20dp gutter. */
+private fun LazyGridScope.fullWidthItem(key: String, content: @Composable () -> Unit) =
+    item(key, span = { GridItemSpan(maxLineSpan) }) { content() }
+
+/** Edge-to-edge horizontal chip row aligned to the gutter (it bleeds out of the grid's padding). */
 @Composable
 private fun ChipRow(content: LazyListScope.() -> Unit) {
     LazyRow(
-        contentPadding = PaddingValues(horizontal = 20.dp),
+        modifier = Modifier.bleed(CraveLayout.Gutter),
+        contentPadding = PaddingValues(horizontal = CraveLayout.Gutter),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         // Top, not center: selected chips are 4dp taller (sticker shadow) and would jump.
         verticalAlignment = Alignment.Top,
         content = content,
     )
+}
+
+/** Widens the content by [horizontal] on each side, e.g. to scroll under a parent's padding. */
+private fun Modifier.bleed(horizontal: Dp) = layout { measurable, constraints ->
+    val extra = horizontal.roundToPx()
+    val placeable = measurable.measure(
+        constraints.copy(minWidth = constraints.minWidth + 2 * extra, maxWidth = constraints.maxWidth + 2 * extra),
+    )
+    layout(constraints.maxWidth, placeable.height) { placeable.place(-extra, 0) }
 }
 
 private val previewActions = BrowseActions({}, {}, {}, {}, {}, {}, {}, {})
