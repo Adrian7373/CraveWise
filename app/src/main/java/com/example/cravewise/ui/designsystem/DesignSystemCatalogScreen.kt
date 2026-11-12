@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import com.example.cravewise.ui.theme.CraveTheme
 import com.example.cravewise.ui.theme.CraveWiseTheme
 import com.example.cravewise.ui.theme.Flavor
+import com.example.cravewise.ui.theme.cookStep
 
 /**
  * Living catalog of the CraveWise design system. Every reusable component must have a section
@@ -118,6 +119,7 @@ fun DesignSystemCatalogScreen(
                 item("cards") { CardSection() }
                 item("via") { ViaSection() }
                 item("safety") { SafetySection() }
+                item("cooking") { CookingSection() }
             }
         }
     }
@@ -205,6 +207,7 @@ private fun TypeSection() {
         "Body L" to t.bodyLarge,
         "Body M" to t.bodyMedium,
         "Label L" to t.labelLarge,
+        "Cook step" to t.cookStep,
     )
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         SectionHeader("Typography", eyebrow = "02 · Type")
@@ -420,6 +423,22 @@ private fun SafetySection() {
     }
 }
 
+@Composable
+private fun CookingSection() {
+    var servings by remember { mutableStateOf(4) }
+    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        SectionHeader("Cooking", eyebrow = "10 · Cook mode")
+        ServingsStepper(value = servings, onValueChange = { servings = it })
+        StepProgress(current = 2, total = 6)
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            CookTimerCard("Step 2 · 20 min", "17:42", CookTimerState.Running, {}, {}, {})
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            CookTimerCard("Step 4 · 45 sec", "0:00", CookTimerState.Done, {}, {}, {})
+        }
+    }
+}
+
 // ---------------------------------------------------------------------------------------------
 // Previews
 // ---------------------------------------------------------------------------------------------
@@ -477,3 +496,7 @@ private fun ViaPreview() = CravePreviewSurface { ViaSection() }
 @CravePreviews
 @Composable
 private fun AllergenNoticePreview() = CravePreviewSurface { SafetySection() }
+
+@CravePreviews
+@Composable
+private fun CookingPreview() = CravePreviewSurface { CookingSection() }

@@ -14,6 +14,9 @@ import kotlinx.serialization.Serializable
 // ---- Sub-routes (pushed onto the current tab's back stack) ----
 @Serializable data class RecipeDetailRoute(val recipeId: String) : NavKey
 
+/** Full-screen, step-by-step cooking with timers. Hides the nav bar/rail. */
+@Serializable data class CookModeRoute(val recipeId: String, val servings: Int) : NavKey
+
 /** Cookbook browse. A set [mealType] or [cuisine] makes it a category screen (initial filter). */
 @Serializable data class BrowseRoute(val mealType: MealType? = null, val cuisine: String? = null) : NavKey
 @Serializable data object FavoritesRoute : NavKey

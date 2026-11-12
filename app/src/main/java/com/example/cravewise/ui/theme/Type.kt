@@ -19,6 +19,13 @@ private fun TextStyle.title() = copy(fontFamily = HeadingFamily, fontWeight = Fo
 private fun TextStyle.body() = copy(fontFamily = BodyFamily)
 private fun TextStyle.label() = copy(fontFamily = BodyFamily, fontWeight = FontWeight.Bold)
 
+/**
+ * Cook-mode step text: body face at arm's-length size, readable from the counter. Use only for the
+ * current step in cook mode (`MaterialTheme.typography.cookStep`).
+ */
+val Typography.cookStep: TextStyle
+    get() = bodyLarge.copy(fontSize = 24.sp, lineHeight = 34.sp)
+
 internal val CraveTypography: Typography = Typography().run {
     Typography(
         displayLarge = displayLarge.heading(),

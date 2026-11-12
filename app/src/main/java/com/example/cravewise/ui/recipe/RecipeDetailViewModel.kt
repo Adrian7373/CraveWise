@@ -1,6 +1,8 @@
 package com.example.cravewise.ui.recipe
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.example.cravewise.domain.RecipeScaling
 import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.FavoritesRepository
 import com.example.cravewise.data.repository.PantryRepository
@@ -34,7 +36,13 @@ data class RecipeDetailUiState(
     val conflicts: List<ProfileConflict> = emptyList(),
     /** Ingredient ids this recipe has put on the shopping list. */
     val onShoppingList: Set<String> = emptySet(),
+    /** Servings chosen on the stepper; the recipe's own yield until changed. 0 while loading. */
+    val servings: Int = 0,
 ) {
+    /** Multiplier for ingredient amounts at the chosen [servings]. */
+    val scale: Double
+        get() = recipe?.let { RecipeScaling.factor(it.servings, servings) } ?: 1.0
+
     /**
      * Distinct ingredients you don't own (same rule as the have/missing marks, so assumed staples
      * are skipped) that this recipe hasn't added to the shopping list yet.
@@ -49,6 +57,7 @@ data class RecipeDetailUiState(
 @HiltViewModel(assistedFactory = RecipeDetailViewModel.Factory::class)
 class RecipeDetailViewModel @AssistedInject constructor(
     @Assisted private val recipeId: String,
+    private val savedState: SavedStateHandle,
     recipes: RecipeRepository,
     private val favorites: FavoritesRepository,
     pantry: PantryRepository,
@@ -56,24 +65,38 @@ class RecipeDetailViewModel @AssistedInject constructor(
     private val shopping: ShoppingRepository,
 ) : ViewModel() {
 
+    /** Null = the recipe's own yield. Saved so it survives process death. */
+    private val chosenServings = savedState.getStateFlow<Int?>(KEY_SERVINGS, null)
+
     val uiState: StateFlow<RecipeDetailUiState> = combine(
-        recipes.observeRecipe(recipeId),
-        favorites.observeFavoriteIds().map { recipeId in it }.distinctUntilChanged(),
-        pantry.observePantry(),
-        profiles.observeProfile(),
-        shopping.observeIngredientIdsForRecipe(recipeId),
-    ) { recipe, isFavorite, pantryState, profile, onList ->
-        RecipeDetailUiState(
-            isLoading = false,
-            recipe = recipe,
-            isFavorite = isFavorite,
-            pantry = pantryState,
-            conflicts = recipe?.let { r ->
-                ProfileFilter.conflicts(r.summary, r.ingredients.map { it.ingredient.id }, profile)
-            }.orEmpty(),
-            onShoppingList = onList,
-        )
+        combine(
+            recipes.observeRecipe(recipeId),
+            favorites.observeFavoriteIds().map { recipeId in it }.distinctUntilChanged(),
+            pantry.observePantry(),
+            profiles.observeProfile(),
+            shopping.observeIngredientIdsForRecipe(recipeId),
+        ) { recipe, isFavorite, pantryState, profile, onList ->
+            RecipeDetailUiState(
+                isLoading = false,
+                recipe = recipe,
+                isFavorite = isFavorite,
+                pantry = pantryState,
+                conflicts = recipe?.let { r ->
+                    ProfileFilter.conflicts(r.summary, r.ingredients.map { it.ingredient.id }, profile)
+                }.orEmpty(),
+                onShoppingList = onList,
+            )
+        },
+        chosenServings,
+    ) { state, servings ->
+        state.copy(servings = servings ?: state.recipe?.servings ?: 0)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), RecipeDetailUiState())
+
+    fun setServings(servings: Int) {
+        val recipe = uiState.value.recipe ?: return
+        val clamped = RecipeScaling.clampServings(servings)
+        savedState[KEY_SERVINGS] = clamped.takeIf { it != recipe.servings }
+    }
 
     fun toggleFavorite() {
         val makeFavorite = !uiState.value.isFavorite
@@ -81,8 +104,9 @@ class RecipeDetailViewModel @AssistedInject constructor(
     }
 
     fun addMissingToShoppingList() {
-        val missing = uiState.value.missingNotListed
-        viewModelScope.launch { shopping.addFromRecipe(recipeId, missing) }
+        val state = uiState.value
+        val missing = state.missingNotListed
+        viewModelScope.launch { shopping.addFromRecipe(recipeId, missing, state.servings) }
     }
 
     fun removeFromShoppingList() {
@@ -91,14 +115,23 @@ class RecipeDetailViewModel @AssistedInject constructor(
 
     /** Per-ingredient +: adds this recipe's amount, or takes it back if already listed. */
     fun toggleShoppingItem(ingredientId: String) {
-        val listed = ingredientId in uiState.value.onShoppingList
+        val state = uiState.value
+        val listed = ingredientId in state.onShoppingList
         viewModelScope.launch {
-            if (listed) shopping.removeFromRecipe(recipeId, ingredientId) else shopping.addFromRecipe(recipeId, setOf(ingredientId))
+            if (listed) {
+                shopping.removeFromRecipe(recipeId, ingredientId)
+            } else {
+                shopping.addFromRecipe(recipeId, setOf(ingredientId), state.servings)
+            }
         }
     }
 
     @AssistedFactory
     interface Factory {
         fun create(recipeId: String): RecipeDetailViewModel
+    }
+
+    private companion object {
+        const val KEY_SERVINGS = "servings"
     }
 }

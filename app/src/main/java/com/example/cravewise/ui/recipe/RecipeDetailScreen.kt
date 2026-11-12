@@ -3,6 +3,7 @@ package com.example.cravewise.ui.recipe
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -17,19 +18,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.PlaylistAddCheck
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.automirrored.filled.PlaylistAddCheck
 import androidx.compose.material.icons.outlined.AddCircleOutline
 import androidx.compose.material.icons.outlined.AddShoppingCart
-import androidx.compose.material.icons.outlined.RemoveShoppingCart
 import androidx.compose.material.icons.outlined.Eco
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.People
+import androidx.compose.material.icons.outlined.PlayArrow
+import androidx.compose.material.icons.outlined.RemoveShoppingCart
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.SignalCellularAlt
 import androidx.compose.material3.CircularProgressIndicator
@@ -50,26 +53,30 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cravewise.domain.PantryMatcher
+import com.example.cravewise.domain.ProfileConflict
+import com.example.cravewise.domain.RecipeScaling
+import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.domain.model.Pantry
 import com.example.cravewise.domain.model.Recipe
 import com.example.cravewise.ui.designsystem.AllergenNotice
 import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
+import com.example.cravewise.ui.designsystem.CraveLayout
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.CraveTag
 import com.example.cravewise.ui.designsystem.FlavorProfile
 import com.example.cravewise.ui.designsystem.ProfileConflictNotice
-import com.example.cravewise.ui.profile.describe
-import com.example.cravewise.domain.ProfileConflict
-import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.ui.designsystem.SectionHeader
+import com.example.cravewise.ui.designsystem.ServingsStepper
 import com.example.cravewise.ui.designsystem.SpiceMeter
 import com.example.cravewise.ui.designsystem.ViaEmptyState
+import com.example.cravewise.ui.profile.describe
 import com.example.cravewise.ui.theme.CraveTheme
 import com.example.cravewise.ui.theme.CraveWiseTheme
 
@@ -78,6 +85,8 @@ fun RecipeDetailScreen(
     recipeId: String,
     onBack: () -> Unit,
     onBrowseCuisine: (String) -> Unit,
+    onStartCooking: (servings: Int) -> Unit,
+    showBackButton: Boolean = true,
     viewModel: RecipeDetailViewModel = hiltViewModel<RecipeDetailViewModel, RecipeDetailViewModel.Factory>(
         creationCallback = { it.create(recipeId) },
     ),
@@ -88,6 +97,9 @@ fun RecipeDetailScreen(
         onBack = onBack,
         onToggleFavorite = viewModel::toggleFavorite,
         onBrowseCuisine = onBrowseCuisine,
+        onServingsChange = viewModel::setServings,
+        onStartCooking = { onStartCooking(state.servings) },
+        showBackButton = showBackButton,
         shopping = ShoppingCallbacks(
             onAddMissing = viewModel::addMissingToShoppingList,
             onRemoveRecipe = viewModel::removeFromShoppingList,
@@ -106,6 +118,10 @@ class ShoppingCallbacks(
     }
 }
 
+/**
+ * @param showBackButton false when shown as the detail pane next to a list on a tablet: the list
+ *   is right there, so a back arrow would only add noise.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RecipeDetailScreen(
@@ -113,6 +129,9 @@ fun RecipeDetailScreen(
     onBack: () -> Unit,
     onToggleFavorite: () -> Unit,
     onBrowseCuisine: (String) -> Unit,
+    onServingsChange: (Int) -> Unit = {},
+    onStartCooking: () -> Unit = {},
+    showBackButton: Boolean = true,
     shopping: ShoppingCallbacks = ShoppingCallbacks.None,
 ) {
     val cs = MaterialTheme.colorScheme
@@ -122,8 +141,10 @@ fun RecipeDetailScreen(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    if (showBackButton) {
+                        IconButton(onClick = onBack) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        }
                     }
                 },
                 actions = {
@@ -154,108 +175,178 @@ fun RecipeDetailScreen(
                     onAction = onBack,
                 )
             }
-            else -> RecipeContent(recipe, state, padding, onBrowseCuisine, shopping)
+            else -> RecipeContent(
+                recipe = recipe,
+                state = state,
+                padding = padding,
+                actions = DetailActions(onBrowseCuisine, onServingsChange, onStartCooking, shopping),
+            )
         }
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
+private class DetailActions(
+    val onBrowseCuisine: (String) -> Unit,
+    val onServingsChange: (Int) -> Unit,
+    val onStartCooking: () -> Unit,
+    val shopping: ShoppingCallbacks,
+)
+
+/** One column on phones; overview + ingredients beside the method on wide windows. */
 @Composable
 private fun RecipeContent(
     recipe: Recipe,
     state: RecipeDetailUiState,
     padding: PaddingValues,
-    onBrowseCuisine: (String) -> Unit,
-    shopping: ShoppingCallbacks,
+    actions: DetailActions,
 ) {
-    val pantry = state.pantry
-    val conflicts = state.conflicts
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+        val twoColumns = maxWidth >= CraveLayout.TwoColumnWidth
+        val gutter = if (twoColumns) 24.dp else CraveLayout.gutterFor(maxWidth)
+        fun contentPadding(start: Boolean = true, end: Boolean = true) = PaddingValues(
+            start = if (start) gutter else 12.dp,
+            end = if (end) gutter else 12.dp,
+            top = padding.calculateTopPadding() + 4.dp,
+            bottom = padding.calculateBottomPadding() + 32.dp,
+        )
+        if (twoColumns) {
+            Row(Modifier.fillMaxSize()) {
+                LazyColumn(
+                    contentPadding = contentPadding(end = false),
+                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.weight(1f).fillMaxSize(),
+                ) {
+                    overviewItems(recipe, state, actions)
+                    ingredientItems(recipe, state, actions)
+                }
+                LazyColumn(
+                    contentPadding = contentPadding(start = false),
+                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.weight(1f).fillMaxSize(),
+                ) {
+                    methodItems(recipe, actions, topPadding = false)
+                }
+            }
+        } else {
+            LazyColumn(
+                contentPadding = contentPadding(),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                overviewItems(recipe, state, actions)
+                ingredientItems(recipe, state, actions)
+                methodItems(recipe, actions, topPadding = true)
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+private fun LazyListScope.overviewItems(recipe: Recipe, state: RecipeDetailUiState, actions: DetailActions) {
     val summary = recipe.summary
+    if (state.conflicts.isNotEmpty()) {
+        item("conflicts") {
+            val names = recipe.ingredients.associate { it.ingredient.id to it.ingredient.name }
+            ProfileConflictNotice(state.conflicts.map { c -> c.describe { id -> names[id] ?: id } })
+        }
+    }
+    item("hero") { RecipeHero(recipe) }
+    item("title") {
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(summary.cuisine, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+            Text(summary.title, style = MaterialTheme.typography.headlineMedium)
+        }
+    }
+    item("facts") { FactsRow(recipe, state.servings) }
+    if (recipe.steps.isNotEmpty()) {
+        item("cook") {
+            CraveButton(
+                "Start cooking",
+                onClick = actions.onStartCooking,
+                icon = Icons.Outlined.PlayArrow,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
+    }
+    item("heat") {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Heat", style = MaterialTheme.typography.labelLarge)
+            Spacer(Modifier.width(12.dp))
+            SpiceMeter(summary.spiceLevel)
+        }
+    }
+    item("tags") {
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            recipe.diets.sortedBy { it.ordinal }.forEach { CraveTag(it.label, icon = Icons.Outlined.Eco) }
+            summary.mealTypes.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
+            recipe.moods.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
+            recipe.textures.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
+        }
+    }
+    item("allergens") { AllergenNotice(recipe.allergens.sortedBy { it.ordinal }.map { it.label }) }
+    item("flavor") {
+        CraveSurface(Modifier.fillMaxWidth(), hardShadow = false) {
+            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Text("Flavor profile", style = MaterialTheme.typography.titleMedium)
+                FlavorProfile(summary.flavor.toFlavorMap())
+            }
+        }
+    }
+}
+
+private fun LazyListScope.ingredientItems(recipe: Recipe, state: RecipeDetailUiState, actions: DetailActions) {
+    val pantry = state.pantry
     // Have/missing marks only make sense once the user has listed something.
     val match = if (pantry.isEmpty) {
         null
     } else {
         val catalog = recipe.ingredients.associate { it.ingredient.id to it.ingredient }
-        PantryMatcher.matchRecipe(summary, recipe.ingredients.map { it.ingredient.id }, catalog, pantry)
+        PantryMatcher.matchRecipe(recipe.summary, recipe.ingredients.map { it.ingredient.id }, catalog, pantry)
     }
-    LazyColumn(
-        contentPadding = PaddingValues(
-            start = 20.dp,
-            end = 20.dp,
-            top = padding.calculateTopPadding() + 4.dp,
-            bottom = padding.calculateBottomPadding() + 32.dp,
-        ),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-        modifier = Modifier.fillMaxSize(),
-    ) {
-        if (conflicts.isNotEmpty()) {
-            item("conflicts") {
-                val names = recipe.ingredients.associate { it.ingredient.id to it.ingredient.name }
-                ProfileConflictNotice(conflicts.map { c -> c.describe { id -> names[id] ?: id } })
-            }
-        }
-        item("hero") { RecipeHero(recipe) }
-        item("title") {
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(summary.cuisine, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                Text(summary.title, style = MaterialTheme.typography.headlineMedium)
-            }
-        }
-        item("facts") { FactsRow(recipe) }
-        item("heat") {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Heat", style = MaterialTheme.typography.labelLarge)
-                Spacer(Modifier.width(12.dp))
-                SpiceMeter(summary.spiceLevel)
-            }
-        }
-        item("tags") {
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                recipe.diets.sortedBy { it.ordinal }.forEach { CraveTag(it.label, icon = Icons.Outlined.Eco) }
-                summary.mealTypes.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
-                recipe.moods.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
-                recipe.textures.sortedBy { it.ordinal }.forEach { CraveTag(it.label) }
-            }
-        }
-        item("allergens") { AllergenNotice(recipe.allergens.sortedBy { it.ordinal }.map { it.label }) }
-        item("flavor") {
-            CraveSurface(Modifier.fillMaxWidth(), hardShadow = false) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text("Flavor profile", style = MaterialTheme.typography.titleMedium)
-                    FlavorProfile(summary.flavor.toFlavorMap())
-                }
-            }
-        }
-        item("ingredients-header") {
-            SectionHeader(
-                "Ingredients",
-                eyebrow = buildString {
-                    append("Serves ${recipe.servings}")
-                    if (match != null) append(" · You have ${match.have.size} of ${match.total}")
-                },
-                modifier = Modifier.padding(top = 16.dp),
-            )
-        }
-        item("ingredients") { IngredientList(recipe, pantry, state.onShoppingList, shopping.onToggleIngredient) }
-        item("shopping") { ShoppingButton(state, shopping) }
-        item("steps-header") {
-            SectionHeader(
-                "Method",
-                eyebrow = if (recipe.steps.size == 1) "1 step" else "${recipe.steps.size} steps",
-                modifier = Modifier.padding(top = 16.dp),
-            )
-        }
-        itemsIndexed(recipe.steps, key = { i, _ -> "step-$i" }) { i, step -> StepRow(i + 1, step) }
-        item("more") {
-            CraveButton(
-                "More ${summary.cuisine} recipes",
-                onClick = { onBrowseCuisine(summary.cuisine) },
-                variant = CraveButtonVariant.Secondary,
-                modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
-            )
-        }
-        item("source") { SourceCredit(recipe) }
+    item("ingredients-header") {
+        SectionHeader(
+            "Ingredients",
+            eyebrow = when {
+                match != null -> "You have ${match.have.size} of ${match.total}"
+                RecipeScaling.isScaled(state.scale) -> "Scaled from ${recipe.servings}"
+                else -> null
+            },
+            modifier = Modifier.padding(top = 16.dp),
+        )
     }
+    item("servings") {
+        ServingsStepper(
+            value = state.servings,
+            onValueChange = actions.onServingsChange,
+            min = RecipeScaling.MIN_SERVINGS,
+            max = RecipeScaling.MAX_SERVINGS,
+        )
+    }
+    item("ingredients") {
+        IngredientList(recipe, state.scale, pantry, state.onShoppingList, actions.shopping.onToggleIngredient)
+    }
+    item("shopping") { ShoppingButton(state, actions.shopping) }
+}
+
+private fun LazyListScope.methodItems(recipe: Recipe, actions: DetailActions, topPadding: Boolean) {
+    val summary = recipe.summary
+    item("steps-header") {
+        SectionHeader(
+            "Method",
+            eyebrow = if (recipe.steps.size == 1) "1 step" else "${recipe.steps.size} steps",
+            modifier = if (topPadding) Modifier.padding(top = 16.dp) else Modifier,
+        )
+    }
+    itemsIndexed(recipe.steps, key = { i, _ -> "step-$i" }) { i, step -> StepRow(i + 1, step) }
+    item("more") {
+        CraveButton(
+            "More ${summary.cuisine} recipes",
+            onClick = { actions.onBrowseCuisine(summary.cuisine) },
+            variant = CraveButtonVariant.Outline,
+            modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+        )
+    }
+    item("source") { SourceCredit(recipe) }
 }
 
 @Composable
@@ -275,7 +366,7 @@ private fun RecipeHero(recipe: Recipe) {
 }
 
 @Composable
-private fun FactsRow(recipe: Recipe) {
+private fun FactsRow(recipe: Recipe, servings: Int) {
     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
         Fact(
             icon = Icons.Outlined.Schedule,
@@ -283,7 +374,7 @@ private fun FactsRow(recipe: Recipe) {
             label = "Prep ${recipe.prepMinutes} · Cook ${recipe.cookMinutes}",
             modifier = Modifier.weight(1.4f),
         )
-        Fact(Icons.Outlined.People, "${recipe.servings}", "Servings", Modifier.weight(1f))
+        Fact(Icons.Outlined.People, "$servings", "Servings", Modifier.weight(1f))
         Fact(Icons.Outlined.SignalCellularAlt, recipe.summary.difficulty.label, "Difficulty", Modifier.weight(1f))
     }
 }
@@ -307,6 +398,7 @@ private fun ShoppingButton(state: RecipeDetailUiState, shopping: ShoppingCallbac
         missing > 0 -> CraveButton(
             if (missing == 1) "Add 1 missing to shopping list" else "Add $missing missing to shopping list",
             onClick = shopping.onAddMissing,
+            variant = CraveButtonVariant.Secondary,
             icon = Icons.Outlined.AddShoppingCart,
             modifier = Modifier.fillMaxWidth(),
         )
@@ -323,6 +415,7 @@ private fun ShoppingButton(state: RecipeDetailUiState, shopping: ShoppingCallbac
 @Composable
 private fun IngredientList(
     recipe: Recipe,
+    scale: Double,
     pantry: Pantry,
     onShoppingList: Set<String>,
     onToggleShopping: (String) -> Unit,
@@ -335,7 +428,7 @@ private fun IngredientList(
                 val have = pantry.owns(line.ingredient)
                 Row(Modifier.heightIn(min = 48.dp).padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        line.rawMeasure,
+                        RecipeScaling.measure(line, scale),
                         style = MaterialTheme.typography.labelLarge,
                         modifier = Modifier.width(112.dp),
                     )
@@ -401,7 +494,9 @@ private fun SourceCredit(recipe: Recipe) {
             modifier = Modifier.weight(1f),
         )
         if (recipe.sourceUrl.isNotBlank()) {
-            TextButton(onClick = { uriHandler.openUri(recipe.sourceUrl) }) {
+            // The only link out of the app. Offline it simply opens in the browser later; with no
+            // browser installed openUri throws, so swallow that rather than crash.
+            TextButton(onClick = { runCatching { uriHandler.openUri(recipe.sourceUrl) } }) {
                 Text("View original", style = MaterialTheme.typography.labelLarge)
             }
         }
@@ -419,6 +514,20 @@ private fun RecipeDetailPreview() = CraveWiseTheme {
             pantry = Pantry(listOf("beef", "lemon")),
             conflicts = listOf(ProfileConflict.ContainsAllergen(Allergen.Soy), ProfileConflict.HatedIngredient("garlic")),
             onShoppingList = setOf("soy_sauce"),
+            servings = PreviewRecipes.recipe.servings * 2,
+        ),
+        onBack = {}, onToggleFavorite = {}, onBrowseCuisine = {},
+    )
+}
+
+@Preview(name = "Tablet", device = "spec:width=1280dp,height=800dp,dpi=240", showBackground = true)
+@Composable
+private fun RecipeDetailTabletPreview() = CraveWiseTheme {
+    RecipeDetailScreen(
+        state = RecipeDetailUiState(
+            isLoading = false,
+            recipe = PreviewRecipes.recipe,
+            servings = PreviewRecipes.recipe.servings,
         ),
         onBack = {}, onToggleFavorite = {}, onBrowseCuisine = {},
     )

@@ -1,37 +1,51 @@
 package com.example.cravewise.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ListAlt
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Kitchen
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.RestaurantMenu
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfoV2
+import androidx.compose.material3.adaptive.layout.calculatePaneScaffoldDirective
+import androidx.compose.material3.adaptive.navigation3.ListDetailSceneStrategy
+import androidx.compose.material3.adaptive.navigation3.rememberListDetailSceneStrategy
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteItem
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
+import androidx.compose.material3.adaptive.navigationsuite.rememberNavigationSuiteScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
+import com.example.cravewise.data.seed.CatalogStatus
 import com.example.cravewise.navigation.BrowseRoute
+import com.example.cravewise.navigation.CookModeRoute
+import com.example.cravewise.navigation.NavigationState
 import com.example.cravewise.navigation.DecideQuizRoute
 import com.example.cravewise.navigation.DesignCatalogRoute
 import com.example.cravewise.navigation.FavoritesRoute
@@ -43,7 +57,12 @@ import com.example.cravewise.navigation.RecipeDetailRoute
 import com.example.cravewise.navigation.SearchRoute
 import com.example.cravewise.navigation.ShoppingRoute
 import com.example.cravewise.navigation.rememberNavigationState
+import com.example.cravewise.ui.cook.CookModeScreen
 import com.example.cravewise.ui.cookbook.BrowseScreen
+import com.example.cravewise.ui.designsystem.CraveLayout
+import com.example.cravewise.ui.designsystem.CravePreviews
+import com.example.cravewise.ui.designsystem.ViaEmptyState
+import com.example.cravewise.ui.theme.CraveWiseTheme
 import com.example.cravewise.ui.cookbook.FavoritesScreen
 import com.example.cravewise.ui.designsystem.DesignSystemCatalogScreen
 import com.example.cravewise.ui.home.HomeScreen
@@ -65,10 +84,15 @@ private val TOP_LEVEL_DESTINATIONS: Map<NavKey, TopLevelDestination> = linkedMap
     ProfileRoute to TopLevelDestination(Icons.Outlined.Person, "Profile"),
 )
 
-/** Shows onboarding on first run, then the tabbed app. */
+/** Shows onboarding on first run, then the tabbed app. A broken catalog replaces both. */
 @Composable
 fun CraveWiseAppRoot(appViewModel: AppViewModel = hiltViewModel()) {
     val onboardingComplete by appViewModel.onboardingComplete.collectAsStateWithLifecycle()
+    val catalog by appViewModel.catalogStatus.collectAsStateWithLifecycle()
+    if (catalog is CatalogStatus.Failed) {
+        CatalogErrorScreen(onRetry = appViewModel::retryCatalog)
+        return
+    }
     when (onboardingComplete) {
         // Brief: DataStore answers almost at once. A plain canvas avoids flashing onboarding.
         null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
@@ -77,6 +101,7 @@ fun CraveWiseAppRoot(appViewModel: AppViewModel = hiltViewModel()) {
     }
 }
 
+@OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
 private fun CraveWiseTabs(appViewModel: AppViewModel) {
     val shoppingCount by appViewModel.shoppingToBuyCount.collectAsStateWithLifecycle()
@@ -86,6 +111,21 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
     )
     val navigator = remember(navigationState) { Navigator(navigationState) }
     val openProfile: () -> Unit = { navigator.navigate(ProfileRoute) }
+
+    // Tablets / unfolded foldables: recipe lists sit beside the recipe they opened.
+    val paneDirective = calculatePaneScaffoldDirective(currentWindowAdaptiveInfoV2())
+    val twoPane = paneDirective.maxHorizontalPartitions > 1
+    val listDetailStrategy = rememberListDetailSceneStrategy<NavKey>(directive = paneDirective)
+    val listPane = ListDetailSceneStrategy.listPane(detailPlaceholder = { RecipePanePlaceholder() })
+    val detailPane = ListDetailSceneStrategy.detailPane()
+
+    // Cook mode is full-screen: hide the bar/rail while it's on top.
+    val topKey = navigationState.backStacks[navigationState.topLevelRoute]?.lastOrNull()
+    val isNavVisible = topKey !is CookModeRoute
+    val navSuiteState = rememberNavigationSuiteScaffoldState()
+    LaunchedEffect(isNavVisible) {
+        if (isNavVisible) navSuiteState.show() else navSuiteState.hide()
+    }
 
     val entryProvider = entryProvider<NavKey> {
         entry<HomeRoute> {
@@ -99,7 +139,7 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
                 onOpenProfile = openProfile,
             )
         }
-        entry<PantryRoute> {
+        entry<PantryRoute>(metadata = listPane) {
             PantryScreen(
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { navigator.navigate(BrowseRoute()) },
@@ -107,7 +147,7 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
                 onOpenShopping = { navigator.navigate(ShoppingRoute) },
             )
         }
-        entry<SearchRoute> {
+        entry<SearchRoute>(metadata = listPane) {
             SearchScreen(
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
                 onBrowse = { navigator.navigate(BrowseRoute()) },
@@ -122,7 +162,7 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
                 onOpenDesignSystem = { navigator.navigate(DesignCatalogRoute) },
             )
         }
-        entry<BrowseRoute> { key ->
+        entry<BrowseRoute>(metadata = listPane) { key ->
             BrowseScreen(
                 route = key,
                 onBack = navigator::goBack,
@@ -130,7 +170,7 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
                 onOpenProfile = openProfile,
             )
         }
-        entry<FavoritesRoute> {
+        entry<FavoritesRoute>(metadata = listPane) {
             FavoritesScreen(
                 onBack = navigator::goBack,
                 onRecipeClick = { id -> navigator.navigate(RecipeDetailRoute(id)) },
@@ -146,44 +186,101 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
                 onOpenProfile = openProfile,
             )
         }
-        entry<RecipeDetailRoute> { key ->
+        entry<RecipeDetailRoute>(metadata = detailPane) { key ->
+            // Beside its list on a tablet, the detail pane needs no back arrow.
+            val inPane = twoPane && navigationState.opensFromList(key)
             RecipeDetailScreen(
                 recipeId = key.recipeId,
                 onBack = navigator::goBack,
                 onBrowseCuisine = { cuisine -> navigator.navigate(BrowseRoute(cuisine = cuisine)) },
+                onStartCooking = { servings -> navigator.navigate(CookModeRoute(key.recipeId, servings)) },
+                showBackButton = !inPane,
             )
         }
+        entry<CookModeRoute> { key -> CookModeScreen(route = key, onExit = navigator::goBack) }
     }
 
-    Scaffold(
-        contentWindowInsets = WindowInsets(0.dp),
-        bottomBar = {
-            NavigationBar {
-                TOP_LEVEL_DESTINATIONS.forEach { (route, destination) ->
-                    NavigationBarItem(
-                        selected = route == navigationState.topLevelRoute,
-                        onClick = { navigator.navigate(route) },
-                        icon = {
-                            if (route == ShoppingRoute && shoppingCount > 0) {
-                                BadgedBox(badge = { Badge { Text(if (shoppingCount > 99) "99+" else "$shoppingCount") } }) {
-                                    Icon(destination.icon, contentDescription = null)
-                                }
-                            } else {
-                                Icon(destination.icon, contentDescription = null)
-                            }
-                        },
-                        label = { Text(destination.label) },
-                    )
-                }
+    // Bottom bar on phones, rail on tablets and desktop windows.
+    NavigationSuiteScaffold(
+        state = navSuiteState,
+        containerColor = MaterialTheme.colorScheme.background,
+        navigationItems = {
+            TOP_LEVEL_DESTINATIONS.forEach { (route, destination) ->
+                NavigationSuiteItem(
+                    selected = route == navigationState.topLevelRoute,
+                    onClick = { navigator.navigate(route) },
+                    icon = { Icon(destination.icon, contentDescription = null) },
+                    label = { Text(destination.label) },
+                    badge = if (route == ShoppingRoute && shoppingCount > 0) {
+                        { Badge { Text(if (shoppingCount > 99) "99+" else "$shoppingCount") } }
+                    } else {
+                        null
+                    },
+                )
             }
         },
-    ) { innerPadding ->
+    ) {
         NavDisplay(
             entries = navigationState.toDecoratedEntries(entryProvider),
             onBack = { navigator.goBack() },
-            modifier = Modifier
-                .padding(innerPadding)
-                .consumeWindowInsets(innerPadding),
+            sceneStrategies = listOf(listDetailStrategy),
         )
     }
 }
+
+/** True when the entry under [key] is a recipe list, i.e. the two would share a list-detail scene. */
+private fun NavigationState.opensFromList(key: NavKey): Boolean {
+    val stack = backStacks.values.firstOrNull { key in it } ?: return false
+    val previous = stack.getOrNull(stack.lastIndexOf(key) - 1)
+    return previous is BrowseRoute || previous == FavoritesRoute || previous == SearchRoute || previous == PantryRoute
+}
+
+/** Detail pane before a recipe is picked. No Via here: the list beside it may already show one. */
+@Composable
+private fun RecipePanePlaceholder() {
+    Column(
+        Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(32.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Icon(
+            Icons.Outlined.RestaurantMenu,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(64.dp),
+        )
+        Text("Pick a recipe", style = MaterialTheme.typography.headlineSmall)
+        Text(
+            "Tap any dish in the list and it'll open right here.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center,
+        )
+    }
+}
+
+/** The bundled recipes couldn't be loaded (corrupt install, full disk). Nothing works without them. */
+@Composable
+private fun CatalogErrorScreen(onRetry: () -> Unit) {
+    Box(
+        Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).safeDrawingPadding(),
+        contentAlignment = Alignment.Center,
+    ) {
+        ViaEmptyState(
+            title = "The cookbook got stuck",
+            body = "I couldn't open the recipe collection on this phone. Try again, and if it keeps happening, " +
+                "free up some storage or reinstall CraveWise. Your kitchen and lists are safe.",
+            actionLabel = "Try again",
+            onAction = onRetry,
+            modifier = Modifier.widthIn(max = CraveLayout.ReadableWidth),
+        )
+    }
+}
+
+@CravePreviews
+@Composable
+private fun CatalogErrorPreview() = CraveWiseTheme { CatalogErrorScreen(onRetry = {}) }
+
+@CravePreviews
+@Composable
+private fun RecipePanePlaceholderPreview() = CraveWiseTheme { RecipePanePlaceholder() }
