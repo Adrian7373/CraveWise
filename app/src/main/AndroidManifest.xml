@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Cook-mode timer alarm. Normal permission, granted at install. No INTERNET: the app is fully offline. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".CraveWiseApplication"
         android:allowBackup="true"
