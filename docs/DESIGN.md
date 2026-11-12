@@ -12,6 +12,7 @@ and **one mascot (Via the panda)**. Light and dark themes are both first-class.
 | Type scale | `ui/theme/Type.kt` |
 | Theme entry point, shapes, `CraveExtras`, `Flavor` | `ui/theme/Theme.kt` |
 | Reusable components + `@CravePreviews` | `ui/designsystem/CraveComponents.kt` |
+| Cooking components + layout tokens (`CraveLayout`, `readableWidth`) | `ui/designsystem/CraveCookComponents.kt` |
 | Living catalog screen + component previews | `ui/designsystem/DesignSystemCatalogScreen.kt` |
 | Via artwork | `app/src/main/res/drawable-nodpi/via.png` (flat backdrop `#F5E2D2`) |
 
@@ -43,12 +44,18 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 - `headlineMedium`: screen hero question. `headlineSmall`: section titles (`SectionHeader`).
 - `titleLarge`: card titles. `titleMedium`: in-card headings.
 - `bodyLarge/Medium`: copy. `labelLarge`: buttons and chips. `labelMedium`: tags and metadata.
+- `cookStep` (`MaterialTheme.typography.cookStep`, body face at 24/34sp) is used only for the current step in cook mode, so it can be read from the counter.
 - Platform sans-serif for now. To brand it, change only `HeadingFamily`/`BodyFamily` in `Type.kt`.
 
 ### Shape & spacing
 - Shapes: `small` 12, `medium` 16, `large` 22 (cards), `extraLarge` 28; buttons 16; chips pill.
 - Spacing: screen gutters **20dp**, gaps between stacked items **16dp**, between sections **32dp**,
   card padding **16dp** (feature cards 20dp). Minimum touch target 48dp (buttons are 52dp tall).
+- Wide windows use `CraveLayout`:
+  - `ReadableWidth` (720dp): the cap for single-column screens. Apply `Modifier.readableWidth()` to the main list.
+  - `TwoColumnWidth` (720dp): where recipe detail and cook mode split into two columns.
+  - `CardMinWidth` (320dp): the cell size for `GridCells.Adaptive` recipe grids.
+  - The nav bar becomes a rail automatically (`NavigationSuiteScaffold`).
 
 ## Components (`ui/designsystem`)
 
@@ -65,7 +72,10 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `RecipeCard` | Any recipe in a list (browse, pantry results, search). Optional `matchPercent` badge and `footer` slot (e.g. missing-ingredient pills) |
 | `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard action key (e.g. add the top pantry suggestion; `imeAction` picks Done/Search), and `onClear` to show a × while there's text |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |
-| `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results states |
+| `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results/error states (error copy says what happened and offers "Try again") |
+| `ServingsStepper` | − N servings + control (recipe detail). Flat container; the buttons are the actions |
+| `StepProgress` | Segmented progress through cook-mode steps |
+| `CookTimerCard` | A running/paused/done kitchen timer with pause, +1 min and dismiss. It turns tomato when done |
 
 ### Guidelines
 - **One `Primary` button per screen.** Use `Secondary` or `Outline` for everything else.

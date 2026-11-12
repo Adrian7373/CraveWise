@@ -10,7 +10,7 @@ CraveWise is a single-module Android app (`:app`, package `com.example.cravewise
 - **"Help me decide" quiz** covering cuisine, allergies, hated ingredients, spice tolerance, proteins, etc.
 - **Smart search**, e.g. "something salty".
 
-Current state: Phases 0–5 and 6a are done (shell, Room data layer + seed, cookbook, pantry match, profile + quiz, shopping list, lexicon + full-text smart search). Every tab and screen is real. Phase 6b (on-device vector search) and optional LLM query parsing are next.
+Current state: Phases 0–5, 6a and 7 are done (shell, Room data layer + seed, cookbook, pantry match, profile + quiz, shopping list, lexicon + full-text smart search, polish: cook mode + timers, servings scaling, offline/error states, tablet layout). Every tab and screen is real. Phase 6b (on-device vector search) and optional LLM query parsing are still open.
 
 Pantry match: `domain/PantryMatcher` (pure, ID-based, buckets Cook now / Almost there (1–2 missing) / Needs a shop) and `domain/IngredientSearch` (type-ahead over names + synonyms). The pantry list is the `pantry_items` Room table; the "assume basics" (`isPantryStaple`) toggle is in DataStore (`user_prefs`).
 
@@ -19,6 +19,12 @@ Profile (Phase 4): `FoodProfile` = allergens, diets, hated ingredient ids, `maxS
 Shopping (Phase 5): Room tables `shopping_items` (one row per ingredient id, or `custom:<name>` for free text; name/aisle snapshot) and `shopping_shares` (one row per source: recipe id + line position, or `""` for manual adds; cascades only to items). `ShoppingDao` holds the transactional ops (idempotent add, remove a recipe's share + orphan cleanup, Done shopping → pantry, clear) and each returns a `ShoppingSnapshot` for undo. `domain/ShoppingQuantities` merges amounts (mass and volume convert; other units sum only with themselves; unparsed text is appended), and `domain/ShoppingList` groups rows by aisle in `STORE_WALK` order with a checked "basket" plus share text. You can add from recipe detail ("Add N missing", using the same `Pantry.owns` rule so staples are skipped, plus a per-ingredient toggle), from Pantry "Almost there" cards, or by hand on the Shopping tab. The tab badge (`AppViewModel.shoppingToBuyCount`) counts unchecked items. The "For these recipes" strip goes through `ProfileGate`; items themselves are never hidden. No servings scaling yet (Phase 7).
 
 Smart search (Phase 6a), in `domain/search/`: `QueryParser` (built once per catalog) turns text into a `SearchQuery` using the fixed `SearchLexicon` (flavors, textures, moods, meal types, diets, proteins, allergens, time, difficulty, "with what I have", negators like "no"/"without"/"-free") plus catalog cuisines and an ingredient index. Phrases match longest-first, and fixed entries beat cuisines, which beat ingredients. Ingredient words cover their head-noun family ("mushroom" → shiitake mushrooms, but "rice" ≠ rice vinegar). Unknown words become full-text terms. `SmartSearch.search` treats meal type, cuisine, diet, time, difficulty, exclusions and pantry as hard filters, and scores wants: a result must match at least one want, and results split into best (all wants) and close matches. Full text is the Room FTS4 table `recipe_fts` (Porter, prefix queries; title, cuisine, ingredient names + raw wording). It's derived data: `CatalogDao.rebuildSearchIndex()` runs inside `replaceCatalog`, and `SeedImporter` rebuilds it when its count drifts from `recipes`. `SearchRepository` sanitizes FTS input and keeps recent searches in DataStore. `SearchViewModel` applies `ProfileGate` last. Vectors (6b) must stay on-device (local-only), not pgvector.
+
+Polish (Phase 7):
+- **Servings scaling:** `domain/RecipeScaling` multiplies parsed amounts, keeps the recipe's own wording (it swaps only the leading number and re-pluralizes known unit words), and leaves unparsed lines ("To taste") alone. Recipe detail has a `ServingsStepper`; the choice lives in `RecipeDetailViewModel`'s `SavedStateHandle`. Adding to the shopping list passes `servings`, so shares store scaled amounts. Re-adding stays idempotent and keeps the first amount.
+- **Cook mode** (`ui/cook`, `CookModeRoute(recipeId, servings)`): full-screen pager, one step per page plus a "done" page. `domain/cook/StepTimers` finds durations in the step text (digits, ½, number words, ranges use the lower bound, "1 hour 30 minutes"). `domain/cook/CookTimer` is immutable and runs on `elapsedRealtime`; it is saved as JSON in `SavedStateHandle`. `CookModeViewModel` ticks every 250ms only while a timer runs, rings each timer once through `TimerAlarm` (looping alarm sound + vibration, stops after 60s, on dismiss/+1 min, or on exit), keeps the screen on, and confirms before you leave with timers running. Timers live only as long as cook mode does; there's no notification or foreground service yet. The ingredient checklist is a bottom sheet on phones and a side panel at ≥720dp.
+- **Offline / errors:** the app has no INTERNET permission. `SeedImporter.status` (`CatalogStatus`) records import failures, and repositories call `ensureSeededSafely()` (which never throws). `CraveWiseAppRoot` swaps in a full-screen "Try again" error when it fails. "View original" ignores a missing browser.
+- **Tablet:** `NavigationSuiteScaffold` gives a bottom bar on phones and a rail on wider windows, and hides itself while cook mode is on top. `ListDetailSceneStrategy` (`adaptive-navigation3`) puts Pantry/Search/Browse/Favorites (list) beside RecipeDetail (detail), with a placeholder pane; at that width the detail screen drops its back arrow (`showBackButton`). Browse and Favorites use `GridCells.Adaptive(CraveLayout.CardMinWidth)`. Recipe detail and cook mode split into two columns at `CraveLayout.TwoColumnWidth`. Single-column screens use `Modifier.readableWidth()`.
 
 ## Commands (Windows / PowerShell, run from repo root)
 
@@ -53,11 +59,12 @@ MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't ex
 - `navigation/NavigationState.kt`: one `NavBackStack` per tab, saved across process death. Uses the "exit through home" pattern (Home's stack is always at the bottom). Each entry is decorated with saveable-state and ViewModel-store decorators, so `hiltViewModel()` inside an entry is scoped to that entry.
 - `navigation/Navigator.kt`: the only place that changes nav state. `navigate(route)` switches tabs if `route` is a tab key, otherwise pushes onto the current tab. `navigateInTab(tab, route)` does a cross-tab push.
 - `ui/CraveWiseAppRoot.kt`: holds the tab list (`TOP_LEVEL_DESTINATIONS`), the `entryProvider` that maps each route to a screen, and the outer `Scaffold` + `NavigationBar` + `NavDisplay`.
-- **To add a screen:** add a route in `Routes.kt`, then add an `entry<...>` in `CraveWiseAppRoot.kt`.
+- **To add a screen:** add a route in `Routes.kt`, then add an `entry<...>` in `CraveWiseAppRoot.kt`. A new recipe list should get `metadata = listPane` so it pairs with the detail pane on tablets.
+- The outer container is `NavigationSuiteScaffold`, not `Scaffold`. Full-screen routes hide it through `navSuiteState` (see `isNavVisible`).
 
 **Insets / edge-to-edge:**
 - `MainActivity` calls `enableEdgeToEdge()`.
-- The outer Scaffold uses zero content insets and applies `padding(innerPadding).consumeWindowInsets(innerPadding)` to `NavDisplay`.
+- `NavigationSuiteScaffold` consumes the bar/rail insets for `NavDisplay`.
 - Each screen owns its own inner `Scaffold` + `TopAppBar`, which handles the status-bar inset.
 
 **Theme / design system:** "Noodle Pop". Tokens live in `ui/theme/` (fixed brand palette, no dynamic color on purpose); reusable components and the catalog live in `ui/designsystem/`. The mascot is Via the panda. XML themes are window-only (`android:Theme.Material.*.NoActionBar`); all styling happens in Compose. Follow the rules in the design doc below: theme tokens only, `@CravePreviews` on every component, and every new component added to the catalog.
@@ -78,7 +85,7 @@ MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't ex
   4. Profile + quiz
   5. Shopping list
   6. Smart search (6a lexicon + FTS done; 6b on-device vectors; optional LLM parsing)
-  7. Polish (cook mode, timers, servings scaling)
+  7. Polish (done: cook mode, timers, servings scaling, offline/error states, tablet layout)
 - **Before public release:** TheMealDB-derived content is acceptable for testers but must be replaced or rewritten.
 
 - Never add Claude as co-author in commits or PRs” in CLAUDE.md.
