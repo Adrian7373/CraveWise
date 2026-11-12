@@ -38,7 +38,7 @@ class OfflineSearchRepository @Inject constructor(
 
     override suspend fun textHits(terms: Collection<String>): Map<String, TextHits> {
         if (terms.isEmpty()) return emptyMap()
-        seeder.ensureSeeded()
+        seeder.ensureSeededSafely()
         return terms.associateWith { term ->
             val words = ftsWords(term)
             if (words.isEmpty()) return@associateWith TextHits()

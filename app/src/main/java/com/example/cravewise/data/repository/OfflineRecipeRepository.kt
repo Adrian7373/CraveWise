@@ -27,7 +27,10 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.serialization.KSerializer
 import javax.inject.Inject
 
-/** Room-backed repository over the bundled catalog. "Offline" = no network source exists yet. */
+/**
+ * Room-backed repository over the bundled catalog. Fully offline: the app has no network source
+ * (and no INTERNET permission). Seeding failures surface through [SeedImporter.status].
+ */
 class OfflineRecipeRepository @Inject constructor(
     private val dao: CatalogDao,
     private val seeder: SeedImporter,
@@ -35,28 +38,28 @@ class OfflineRecipeRepository @Inject constructor(
 
     override fun observeRecipeSummaries(): Flow<List<RecipeSummary>> =
         dao.observeRecipesWithTags()
-            .onStart { seeder.ensureSeeded() }
+            .onStart { seeder.ensureSeededSafely() }
             .map { rows -> rows.map(RecipeWithTags::toSummary) }
 
     override fun observeRecipe(id: String): Flow<Recipe?> =
         dao.observeRecipeDetail(id)
-            .onStart { seeder.ensureSeeded() }
+            .onStart { seeder.ensureSeededSafely() }
             .map { it?.toDomain() }
 
     override fun observeIngredients(): Flow<List<Ingredient>> =
         dao.observeIngredientsWithSynonyms()
-            .onStart { seeder.ensureSeeded() }
+            .onStart { seeder.ensureSeededSafely() }
             .map { list ->
                 list.map { row -> row.ingredient.toDomain(row.synonyms.mapTo(mutableSetOf()) { it.synonym }) }
             }
 
     override fun observeRecipeIngredientIds(): Flow<Map<String, List<String>>> =
         dao.observeRecipeIngredientRefs()
-            .onStart { seeder.ensureSeeded() }
+            .onStart { seeder.ensureSeededSafely() }
             .map { refs -> refs.groupBy({ it.recipeId }, { it.ingredientId }) }
 
     override suspend fun resolveIngredientId(text: String): String? {
-        seeder.ensureSeeded()
+        seeder.ensureSeededSafely()
         return dao.findIngredientIdBySynonym(SeedMapper.normalize(text))
     }
 }

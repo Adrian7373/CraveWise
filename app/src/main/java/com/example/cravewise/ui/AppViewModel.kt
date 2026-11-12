@@ -4,10 +4,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.ShoppingRepository
+import com.example.cravewise.data.seed.CatalogStatus
+import com.example.cravewise.data.seed.SeedImporter
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /** App-level state that decides what the root shows. */
@@ -15,7 +18,14 @@ import javax.inject.Inject
 class AppViewModel @Inject constructor(
     profiles: ProfileRepository,
     shopping: ShoppingRepository,
+    private val seeder: SeedImporter,
 ) : ViewModel() {
+
+    init {
+        // Start the (usually no-op) catalog check right away so a failure shows up even before
+        // any screen asks for recipes.
+        viewModelScope.launch { seeder.ensureSeededSafely() }
+    }
 
     /** Null while loading, so the app doesn't flash onboarding for returning users. */
     val onboardingComplete: StateFlow<Boolean?> =
@@ -26,4 +36,11 @@ class AppViewModel @Inject constructor(
     val shoppingToBuyCount: StateFlow<Int> =
         shopping.observeToBuyCount()
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), 0)
+
+    /** A failed import replaces the whole app with a retry screen (nothing works without recipes). */
+    val catalogStatus: StateFlow<CatalogStatus> = seeder.status
+
+    fun retryCatalog() {
+        viewModelScope.launch { seeder.retry() }
+    }
 }

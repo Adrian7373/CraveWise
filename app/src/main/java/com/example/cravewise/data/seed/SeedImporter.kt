@@ -19,7 +19,12 @@ import com.example.cravewise.domain.model.Mood
 import com.example.cravewise.domain.model.Protein
 import com.example.cravewise.domain.model.Texture
 import dagger.hilt.android.qualifiers.ApplicationContext
+import android.util.Log
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -43,6 +48,13 @@ class AssetSeedFileReader @Inject constructor(
     }
 }
 
+/** Whether the bundled catalog is usable. Drives the app-wide error screen. */
+sealed interface CatalogStatus {
+    data object Loading : CatalogStatus
+    data object Ready : CatalogStatus
+    data class Failed(val cause: Throwable) : CatalogStatus
+}
+
 /**
  * Keeps the Room catalog in step with the dataset bundled in the APK ("sync" for a local-only app).
  * On each launch it reads the tiny manifest; only when its version differs from what's stored does
@@ -57,10 +69,38 @@ class SeedImporter @Inject constructor(
 ) {
     private val mutex = Mutex()
     @Volatile private var upToDate = false
+    private val _status = MutableStateFlow<CatalogStatus>(CatalogStatus.Loading)
+
+    val status: StateFlow<CatalogStatus> = _status.asStateFlow()
+
+    /**
+     * [ensureSeeded] for read paths: never throws. A failure (corrupt asset, full disk) is reported
+     * through [status] so the app shows a retry screen instead of crashing; callers then just see
+     * whatever the database already holds.
+     */
+    suspend fun ensureSeededSafely() {
+        try {
+            ensureSeeded()
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Log.e(TAG, "Catalog import failed", e)
+            _status.value = CatalogStatus.Failed(e)
+        }
+    }
+
+    /** Clears a failure and tries again. */
+    suspend fun retry() {
+        _status.value = CatalogStatus.Loading
+        ensureSeededSafely()
+    }
 
     /** Idempotent and cheap after the first call in a process. Returns true if it (re)seeded. */
     suspend fun ensureSeeded(): Boolean {
-        if (upToDate) return false
+        if (upToDate) {
+            _status.value = CatalogStatus.Ready
+            return false
+        }
         return mutex.withLock {
             if (upToDate) return@withLock false
             withContext(io) {
@@ -78,6 +118,7 @@ class SeedImporter @Inject constructor(
                     dao.rebuildSearchIndex()
                 }
                 upToDate = true
+                _status.value = CatalogStatus.Ready
                 needsSeed
             }
         }
@@ -97,6 +138,7 @@ class SeedImporter @Inject constructor(
 
     private companion object {
         const val MANIFEST = "manifest.json"
+        const val TAG = "SeedImporter"
         val json = Json { ignoreUnknownKeys = true }
     }
 }
