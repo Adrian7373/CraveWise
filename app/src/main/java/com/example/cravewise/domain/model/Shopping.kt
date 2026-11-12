@@ -2,7 +2,8 @@ package com.example.cravewise.domain.model
 
 /**
  * One source's share of a shopping item: a recipe line, or the user's own manual add
- * ([recipeId] null). Amounts are the recipe's parsed measure (no servings scaling yet).
+ * ([recipeId] null). Amounts are the recipe's parsed measure, scaled to the servings chosen when
+ * it was added.
  */
 data class ShoppingShare(
     val recipeId: String?,

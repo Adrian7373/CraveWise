@@ -4,6 +4,7 @@ import com.example.cravewise.data.local.ShoppingDao
 import com.example.cravewise.data.local.ShoppingItemEntity
 import com.example.cravewise.data.local.ShoppingShareEntity
 import com.example.cravewise.data.local.ShoppingSnapshot
+import com.example.cravewise.domain.RecipeScaling
 import com.example.cravewise.domain.model.Aisle
 import com.example.cravewise.domain.model.Ingredient
 import com.example.cravewise.domain.model.ShoppingEntry
@@ -36,10 +37,11 @@ interface ShoppingRepository {
     fun observeRecipeIds(): Flow<Set<String>>
 
     /**
-     * Adds this recipe's lines for [ingredientIds] (each with the recipe's own amount). Lines already
-     * added from this recipe are skipped, so adding a recipe twice never doubles it.
+     * Adds this recipe's lines for [ingredientIds], with amounts scaled to [servings] (null = the
+     * recipe's own yield). Lines already added from this recipe are skipped, so adding a recipe twice
+     * never doubles it (and keeps the amount it was first added with).
      */
-    suspend fun addFromRecipe(recipeId: String, ingredientIds: Set<String>)
+    suspend fun addFromRecipe(recipeId: String, ingredientIds: Set<String>, servings: Int? = null)
 
     /** Takes back one recipe's share of one ingredient. */
     suspend fun removeFromRecipe(recipeId: String, ingredientId: String)
@@ -82,9 +84,10 @@ class OfflineShoppingRepository @Inject constructor(
 
     override fun observeRecipeIds(): Flow<Set<String>> = dao.observeRecipeIds().map { it.toSet() }
 
-    override suspend fun addFromRecipe(recipeId: String, ingredientIds: Set<String>) {
+    override suspend fun addFromRecipe(recipeId: String, ingredientIds: Set<String>, servings: Int?) {
         if (ingredientIds.isEmpty()) return
         val recipe = recipes.observeRecipe(recipeId).first() ?: return
+        val factor = servings?.let { RecipeScaling.factor(recipe.servings, it) } ?: 1.0
         val now = System.currentTimeMillis()
         val lines = recipe.ingredients.withIndex().filter { (_, line) -> line.ingredient.id in ingredientIds }
         val items = lines.map { (_, line) -> line.ingredient.toItem(now) }.distinctBy { it.itemKey }
@@ -93,8 +96,8 @@ class OfflineShoppingRepository @Inject constructor(
                 itemKey = ShoppingEntry.keyFor(line.ingredient.id),
                 recipeId = recipeId,
                 position = position,
-                amount = line.amount,
-                amountMax = line.amountMax,
+                amount = line.amount?.times(factor),
+                amountMax = line.amountMax?.times(factor),
                 unit = line.unit,
                 rawMeasure = line.rawMeasure,
                 addedAtEpochMs = now,
