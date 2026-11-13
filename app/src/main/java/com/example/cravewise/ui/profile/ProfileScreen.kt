@@ -151,6 +151,20 @@ fun ProfileScreen(state: ProfileUiState, actions: ProfileActions) {
                     )
                 }
             }
+            item("credits") {
+                Section("Credits", eyebrow = "Data sources") {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(
+                            "Nutrition estimates: USDA FoodData Central (SR Legacy).",
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                        Text(
+                            "Recipes adapted from TheMealDB (testing only).",
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                    }
+                }
+            }
         }
     }
 }

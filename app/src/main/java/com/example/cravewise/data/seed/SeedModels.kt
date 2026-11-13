@@ -37,6 +37,21 @@ data class SeedIngredient(
     val contains: Set<ContainsFlag> = emptySet(),
     val protein: Protein? = null,
     val isPantryStaple: Boolean,
+    /** Per 100 g from USDA FDC; null when there's no sensible match. */
+    val nutrition: SeedNutrition? = null,
+)
+
+/** Per 100 g: kcal, grams, sodium in mg. */
+@Serializable
+data class SeedNutrition(
+    val fdcId: Int,
+    val kcal: Double,
+    val protein: Double,
+    val carbs: Double,
+    val fat: Double,
+    val fiber: Double,
+    val sugar: Double,
+    val sodium: Double,
 )
 
 @Serializable
@@ -58,6 +73,8 @@ data class SeedRecipeIngredient(
     val amountMax: Double? = null,
     val unit: MeasureUnit? = null,
     val note: String? = null,
+    /** Weight at the recipe's own servings (0 = negligible, null = couldn't weigh). */
+    val grams: Double? = null,
 )
 
 @Serializable

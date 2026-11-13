@@ -71,6 +71,7 @@ import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.CraveTag
 import com.example.cravewise.ui.designsystem.FlavorProfile
+import com.example.cravewise.ui.designsystem.NutritionPanel
 import com.example.cravewise.ui.designsystem.ProfileConflictNotice
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ServingsStepper
@@ -290,6 +291,19 @@ private fun LazyListScope.overviewItems(recipe: Recipe, state: RecipeDetailUiSta
                 Text("Flavor profile", style = MaterialTheme.typography.titleMedium)
                 FlavorProfile(summary.flavor.toFlavorMap())
             }
+        }
+    }
+    // No grams at all = a dataset built without nutrition; show nothing rather than "unavailable".
+    state.nutrition?.takeIf { recipe.ingredients.any { it.grams != null } }?.let { n ->
+        item("nutrition") {
+            val scaled = RecipeScaling.isScaled(state.scale)
+            NutritionPanel(
+                perServing = n.perServing.takeIf { n.available },
+                coveredLines = n.coveredLines,
+                totalLines = n.totalLines,
+                servings = n.servings.takeIf { scaled },
+                totalKcal = n.total.kcal.takeIf { scaled },
+            )
         }
     }
 }

@@ -120,6 +120,7 @@ fun DesignSystemCatalogScreen(
                 item("via") { ViaSection() }
                 item("safety") { SafetySection() }
                 item("cooking") { CookingSection() }
+        item("nutrition") { NutritionSection() }
             }
         }
     }
@@ -436,6 +437,15 @@ private fun CookingSection() {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             CookTimerCard("Step 4 · 45 sec", "0:00", CookTimerState.Done, {}, {}, {})
         }
+    }
+}
+
+@Composable
+private fun NutritionSection() {
+    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        SectionHeader("Nutrition", eyebrow = "11 · Per serving")
+        NutritionPanel(PreviewNutrition, coveredLines = 9, totalLines = 11, servings = 6, totalKcal = 3072.0)
+        NutritionPanel(perServing = null, coveredLines = 5, totalLines = 11)
     }
 }
 

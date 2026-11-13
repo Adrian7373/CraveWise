@@ -16,6 +16,7 @@ import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.domain.model.Diet
 import com.example.cravewise.domain.model.MealType
 import com.example.cravewise.domain.model.Mood
+import com.example.cravewise.domain.model.NutritionPer100g
 import com.example.cravewise.domain.model.Protein
 import com.example.cravewise.domain.model.Texture
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -189,7 +190,7 @@ object SeedMapper {
                 lines += RecipeIngredientEntity(
                     recipeId = r.id, position = position, ingredientId = l.ingredientId,
                     rawName = l.rawName, rawMeasure = l.rawMeasure, amount = l.amount,
-                    amountMax = l.amountMax, unit = l.unit, note = l.note,
+                    amountMax = l.amountMax, unit = l.unit, note = l.note, grams = l.grams,
                 )
             }
             fun <T : Enum<T>> add(type: TagType, values: Set<T>, name: (T) -> String) =
@@ -206,6 +207,9 @@ object SeedMapper {
             IngredientEntity(
                 id = it.id, name = it.name, aisle = it.aisle, allergens = it.allergens,
                 contains = it.contains, protein = it.protein, isPantryStaple = it.isPantryStaple,
+                per100g = it.nutrition?.let { n ->
+                    NutritionPer100g(n.fdcId, n.kcal, n.protein, n.carbs, n.fat, n.fiber, n.sugar, n.sodium)
+                },
             )
         }
         return CatalogRows(recipes, ingredients, synonyms, lines, tags)

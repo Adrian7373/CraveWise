@@ -9,6 +9,8 @@ import com.example.cravewise.data.repository.PantryRepository
 import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.RecipeRepository
 import com.example.cravewise.data.repository.ShoppingRepository
+import com.example.cravewise.domain.Nutrition
+import com.example.cravewise.domain.NutritionEstimate
 import com.example.cravewise.domain.ProfileConflict
 import com.example.cravewise.domain.ProfileFilter
 import com.example.cravewise.domain.model.Pantry
@@ -42,6 +44,10 @@ data class RecipeDetailUiState(
     /** Multiplier for ingredient amounts at the chosen [servings]. */
     val scale: Double
         get() = recipe?.let { RecipeScaling.factor(it.servings, servings) } ?: 1.0
+
+    /** Estimated nutrition at the chosen [servings]; null while loading. */
+    val nutrition: NutritionEstimate?
+        get() = recipe?.let { Nutrition.estimate(it.ingredients, it.servings, servings) }
 
     /**
      * Distinct ingredients you don't own (same rule as the have/missing marks, so assumed staples

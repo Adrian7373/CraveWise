@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Pause
 import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Remove
@@ -39,7 +40,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.example.cravewise.domain.NutrientAmounts
 import com.example.cravewise.ui.theme.CraveTheme
+import java.util.Locale
+import kotlin.math.roundToInt
 
 // ---------------------------------------------------------------------------------------------
 // Layout: tablets and wide windows
@@ -199,6 +203,122 @@ fun CookTimerCard(
 }
 
 // ---------------------------------------------------------------------------------------------
+// Nutrition
+// ---------------------------------------------------------------------------------------------
+
+/**
+ * Estimated nutrition per serving: kcal headline, protein/carbs/fat bars (bar length = share of
+ * energy), then fiber, sugar and sodium, plus how many ingredients the estimate covers. Pass
+ * [perServing] = null for the "unavailable" state. Static info, so no sticker shadow.
+ *
+ * @param totalKcal whole-recipe energy at [servings], shown when the recipe is scaled.
+ */
+@Composable
+fun NutritionPanel(
+    perServing: NutrientAmounts?,
+    coveredLines: Int,
+    totalLines: Int,
+    modifier: Modifier = Modifier,
+    servings: Int? = null,
+    totalKcal: Double? = null,
+) {
+    val cs = MaterialTheme.colorScheme
+    CraveSurface(modifier.fillMaxWidth(), hardShadow = false) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(verticalAlignment = Alignment.Bottom) {
+                Text("Nutrition", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+                if (perServing != null) {
+                    Text("per serving", style = MaterialTheme.typography.labelMedium, color = cs.onSurfaceVariant)
+                }
+            }
+            if (perServing == null) {
+                Row(verticalAlignment = Alignment.Top) {
+                    Icon(Icons.Outlined.Info, contentDescription = null, tint = cs.onSurfaceVariant, modifier = Modifier.size(20.dp))
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        "Not enough data for this one: we could weigh $coveredLines of $totalLines ingredients, " +
+                            "so we'd rather not guess.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = cs.onSurfaceVariant,
+                    )
+                }
+                return@Column
+            }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                modifier = Modifier.semantics(mergeDescendants = true) {},
+            ) {
+                Text(formatWhole(perServing.kcal), style = MaterialTheme.typography.headlineMedium)
+                Spacer(Modifier.width(6.dp))
+                Text("kcal", style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(bottom = 4.dp))
+            }
+            val energy = (perServing.protein * 4 + perServing.carbs * 4 + perServing.fat * 9).coerceAtLeast(1.0)
+            MacroBar("Protein", perServing.protein, (perServing.protein * 4 / energy).toFloat(), cs.primary)
+            MacroBar("Carbs", perServing.carbs, (perServing.carbs * 4 / energy).toFloat(), cs.secondary)
+            MacroBar("Fat", perServing.fat, (perServing.fat * 9 / energy).toFloat(), cs.tertiary)
+            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                MinorFact("Fiber", "${formatGrams(perServing.fiber)} g")
+                MinorFact("Sugar", "${formatGrams(perServing.sugar)} g")
+                MinorFact("Sodium", "${formatWhole(perServing.sodium)} mg")
+            }
+            if (servings != null && totalKcal != null) {
+                Text(
+                    "Whole recipe (${if (servings == 1) "1 serving" else "$servings servings"}): ${formatWhole(totalKcal)} kcal",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+            }
+            Text(
+                "Estimated from $coveredLines of $totalLines ingredients using USDA data.",
+                style = MaterialTheme.typography.labelMedium,
+                color = cs.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@Composable
+private fun MacroBar(label: String, grams: Double, share: Float, color: androidx.compose.ui.graphics.Color) {
+    val cs = MaterialTheme.colorScheme
+    Column(
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+        modifier = Modifier.semantics(mergeDescendants = true) {
+            contentDescription = "$label ${formatGrams(grams)} grams, ${(share * 100).roundToInt()} percent of energy"
+        },
+    ) {
+        Row {
+            Text(label, style = MaterialTheme.typography.labelLarge, modifier = Modifier.weight(1f))
+            Text("${formatGrams(grams)} g", style = MaterialTheme.typography.labelLarge)
+        }
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(8.dp)
+                .background(cs.outlineVariant, CraveTheme.extras.chipShape),
+        ) {
+            Box(
+                Modifier
+                    .fillMaxWidth(share.coerceIn(0f, 1f))
+                    .height(8.dp)
+                    .background(color, CraveTheme.extras.chipShape),
+            )
+        }
+    }
+}
+
+@Composable
+private fun MinorFact(label: String, value: String) {
+    Column(Modifier.semantics(mergeDescendants = true) {}) {
+        Text(label, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(value, style = MaterialTheme.typography.labelLarge)
+    }
+}
+
+private fun formatWhole(value: Double): String = String.format(Locale.getDefault(), "%,d", value.roundToInt())
+
+private fun formatGrams(value: Double): String =
+    if (value < 10) String.format(Locale.getDefault(), "%.1f", value) else formatWhole(value)
+
+// ---------------------------------------------------------------------------------------------
 // Previews
 // ---------------------------------------------------------------------------------------------
 
@@ -208,6 +328,20 @@ private fun ServingsStepperPreview() = CravePreviewSurface {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         ServingsStepper(value = 4, onValueChange = {})
         ServingsStepper(value = 1, onValueChange = {}) // minus disabled
+    }
+}
+
+internal val PreviewNutrition = NutrientAmounts(
+    kcal = 512.0, protein = 31.4, carbs = 48.2, fat = 21.7, fiber = 6.3, sugar = 9.8, sodium = 840.0,
+)
+
+@CravePreviews
+@Composable
+private fun NutritionPanelPreview() = CravePreviewSurface {
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        NutritionPanel(PreviewNutrition, coveredLines = 9, totalLines = 11)
+        NutritionPanel(PreviewNutrition, coveredLines = 9, totalLines = 11, servings = 6, totalKcal = 3072.0)
+        NutritionPanel(perServing = null, coveredLines = 5, totalLines = 11)
     }
 }
 

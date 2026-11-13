@@ -20,7 +20,7 @@ import androidx.room.TypeConverters
         ShoppingShareEntity::class,
         RecipeFtsEntity::class,
     ],
-    version = 6,
+    version = 7,
     exportSchema = true,
     autoMigrations = [
         AutoMigration(from = 1, to = 2), // + favorites
@@ -28,6 +28,7 @@ import androidx.room.TypeConverters
         AutoMigration(from = 3, to = 4), // + hated_ingredients
         AutoMigration(from = 4, to = 5), // + shopping_items, shopping_shares
         AutoMigration(from = 5, to = 6), // + recipe_fts (filled by SeedImporter)
+        AutoMigration(from = 6, to = 7), // + ingredients.per100g_* nutrition, recipe_ingredients.grams
     ],
 )
 @TypeConverters(Converters::class)

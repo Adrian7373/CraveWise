@@ -10,6 +10,21 @@ data class FlavorScores(
     val spicy: Int,
 )
 
+/**
+ * Nutrients per 100 g from USDA FoodData Central (SR Legacy), matched at build time by
+ * tools/seedgen. Energy in kcal, sodium in mg, the rest in grams.
+ */
+data class NutritionPer100g(
+    val fdcId: Int,
+    val kcal: Double,
+    val protein: Double,
+    val carbs: Double,
+    val fat: Double,
+    val fiber: Double,
+    val sugar: Double,
+    val sodium: Double,
+)
+
 data class Ingredient(
     val id: String,
     val name: String,
@@ -18,6 +33,10 @@ data class Ingredient(
     val isPantryStaple: Boolean,
     /** Normalized (lower-case) name + synonyms, for the pantry picker. Empty where not loaded. */
     val synonyms: Set<String> = emptySet(),
+    /** Main protein this ingredient provides (meat, fish, egg, legumes...), if any. */
+    val protein: Protein? = null,
+    /** Null when the ingredient has no sensible FDC match. */
+    val nutrition: NutritionPer100g? = null,
 )
 
 /**
@@ -51,6 +70,12 @@ data class RecipeIngredientLine(
     val amountMax: Double?,
     val unit: MeasureUnit?,
     val note: String?,
+    /**
+     * Weight of this line at the recipe's own servings, worked out at build time. 0 for
+     * "to taste"/garnish lines, null when it couldn't be weighed (then it doesn't count towards
+     * nutrition coverage).
+     */
+    val grams: Double? = null,
 )
 
 /** Lightweight row for lists (browse, pantry results, search). */

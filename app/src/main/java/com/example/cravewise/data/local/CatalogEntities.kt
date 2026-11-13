@@ -1,6 +1,7 @@
 package com.example.cravewise.data.local
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Fts4
@@ -12,6 +13,7 @@ import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.domain.model.ContainsFlag
 import com.example.cravewise.domain.model.Difficulty
 import com.example.cravewise.domain.model.MeasureUnit
+import com.example.cravewise.domain.model.NutritionPer100g
 import com.example.cravewise.domain.model.Protein
 
 /*
@@ -51,6 +53,8 @@ data class IngredientEntity(
     val contains: Set<ContainsFlag>,
     val protein: Protein?,
     val isPantryStaple: Boolean,
+    /** USDA per-100 g facts (v7); all `per100g_*` columns null when there's no match. */
+    @Embedded(prefix = "per100g_") val per100g: NutritionPer100g? = null,
 )
 
 /** Normalized (lower-case, trimmed) names and synonyms → canonical id, for pantry entry lookup. */
@@ -85,6 +89,8 @@ data class RecipeIngredientEntity(
     val amountMax: Double?,
     val unit: MeasureUnit?,
     val note: String?,
+    /** Weight at the recipe's own servings (v7); null = couldn't weigh. */
+    val grams: Double? = null,
 )
 
 /** Kinds of multi-valued recipe tags stored in [RecipeTagEntity]. */

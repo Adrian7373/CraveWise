@@ -91,7 +91,7 @@ private fun RecipeWithTags.toSummary() = summaryOf(recipe, tags)
 
 private fun IngredientEntity.toDomain(synonyms: Set<String> = emptySet()) = Ingredient(
     id = id, name = name, aisle = aisle, allergens = allergens, isPantryStaple = isPantryStaple,
-    synonyms = synonyms,
+    synonyms = synonyms, protein = protein, nutrition = per100g,
 )
 
 private fun RecipeDetailRow.toDomain() = Recipe(
@@ -109,6 +109,7 @@ private fun RecipeDetailRow.toDomain() = Recipe(
             amountMax = line.amountMax,
             unit = line.unit,
             note = line.note,
+            grams = line.grams,
         )
     },
     steps = recipe.steps,

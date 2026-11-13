@@ -76,6 +76,7 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `ServingsStepper` | − N servings + control (recipe detail). Flat container; the buttons are the actions |
 | `StepProgress` | Segmented progress through cook-mode steps |
 | `CookTimerCard` | A running/paused/done kitchen timer with pause, +1 min and dismiss. It turns tomato when done |
+| `NutritionPanel` | Estimated nutrition per serving (recipe detail): kcal, protein/carbs/fat bars, fiber/sugar/sodium, coverage line, optional whole-recipe kcal when scaled. Pass `perServing = null` for the "not enough data" state. Flat, no shadow |
 
 ### Guidelines
 - **One `Primary` button per screen.** Use `Secondary` or `Outline` for everything else.
