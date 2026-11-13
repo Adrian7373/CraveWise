@@ -1,0 +1,161 @@
+{
+ "batch": 15,
+ "recipes": {
+  "mdb-53055": {
+   "textures": {"value": ["tender", "chewy"], "reason": "grilled minced sausages"},
+   "moods": {"value": ["hearty", "festive"], "reason": "Balkan barbecue"},
+   "servings": {"value": 6, "reason": "18 sausages"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, grill"}
+  },
+  "mdb-53056": {
+   "flavor.sweet": {"value": 1, "reason": "roast veg"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "slow-baked lamb and veg"},
+   "moods": {"value": ["hearty", "festive"], "reason": "Croatian Sunday bake"},
+   "servings": {"value": 4, "reason": "800g lamb"},
+   "difficulty": {"value": "easy", "reason": "marinate and bake"}
+  },
+  "mdb-53057": {
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "carrots, onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "long-simmered beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "goulash"},
+   "servings": {"value": 4, "reason": "500g beef"},
+   "difficulty": {"value": "easy", "reason": "brown and simmer"}
+  },
+  "mdb-53058": {
+   "textures": {"value": ["tender", "saucy"], "reason": "beans in tomato"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "bean and sausage stew"},
+   "servings": {"value": 4, "reason": "2 cans beans, 500g sausage"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53059": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "light"], "reason": "simple mushroom soup"},
+   "servings": {"value": 2, "reason": "150g mushrooms"},
+   "cookMinutes": {"value": 25, "reason": "simmering buckwheat"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53060": {
+   "flavor.salty": {"value": 1, "reason": "seasoned mince"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["flaky", "crispy"], "reason": "layered filo pie"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Balkan meat pie"},
+   "servings": {"value": 4, "reason": "cut in quarters"},
+   "difficulty": {"value": "easy", "reason": "layer and bake"}
+  },
+  "mdb-53061": {
+   "flavor.salty": {"value": 2, "reason": "salted fried fish"},
+   "textures": {"value": ["crispy"], "reason": "fried whole sardines"},
+   "moods": {"value": ["fresh", "light"], "reason": "seaside snack"},
+   "servings": {"value": 4, "reason": "500g sardines"},
+   "cookMinutes": {"value": 10, "reason": "quick deep fry"},
+   "difficulty": {"value": "easy", "reason": "flour and fry"}
+  },
+  "mdb-53062": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.bitter": {"value": 0, "reason": "walnuts are mild"},
+   "textures": {"value": ["fluffy", "crunchy"], "reason": "sweet bread, nut filling"},
+   "moods": {"value": ["festive", "comfort"], "reason": "holiday sweet bread"},
+   "servings": {"value": 12, "reason": "two 12-inch rolls"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, two rises"}
+  },
+  "mdb-53063": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["tender", "crispy"], "reason": "steak, bacon, egg"},
+   "moods": {"value": ["indulgent", "hearty"], "reason": "loaded sandwich"},
+   "servings": {"value": 2, "reason": "2 steaks, 2 breads"},
+   "cookMinutes": {"value": 15, "reason": "griddle and fry"},
+   "difficulty": {"value": "easy", "reason": "fry and stack"}
+  },
+  "mdb-53067": {
+   "flavor.sweet": {"value": 1, "reason": "sweetcorn"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "baked peppers, melted cheese"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "veggie bake"},
+   "servings": {"value": 4, "reason": "4 peppers"},
+   "difficulty": {"value": "easy", "reason": "fill and bake"}
+  },
+  "mdb-53068": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "beef in tomato sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Filipino stew"},
+   "servings": {"value": 6, "reason": "2lb beef"},
+   "difficulty": {"value": "easy", "reason": "marinate and cook"}
+  },
+  "mdb-53070": {
+   "flavor.sweet": {"value": 1, "reason": "peanut butter, tomato"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "rich beef stew"},
+   "moods": {"value": ["hearty", "festive"], "reason": "party stew"},
+   "servings": {"value": 8, "reason": "2kg beef"},
+   "difficulty": {"value": "medium", "reason": "pressure cooking plus frying veg"}
+  },
+  "mdb-53071": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised beef"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "braise with fried potatoes"},
+   "servings": {"value": 6, "reason": "1.5kg beef"},
+   "difficulty": {"value": "medium", "reason": "marinate, braise, fry veg"}
+  },
+  "mdb-53072": {
+   "flavor.salty": {"value": 1, "reason": "salted slices"},
+   "flavor.bitter": {"value": 0, "reason": "salting removes bitterness"},
+   "flavor.umami": {"value": 1, "reason": "egg, sesame"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crumbed fried slices"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fried snack"},
+   "servings": {"value": 2, "reason": "one large aubergine"},
+   "difficulty": {"value": "easy", "reason": "crumb and fry"}
+  },
+  "mdb-53073": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy", "crispy"], "reason": "glazed aubergine, crisp garlic"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "adobo with rice"},
+   "servings": {"value": 3, "reason": "1lb aubergine"},
+   "difficulty": {"value": "medium", "reason": "salting, crisp garlic, braise"}
+  },
+  "mdb-53074": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.bitter": {"value": 1, "reason": "charred skin"},
+   "flavor.umami": {"value": 1, "reason": "smoky aubergine"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "soft aubergine in coconut"},
+   "moods": {"value": ["comfort", "light"], "reason": "simple veg dish"},
+   "servings": {"value": 4, "reason": "6 aubergines"},
+   "cookMinutes": {"value": 20, "reason": "grilling until soft"},
+   "difficulty": {"value": "easy", "reason": "grill and dress"}
+  },
+  "mdb-53075": {
+   "flavor.bitter": {"value": 1, "reason": "charred aubergine"},
+   "flavor.umami": {"value": 1, "reason": "egg"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "egg-coated aubergine"},
+   "moods": {"value": ["comfort", "light"], "reason": "Filipino breakfast omelette"},
+   "servings": {"value": 4, "reason": "4 aubergines"},
+   "difficulty": {"value": "easy", "reason": "grill, dip, fry"}
+  },
+  "mdb-53077": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, cabbage"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Russian cabbage soup"},
+   "servings": {"value": 6, "reason": "8 cups stock"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53079": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "light"], "reason": "clear fish soup"},
+   "servings": {"value": 6, "reason": "6 cups liquid"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53080": {
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury pancakes"},
+   "flavor.umami": {"value": 0, "reason": "plain batter"},
+   "textures": {"value": ["fluffy"], "reason": "yeasted buckwheat pancakes"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "served with caviar or sour cream"},
+   "servings": {"value": 4, "reason": "about 20 blini"},
+   "difficulty": {"value": "medium", "reason": "yeast batter, folded whites"}
+  }
+ }
+}

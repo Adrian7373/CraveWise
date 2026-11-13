@@ -1,0 +1,157 @@
+{
+ "batch": 18,
+ "recipes": {
+  "mdb-53126": {
+   "flavor.sweet": {"value": 1, "reason": "root veg"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "beef and roots stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Norwegian stew"},
+   "servings": {"value": 6, "reason": "2lb beef"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53127": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "crisp outside, chewy almond rings"},
+   "moods": {"value": ["festive"], "reason": "wedding and Christmas tower"},
+   "servings": {"value": 20, "reason": "18-ring tower"},
+   "difficulty": {"value": "hard", "reason": "special ring forms, piping, stacking"}
+  },
+  "mdb-53128": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "creamy", "crunchy"], "reason": "sponge, meringue, cream"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "celebration cake"},
+   "servings": {"value": 16, "reason": "large tray cake"},
+   "difficulty": {"value": "hard", "reason": "custard, sponge-meringue, assembly"}
+  },
+  "mdb-53129": {
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crispy", "crunchy"], "reason": "thin rolled wafers"},
+   "moods": {"value": ["festive"], "reason": "Christmas cookies"},
+   "servings": {"value": 12, "reason": "about 30 wafers"},
+   "cookMinutes": {"value": 30, "reason": "one at a time on the iron"},
+   "difficulty": {"value": "medium", "reason": "needs a krumkake iron, quick rolling"}
+  },
+  "mdb-53130": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "macaroon base, egg cream"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "celebration cake"},
+   "servings": {"value": 12, "reason": "27cm cake"},
+   "difficulty": {"value": "medium", "reason": "base plus cooked cream"}
+  },
+  "mdb-53131": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "shortcrust, almond filling"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "lattice cake for occasions"},
+   "servings": {"value": 12, "reason": "one cake"},
+   "difficulty": {"value": "medium", "reason": "pastry, filling, lattice"}
+  },
+  "mdb-53132": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "shell with almond filling"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "coffee-table tartlets"},
+   "servings": {"value": 12, "reason": "muffin pan of tartlets"},
+   "difficulty": {"value": "medium", "reason": "shells, filling, icing"}
+  },
+  "mdb-53135": {
+   "flavor.salty": {"value": 2, "reason": "seasoned crumb"},
+   "textures": {"value": ["crispy", "tender"], "reason": "breaded fried cutlet"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday Argentine dinner"},
+   "servings": {"value": 4, "reason": "4 cutlets"},
+   "difficulty": {"value": "easy", "reason": "bread and fry"}
+  },
+  "mdb-53136": {
+   "textures": {"value": ["chewy", "crispy"], "reason": "grilled sausage in toasted roll"},
+   "moods": {"value": ["hearty", "festive"], "reason": "asado street food"},
+   "servings": {"value": 4, "reason": "4 chorizos"},
+   "difficulty": {"value": "easy", "reason": "grill and assemble"}
+  },
+  "mdb-53137": {
+   "textures": {"value": ["smooth", "creamy"], "reason": "thick caramel"},
+   "moods": {"value": ["indulgent"], "reason": "sweet spread"},
+   "servings": {"value": 12, "reason": "1 litre milk makes a jar"},
+   "difficulty": {"value": "medium", "reason": "1-2 hours constant stirring"}
+  },
+  "mdb-53138": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "shortbread with caramel"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "sandwich cookies"},
+   "servings": {"value": 12, "reason": "about 24 cookies"},
+   "difficulty": {"value": "medium", "reason": "dough, chill, sandwich"}
+  },
+  "mdb-53139": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp edge, soft middle"},
+   "moods": {"value": ["comfort"], "reason": "pizzeria side"},
+   "servings": {"value": 6, "reason": "one round tray"},
+   "difficulty": {"value": "easy", "reason": "whisk, rest, bake"}
+  },
+  "mdb-53140": {
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "flavor.umami": {"value": 3, "reason": "steak, cheese, tomato"},
+   "textures": {"value": ["tender", "creamy"], "reason": "steak with melted cheese"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "asado showpiece"},
+   "servings": {"value": 6, "reason": "1kg flank steak"},
+   "cookMinutes": {"value": 30, "reason": "grilling both stages"},
+   "difficulty": {"value": "easy", "reason": "grill and top"}
+  },
+  "mdb-53141": {
+   "textures": {"value": ["tender", "brothy"], "reason": "beef and pumpkin stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "national stew"},
+   "servings": {"value": 6, "reason": "2 litres stock"},
+   "difficulty": {"value": "easy", "reason": "brown and simmer"}
+  },
+  "mdb-53142": {
+   "flavor.umami": {"value": 1, "reason": "egg"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "set egg with potato"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "curry-spiced omelette"},
+   "servings": {"value": 4, "reason": "8 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan, grill finish"}
+  },
+  "mdb-53143": {
+   "flavor.sweet": {"value": 1, "reason": "peppers"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["crispy", "tender", "saucy"], "reason": "crisp skin in stew"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "traybake stew"},
+   "servings": {"value": 4, "reason": "8 thighs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53144": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "sizzling prawns"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "tapas"},
+   "servings": {"value": 2, "reason": "12 prawns"},
+   "difficulty": {"value": "easy", "reason": "5 minutes"}
+  },
+  "mdb-53145": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 3, "reason": "jamon, manchego"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crumbed bechamel croquettes"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "tapas"},
+   "servings": {"value": 6, "reason": "about 20 croquetas"},
+   "difficulty": {"value": "hard", "reason": "set bechamel, shape, crumb, deep fry"}
+  },
+  "mdb-53146": {
+   "flavor.sweet": {"value": 1, "reason": "pumpkin, corn"},
+   "textures": {"value": ["tender", "creamy"], "reason": "thick corn stew"},
+   "moods": {"value": ["hearty", "festive"], "reason": "national-day stew"},
+   "servings": {"value": 8, "reason": "500g corn, mixed meats"},
+   "difficulty": {"value": "medium", "reason": "overnight soak, long simmer"}
+  },
+  "mdb-53147": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "saffron is subtle"},
+   "textures": {"value": ["tender", "saucy"], "reason": "brothy rice with seafood"},
+   "moods": {"value": ["festive", "hearty"], "reason": "sharing rice"},
+   "servings": {"value": 4, "reason": "450g rice, 24 prawns"},
+   "difficulty": {"value": "medium", "reason": "prepping prawns and squid"}
+  }
+ }
+}

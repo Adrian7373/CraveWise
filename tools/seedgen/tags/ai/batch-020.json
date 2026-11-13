@@ -1,0 +1,158 @@
+{
+ "batch": 20,
+ "recipes": {
+  "mdb-53169": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "garlic, almonds"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "blended cold soup"},
+   "moods": {"value": ["fresh", "light"], "reason": "chilled summer soup"},
+   "servings": {"value": 4, "reason": "700ml water, 200g almonds"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "soak and blend"}
+  },
+  "mdb-53170": {
+   "flavor.salty": {"value": 2, "reason": "salted caramel"},
+   "textures": {"value": ["crispy", "fluffy", "saucy"], "reason": "fried churros, sauce"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "dessert treat"},
+   "servings": {"value": 6, "reason": "200g flour"},
+   "difficulty": {"value": "medium", "reason": "sauce, piping, deep frying"}
+  },
+  "mdb-53171": {
+   "flavor.sweet": {"value": 1, "reason": "slow onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "flaky"], "reason": "egg with flaked cod"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Spanish omelette"},
+   "servings": {"value": 6, "reason": "8 eggs"},
+   "difficulty": {"value": "medium", "reason": "desalting cod, flipping tortilla"}
+  },
+  "mdb-53172": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "crisp potatoes, sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "tapas"},
+   "servings": {"value": 4, "reason": "900g potatoes"},
+   "difficulty": {"value": "easy", "reason": "roast and simmer"}
+  },
+  "mdb-53173": {
+   "flavor.sweet": {"value": 1, "reason": "red pepper, tomato"},
+   "flavor.umami": {"value": 1, "reason": "passata"},
+   "textures": {"value": ["smooth"], "reason": "blended cold soup"},
+   "moods": {"value": ["fresh", "light"], "reason": "chilled soup"},
+   "servings": {"value": 2, "reason": "250g passata"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-53174": {
+   "flavor.bitter": {"value": 0, "reason": "charred but sweet"},
+   "textures": {"value": ["tender", "saucy", "crunchy"], "reason": "prawns with nutty sauce"},
+   "moods": {"value": ["fresh", "festive"], "reason": "tapas"},
+   "servings": {"value": 4, "reason": "400g prawns"},
+   "difficulty": {"value": "medium", "reason": "grilling and blending romesco"}
+  },
+  "mdb-53175": {
+   "flavor.sweet": {"value": 1, "reason": "roasted peppers"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow lamb with beans"},
+   "moods": {"value": ["festive", "hearty"], "reason": "weekend feast"},
+   "servings": {"value": 8, "reason": "2.5kg shoulder"},
+   "difficulty": {"value": "easy", "reason": "rub, then oven"}
+  },
+  "mdb-53176": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy"], "reason": "toasted baguette"},
+   "moods": {"value": ["fresh", "festive"], "reason": "tapas"},
+   "servings": {"value": 6, "reason": "20 toasts"},
+   "cookMinutes": {"value": 5, "reason": "toasting"},
+   "difficulty": {"value": "easy", "reason": "no real cooking"}
+  },
+  "mdb-53177": {
+   "flavor.sweet": {"value": 1, "reason": "red peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy"], "reason": "spaghetti"},
+   "moods": {"value": ["comfort"], "reason": "quick pasta"},
+   "servings": {"value": 3, "reason": "300g spaghetti"},
+   "difficulty": {"value": "easy", "reason": "10 minutes"}
+  },
+  "mdb-53178": {
+   "textures": {"value": ["crispy", "tender"], "reason": "fried squid rings"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "tapas"},
+   "servings": {"value": 2, "reason": "300g squid"},
+   "difficulty": {"value": "medium", "reason": "deep frying"}
+  },
+  "mdb-53179": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crumbed bechamel"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "tapas"},
+   "servings": {"value": 6, "reason": "about 20 croquetas"},
+   "difficulty": {"value": "hard", "reason": "set filling, shape, crumb, fry"}
+  },
+  "mdb-53180": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "quick-cooked prawns"},
+   "moods": {"value": ["fresh", "light"], "reason": "tapas"},
+   "servings": {"value": 2, "reason": "400g prawns"},
+   "difficulty": {"value": "easy", "reason": "5 minutes"}
+  },
+  "mdb-53181": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "bean stew"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "rustic stew"},
+   "servings": {"value": 4, "reason": "4 thighs"},
+   "difficulty": {"value": "easy", "reason": "soak and simmer"}
+  },
+  "mdb-53182": {
+   "flavor.sweet": {"value": 1, "reason": "peppers"},
+   "flavor.bitter": {"value": 0, "reason": "saffron is subtle"},
+   "textures": {"value": ["tender"], "reason": "rice and seafood"},
+   "moods": {"value": ["fresh", "comfort"], "reason": "weeknight paella"},
+   "servings": {"value": 4, "reason": "250g rice"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53183": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "meatballs and seafood in sauce"},
+   "moods": {"value": ["festive", "hearty"], "reason": "surf and turf"},
+   "servings": {"value": 4, "reason": "18 meatballs"},
+   "difficulty": {"value": "medium", "reason": "meatballs plus three seafoods"}
+  },
+  "mdb-53184": {
+   "flavor.sweet": {"value": 1, "reason": "peppers, tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "rice and prawns"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "quick one-pot"},
+   "servings": {"value": 4, "reason": "250g rice"},
+   "difficulty": {"value": "easy", "reason": "one pan, 20 minutes"}
+  },
+  "mdb-53185": {
+   "flavor.sweet": {"value": 1, "reason": "ripe tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried chorizo, tomatoes"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer salad"},
+   "servings": {"value": 2, "reason": "3 tomatoes, 100g chorizo"},
+   "cookMinutes": {"value": 5, "reason": "fry chorizo"},
+   "difficulty": {"value": "easy", "reason": "slice and fry"}
+  },
+  "mdb-53186": {
+   "flavor.bitter": {"value": 0, "reason": "saffron is subtle"},
+   "textures": {"value": ["tender", "saucy", "crunchy"], "reason": "braised chicken, pine nuts"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Catalan braise"},
+   "servings": {"value": 4, "reason": "1.25kg chicken"},
+   "difficulty": {"value": "medium", "reason": "browning, sherry reduction, braise"}
+  },
+  "mdb-53187": {
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "textures": {"value": ["chewy", "tender"], "reason": "potato dumplings with poppy seed"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Christmas Eve dish"},
+   "servings": {"value": 6, "reason": "700g potatoes"},
+   "difficulty": {"value": "medium", "reason": "dough, shaping, boiling"}
+  },
+  "mdb-53188": {
+   "flavor.salty": {"value": 2, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "tender"], "reason": "breaded fried patties"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday dinner"},
+   "servings": {"value": 4, "reason": "500g pork"},
+   "difficulty": {"value": "medium", "reason": "breading and frying"}
+  }
+ }
+}

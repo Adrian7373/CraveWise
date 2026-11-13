@@ -1,0 +1,155 @@
+{
+ "batch": 13,
+ "recipes": {
+  "mdb-53010": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "juicy patty, tzatziki"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "minty burger"},
+   "servings": {"value": 4, "reason": "4 burgers"},
+   "difficulty": {"value": "easy", "reason": "shape and fry"}
+  },
+  "mdb-53011": {
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["tender", "chewy"], "reason": "griddled chicken, quinoa"},
+   "moods": {"value": ["fresh", "light"], "reason": "grain salad"},
+   "servings": {"value": 4, "reason": "225g quinoa, 400g chicken"},
+   "difficulty": {"value": "easy", "reason": "boil, griddle, toss"}
+  },
+  "mdb-53012": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "baked beans in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Greek baked beans"},
+   "servings": {"value": 4, "reason": "400g dried beans"},
+   "difficulty": {"value": "easy", "reason": "soak, simmer, bake"}
+  },
+  "mdb-53013": {
+   "flavor.sweet": {"value": 1, "reason": "burger sauce"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "patties, lettuce, pickles"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fast-food copycat"},
+   "servings": {"value": 2, "reason": "2 double burgers"},
+   "difficulty": {"value": "easy", "reason": "fry patties, assemble"}
+  },
+  "mdb-53015": {
+   "flavor.salty": {"value": 1, "reason": "pinch of salt"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "airy yeast doughnut, glaze"},
+   "moods": {"value": ["indulgent"], "reason": "glazed doughnuts"},
+   "servings": {"value": 12, "reason": "about 18 doughnuts"},
+   "difficulty": {"value": "hard", "reason": "two rises and deep frying"}
+  },
+  "mdb-53016": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried cutlet"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fried chicken sandwich"},
+   "servings": {"value": 1, "reason": "one breast, one bun"},
+   "difficulty": {"value": "medium", "reason": "brining, breading, frying"}
+  },
+  "mdb-53017": {
+   "flavor.salty": {"value": 2, "reason": "salted filling"},
+   "textures": {"value": ["flaky", "tender"], "reason": "butter pastry, meat filling"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Christmas Eve pasties"},
+   "servings": {"value": 6, "reason": "1 cup flour, small pasties"},
+   "difficulty": {"value": "hard", "reason": "dough, grinding, shaping"}
+  },
+  "mdb-53018": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow stew"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "hunter's stew"},
+   "servings": {"value": 8, "reason": "2lb meat, 5 cups stock"},
+   "difficulty": {"value": "medium", "reason": "browning then long bake"}
+  },
+  "mdb-53020": {
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "light"], "reason": "clear chicken soup"},
+   "servings": {"value": 6, "reason": "4 chicken legs, big pot"},
+   "difficulty": {"value": "easy", "reason": "long gentle simmer"}
+  },
+  "mdb-53021": {
+   "flavor.salty": {"value": 2, "reason": "seasoned filling"},
+   "flavor.sweet": {"value": 1, "reason": "tomato sauce"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "cabbage rolls in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Polish family dish"},
+   "servings": {"value": 6, "reason": "18 rolls"},
+   "difficulty": {"value": "medium", "reason": "blanching and rolling leaves"}
+  },
+  "mdb-53022": {
+   "flavor.salty": {"value": 1, "reason": "butter, salt"},
+   "flavor.umami": {"value": 0, "reason": "plain crepes"},
+   "textures": {"value": ["tender"], "reason": "thin crepes"},
+   "moods": {"value": ["comfort"], "reason": "simple pancakes"},
+   "servings": {"value": 4, "reason": "about 10 crepes"},
+   "cookMinutes": {"value": 20, "reason": "frying one by one"},
+   "difficulty": {"value": "easy", "reason": "one batter"}
+  },
+  "mdb-53023": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 3, "reason": "cured herring"},
+   "textures": {"value": ["tender"], "reason": "marinated herring"},
+   "moods": {"value": ["festive", "light"], "reason": "Christmas Eve starter"},
+   "servings": {"value": 8, "reason": "8 herring fillets"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "soak and jar"}
+  },
+  "mdb-53024": {
+   "textures": {"value": ["flaky", "tender"], "reason": "cream cheese pastry"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "holiday cookies"},
+   "servings": {"value": 12, "reason": "3 cups flour, many cookies"},
+   "difficulty": {"value": "medium", "reason": "rolling and shaping"}
+  },
+  "mdb-53025": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "beans, garlic"},
+   "textures": {"value": ["creamy", "tender"], "reason": "half-mashed beans"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "Egyptian breakfast"},
+   "servings": {"value": 4, "reason": "2 cups dried beans"},
+   "difficulty": {"value": "easy", "reason": "long simmer, simple dressing"}
+  },
+  "mdb-53026": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "beans, garlic"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried green falafel"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "herby street food"},
+   "servings": {"value": 6, "reason": "3 cups beans"},
+   "difficulty": {"value": "medium", "reason": "soaking, grinding, frying"}
+  },
+  "mdb-53028": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "charred chicken, yogurt sauce"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "wraps with salad"},
+   "servings": {"value": 6, "reason": "6 pita, 1kg chicken"},
+   "difficulty": {"value": "easy", "reason": "marinate and grill"}
+  },
+  "mdb-53029": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "jute leaves"},
+   "textures": {"value": ["smooth", "brothy"], "reason": "silky green soup"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Egyptian home cooking"},
+   "servings": {"value": 4, "reason": "1 litre, 300g beef"},
+   "difficulty": {"value": "easy", "reason": "simmer and finish with garlic"}
+  },
+  "mdb-53030": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "crispy"], "reason": "layered buttery pastry"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "rich pastry"},
+   "servings": {"value": 8, "reason": "6-8 feteer"},
+   "difficulty": {"value": "hard", "reason": "stretching dough paper-thin"}
+  },
+  "mdb-53031": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried bread, rice, beef"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Eid dish"},
+   "servings": {"value": 6, "reason": "2 cups rice, 1lb beef"},
+   "difficulty": {"value": "medium", "reason": "several layers"}
+  },
+  "mdb-53032": {
+   "moods": {"value": ["comfort", "indulgent"], "reason": "fried cutlet"},
+   "servings": {"value": 4, "reason": "4 chops"},
+   "difficulty": {"value": "medium", "reason": "breading and shallow frying"}
+  }
+ }
+}

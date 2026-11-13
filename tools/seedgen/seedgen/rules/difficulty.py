@@ -6,7 +6,7 @@ import re
 from ..tags import Proposal
 
 TECHNIQUES = re.compile(
-    r"deep[- ]?fr|\btemper(?!ature)|emulsif|\bprove\b|(?<![-\w])proof(?:ing)?\b|knead|laminat|blind bake|souffl|flamb|"
+    r"deep[- ]?fr(?!ying pan)|\btemper(?!ature)|emulsif|\bprove\b|(?<![-\w])proof(?:ing)?\b|knead|laminat|blind bake|souffl|flamb|"
     r"caramelis|caramelize|sugar thermometer|soft ball|\bcandy\b|\bpipe |piping(?! hot)|choux|make the pastry|"
     r"roll out the pastry|\brub in|fold in the (egg|flour)|stiff peaks|clarif|debone|butterfly|\btruss|"
     r"\bcure\b|\bferment(?! ?ed)|"

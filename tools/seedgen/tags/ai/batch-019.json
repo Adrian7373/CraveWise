@@ -1,0 +1,152 @@
+{
+ "batch": 19,
+ "recipes": {
+  "mdb-53148": {
+   "flavor.bitter": {"value": 0, "reason": "zest is fragrant, not bitter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "smooth", "crunchy"], "reason": "custard, burnt sugar top"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "St Joseph's Day custard"},
+   "servings": {"value": 6, "reason": "7 yolks, 550ml dairy"},
+   "difficulty": {"value": "medium", "reason": "stirred custard and caramelising"}
+  },
+  "mdb-53149": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "flaky"], "reason": "coiled lard pastry"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "Mallorcan pastry"},
+   "servings": {"value": 8, "reason": "4 large coils"},
+   "difficulty": {"value": "hard", "reason": "stretching dough thin, long proving"}
+  },
+  "mdb-53150": {
+   "flavor.bitter": {"value": 1, "reason": "blistered peppers"},
+   "textures": {"value": ["tender", "crispy"], "reason": "blistered skins"},
+   "moods": {"value": ["fresh", "light"], "reason": "tapas"},
+   "servings": {"value": 4, "reason": "500g peppers"},
+   "difficulty": {"value": "easy", "reason": "2 ingredients"}
+  },
+  "mdb-53152": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "bean broth with fish"},
+   "servings": {"value": 6, "reason": "6 hake fillets"},
+   "difficulty": {"value": "medium", "reason": "beans, croutons, chorizo, fish"}
+  },
+  "mdb-53153": {
+   "flavor.salty": {"value": 1, "reason": "butter, salt"},
+   "textures": {"value": ["crispy", "fluffy", "saucy"], "reason": "fried dough, chocolate sauce"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "fairground treat"},
+   "servings": {"value": 6, "reason": "250g flour"},
+   "difficulty": {"value": "medium", "reason": "piping into hot oil"}
+  },
+  "mdb-53154": {
+   "flavor.sweet": {"value": 1, "reason": "tomatoes"},
+   "textures": {"value": ["tender", "saucy"], "reason": "beans and clams"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "seafood stew"},
+   "servings": {"value": 2, "reason": "600g clams, one can beans"},
+   "difficulty": {"value": "easy", "reason": "one pan, 20 minutes"}
+  },
+  "mdb-53155": {
+   "flavor.sweet": {"value": 1, "reason": "roasted peppers"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "mash over tomato chicken"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family bake"},
+   "servings": {"value": 4, "reason": "1kg potatoes"},
+   "difficulty": {"value": "easy", "reason": "mash and bake"}
+  },
+  "mdb-53156": {
+   "flavor.sweet": {"value": 1, "reason": "peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp-topped baked rice"},
+   "moods": {"value": ["hearty", "festive"], "reason": "Valencian Sunday rice"},
+   "servings": {"value": 6, "reason": "800g pork belly, 375g rice"},
+   "difficulty": {"value": "medium", "reason": "browning meats, oven rice"}
+  },
+  "mdb-53157": {
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp chorizo, jammy eggs"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "warm salad"},
+   "servings": {"value": 4, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan boil, fry"}
+  },
+  "mdb-53158": {
+   "flavor.sweet": {"value": 1, "reason": "tomato sauce"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "crisp potatoes, bravas sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "tapas favourite"},
+   "servings": {"value": 4, "reason": "900g potatoes"},
+   "difficulty": {"value": "easy", "reason": "air fryer"}
+  },
+  "mdb-53159": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "crispy"], "reason": "omelette with crisp potato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "quick supper"},
+   "servings": {"value": 1, "reason": "3-egg omelette"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53160": {
+   "flavor.bitter": {"value": 1, "reason": "aubergine, herbs"},
+   "flavor.umami": {"value": 2, "reason": "tomato, egg"},
+   "textures": {"value": ["saucy", "tender"], "reason": "stewed veg, baked eggs"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "Spanish ratatouille with eggs"},
+   "servings": {"value": 4, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "slow cooking, one pan"}
+  },
+  "mdb-53161": {
+   "flavor.sweet": {"value": 1, "reason": "red pepper"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chicken in rice"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-pot rice"},
+   "servings": {"value": 6, "reason": "whole chicken, 400g rice"},
+   "difficulty": {"value": "easy", "reason": "brown, then simmer"}
+  },
+  "mdb-53162": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chicken in almond sauce"},
+   "moods": {"value": ["festive", "comfort"], "reason": "traditional celebration dish"},
+   "servings": {"value": 4, "reason": "8 thighs"},
+   "difficulty": {"value": "medium", "reason": "picada, browning, braise"}
+  },
+  "mdb-53163": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "fig paste, sesame coat"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "edible gift"},
+   "servings": {"value": 12, "reason": "6 large balls, sliced"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend and roll"}
+  },
+  "mdb-53164": {
+   "flavor.sweet": {"value": 1, "reason": "roast onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "golden roast thighs"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "lemony traybake"},
+   "servings": {"value": 4, "reason": "8 thighs"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53165": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp edges, custardy middle"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "Easter French toast"},
+   "servings": {"value": 4, "reason": "8 half slices"},
+   "difficulty": {"value": "easy", "reason": "soak and fry"}
+  },
+  "mdb-53166": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "stewed chickpeas"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "quick stew"},
+   "servings": {"value": 4, "reason": "800g chickpeas"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53167": {
+   "flavor.sweet": {"value": 1, "reason": "peas"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "rice and seafood"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "quick paella-style rice"},
+   "servings": {"value": 4, "reason": "300g rice"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53168": {
+   "flavor.sweet": {"value": 1, "reason": "tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "10-minute soup"},
+   "servings": {"value": 2, "reason": "one can chickpeas"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  }
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "batch": 17,
+ "recipes": {
+  "mdb-53105": {
+   "flavor.bitter": {"value": 1, "reason": "smoked herbs, char"},
+   "textures": {"value": ["tender", "crispy"], "reason": "barbecued thighs"},
+   "moods": {"value": ["festive", "hearty"], "reason": "barbecue"},
+   "servings": {"value": 6, "reason": "12 thighs"},
+   "difficulty": {"value": "easy", "reason": "marinate and barbecue"}
+  },
+  "mdb-53106": {
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp bacon, soft veg"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "warm salad"},
+   "servings": {"value": 4, "reason": "12 bacon rolls, 16 potatoes"},
+   "difficulty": {"value": "easy", "reason": "roast and dress"}
+  },
+  "mdb-53107": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "dip with roast potatoes"},
+   "moods": {"value": ["fresh", "festive"], "reason": "party dip"},
+   "servings": {"value": 8, "reason": "1.25kg potatoes, for guests"},
+   "difficulty": {"value": "easy", "reason": "blend and roast"}
+  },
+  "mdb-53108": {
+   "textures": {"value": ["tender", "crispy"], "reason": "scored, charred squid"},
+   "moods": {"value": ["light", "fresh"], "reason": "quick grill"},
+   "servings": {"value": 2, "reason": "400g squid"},
+   "difficulty": {"value": "easy", "reason": "score and grill"}
+  },
+  "mdb-53109": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "creamy"], "reason": "pastry cups, sour cream"},
+   "moods": {"value": ["festive", "hearty"], "reason": "party canapes"},
+   "servings": {"value": 12, "reason": "24 mini pies"},
+   "difficulty": {"value": "medium", "reason": "chilli, pastry cases, two batches"}
+  },
+  "mdb-53110": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "chewy"], "reason": "sticky glazed drumsticks"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family traybake"},
+   "servings": {"value": 4, "reason": "8 drumsticks"},
+   "difficulty": {"value": "easy", "reason": "marinate and roast"}
+  },
+  "mdb-53111": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "oaty biscuits"},
+   "moods": {"value": ["comfort"], "reason": "teatime biscuits"},
+   "servings": {"value": 10, "reason": "about 20 biscuits"},
+   "difficulty": {"value": "easy", "reason": "melt and mix"}
+  },
+  "mdb-53112": {
+   "flavor.salty": {"value": 2, "reason": "seasoned curry"},
+   "textures": {"value": ["tender", "saucy"], "reason": "simmered beef in tomato curry"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "stew with ugali"},
+   "servings": {"value": 6, "reason": "2lb beef"},
+   "difficulty": {"value": "easy", "reason": "boil then curry"}
+  },
+  "mdb-53113": {
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.sweet": {"value": 1, "reason": "onions"},
+   "flavor.umami": {"value": 0, "reason": "greens and cream"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creamed kale"},
+   "moods": {"value": ["comfort"], "reason": "greens side"},
+   "servings": {"value": 4, "reason": "1lb kale"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53114": {
+   "textures": {"value": ["smooth", "chewy"], "reason": "stiff cornmeal"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "staple starch"},
+   "servings": {"value": 4, "reason": "1.5 cups cornmeal"},
+   "cookMinutes": {"value": 10, "reason": "stirring until firm"},
+   "difficulty": {"value": "easy", "reason": "two ingredients"}
+  },
+  "mdb-53115": {
+   "flavor.salty": {"value": 1, "reason": "brined"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "pickle"},
+   "textures": {"value": ["crunchy"], "reason": "crisp pickled onion"},
+   "moods": {"value": ["fresh"], "reason": "tangy condiment"},
+   "servings": {"value": 12, "reason": "a few jars"},
+   "difficulty": {"value": "easy", "reason": "brine and jar"}
+  },
+  "mdb-53116": {
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "soft enriched buns"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "fika buns"},
+   "servings": {"value": 12, "reason": "500g flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, rolling, two rises"}
+  },
+  "mdb-53117": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy", "crunchy"], "reason": "crisp shallots, cream, rye"},
+   "moods": {"value": ["fresh", "light"], "reason": "open sandwich"},
+   "servings": {"value": 4, "reason": "4 slices rye"},
+   "difficulty": {"value": "medium", "reason": "several small components"}
+  },
+  "mdb-53118": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "thick porridge"},
+   "moods": {"value": ["comfort", "festive"], "reason": "celebration porridge"},
+   "servings": {"value": 4, "reason": "4 cups dairy"},
+   "difficulty": {"value": "easy", "reason": "whisk and simmer"}
+  },
+  "mdb-53119": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "buns with custard"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "school buns"},
+   "servings": {"value": 6, "reason": "6 buns"},
+   "difficulty": {"value": "medium", "reason": "yeast dough plus custard"}
+  },
+  "mdb-53121": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["tender", "chewy"], "reason": "soft potato flatbread"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas flatbread"},
+   "servings": {"value": 8, "reason": "7-12 lefse"},
+   "difficulty": {"value": "hard", "reason": "rolling very thin, griddling"}
+  },
+  "mdb-53122": {
+   "flavor.sweet": {"value": 1, "reason": "milk, carrot"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "creamy fish soup"},
+   "servings": {"value": 4, "reason": "4 cups stock, 1lb fish"},
+   "difficulty": {"value": "easy", "reason": "roux soup"}
+  },
+  "mdb-53123": {
+   "flavor.salty": {"value": 2, "reason": "3 tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "lamb falling off the bone"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "autumn stew"},
+   "servings": {"value": 6, "reason": "3lb lamb"},
+   "difficulty": {"value": "easy", "reason": "layer and simmer"}
+  },
+  "mdb-53124": {
+   "flavor.sweet": {"value": 1, "reason": "swede, carrot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "tender"], "reason": "dense potato dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Thursday dinner classic"},
+   "servings": {"value": 6, "reason": "3lb potatoes"},
+   "difficulty": {"value": "medium", "reason": "grating, shaping, long simmer"}
+  },
+  "mdb-53125": {
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "caramelised onions"},
+   "textures": {"value": ["tender"], "reason": "pan-fried patties"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday dinner"},
+   "servings": {"value": 3, "reason": "6 patties"},
+   "difficulty": {"value": "easy", "reason": "mix and fry"}
+  }
+ }
+}

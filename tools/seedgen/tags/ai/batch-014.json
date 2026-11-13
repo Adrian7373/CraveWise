@@ -1,0 +1,156 @@
+{
+ "batch": 14,
+ "recipes": {
+  "mdb-53033": {
+   "flavor.umami": {"value": 1, "reason": "plain rice, optional dashi"},
+   "textures": {"value": ["chewy", "fluffy"], "reason": "sticky short-grain rice"},
+   "moods": {"value": ["comfort", "light"], "reason": "plain rice side"},
+   "servings": {"value": 4, "reason": "300g rice"},
+   "difficulty": {"value": "easy", "reason": "rinse and steam"}
+  },
+  "mdb-53034": {
+   "moods": {"value": ["comfort", "hearty"], "reason": "rice bowl"},
+   "servings": {"value": 2, "reason": "divided between two bowls"},
+   "difficulty": {"value": "medium", "reason": "needs a tonkatsu first"}
+  },
+  "mdb-53035": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 1, "reason": "mustard"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creamy mash with greens"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Irish mash with eggs"},
+   "servings": {"value": 4, "reason": "4 eggs, 800g potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and mash"}
+  },
+  "mdb-53036": {
+   "textures": {"value": ["crispy", "fluffy"], "reason": "potato pancakes"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "big breakfast"},
+   "servings": {"value": 6, "reason": "6 eggs, 12 bacon"},
+   "difficulty": {"value": "medium", "reason": "batter plus juggling the fry-up"}
+  },
+  "mdb-53037": {
+   "flavor.sweet": {"value": 1, "reason": "cider, root veg"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "braised in cider"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-pot supper"},
+   "servings": {"value": 2, "reason": "2 pork chops"},
+   "difficulty": {"value": "easy", "reason": "one casserole"}
+  },
+  "mdb-53038": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 1, "reason": "mustard"},
+   "flavor.umami": {"value": 0, "reason": "plain mash"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "buttery mash"},
+   "moods": {"value": ["comfort"], "reason": "mash side"},
+   "servings": {"value": 4, "reason": "1kg potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and mash"}
+  },
+  "mdb-53039": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, beetroot slaw"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "roast chicken, slaw"},
+   "moods": {"value": ["hearty", "festive"], "reason": "roast chicken feast"},
+   "servings": {"value": 4, "reason": "1.5kg chicken"},
+   "difficulty": {"value": "easy", "reason": "blend marinade, roast"}
+  },
+  "mdb-53040": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "pastry, prawns"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "party pastries"},
+   "servings": {"value": 4, "reason": "250g flour"},
+   "difficulty": {"value": "medium", "reason": "dough and crimping"}
+  },
+  "mdb-53041": {
+   "flavor.bitter": {"value": 1, "reason": "charred skin"},
+   "textures": {"value": ["tender", "crispy"], "reason": "charred fish"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer grill"},
+   "servings": {"value": 4, "reason": "8 sardines"},
+   "difficulty": {"value": "easy", "reason": "marinate and grill"}
+  },
+  "mdb-53042": {
+   "textures": {"value": ["tender", "chewy"], "reason": "steak in ciabatta"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "steak sandwich, herb sauce"},
+   "servings": {"value": 2, "reason": "2 steaks, 2 ciabatta"},
+   "difficulty": {"value": "easy", "reason": "marinate, sear, blend sauce"}
+  },
+  "mdb-53043": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "fish"},
+   "textures": {"value": ["crispy", "flaky"], "reason": "crumbed fish cakes"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Goan party snack"},
+   "servings": {"value": 5, "reason": "15 fofos"},
+   "difficulty": {"value": "medium", "reason": "poach, shape, crumb, fry"}
+  },
+  "mdb-53044": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "grilled pork, chips"},
+   "moods": {"value": ["hearty", "festive"], "reason": "barbecue"},
+   "servings": {"value": 4, "reason": "2 tenderloins, 1kg potatoes"},
+   "difficulty": {"value": "medium", "reason": "barbecue plus double-fried chips"}
+  },
+  "mdb-53045": {
+   "flavor.sweet": {"value": 1, "reason": "peppers, tomato"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["brothy", "tender"], "reason": "seafood stew"},
+   "moods": {"value": ["hearty", "festive"], "reason": "sharing pot"},
+   "servings": {"value": 6, "reason": "600g cod plus shellfish"},
+   "difficulty": {"value": "medium", "reason": "several kinds of seafood"}
+  },
+  "mdb-53047": {
+   "flavor.sweet": {"value": 2, "reason": "roast carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "roast onion, garlic"},
+   "moods": {"value": ["comfort", "light"], "reason": "spiced soup"},
+   "servings": {"value": 4, "reason": "6 carrots"},
+   "difficulty": {"value": "easy", "reason": "roast and blend"}
+  },
+  "mdb-53048": {
+   "flavor.sweet": {"value": 1, "reason": "sweet soy"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "noodles, peanuts"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "street noodles"},
+   "servings": {"value": 4, "reason": "4 portions noodles"},
+   "difficulty": {"value": "medium", "reason": "spice paste then wok"}
+  },
+  "mdb-53049": {
+   "flavor.salty": {"value": 1, "reason": "butter, peanut butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "crisp edge, soft middle"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "street pancake"},
+   "servings": {"value": 6, "reason": "large folded pancake in wedges"},
+   "difficulty": {"value": "easy", "reason": "one batter"}
+  },
+  "mdb-53050": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "grilled chicken in coconut sauce"},
+   "moods": {"value": ["hearty", "festive"], "reason": "Ramadan bazaar favourite"},
+   "servings": {"value": 6, "reason": "6 thighs"},
+   "difficulty": {"value": "medium", "reason": "spice paste, marinade, grill"}
+  },
+  "mdb-53051": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "coconut rice, peanuts, anchovies"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "national breakfast"},
+   "servings": {"value": 4, "reason": "2 cups rice, 4 eggs"},
+   "difficulty": {"value": "medium", "reason": "rice, sambal, fried sides"}
+  },
+  "mdb-53052": {
+   "flavor.salty": {"value": 2, "reason": "seasoned mince"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "tender"], "reason": "griddled omelette bread"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "street sandwich"},
+   "servings": {"value": 2, "reason": "half a baguette"},
+   "difficulty": {"value": "easy", "reason": "mix and griddle"}
+  },
+  "mdb-53054": {
+   "flavor.salty": {"value": 1, "reason": "salted rice layer"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "smooth"], "reason": "sticky rice, pandan custard"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "kuih for gatherings"},
+   "servings": {"value": 12, "reason": "9-inch pan of squares"},
+   "difficulty": {"value": "hard", "reason": "two steamed layers, careful setting"}
+  }
+ }
+}

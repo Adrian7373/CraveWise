@@ -1,0 +1,156 @@
+{
+ "batch": 16,
+ "recipes": {
+  "mdb-53081": {
+   "flavor.sweet": {"value": 1, "reason": "carrots, peas"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "mayo-dressed diced veg"},
+   "moods": {"value": ["festive", "hearty"], "reason": "New Year salad"},
+   "servings": {"value": 8, "reason": "big bowl, 4 eggs, 1 cup mayo"},
+   "difficulty": {"value": "easy", "reason": "boil, dice, mix"}
+  },
+  "mdb-53082": {
+   "textures": {"value": ["creamy", "smooth"], "reason": "berries in whipped cream"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "berries and cream"},
+   "servings": {"value": 6, "reason": "2 pints strawberries"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "macerate and whip"}
+  },
+  "mdb-53083": {
+   "flavor.bitter": {"value": 0, "reason": "saffron is subtle"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "lamb and rice"},
+   "moods": {"value": ["hearty", "festive"], "reason": "celebration pilaf"},
+   "servings": {"value": 6, "reason": "2 cups rice, 500g lamb"},
+   "difficulty": {"value": "easy", "reason": "simmer then rice"}
+  },
+  "mdb-53085": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy", "creamy"], "reason": "chicken, slaw, halloumi"},
+   "moods": {"value": ["indulgent", "hearty"], "reason": "quick burger"},
+   "servings": {"value": 2, "reason": "2 buns"},
+   "difficulty": {"value": "easy", "reason": "15 minutes"}
+  },
+  "mdb-53086": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "crunchy"], "reason": "fried breadcrumbs"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "shepherd's fried bread"},
+   "servings": {"value": 4, "reason": "one large loaf"},
+   "difficulty": {"value": "easy", "reason": "soak and fry"}
+  },
+  "mdb-53089": {
+   "flavor.salty": {"value": 1, "reason": "dough salt"},
+   "textures": {"value": ["chewy", "fluffy"], "reason": "puffed flatbread"},
+   "moods": {"value": ["comfort"], "reason": "everyday bread"},
+   "servings": {"value": 8, "reason": "8 loaves"},
+   "difficulty": {"value": "easy", "reason": "bread machine dough"}
+  },
+  "mdb-53091": {
+   "flavor.bitter": {"value": 1, "reason": "tahini"},
+   "flavor.umami": {"value": 1, "reason": "falafel"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "salad, tahini sauce"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "stuffed pita"},
+   "servings": {"value": 6, "reason": "6 pitas"},
+   "difficulty": {"value": "easy", "reason": "bake bought falafel, assemble"}
+  },
+  "mdb-53092": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "garlic"},
+   "textures": {"value": ["tender"], "reason": "steam-braised beans"},
+   "moods": {"value": ["light", "fresh"], "reason": "simple veg dish"},
+   "servings": {"value": 4, "reason": "1lb beans"},
+   "cookMinutes": {"value": 25, "reason": "until browning"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53093": {
+   "flavor.salty": {"value": 1, "reason": "seasoned sauce"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "crisp top, baked pasta"},
+   "moods": {"value": ["comfort"], "reason": "baked pasta"},
+   "servings": {"value": 6, "reason": "1lb spaghetti"},
+   "difficulty": {"value": "easy", "reason": "boil and bake"}
+  },
+  "mdb-53094": {
+   "flavor.bitter": {"value": 1, "reason": "charred aubergine, tahini"},
+   "flavor.umami": {"value": 1, "reason": "smoky aubergine"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "smoky dip"},
+   "moods": {"value": ["fresh", "light"], "reason": "mezze dip"},
+   "servings": {"value": 6, "reason": "4 large aubergines"},
+   "difficulty": {"value": "easy", "reason": "grill and mash"}
+  },
+  "mdb-53095": {
+   "textures": {"value": ["fluffy", "crunchy"], "reason": "rice, pine nuts"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "spiced rice and meat"},
+   "servings": {"value": 6, "reason": "2lb beef, 2 cups rice"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53096": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "tender"], "reason": "browned hash"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "breakfast hash"},
+   "servings": {"value": 4, "reason": "3 cups corned beef"},
+   "cookMinutes": {"value": 20, "reason": "browning both sides"},
+   "difficulty": {"value": "easy", "reason": "one skillet"}
+  },
+  "mdb-53097": {
+   "flavor.sweet": {"value": 0, "reason": "plain batter"},
+   "flavor.umami": {"value": 0, "reason": "plain batter"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "crisp puffed batter"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Sunday roast side"},
+   "servings": {"value": 8, "reason": "8 puddings"},
+   "difficulty": {"value": "easy", "reason": "batter into hot oil"}
+  },
+  "mdb-53098": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "braised beef, crisp potato top"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow beef pie"},
+   "servings": {"value": 6, "reason": "800g beef"},
+   "difficulty": {"value": "medium", "reason": "3-hour braise"}
+  },
+  "mdb-53099": {
+   "flavor.sweet": {"value": 1, "reason": "beetroot"},
+   "textures": {"value": ["tender", "creamy"], "reason": "burger, dip"},
+   "moods": {"value": ["hearty", "festive"], "reason": "barbecue burger"},
+   "servings": {"value": 4, "reason": "4 burgers"},
+   "difficulty": {"value": "easy", "reason": "shape and grill"}
+  },
+  "mdb-53100": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "almond cakes"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "lemony teacakes"},
+   "servings": {"value": 6, "reason": "6 friands"},
+   "difficulty": {"value": "easy", "reason": "one-bowl batter"}
+  },
+  "mdb-53101": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "sponge with coconut icing"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "traybake"},
+   "servings": {"value": 16, "reason": "20cm square tin"},
+   "difficulty": {"value": "easy", "reason": "simple sponge"}
+  },
+  "mdb-53102": {
+   "flavor.sweet": {"value": 1, "reason": "charred peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "chewy"], "reason": "squid, chickpeas"},
+   "moods": {"value": ["fresh", "light"], "reason": "warm salad"},
+   "servings": {"value": 4, "reason": "600g squid"},
+   "difficulty": {"value": "easy", "reason": "char peppers, flash-fry"}
+  },
+  "mdb-53103": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "whole fish"},
+   "textures": {"value": ["tender", "flaky"], "reason": "roast fish"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby fish"},
+   "servings": {"value": 4, "reason": "2 x 400g fish"},
+   "difficulty": {"value": "easy", "reason": "marinate and roast"}
+  },
+  "mdb-53104": {
+   "flavor.salty": {"value": 1, "reason": "butter, salt"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "sponge in coconut"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Australia Day treat"},
+   "servings": {"value": 18, "reason": "18 squares"},
+   "difficulty": {"value": "medium", "reason": "sponge, fill, dip, coat"}
+  }
+ }
+}
