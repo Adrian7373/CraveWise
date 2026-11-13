@@ -20,13 +20,18 @@ def split_steps(text: str) -> list[str]:
     if _STEP_HEADING.search(t):
         parts = _STEP_HEADING.split(t)
     else:
-        parts, buf = [], ""
+        parts, buf, heading = [], "", None
         for line in (ln.strip() for ln in t.split("\n")):
             if not line:
                 if buf:
                     parts.append(buf)
                     buf = ""
                 continue
+            if not buf and _is_section_heading(line):
+                heading = line  # "Make the Filling" isn't a step; it labels the next one
+                continue
+            if heading and not buf:
+                line, heading = f"{heading}: {line}", None
             buf = f"{buf} {line}".strip()
             if re.search(r"[.!?:)]$", buf):  # sentence ended -> the line break is a real step break
                 parts.append(buf)
@@ -44,6 +49,19 @@ def split_steps(text: str) -> list[str]:
             piece = piece if re.search(r"[.!?)]$", piece) else piece + "."
             steps.extend(_split_long(piece))
     return steps
+
+
+_HEADING_SMALL_WORDS = {"the", "a", "an", "and", "of", "for", "to", "with", "in", "on", "or"}
+
+
+def _is_section_heading(line: str) -> bool:
+    """A short Title Case line with no punctuation or digits, e.g. "Make the Pastry Dough".
+    Only consulted at the start of a paragraph, so mid-sentence lines are never touched."""
+    words = line.split()
+    if not 2 <= len(words) <= 6 or re.search(r"[.!?:;,)]$|\d", line):
+        return False
+    content = [w for w in words if w.lower() not in _HEADING_SMALL_WORDS]
+    return len(content) >= 2 and all(w[:1].isupper() for w in content)
 
 
 LONG_STEP = 400

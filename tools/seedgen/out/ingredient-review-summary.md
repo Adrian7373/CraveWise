@@ -1,0 +1,805 @@
+# Ingredient allergen review: summary
+
+Written by Claude on 2026-11-13. Nothing here is marked `reviewed: true`; that flag is yours to set.
+
+- **706** entries in `curation/ingredients.json` (704 existing + 2 new splits)
+- **(a)** entries believed correct as they are: confirm them in bulk
+- **(b)** entries changed in this pass: confirm each one or revert it
+- **(c)** entries that need your call (brand-dependent or unclear). Changed entries also appear here when they are judgement calls
+
+Safe-side policy used: if a mainstream version of a brand-dependent product lists an allergen *as an ingredient*, it was added to `allergens`, with the reason in `notes`. 'May contain' traces were noted, not added.
+
+## (a) Correct as they are (514)
+
+Unchanged, and their allergens don't depend on brand.
+
+- `achiote_seed` Achiote Seed: no allergens
+- `ackee` Ackee: no allergens
+- `allspice_berry` Allspice Berry: no allergens
+- `almond` Almond: tree_nuts
+- `almond_milk` Almond Milk: tree_nuts
+- `ancho_chilli` Ancho Chilli: no allergens
+- `anchovy_fillet` Anchovy Fillet: fish; contains fish
+- `apple` Apple: no allergens
+- `asparagus` Asparagus: no allergens
+- `aubergine` Aubergine: no allergens
+- `avocado` Avocado: no allergens
+- `bacon` Bacon: no allergens; contains pork; protein pork
+- `baguette` Baguette: gluten
+- `baked_bean` Baked Bean: no allergens; protein legumes
+- `balsamic_vinegar` Balsamic Vinegar: sulphites
+- `bamboo_shoot` Bamboo Shoot: no allergens
+- `banana` Banana: no allergens
+- `banana_leaf` Banana Leaf: no allergens
+- `banana_pepper` Banana Pepper: no allergens
+- `barramundi` Barramundi: fish; contains fish; protein fish
+- `basil` Basil: no allergens
+- `basmati_rice` Basmati Rice: no allergens
+- `bay_leaf` Bay Leaf: no allergens
+- `bean_sprout` Bean Sprout: no allergens
+- `beef` Beef: no allergens; contains meat; protein beef
+- `beef_brisket` Beef Brisket: no allergens; contains meat; protein beef
+- `beef_cutlet` Beef Cutlet: no allergens; contains meat; protein beef
+- `beef_fillet` Beef Fillet: no allergens; contains meat; protein beef
+- `beef_mince` Beef Mince: no allergens; contains meat; protein beef
+- `beef_shin` Beef Shin: no allergens; contains meat; protein beef
+- `beer` Beer: gluten, sulphites; contains alcohol
+- `beetroot` Beetroot: no allergens
+- `bicarbonate_of_soda` Bicarbonate of Soda: no allergens
+- `birds_eye_chilli` Birds Eye Chilli: no allergens
+- `biryani_masala` Biryani Masala: no allergens
+- `black_bean` Black Bean: no allergens; protein legumes
+- `black_eyed_pea` Black Eyed Pea: no allergens; protein legumes
+- `black_olive` Black Olive: no allergens
+- `black_treacle` Black Treacle: no allergens
+- `blackberry` Blackberry: no allergens
+- `blueberry` Blueberry: no allergens
+- `borlotti_bean` Borlotti Bean: no allergens; protein legumes
+- `bowtie_pasta` Bowtie Pasta: gluten
+- `brandy` Brandy: sulphites; contains alcohol
+- `brie` Brie: milk; contains dairy
+- `broad_bean` Broad Bean: no allergens; protein legumes
+- `broccoli` Broccoli: no allergens
+- `brown_lentil` Brown Lentil: no allergens; protein legumes
+- `brown_rice` Brown Rice: no allergens
+- `brown_sugar` Brown Sugar: no allergens
+- `bryndza_cheese` Bryndza Cheese: milk; contains dairy
+- `bulgur_wheat` Bulgur Wheat: gluten
+- `butter` Butter: milk; contains dairy
+- `butter_bean` Butter Bean: no allergens; protein legumes
+- `buttermilk` Buttermilk: milk; contains dairy
+- `butternut_squash` Butternut Squash: no allergens
+- `cabbage` Cabbage: no allergens
+- `cabbage_leaf` Cabbage Leaf: no allergens
+- `cafe_la_llave` Cafe la Llave: no allergens
+- `cajun` Cajun: no allergens
+- `callaloo` Callaloo: no allergens
+- `candied_peel` Candied Peel: sulphites
+- `canned_bean` Canned Bean: no allergens; protein legumes
+- `cannellini_bean` Cannellini Bean: no allergens; protein legumes
+- `caper` Caper: no allergens
+- `caraway_seed` Caraway Seed: no allergens
+- `cardamom` Cardamom: no allergens
+- `carrot` Carrot: no allergens
+- `casabe` Casabe: no allergens
+- `cashew` Cashew: tree_nuts
+- `cassava` Cassava: no allergens
+- `cassava_flour` Cassava Flour: no allergens
+- `cayenne_pepper` Cayenne Pepper: no allergens
+- `celeriac` Celeriac: celery
+- `celery` Celery: celery
+- `celery_salt` Celery Salt: celery
+- `cheddar` Cheddar: milk; contains dairy
+- `cheese` Cheese: milk; contains dairy
+- `cheese_curd` Cheese Curd: milk; contains dairy
+- `cherry` Cherry: no allergens
+- `cherry_tomato` Cherry Tomato: no allergens
+- `chicken` Chicken: no allergens; contains poultry; protein chicken
+- `chicken_breast` Chicken Breast: no allergens; contains poultry; protein chicken
+- `chicken_drumstick` Chicken Drumstick: no allergens; contains poultry; protein chicken
+- `chicken_leg` Chicken Leg: no allergens; contains poultry; protein chicken
+- `chicken_thigh` Chicken Thigh: no allergens; contains poultry; protein chicken
+- `chicken_wing` Chicken Wing: no allergens; contains poultry; protein chicken
+- `chickpea` Chickpea: no allergens; protein legumes
+- `chickpea_flour` Chickpea Flour: no allergens
+- `chilli_flakes` Chilli Flakes: no allergens
+- `chilli_powder` Chilli Powder: no allergens
+- `chinese_broccoli` Chinese Broccoli: no allergens
+- `chinese_cabbage` Chinese Cabbage: no allergens
+- `chive` Chive: no allergens
+- `chopped_tomatoes` Chopped Tomatoes: no allergens
+- `chuck_roast` Chuck Roast: no allergens; contains meat; protein beef
+- `ciabatta` Ciabatta: gluten
+- `cider` Cider: sulphites; contains alcohol
+- `cider_vinegar` Cider Vinegar: sulphites
+- `cinnamon` Cinnamon: no allergens
+- `cinnamon_stick` Cinnamon Stick: no allergens
+- `clam` Clam: molluscs; contains shellfish; protein shellfish
+- `clotted_cream` Clotted Cream: milk; contains dairy
+- `clove` Clove: no allergens
+- `coco_sugar` Coco Sugar: no allergens
+- `cocoa_powder` Cocoa Powder: no allergens
+- `coconut_cream` Coconut Cream: no allergens
+- `coconut_milk` Coconut Milk: no allergens
+- `coconut_oil` Coconut Oil: no allergens
+- `cocoy_banana` Cocoy Banana: no allergens
+- `cod` Cod: fish; contains fish; protein fish
+- `colby_jack_cheese` Colby Jack Cheese: milk; contains dairy
+- `conch` Conch: molluscs; contains shellfish; protein shellfish
+- `condensed_milk` Condensed Milk: milk; contains dairy
+- `cooking_apple` Cooking Apple: no allergens
+- `cooking_wine` Cooking Wine: sulphites; contains alcohol
+- `coriander` Coriander: no allergens
+- `coriander_seed` Coriander Seed: no allergens
+- `corn_arepa_filled_with_mozarella_cheese` Corn Arepa Filled with Mozarella Cheese: milk; contains dairy
+- `corn_on_the_cob` Corn On the Cob: no allergens
+- `corned_beef` Corned Beef: no allergens; contains meat; protein beef
+- `cornflour` Cornflour: no allergens
+- `cornmeal` Cornmeal: no allergens
+- `cottage_cheese` Cottage Cheese: milk; contains dairy; protein cheese
+- `courgette` Courgette: no allergens
+- `couscous` Couscous: gluten
+- `crab_meat` Crab Meat: crustaceans; contains shellfish; protein shellfish
+- `cranberry` Cranberry: no allergens
+- `cream` Cream: milk; contains dairy
+- `cream_cheese` Cream Cheese: milk; contains dairy
+- `cream_of_tartar` Cream of Tartar: no allergens
+- `creamed_corn` Creamed Corn: milk; contains dairy
+- `creme_fraiche` Creme Fraiche: milk; contains dairy
+- `cucumber` Cucumber: no allergens
+- `cumin_seed` Cumin Seed: no allergens
+- `currant` Currant: sulphites
+- `daikon_radish` Daikon Radish: no allergens
+- `dark_beer` Dark Beer: gluten, sulphites; contains alcohol
+- `dark_rum` Dark Rum: no allergens; contains alcohol
+- `date` Date: no allergens
+- `date_molasses` Date Molasses: sulphites
+- `demerara_sugar` Demerara Sugar: no allergens
+- `desiccated_coconut` Desiccated Coconut: no allergens
+- `dessert_rice` Dessert Rice: no allergens
+- `dill` Dill: no allergens
+- `dill_pickle` Dill Pickle: sulphites
+- `double_cream` Double Cream: milk; contains dairy
+- `dried_apricot` Dried Apricot: sulphites
+- `dried_cherry` Dried Cherry: sulphites
+- `dried_chilli` Dried Chilli: no allergens
+- `dried_cranberry` Dried Cranberry: sulphites
+- `dried_dill` Dried Dill: no allergens
+- `dried_fruit` Dried Fruit: sulphites
+- `dried_mint` Dried Mint: no allergens
+- `dried_oregano` Dried Oregano: no allergens
+- `dried_red_chilli` Dried Red Chilli: no allergens
+- `dried_shrimp` Dried Shrimp: crustaceans; contains shellfish
+- `dried_sorrel` Dried Sorrel: no allergens
+- `dried_white_bean` Dried White Bean: no allergens; protein legumes
+- `dried_white_corn` Dried White Corn: no allergens
+- `dried_white_navy_bean` Dried White Navy Bean: no allergens; protein legumes
+- `duck_leg` Duck Leg: no allergens; contains poultry; protein duck
+- `dulce_de_leche` Dulce de Leche: milk; contains dairy
+- `egg` Egg: eggs; contains egg; protein egg
+- `egg_white` Egg White: eggs; contains egg; protein egg
+- `egg_yolk` Egg Yolk: eggs; contains egg; protein egg
+- `emmentaler_cheese` Emmentaler Cheese: milk; contains dairy
+- `english_muffin` English Muffin: gluten
+- `evaporated_milk` Evaporated Milk: milk; contains dairy
+- `farfalle` Farfalle: gluten
+- `farine` Farine: no allergens
+- `farmers_cheese` Farmers Cheese: milk; contains dairy
+- `feather_blade_beef` Feather Blade Beef: no allergens; contains meat; protein beef
+- `fennel` Fennel: no allergens
+- `fennel_bulb` Fennel Bulb: no allergens
+- `fennel_seed` Fennel Seed: no allergens
+- `fenugreek` Fenugreek: no allergens
+- `feta` Feta: milk; contains dairy
+- `fig` Fig: no allergens
+- `five_spice_powder` Five Spice Powder: no allergens
+- `flaked_almond` Flaked Almond: tree_nuts
+- `flank_steak` Flank Steak: no allergens; contains meat; protein beef
+- `freekeh` Freekeh: gluten
+- `french_lentil` French Lentil: no allergens; protein legumes
+- `fried_ripe_banana` Fried Ripe Banana: no allergens
+- `fries` Fries: no allergens
+- `frogs_leg` Frogs Leg: no allergens; contains meat
+- `fromage_frais` Fromage Frais: milk; contains dairy
+- `galangal` Galangal: no allergens
+- `garam_masala` Garam Masala: no allergens
+- `garlic` Garlic: no allergens
+- `garlic_powder` Garlic Powder: no allergens
+- `gelatine` Gelatine: no allergens; contains gelatin
+- `ghee` Ghee: milk; contains dairy
+- `ginger` Ginger: no allergens
+- `glace_cherry` Glace Cherry: sulphites
+- `glutinous_rice` Glutinous Rice: no allergens
+- `goat_meat` Goat Meat: no allergens; contains meat; protein goat
+- `golden_syrup` Golden Syrup: no allergens
+- `goose_fat` Goose Fat: no allergens; contains poultry
+- `gouda_cheese` Gouda Cheese: milk; contains dairy
+- `grand_marnier` Grand Marnier: sulphites; contains alcohol
+- `grapefruit` Grapefruit: no allergens
+- `great_northern_bean` Great Northern Bean: no allergens; protein legumes
+- `greek_yogurt` Greek Yogurt: milk; contains dairy
+- `green_chilli` Green Chilli: no allergens
+- `green_olive` Green Olive: no allergens
+- `green_papaya` Green Papaya: no allergens
+- `green_pepper` Green Pepper: no allergens
+- `green_red_lentil` Green Red Lentil: no allergens; protein legumes
+- `grits` Grits: no allergens
+- `ground_allspice` Ground Allspice: no allergens
+- `ground_almond` Ground Almond: tree_nuts
+- `ground_annatto` Ground Annatto: no allergens
+- `ground_coriander` Ground Coriander: no allergens
+- `ground_cumin` Ground Cumin: no allergens
+- `ground_ginger` Ground Ginger: no allergens
+- `ground_onion` Ground Onion: no allergens
+- `ground_poppy_seed` Ground Poppy Seed: no allergens
+- `groundnut_oil` Groundnut Oil: peanuts
+- `gruyere` Gruyere: milk; contains dairy
+- `habanero_pepper` Habanero Pepper: no allergens
+- `haddock` Haddock: fish; contains fish; protein fish
+- `hake` Hake: fish; contains fish; protein fish
+- `hard_taco_shell` Hard Taco Shell: no allergens
+- `haricot_bean` Haricot Bean: no allergens; protein legumes
+- `harissa_spice` Harissa Spice: no allergens
+- `hazelnut` Hazelnut: tree_nuts
+- `herring` Herring: fish; contains fish; protein fish
+- `hind_shank` Hind Shank: no allergens; contains meat; protein beef
+- `honey` Honey: no allergens; contains honey
+- `horseradish` Horseradish: no allergens
+- `hot_mint` Hot Mint: no allergens
+- `hummus` Hummus: sesame
+- `ice` Ice: no allergens
+- `icing_sugar` Icing Sugar: no allergens
+- `jalapeno` Jalapeno: no allergens
+- `jasmine_rice` Jasmine Rice: no allergens
+- `jerk` Jerk: no allergens
+- `jerusalem_artichoke` Jerusalem Artichoke: no allergens
+- `juniper_berry` Juniper Berry: no allergens
+- `kabse_spice` Kabse Spice: no allergens
+- `kale` Kale: no allergens
+- `kampot_pepper` Kampot Pepper: no allergens
+- `kidney_bean` Kidney Bean: no allergens; protein legumes
+- `kielbasa` Kielbasa: no allergens; contains meat, pork; protein pork
+- `knafeh` Knafeh: gluten
+- `lamb` Lamb: no allergens; contains meat; protein lamb
+- `lamb_fat` Lamb Fat: no allergens; contains meat
+- `lamb_kidney` Lamb Kidney: no allergens; contains meat; protein lamb
+- `lamb_leg` Lamb Leg: no allergens; contains meat; protein lamb
+- `lamb_loin_chop` Lamb Loin Chop: no allergens; contains meat; protein lamb
+- `lamb_mince` Lamb Mince: no allergens; contains meat; protein lamb
+- `lamb_shank` Lamb Shank: no allergens; contains meat; protein lamb
+- `lamb_shoulder` Lamb Shoulder: no allergens; contains meat; protein lamb
+- `lard` Lard: no allergens; contains meat, pork
+- `leek` Leek: no allergens
+- `lemon` Lemon: no allergens
+- `lemon_zest` Lemon Zest: no allergens
+- `lemongrass` Lemongrass: no allergens
+- `lentil` Lentil: no allergens; protein legumes
+- `lettuce` Lettuce: no allergens
+- `lima_bean` Lima Bean: no allergens; protein legumes
+- `lime` Lime: no allergens
+- `linguine_pasta` Linguine Pasta: gluten
+- `liquid_cheese` Liquid Cheese: milk; contains dairy
+- `lobster` Lobster: crustaceans; contains shellfish; protein shellfish
+- `longan` Longan: no allergens
+- `macaroni` Macaroni: gluten
+- `mackerel` Mackerel: fish; contains fish; protein fish
+- `makrut_lime_leaf` Makrut Lime Leaf: no allergens
+- `malai` Malai: milk; contains dairy
+- `malt_vinegar` Malt Vinegar: gluten, sulphites
+- `manchego` Manchego: milk; contains dairy
+- `mango` Mango: no allergens
+- `maple_syrup` Maple Syrup: no allergens
+- `marjoram` Marjoram: no allergens
+- `marzipan` Marzipan: tree_nuts
+- `mascarpone` Mascarpone: milk; contains dairy
+- `meringue_nests` Meringue Nests: eggs; contains egg
+- `mint` Mint: no allergens
+- `mirin` Mirin: sulphites; contains alcohol
+- `mixed_berry` Mixed Berry: no allergens
+- `mixed_peel` Mixed Peel: sulphites
+- `mixed_spice` Mixed Spice: no allergens
+- `molasses` Molasses: no allergens
+- `monkfish` Monkfish: fish; contains fish; protein fish
+- `monterey_jack_cheese` Monterey Jack Cheese: milk; contains dairy
+- `morning_glory` Morning Glory: no allergens
+- `mozzarella` Mozzarella: milk; contains dairy
+- `mulukhiyah` Mulukhiyah: no allergens
+- `mung_bean_sprout` Mung Bean Sprout: no allergens
+- `muscovado_sugar` Muscovado Sugar: no allergens
+- `mushroom` Mushroom: no allergens
+- `mussel` Mussel: molluscs; contains shellfish; protein shellfish
+- `new_potato` New Potato: no allergens
+- `olive_oil` Olive Oil: no allergens
+- `onion` Onion: no allergens
+- `onion_salt` Onion Salt: no allergens
+- `orange` Orange: no allergens
+- `orange_blossom_water` Orange Blossom Water: no allergens
+- `orange_juice` Orange Juice: no allergens
+- `orange_zest` Orange Zest: no allergens
+- `oregano` Oregano: no allergens
+- `oxtail` Oxtail: no allergens; contains meat; protein beef
+- `oyster` Oyster: molluscs; contains shellfish; protein shellfish
+- `paccheri_pasta` Paccheri Pasta: gluten
+- `paella_rice` Paella Rice: no allergens
+- `pak_choi` Pak Choi: no allergens
+- `palm_heart` Palm Heart: no allergens
+- `palm_sugar` Palm Sugar: no allergens
+- `pandan_leaf` Pandan Leaf: no allergens
+- `paneer` Paneer: milk; contains dairy; protein cheese
+- `panquehue_cheese` Panquehue Cheese: milk; contains dairy
+- `paprika` Paprika: no allergens
+- `parmesan` Parmesan: milk; contains dairy
+- `parsley` Parsley: no allergens
+- `parsnip` Parsnip: no allergens
+- `passata` Passata: no allergens
+- `passion_fruit_pulp` Passion Fruit Pulp: no allergens
+- `pea` Pea: no allergens
+- `peach` Peach: no allergens
+- `peach_juice` Peach Juice: no allergens
+- `peanut` Peanut: peanuts
+- `peanut_butter` Peanut Butter: peanuts
+- `pear` Pear: no allergens
+- `pecan_nut` Pecan Nut: tree_nuts
+- `pecorino` Pecorino: milk; contains dairy
+- `penne_rigate` Penne Rigate: gluten
+- `peppercorn` Peppercorn: no allergens
+- `pickle_juice` Pickle Juice: sulphites
+- `pickled_garlic` Pickled Garlic: sulphites
+- `pickled_grape_leaf` Pickled Grape Leaf: sulphites
+- `pickled_scallion_head` Pickled Scallion Head: sulphites
+- `pickled_scallion_head_brine` Pickled Scallion Head Brine: sulphites
+- `pigs_trotter` Pigs Trotter: no allergens; contains meat, pork; protein pork
+- `pilchard` Pilchard: fish; contains fish; protein fish
+- `pimento_stuffed_olive` Pimento Stuffed Olive: no allergens
+- `pineapple_chunk` Pineapple Chunk: no allergens
+- `pineapple_juice` Pineapple Juice: no allergens
+- `pink_food_colouring` Pink Food Colouring: no allergens
+- `pinto_bean` Pinto Bean: no allergens; protein legumes
+- `pistachio` Pistachio: tree_nuts
+- `plain_flour` Plain Flour: gluten
+- `plantain` Plantain: no allergens
+- `pomegranate` Pomegranate: no allergens
+- `pomegranate_molasses` Pomegranate Molasses: sulphites
+- `poppy_seed` Poppy Seed: no allergens
+- `pork` Pork: no allergens; contains meat, pork; protein pork
+- `pork_back_rib` Pork Back Rib: no allergens; contains meat, pork; protein pork
+- `pork_belly` Pork Belly: no allergens; contains meat, pork; protein pork
+- `pork_chop` Pork Chop: no allergens; contains meat, pork; protein pork
+- `pork_knuckle` Pork Knuckle: no allergens; contains meat, pork; protein pork
+- `pork_mince` Pork Mince: no allergens; contains meat, pork; protein pork
+- `pork_shoulder` Pork Shoulder: no allergens; contains meat, pork; protein pork
+- `pork_tenderloin` Pork Tenderloin: no allergens; contains meat, pork; protein pork
+- `potato` Potato: no allergens
+- `potato_starch` Potato Starch: no allergens
+- `prahok` Prahok: fish; contains fish
+- `prawn` Prawn: crustaceans; contains shellfish; protein shellfish
+- `prune` Prune: sulphites
+- `pul_biber` Pul Biber: no allergens
+- `pumpkin` Pumpkin: no allergens
+- `pumpkin_puree` Pumpkin Puree: no allergens
+- `purple_sprouting_broccoli` Purple Sprouting Broccoli: no allergens
+- `queso_fresco` Queso Fresco: milk; contains dairy; protein cheese
+- `quinoa` Quinoa: no allergens
+- `radish` Radish: no allergens
+- `rainbow_trout` Rainbow Trout: fish; contains fish; protein fish
+- `raisin` Raisin: sulphites
+- `ras_el_hanout` Ras El Hanout: no allergens
+- `raspberry` Raspberry: no allergens
+- `red_cabbage` Red Cabbage: no allergens
+- `red_chilli` Red Chilli: no allergens
+- `red_onion` Red Onion: no allergens
+- `red_pepper` Red Pepper: no allergens
+- `red_snapper` Red Snapper: fish; contains fish; protein fish
+- `red_wine` Red Wine: sulphites; contains alcohol
+- `red_wine_jelly` Red Wine Jelly: sulphites; contains alcohol
+- `red_wine_vinegar` Red Wine Vinegar: sulphites
+- `rhubarb` Rhubarb: no allergens
+- `rice` Rice: no allergens
+- `rice_flour` Rice Flour: no allergens
+- `rice_flour_pancake` Rice Flour Pancake: no allergens
+- `rice_paper_sheet` Rice Paper Sheet: no allergens
+- `rice_vinegar` Rice Vinegar: sulphites
+- `ricotta` Ricotta: milk; contains dairy
+- `rigatoni` Rigatoni: gluten
+- `roasted_pepper` Roasted Pepper: no allergens
+- `roasted_vegetable` Roasted Vegetable: no allergens
+- `rocket` Rocket: no allergens
+- `rose_water` Rose Water: no allergens
+- `rosemary` Rosemary: no allergens
+- `rye` Rye: gluten
+- `rye_flour` Rye Flour: gluten
+- `rye_grain` Rye Grain: gluten
+- `saffron` Saffron: no allergens
+- `sage` Sage: no allergens
+- `sake` Sake: no allergens; contains alcohol
+- `salmon` Salmon: fish; contains fish; protein fish
+- `salt` Salt: no allergens
+- `salt_cod` Salt Cod: fish; contains fish; protein fish
+- `sardine` Sardine: fish; contains fish; protein fish
+- `saskatoon_berry` Saskatoon Berry: no allergens
+- `sauerkraut` Sauerkraut: sulphites
+- `savoy_cabbage` Savoy Cabbage: no allergens
+- `sazon` Sazon: no allergens
+- `sazon_goya_with_azafran` Sazon Goya with Azafran: no allergens
+- `scotch_bonnet` Scotch Bonnet: no allergens
+- `sea_bass_fillet` Sea Bass Fillet: fish; contains fish; protein fish
+- `seafood_mix` Seafood Mix: crustaceans, molluscs; contains shellfish
+- `semolina` Semolina: gluten
+- `sesame_oil` Sesame Oil: sesame
+- `sesame_seed` Sesame Seed: sesame
+- `sevaiiya` Sevaiiya: gluten
+- `shallot` Shallot: no allergens
+- `sherry` Sherry: sulphites; contains alcohol
+- `sherry_vinegar` Sherry Vinegar: sulphites
+- `shiitake_mushroom` Shiitake Mushroom: no allergens
+- `shortening` Shortening: no allergens
+- `shredded_meat` Shredded Meat: no allergens; contains meat
+- `shredded_mexican_cheese` Shredded Mexican Cheese: milk; contains dairy
+- `shredded_monterey_jack_cheese` Shredded Monterey Jack Cheese: milk; contains dairy
+- `sichuan_pepper` Sichuan Pepper: no allergens
+- `silken_tofu` Silken Tofu: soy; protein tofu
+- `single_cream` Single Cream: milk; contains dairy
+- `sirloin_steak` Sirloin Steak: no allergens; contains meat; protein beef
+- `skirt_steak` Skirt Steak: no allergens; contains meat; protein beef
+- `smoked_haddock` Smoked Haddock: fish; contains fish; protein fish
+- `smoked_paprika` Smoked Paprika: no allergens
+- `smoked_salmon` Smoked Salmon: fish; contains fish; protein fish
+- `smoky_aioli` Smoky Aioli: eggs; contains egg
+- `snow_pea` Snow Pea: no allergens
+- `soda_water` Soda Water: no allergens
+- `sour_cream` Sour Cream: milk; contains dairy
+- `sour_milk` Sour Milk: milk; contains dairy
+- `soured_cream_and_chive_dip` Soured Cream and Chive Dip: milk; contains dairy
+- `soy_sauce` Soy Sauce: gluten, soy
+- `soya_bean` Soya Bean: soy; protein legumes
+- `soya_milk` Soya Milk: soy
+- `spaghetti` Spaghetti: gluten
+- `spinach` Spinach: no allergens
+- `spring_onion` Spring Onion: no allergens
+- `squash` Squash: no allergens
+- `squid` Squid: molluscs; contains shellfish; protein shellfish
+- `star_anise` Star Anise: no allergens
+- `sticky_rice_flour` Sticky Rice Flour: no allergens
+- `stilton_cheese` Stilton Cheese: milk; contains dairy
+- `stir_fry_vegetable` Stir Fry Vegetable: no allergens
+- `stout` Stout: gluten, sulphites; contains alcohol
+- `strawberries` Strawberries: no allergens
+- `strong_white_flour` Strong White Flour: gluten
+- `strong_wholemeal_flour` Strong Wholemeal Flour: gluten
+- `suet` Suet: gluten; contains meat
+- `sugar` Sugar: no allergens
+- `sugar_snap_pea` Sugar Snap Pea: no allergens
+- `sugar_syrup` Sugar Syrup: no allergens
+- `sultana` Sultana: sulphites
+- `sumac` Sumac: no allergens
+- `summer_savoury` Summer Savoury: no allergens
+- `sushi_rice` Sushi Rice: no allergens
+- `swede` Swede: no allergens
+- `swiss_cheese` Swiss Cheese: milk; contains dairy
+- `tahini` Tahini: sesame
+- `tapioca` Tapioca: no allergens
+- `taro` Taro: no allergens
+- `tarragon` Tarragon: no allergens
+- `tempeh` Tempeh: soy; protein tofu
+- `tempura_flour` Tempura Flour: gluten
+- `thyme` Thyme: no allergens
+- `toast` Toast: gluten
+- `tofu` Tofu: soy; protein tofu
+- `tomato` Tomato: no allergens
+- `tomato_puree` Tomato Puree: no allergens
+- `toor_dal` Toor Dal: no allergens; protein legumes
+- `trout` Trout: fish; contains fish; protein fish
+- `truffle_oil` Truffle Oil: no allergens
+- `tuna` Tuna: fish; contains fish; protein fish
+- `turkey` Turkey: no allergens; contains poultry; protein turkey
+- `turkey_mince` Turkey Mince: no allergens; contains meat, poultry; protein turkey
+- `turmeric` Turmeric: no allergens
+- `turnip` Turnip: no allergens
+- `vanilla_pod` Vanilla Pod: no allergens
+- `vanilla_powder` Vanilla Powder: no allergens
+- `vanilla_sugar` Vanilla Sugar: no allergens
+- `vasterbottensost_cheese` Vasterbottensost Cheese: milk; contains dairy
+- `veal` Veal: no allergens; contains meat; protein beef
+- `vegan_butter` Vegan Butter: no allergens
+- `vegan_white_wine_vinegar` Vegan White Wine Vinegar: sulphites
+- `vegetable` Vegetable: no allergens
+- `vegetable_oil` Vegetable Oil: no allergens
+- `vermicelli_pasta` Vermicelli Pasta: gluten
+- `vine_leaf` Vine Leaf: no allergens
+- `walnut` Walnut: tree_nuts
+- `water` Water: no allergens
+- `white_asparagus` White Asparagus: no allergens
+- `white_fish` White Fish: fish; contains fish; protein fish
+- `white_sauerkraut` White Sauerkraut: sulphites
+- `white_vinegar` White Vinegar: sulphites
+- `white_wine` White Wine: sulphites; contains alcohol
+- `white_wine_vinegar` White Wine Vinegar: sulphites
+- `white_yam` White Yam: no allergens
+- `whole_wheat` Whole Wheat: gluten
+- `wild_garlic_leaf` Wild Garlic Leaf: no allergens
+- `wood_ear_mushroom` Wood Ear Mushroom: no allergens
+- `yautia` Yautia: no allergens
+- `yeast` Yeast: no allergens
+- `yellow_food_colouring` Yellow Food Colouring: no allergens
+- `yellow_masarepa` Yellow Masarepa: no allergens
+- `yellow_pepper` Yellow Pepper: no allergens
+- `yellow_split_pea` Yellow Split Pea: no allergens; protein legumes
+- `yogurt` Yogurt: milk; contains dairy
+- `yuca` Yuca: no allergens
+- `zapallo_squash` Zapallo Squash: no allergens
+
+## (b) Changed (104)
+
+Fields that didn't change are left out. `+` means added and `-` means removed.
+
+- **`apricot` Apricot**: allergens +sulphites. *Why:* Lamb Tagine uses 100g (dried) apricots, usually sulphured
+- **`barbeque_sauce` Barbeque Sauce**: allergens +mustard. *Why:* many BBQ sauces list mustard; some add Worcestershire (fish); BRAND-DEPENDENT
+- **`beef_gravy` Beef Gravy**: allergens +celery +gluten. *Why:* gravy granules/jars usually thickened with wheat; often celery; BRAND-DEPENDENT
+- **`beef_stock` Beef Stock**: allergens +celery +gluten. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`bouillon_cube` Bouillon Cube: NEW** (aisle condiments; allergens celery, gluten; contains meat; synonyms Bouillon Cubes). review: split from vegetable_stock; flavour unknown (Raspeballer = meat cubes), so safe side: meat, celery, wheat; BRAND-DEPENDENT
+- **`breadfruit` Breadfruit**: aisle bakery -> produce. *Why:* fresh fruit, not bakery; not brand-dependent
+- **`buckwheat` Buckwheat**: allergens -gluten. *Why:* buckwheat is not a gluten grain ('wheat' regex); cross-contact possible
+- **`buckwheat_flour` Buckwheat Flour**: allergens -gluten. *Why:* buckwheat is not a gluten grain; BRAND-DEPENDENT: some flours are blended with wheat
+- **`burger_bun` Burger Bun**: synonyms -Sesame Seed Burger Buns. *Why:* sesame-seed buns split out to sesame_seed_burger_bun; plain buns may still contain milk/sesame (BRAND-DEPENDENT)
+- **`caramelized_sugar_sauce` Caramelized Sugar Sauce**: allergens -milk; contains -dairy; aisle dairy_eggs -> condiments. *Why:* Jamaican browning (burnt sugar), no milk
+- **`cassaba` Cassaba**: aisle pantry -> international. *Why:* in Venezuelan Sancocho; almost certainly cassava (yuca)
+- **`chicken_liver` Chicken Liver**: contains -meat; protein None -> chicken. *Why:* chicken offal -> poultry/chicken
+- **`chicken_stock` Chicken Stock**: allergens +celery +gluten. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`chilli_bean_paste` Chilli Bean Paste**: allergens +gluten. *Why:* doubanjiang is broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT
+- **`chimichurri_sauce` Chimichurri Sauce**: allergens +sulphites. *Why:* made with red wine vinegar; BRAND-DEPENDENT
+- **`chinese_long_bean` Chinese Long Bean**: protein legumes -> None; aisle pantry -> produce. *Why:* green vegetable pod, not a protein legume
+- **`chocolate_chip` Chocolate Chip**: allergens +milk +soy; contains +dairy. *Why:* most chips are milk/semi-sweet with soy lecithin; BRAND-DEPENDENT
+- **`christmas_pudding` Christmas Pudding**: allergens +eggs +milk +sulphites +tree_nuts; contains +alcohol +dairy +egg. *Why:* typically egg, suet, dried fruit, almonds, brandy/stout; BRAND-DEPENDENT
+- **`cuban_bread` Cuban Bread**: contains +meat +pork. *Why:* traditional Cuban bread is made with lard; BRAND-DEPENDENT
+- **`custard_powder` Custard Powder**: aisle dairy_eggs -> pantry. *Why:* shelf powder; Bird's has no milk but instant mixes do, milk kept (safe side); BRAND-DEPENDENT
+- **`dark_chocolate` Dark Chocolate**: allergens +milk +soy; contains +dairy. *Why:* many dark chocolates contain milk fat and soy lecithin; vegan bars exist; BRAND-DEPENDENT
+- **`dark_chocolate_chip` Dark Chocolate Chip**: allergens +milk +soy; contains +dairy. *Why:* many contain milk fat and soy lecithin; BRAND-DEPENDENT
+- **`doner_meat` Doner Meat**: allergens +milk +soy; contains +dairy. *Why:* doner products commonly list wheat, soy and milk; BRAND-DEPENDENT
+- **`doubanjiang` Doubanjiang**: allergens +gluten. *Why:* broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT
+- **`dutch_stroop` Dutch Stroop**: allergens -gluten; aisle pantry -> condiments. *Why:* stroopwafel syrup (sugar/glucose syrup), no wheat ('stroop' regex)
+- **`egg_roll` Egg Roll**: allergens +crustaceans; contains +pork +shellfish. *Why:* ready-made Vietnamese egg rolls (cha gio) are usually pork, often shrimp; BRAND-DEPENDENT
+- **`english_mustard` English Mustard**: allergens +gluten. *Why:* Colman's English mustard contains wheat flour; BRAND-DEPENDENT
+- **`falafel` Falafel**: allergens +sesame. *Why:* ready-made falafel often contains wheat flour and sesame; BRAND-DEPENDENT
+- **`fermented_black_bean` Fermented Black Bean**: protein legumes -> None. *Why:* salted condiment, not a protein source
+- **`fettuccine` Fettuccine**: allergens +eggs; contains +egg. *Why:* fettuccine is often egg pasta; BRAND-DEPENDENT
+- **`fish_stock` Fish Stock**: allergens +celery +gluten. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`flax_egg` Flax Egg**: allergens -eggs; contains -egg. *Why:* flaxseed + water egg substitute; no egg
+- **`fruit_mix` Fruit Mix**: aisle pantry -> produce. *Why:* fresh fruit to serve
+- **`garlic_sauce` Garlic Sauce**: allergens +eggs +milk; contains +dairy +egg. *Why:* Dutch/kebab garlic sauce is mayo- or yogurt-based; BRAND-DEPENDENT
+- **`gingerbread_spice` Gingerbread Spice**: allergens -gluten; aisle bakery -> spices. *Why:* 1 tsp spice blend in Gingerbread Waffles, not bread; BRAND-DEPENDENT: check a typical label
+- **`goats_cheese` Goats Cheese**: contains -meat; aisle meat_seafood -> dairy_eggs. *Why:* not meat ('goat' regex); dairy aisle
+- **`gochujang` Gochujang**: allergens +gluten +soy. *Why:* most gochujang contains wheat and soybean; BRAND-DEPENDENT
+- **`graham_cracker_crumb` Graham Cracker Crumb**: contains +honey -meat; aisle meat_seafood -> pantry. *Why:* not meat ('graham' matched 'ham'); most graham crackers contain honey; BRAND-DEPENDENT: may contain milk/soy
+- **`grape_nut_cereal` Grape Nut Cereal**: aisle produce -> pantry. *Why:* breakfast cereal (wheat + barley), pantry not produce
+- **`green_bean` Green Bean**: protein legumes -> None. *Why:* green vegetable pod, not a protein legume
+- **`ground_nutmeg` Ground Nutmeg**: allergens -peanuts. *Why:* nutmeg is a seed spice, not a peanut ('ground nut' regex misfire)
+- **`hoisin_sauce` Hoisin Sauce**: allergens +sesame. *Why:* common brands (e.g. Lee Kum Kee) include sesame paste; BRAND-DEPENDENT
+- **`ice_cream` Ice Cream**: allergens +eggs; contains +egg. *Why:* custard-base ice creams contain egg; BRAND-DEPENDENT
+- **`jamon_iberico` Jamon Iberico**: protein None -> pork. *Why:* cured pork, protein was missing
+- **`khus_khus` Khus Khus**: allergens -gluten; aisle pantry -> spices. *Why:* in Lamb Biryani 'khus khus' = Indian poppy seeds, not couscous; no gluten
+- **`lamb_stock` Lamb Stock**: allergens +celery +gluten. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`lasagne_sheet` Lasagne Sheet**: allergens +eggs; contains +egg. *Why:* egg lasagne sheets are common; BRAND-DEPENDENT
+- **`madras_paste` Madras Paste**: allergens +mustard. *Why:* Patak's-style curry pastes list mustard; BRAND-DEPENDENT
+- **`maria_cooky` Maria Cooky**: allergens +gluten +milk; contains +dairy. *Why:* wheat biscuit, many brands contain milk; BRAND-DEPENDENT
+- **`marinated_tofu` Marinated Tofu**: allergens +gluten. *Why:* marinades are usually soy sauce (wheat); BRAND-DEPENDENT
+- **`mars_bar` Mars Bar**: allergens +eggs +soy; contains +egg; aisle dairy_eggs -> pantry. *Why:* UK Mars lists egg white and barley malt; soy lecithin in some markets; BRAND-DEPENDENT
+- **`massaman_curry_paste` Massaman Curry Paste**: allergens +crustaceans; contains +shellfish. *Why:* usually contains shrimp paste; BRAND-DEPENDENT
+- **`mincemeat` Mincemeat**: allergens +tree_nuts; contains +meat; protein beef -> None. *Why:* sweet mincemeat (dried fruit, suet), not beef; suet may be beef (safe side: meat); often almonds; BRAND-DEPENDENT. NB Mutabbaq uses this line for minced meat
+- **`mixed_grain` Mixed Grain**: allergens +gluten. *Why:* packet mixed grains usually include spelt/wheat/barley; BRAND-DEPENDENT
+- **`mixed_pepper` Mixed Pepper**: aisle spices -> produce. *Why:* 5 mixed (bell) peppers in Pisto, produce not spices
+- **`mung_bean_paste` Mung Bean Paste**: allergens -soy. *Why:* mung beans + sugar; not soy ('bean paste' regex)
+- **`mustard_seed` Mustard Seed**: notes only. *Why:* whole seed; not brand-dependent
+- **`naan_bread` Naan Bread**: allergens +milk; contains +dairy. *Why:* naan is usually made with yogurt/milk; BRAND-DEPENDENT
+- **`noodle` Noodle**: allergens +eggs; contains +egg. *Why:* used for lo mein / mee goreng (egg noodles) and instant ramen; BRAND-DEPENDENT
+- **`oats` Oats**: allergens +gluten. *Why:* oats are an EU-14 gluten cereal; certified GF oats exist
+- **`oreo_cream_biscuit` Oreo Cream Biscuit**: allergens +soy; aisle dairy_eggs -> pantry. *Why:* soy lecithin; milk kept (may-contain); BRAND-DEPENDENT
+- **`oyster_mushroom` Oyster Mushroom**: protein shellfish -> None. *Why:* a mushroom, not shellfish
+- **`padron_pepper` Padron Pepper**: aisle spices -> produce. *Why:* fresh pepper, produce not spices
+- **`panang_curry_paste` Panang Curry Paste**: allergens +crustaceans; contains +shellfish. *Why:* usually contains shrimp paste; some add peanuts; BRAND-DEPENDENT
+- **`peanut_cooky` Peanut Cooky**: allergens +eggs +gluten +milk; contains +dairy +egg. *Why:* biscuits are wheat-based, usually with butter and egg; BRAND-DEPENDENT
+- **`plain_chocolate` Plain Chocolate**: allergens +milk +soy; contains +dairy. *Why:* UK 'plain' = dark; often milk fat + soy lecithin; BRAND-DEPENDENT
+- **`polish_kabano` Polish Kabano**: contains +meat +pork; protein None -> pork; aisle pantry -> meat_seafood. *Why:* kabanos is a pork sausage (was untagged); same food as kabanos_sausage
+- **`prosciutto` Prosciutto**: protein None -> pork. *Why:* cured pork, protein was missing
+- **`puff_pastry` Puff Pastry**: allergens +milk; contains +dairy. *Why:* all-butter puff is common; vegan brands exist; BRAND-DEPENDENT
+- **`red_curry_paste` Red Curry Paste**: allergens +crustaceans; contains +shellfish. *Why:* Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT
+- **`redcurrant` Redcurrant**: allergens -sulphites. *Why:* fresh berries; sulphites only apply to dried currants
+- **`refried_bean` Refried Bean**: contains +pork. *Why:* traditional refried beans use lard; vegetarian tins exist; BRAND-DEPENDENT
+- **`rice_krispies` Rice Krispies**: allergens +gluten. *Why:* Kellogg's Rice Krispies contain barley malt flavouring; BRAND-DEPENDENT
+- **`runner_bean` Runner Bean**: protein legumes -> None. *Why:* green vegetable pod, not a protein legume
+- **`salsa_lizano` Salsa Lizano**: allergens +mustard. *Why:* Lizano lists mustard (unverified label, safe side); BRAND-DEPENDENT
+- **`sausage` Sausage**: allergens +gluten +sulphites. *Why:* UK sausages usually contain rusk (wheat) and sulphite preservative; BRAND-DEPENDENT
+- **`seafood_stock` Seafood Stock**: allergens +celery +gluten. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`seed` Seed**: allergens +sesame. *Why:* unspecified 'seeds' in Danish rye bread often include sesame (safe side)
+- **`self_raising_flour` Self Raising Flour**: allergens -sulphites. *Why:* removed sulphites ('raisin' matched inside 'raising')
+- **`sesame_seed_burger_bun` Sesame Seed Burger Bun: NEW** (aisle bakery; allergens gluten, sesame; contains none; synonyms Sesame Seed Burger Buns). review: split from burger_bun so sesame isn't lost (Big Mac, Chick-Fil-A); BRAND-DEPENDENT: may contain milk
+- **`shaoxing_wine` Shaoxing Wine**: allergens +gluten. *Why:* Shaoxing is brewed with a wheat starter and is often salted; BRAND-DEPENDENT
+- **`shortcrust_pastry` Shortcrust Pastry**: allergens +milk; contains +dairy. *Why:* usually made with butter; vegan brands exist; BRAND-DEPENDENT
+- **`shrimp_paste` Shrimp Paste**: protein shellfish -> None. *Why:* condiment, not the dish's protein (allergen kept)
+- **`shrimp_stock` Shrimp Stock**: allergens +celery +gluten; protein shellfish -> None. *Why:* condiment, not the dish's protein; review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call
+- **`sirop_de_liege` Sirop de Liege**: allergens -gluten; aisle pantry -> condiments. *Why:* Liege syrup = apples/pears/sugar, no wheat
+- **`speculaas_spice_mix` Speculaas Spice Mix**: allergens -gluten. *Why:* ground spice blend, no flour; BRAND-DEPENDENT: check a typical label
+- **`sriracha` Sriracha**: allergens +sulphites. *Why:* Huy Fong sriracha lists sodium bisulfite; BRAND-DEPENDENT
+- **`sun_dried_tomato` Sun Dried Tomato**: allergens +sulphites. *Why:* often preserved with sulphur dioxide; BRAND-DEPENDENT
+- **`sweet_peppadew_pepper` Sweet Peppadew Pepper**: aisle spices -> condiments. *Why:* jarred pickled peppers; may contain sulphites (BRAND-DEPENDENT)
+- **`sweet_potato` Sweet Potato**: notes only. *Why:* fresh vegetable; brand flag was a 'sweet' regex misfire
+- **`sweetcorn` Sweetcorn**: notes only. *Why:* plain vegetable; brand flag was a 'sweet' regex misfire
+- **`thai_chilli_jam` Thai Chilli Jam**: allergens +crustaceans +fish; contains +fish +shellfish. *Why:* nam prik pao contains dried shrimp + fish sauce; BRAND-DEPENDENT
+- **`thai_green_curry_paste` Thai Green Curry Paste**: allergens +crustaceans; contains +shellfish. *Why:* Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT
+- **`toffee_popcorn` Toffee Popcorn**: aisle dairy_eggs -> pantry. *Why:* snack aisle; BRAND-DEPENDENT
+- **`tomato_ketchup` Tomato Ketchup**: allergens +celery. *Why:* Heinz (UK) lists 'spice and herb extracts (contain celery)'; BRAND-DEPENDENT
+- **`turkey_ham` Turkey Ham**: contains -meat -pork; protein pork -> turkey. *Why:* turkey ham is turkey, not pork ('ham' regex)
+- **`vegetable_millk` Vegetable Millk**: allergens +gluten +soy +tree_nuts; aisle produce -> pantry. *Why:* unspecified plant milk (rijstevlaai); covers soy/almond/oat (safe side); BRAND-DEPENDENT
+- **`vegetable_shortening` Vegetable Shortening**: aisle produce -> pantry. *Why:* shelf fat, pantry not produce
+- **`vegetable_stock` Vegetable Stock**: allergens +celery +gluten; synonyms -Bouillon Cubes. *Why:* stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; 'Bouillon Cubes' moved to bouillon_cube (flavour unknown)
+- **`vinaigrette_dressing` Vinaigrette Dressing**: allergens +mustard +sulphites. *Why:* vinaigrettes usually contain mustard and wine vinegar; BRAND-DEPENDENT
+- **`water_chestnut` Water Chestnut**: allergens -tree_nuts. *Why:* aquatic vegetable corm, not a tree nut
+- **`wholegrain_mustard` Wholegrain Mustard**: allergens +sulphites. *Why:* made with white wine/vinegar, labels list sulphites; BRAND-DEPENDENT
+- **`wonton_skin` Wonton Skin**: allergens +eggs; contains +egg. *Why:* most wonton wrappers contain egg; BRAND-DEPENDENT
+- **`worcestershire_sauce` Worcestershire Sauce**: allergens +gluten. *Why:* UK Lea & Perrins uses barley malt vinegar -> gluten; anchovy -> fish; BRAND-DEPENDENT
+
+## (c) Needs a human call (162)
+
+Each line shows the current allergens, then the question. Lines marked (b) were changed in this pass.
+
+- `achiote_paste` Achiote Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `alinos_sauce` Alinos Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `all_purpose_seasoning` All Purpose Seasoning: [celery]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `almond_extract` Almond Extract: [tree_nuts]: tree_nuts kept. Pure extract is made from bitter-almond oil; imitation extract has no nut. Keep?
+- `almond_paste` Almond Paste: [tree_nuts]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `apricot_jam` Apricot Jam: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `baking_powder` Baking Powder: [none]: no allergen set. Some UK baking powders use wheat flour as the filler (most use maize/rice starch).
+- `barbeque_sauce` Barbeque Sauce (b): [mustard]: many BBQ sauces list mustard; some add Worcestershire (fish); BRAND-DEPENDENT
+- `beef_gravy` Beef Gravy (b): [celery, gluten]: gravy granules/jars usually thickened with wheat; often celery; BRAND-DEPENDENT
+- `beef_stock` Beef Stock (b): [celery, gluten]: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `black_pepper` Black Pepper: [none]: the synonym 'Pepper' also catches bell peppers in 5 recipes ('1 red' in mdb-52796, '1' in mdb-53063, '1/2' in mdb-53326, '1/2 cup' in mdb-53539, '2 tablespoons' in mdb-53541). Not an allergen problem, but pantry match is wrong there. Fixing it needs a per-line remap feature in the pipeline (overrides can only add lines).
+- `blackcurrant_jam` Blackcurrant Jam: [sulphites]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `bouillon_cube` Bouillon Cube (b): [celery, gluten]: split from vegetable_stock; flavour unknown (Raspeballer = meat cubes), so safe side: meat, celery, wheat; BRAND-DEPENDENT
+- `bouquet_garni` Bouquet Garni: [none]: no allergen set. Some bouquet garni include celery leaf.
+- `bread` Bread: [gluten]: BRAND-DEPENDENT: may also contain milk/soy/sesame
+- `breadcrumb` Breadcrumb: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `buckwheat_flour` Buckwheat Flour (b): [none]: buckwheat is not a gluten grain; BRAND-DEPENDENT: some flours are blended with wheat
+- `burger_bun` Burger Bun (b): [gluten]: sesame-seed buns split out to sesame_seed_burger_bun; plain buns may still contain milk/sesame (BRAND-DEPENDENT)
+- `caramel` Caramel: [milk]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `caramel_sauce` Caramel Sauce: [milk]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `caramelized_sugar_sauce` Caramelized Sugar Sauce (b): [none]: Jamaican browning (burnt sugar), no milk; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `chestnut` Chestnut: [tree_nuts]: tree_nuts kept. The EU-14 list doesn't name chestnut, but many allergy bodies treat it as a tree nut. Keep?
+- `chicken_stock` Chicken Stock (b): [celery, gluten]: (changed, see b) isPantryStaple=true. With 'assume basics' on, chicken-stock recipes count as owned. Fine for a cupboard of cubes?
+- `chilli_bean_paste` Chilli Bean Paste (b): [gluten, soy]: (changed, see b) same food as `doubanjiang`; both ids kept (ids can't change).
+- `chilli_sauce` Chilli Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `chimichurri_sauce` Chimichurri Sauce (b): [sulphites]: made with red wine vinegar; BRAND-DEPENDENT
+- `chinese_sesame_sauce` Chinese Sesame Sauce: [sesame]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `chocolate_chip` Chocolate Chip (b): [milk, soy]: most chips are milk/semi-sweet with soy lecithin; BRAND-DEPENDENT
+- `chorizo` Chorizo: [none]: no allergen added. Some Spanish chorizo lists milk protein or sulphites.
+- `christmas_pudding` Christmas Pudding (b): [eggs, gluten, milk, sulphites, tree_nuts]: typically egg, suet, dried fruit, almonds, brandy/stout; BRAND-DEPENDENT
+- `cooked_chestnut` Cooked Chestnut: [tree_nuts]: same as chestnut.
+- `corn_tortilla` Corn Tortilla: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `cuban_bread` Cuban Bread (b): [gluten]: traditional Cuban bread is made with lard; BRAND-DEPENDENT
+- `curry_powder` Curry Powder: [none]: no allergen set. Some blends contain mustard or wheat flour.
+- `custard` Custard: [eggs, milk]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `custard_powder` Custard Powder (b): [milk]: shelf powder; Bird's has no milk but instant mixes do, milk kept (safe side); BRAND-DEPENDENT
+- `dark_chocolate` Dark Chocolate (b): [milk, soy]: many dark chocolates contain milk fat and soy lecithin; vegan bars exist; BRAND-DEPENDENT
+- `dark_chocolate_chip` Dark Chocolate Chip (b): [milk, soy]: many contain milk fat and soy lecithin; BRAND-DEPENDENT
+- `dark_soy_sauce` Dark Soy Sauce: [gluten, soy]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `digestive_biscuit` Digestive Biscuit: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `dijon_mustard` Dijon Mustard: [mustard, sulphites]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `doner_meat` Doner Meat (b): [gluten, milk, soy]: doner products commonly list wheat, soy and milk; BRAND-DEPENDENT
+- `doubanjiang` Doubanjiang (b): [gluten, soy]: broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT
+- `duck_sauce` Duck Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `egg_noodle` Egg Noodle: [eggs, gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `egg_roll` Egg Roll (b): [crustaceans, eggs, gluten]: ready-made Vietnamese egg rolls (cha gio) are usually pork, often shrimp; BRAND-DEPENDENT
+- `egg_roll_wrapper` Egg Roll Wrapper: [eggs, gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `enchilada_sauce` Enchilada Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `english_mustard` English Mustard (b): [gluten, mustard]: Colman's English mustard contains wheat flour; BRAND-DEPENDENT
+- `fajita_seasoning` Fajita Seasoning: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `falafel` Falafel (b): [gluten, sesame]: ready-made falafel often contains wheat flour and sesame; BRAND-DEPENDENT
+- `fettuccine` Fettuccine (b): [eggs, gluten]: fettuccine is often egg pasta; BRAND-DEPENDENT
+- `filo_pastry` Filo Pastry: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `fish_sauce` Fish Sauce: [fish]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `fish_stock` Fish Stock (b): [celery, fish, gluten]: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `flour_tortilla` Flour Tortilla: [gluten]: the synonym 'Tortillas' includes 200g in mdb-53107 (Avocado dip), which is probably tortilla chips (corn). Gluten is kept, which is the safe side.
+- `galangal_paste` Galangal Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `garlic_sauce` Garlic Sauce (b): [eggs, milk]: Dutch/kebab garlic sauce is mayo- or yogurt-based; BRAND-DEPENDENT
+- `ginger_cordial` Ginger Cordial: [sulphites]: BRAND-DEPENDENT: preservative; listed conservatively
+- `ginger_garlic_paste` Ginger Garlic Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `ginger_paste` Ginger Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `gingerbread_spice` Gingerbread Spice (b): [none]: 1 tsp spice blend in Gingerbread Waffles, not bread; BRAND-DEPENDENT: check a typical label
+- `gochujang` Gochujang (b): [gluten, soy]: most gochujang contains wheat and soybean; BRAND-DEPENDENT
+- `graham_cracker_crumb` Graham Cracker Crumb (b): [gluten]: not meat ('graham' matched 'ham'); most graham crackers contain honey; BRAND-DEPENDENT: may contain milk/soy
+- `grape_nut_cereal` Grape Nut Cereal (b): [gluten]: breakfast cereal (wheat + barley), pantry not produce; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `green_salsa` Green Salsa: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `ground_mahleb` Ground Mahleb: [none]: cherry-stone kernel; occasional cross-reactivity with almond. No allergen set. Leave?
+- `ham` Ham: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `hoisin_sauce` Hoisin Sauce (b): [gluten, sesame, soy]: common brands (e.g. Lee Kum Kee) include sesame paste; BRAND-DEPENDENT
+- `hot_sauce` Hot Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `ice_cream` Ice Cream (b): [eggs, milk]: custard-base ice creams contain egg; BRAND-DEPENDENT
+- `italian_fennel_sausage` Italian Fennel Sausage: [none]: no allergen added. Italian sausages usually have no rusk, unlike the generic `sausage`, which was changed.
+- `italian_seasoning` Italian Seasoning: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `jam` Jam: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `jamon_iberico` Jamon Iberico (b): [none]: cured pork, protein was missing; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `kabanos_sausage` Kabanos Sausage: [none]: same food as `polish_kabano` (both ids kept). polish_kabano had no meat/pork tags and is fixed in (b).
+- `lamb_stock` Lamb Stock (b): [celery, gluten]: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `lasagne_sheet` Lasagne Sheet (b): [eggs, gluten]: egg lasagne sheets are common; BRAND-DEPENDENT
+- `lemon_juice` Lemon Juice: [none]: fresh is allergen-free, but bottled lemon juice usually contains sulphites. Add sulphites?
+- `lime_juice` Lime Juice: [none]: same as lemon juice: bottled versions often contain sulphites.
+- `madras_paste` Madras Paste (b): [mustard]: Patak's-style curry pastes list mustard; BRAND-DEPENDENT
+- `maria_cooky` Maria Cooky (b): [gluten, milk]: wheat biscuit, many brands contain milk; BRAND-DEPENDENT
+- `marinated_tofu` Marinated Tofu (b): [gluten, soy]: marinades are usually soy sauce (wheat); BRAND-DEPENDENT
+- `mars_bar` Mars Bar (b): [eggs, gluten, milk, soy]: UK Mars lists egg white and barley malt; soy lecithin in some markets; BRAND-DEPENDENT
+- `massaman_curry_paste` Massaman Curry Paste (b): [crustaceans]: usually contains shrimp paste; BRAND-DEPENDENT
+- `mayonnaise` Mayonnaise: [eggs]: eggs only. Many mayonnaises (and most French-style ones) also contain mustard.
+- `milk` Milk: [milk]: isPantryStaple=true. Milk is perishable; is it really an 'assume basics' item?
+- `milk_chocolate` Milk Chocolate: [milk, soy]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `mincemeat` Mincemeat (b): [gluten, sulphites, tree_nuts]: (changed, see b) Mutabbaq (mdb-53223) uses the raw string 'Mincemeat' for minced meat (method says 'minced meat'), so it picks up sweet-mincemeat allergens and loses its beef/lamb protein tag. Needs a per-line remap or a renamed source line.
+- `miniature_marshmallow` Miniature Marshmallow: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `mixed_grain` Mixed Grain (b): [gluten]: packet mixed grains usually include spelt/wheat/barley; BRAND-DEPENDENT
+- `morcilla` Morcilla: [gluten]: black pudding (UK, oats/barley) and morcilla (Spanish, rice) share one id; gluten is kept, which is the safe side.
+- `mung_bean_paste` Mung Bean Paste (b): [none]: mung beans + sugar; not soy ('bean paste' regex); BRAND-DEPENDENT: check a typical label for hidden allergens
+- `mustard` Mustard: [mustard]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `mustard_powder` Mustard Powder: [mustard]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `naan_bread` Naan Bread (b): [gluten, milk]: naan is usually made with yogurt/milk; BRAND-DEPENDENT
+- `noodle` Noodle (b): [eggs, gluten]: used for lo mein / mee goreng (egg noodles) and instant ramen; BRAND-DEPENDENT
+- `nougatine` Nougatine: [eggs, tree_nuts]: eggs kept (from the rule). Classic nougatine is sugar + nuts and often has no egg; it may contain butter.
+- `oreo_cream_biscuit` Oreo Cream Biscuit (b): [gluten, milk, soy]: soy lecithin; milk kept (may-contain); BRAND-DEPENDENT
+- `oyster_sauce` Oyster Sauce: [gluten, molluscs, soy]: BRAND-DEPENDENT: most contain wheat + soy
+- `panang_curry_paste` Panang Curry Paste (b): [crustaceans]: usually contains shrimp paste; some add peanuts; BRAND-DEPENDENT
+- `parma_ham` Parma Ham: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `peanut_brittle` Peanut Brittle: [peanuts]: peanuts only; most brittle also contains butter (milk).
+- `peanut_cooky` Peanut Cooky (b): [eggs, gluten, milk, peanuts]: biscuits are wheat-based, usually with butter and egg; BRAND-DEPENDENT
+- `pico_de_gallo_sauce` Pico de Gallo Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `pine_nut` Pine Nut: [tree_nuts]: tree_nuts kept (botanically a seed; EU-14 doesn't list it). Keep?
+- `pistachio_paste` Pistachio Paste: [tree_nuts]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `pita_bread` Pita Bread: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `plain_chocolate` Plain Chocolate (b): [milk, soy]: UK 'plain' = dark; often milk fat + soy lecithin; BRAND-DEPENDENT
+- `plum_jam` Plum Jam: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `plum_sauce` Plum Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `pretzels` Pretzels: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `puff_pastry` Puff Pastry (b): [gluten, milk]: all-butter puff is common; vegan brands exist; BRAND-DEPENDENT
+- `raspberry_jam` Raspberry Jam: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `red_curry_paste` Red Curry Paste (b): [crustaceans]: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT
+- `red_pepper_paste` Red Pepper Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `red_pepper_sauce` Red Pepper Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `refried_bean` Refried Bean (b): [none]: traditional refried beans use lard; vegetarian tins exist; BRAND-DEPENDENT
+- `rice_krispies` Rice Krispies (b): [gluten]: Kellogg's Rice Krispies contain barley malt flavouring; BRAND-DEPENDENT
+- `rice_noodle` Rice Noodle: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `rice_wine` Rice Wine: [sulphites]: Sushi (mdb-53065) uses 100ml 'rice wine' to season the rice, which probably means rice vinegar. Either way sulphites are listed; alcohol would hide it from no-alcohol users.
+- `rye_bread` Rye Bread: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `salsa` Salsa: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `salsa_lizano` Salsa Lizano (b): [mustard]: Lizano lists mustard (unverified label, safe side); BRAND-DEPENDENT
+- `sausage` Sausage (b): [gluten, sulphites]: UK sausages usually contain rusk (wheat) and sulphite preservative; BRAND-DEPENDENT
+- `seafood_stock` Seafood Stock (b): [celery, crustaceans, gluten, molluscs]: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `seasoning` Seasoning: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `serrano_ham` Serrano Ham: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `sesame_seed_burger_bun` Sesame Seed Burger Bun (b): [gluten, sesame]: split from burger_bun so sesame isn't lost (Big Mac, Chick-Fil-A); BRAND-DEPENDENT: may contain milk
+- `shaoxing_wine` Shaoxing Wine (b): [gluten, sulphites]: Shaoxing is brewed with a wheat starter and is often salted; BRAND-DEPENDENT
+- `shortcrust_pastry` Shortcrust Pastry (b): [gluten, milk]: usually made with butter; vegan brands exist; BRAND-DEPENDENT
+- `shrimp_paste` Shrimp Paste (b): [crustaceans]: condiment, not the dish's protein (allergen kept); BRAND-DEPENDENT: check a typical label for hidden allergens
+- `shrimp_stock` Shrimp Stock (b): [celery, crustaceans, gluten]: condiment, not the dish's protein; stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens
+- `sorrel_jam` Sorrel Jam: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `sour_pork_sausage` Sour Pork Sausage: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `speculaas_spice_mix` Speculaas Spice Mix (b): [none]: ground spice blend, no flour; BRAND-DEPENDENT: check a typical label
+- `sriracha` Sriracha (b): [sulphites]: Huy Fong sriracha lists sodium bisulfite; BRAND-DEPENDENT
+- `sun_dried_tomato` Sun Dried Tomato (b): [sulphites]: often preserved with sulphur dioxide; BRAND-DEPENDENT
+- `sweet_chilli_sauce` Sweet Chilli Sauce: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `sweet_peppadew_pepper` Sweet Peppadew Pepper (b): [none]: jarred pickled peppers; may contain sulphites (BRAND-DEPENDENT)
+- `sweet_quark` Sweet Quark: [milk]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `tamarind_paste` Tamarind Paste: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `thai_chilli_jam` Thai Chilli Jam (b): [crustaceans, fish]: nam prik pao contains dried shrimp + fish sauce; BRAND-DEPENDENT
+- `thai_green_curry_paste` Thai Green Curry Paste (b): [crustaceans]: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT
+- `toffee_popcorn` Toffee Popcorn (b): [milk]: snack aisle; BRAND-DEPENDENT
+- `tomato_ketchup` Tomato Ketchup (b): [celery]: Heinz (UK) lists 'spice and herb extracts (contain celery)'; BRAND-DEPENDENT
+- `tomato_sauce` Tomato Sauce: [none]: no allergen set. The lines mean US canned tomato sauce or a jar of pasta sauce (mdb-52848); jar sauces sometimes contain celery.
+- `turkey_ham` Turkey Ham (b): [none]: turkey ham is turkey, not pork ('ham' regex); BRAND-DEPENDENT: check a typical label for hidden allergens
+- `turkish_delight` Turkish Delight: [none]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `udon_noodle` Udon Noodle: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `vanilla_extract` Vanilla Extract: [none]: contains alcohol, so every vanilla recipe (67 lines) is excluded from the 'No pork or alcohol' diet. Intended?
+- `vegetable_millk` Vegetable Millk (b): [gluten, soy, tree_nuts]: unspecified plant milk (rijstevlaai); covers soy/almond/oat (safe side); BRAND-DEPENDENT
+- `vegetable_stock` Vegetable Stock (b): [celery, gluten]: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; 'Bouillon Cubes' moved to bouillon_cube (flavour unknown); BRAND-DEPENDENT: check a typical label for hidden allergens
+- `vinaigrette_dressing` Vinaigrette Dressing (b): [mustard, sulphites]: vinaigrettes usually contain mustard and wine vinegar; BRAND-DEPENDENT
+- `white_bread_mix` White Bread Mix: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `white_chocolate` White Chocolate: [milk, soy]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `white_chocolate_chip` White Chocolate Chip: [milk, soy]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `wholegrain_bread` Wholegrain Bread: [gluten]: BRAND-DEPENDENT: check a typical label for hidden allergens
+- `wholegrain_mustard` Wholegrain Mustard (b): [mustard, sulphites]: made with white wine/vinegar, labels list sulphites; BRAND-DEPENDENT
+- `wonton_skin` Wonton Skin (b): [eggs, gluten]: most wonton wrappers contain egg; BRAND-DEPENDENT
+- `worcestershire_sauce` Worcestershire Sauce (b): [fish, gluten, sulphites]: UK Lea & Perrins uses barley malt vinegar -> gluten; anchovy -> fish; BRAND-DEPENDENT
+- `yucca` Yucca: [none]: `yuca`, `yucca`, `cassava` and `cassaba` are all cassava root. Four ids are kept; no allergen issue.

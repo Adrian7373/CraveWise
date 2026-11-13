@@ -15,7 +15,7 @@ Italian · main · TheMealDB Beef · 3 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 2 Onion; 1tbsp Olive Oil; 1 clove Garlic; 500g Beef Mince; 90g Mushroom; 1tsp Dried Oregano; 400g can Tomato; 300ml Beef Stock; 1tbsp Tomato Puree; 1tbsp Worcestershire Sauce; 350g Spaghetti; Topping Parmesan
 
-**Derived (preview):** allergens fish, gluten, milk, sulphites · diets no_pork_no_alcohol · proteins beef
+**Derived (preview):** allergens celery, fish, gluten, milk, sulphites · diets no_pork_no_alcohol · proteins beef
 **Unreviewed ingredients:** beef_mince, beef_stock, dried_oregano, garlic, mushroom, olive_oil, onion, parmesan, spaghetti, tomato, tomato_puree, worcestershire_sauce
 
 | field | value | source | reason |
@@ -67,7 +67,7 @@ Italian · main · TheMealDB Pasta · 6 steps · [source](https://www.themealdb.
 
 **Ingredients:** 1 tblsp Olive Oil; 2 Bacon; 1 finely chopped Onion; 1 Stick Celery; 1 medium Carrot; 2 cloves chopped Garlic; 500g Beef Mince; 1 tbls Tomato Puree; 800g Chopped Tomatoes; 1 tblsp Honey; 500g Lasagne Sheet; 400ml Creme Fraiche; 125g Mozzarella; 50g Parmesan; Topping Basil
 
-**Derived (preview):** allergens celery, gluten, milk · diets none · proteins beef, pork
+**Derived (preview):** allergens celery, eggs, gluten, milk · diets none · proteins beef, pork
 **Unreviewed ingredients:** bacon, basil, beef_mince, carrot, celery, chopped_tomatoes, creme_fraiche, garlic, honey, lasagne_sheet, mozzarella, olive_oil, onion, parmesan, tomato_puree
 
 | field | value | source | reason |
@@ -75,8 +75,8 @@ Italian · main · TheMealDB Pasta · 6 steps · [source](https://www.themealdb.
 | cuisine | Italian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Pasta |
 | flavor.salty | 4 | rule | from bacon, olive oil, parmesan |
-| flavor.sweet | 3 | rule | from honey |
-| flavor.sour | 3 | rule | from chopped tomatoes, creme fraiche, tomato puree |
+| flavor.sweet | 1 | override | top50: 1 tbsp honey in a savoury lasagne isn't sweet 3; sour 3 -> 2 |
+| flavor.sour | 2 | override | top50: 1 tbsp honey in a savoury lasagne isn't sweet 3; sour 3 -> 2 |
 | flavor.bitter | 0 | ai | no bitter ingredients |
 | flavor.umami | 4 | rule | from bacon, beef mince, parmesan, tomato puree |
 | flavor.spicy | 0 | rule | no strong ingredient |
@@ -101,10 +101,10 @@ Italian · main · TheMealDB Miscellaneous · 12 steps · [source](https://www.t
 | cuisine | Italian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Miscellaneous |
 | flavor.salty | 3 | rule | from olive oil |
-| flavor.sweet | 2 | rule | from sugar |
+| flavor.sweet | 1 | override | top50: tomato + mozzarella pizza is umami, not 0; sweet 2 -> 1 |
 | flavor.sour | 1 | rule | from passata |
 | flavor.bitter | 0 | ai | no bitter ingredients |
-| flavor.umami | 0 | rule | no strong ingredient |
+| flavor.umami | 3 | override | top50: tomato + mozzarella pizza is umami, not 0; sweet 2 -> 1 |
 | flavor.spicy | 0 | rule | no strong ingredient |
 | textures | crispy, chewy | ai | thin crisp base, chewy dough |
 | moods | comfort, indulgent | ai | pizza night |
@@ -119,7 +119,7 @@ British · main · TheMealDB Beef · 8 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 400g Mushroom; 1-2tbsp English Mustard; Dash Olive Oil; 750g piece Beef Fillet; 6-8 slices Parma Ham; 500g Puff Pastry; Dusting Plain Flour; 2 Beaten Egg Yolk
 
-**Derived (preview):** allergens eggs, gluten, mustard · diets dairy_free · proteins beef, egg, pork
+**Derived (preview):** allergens eggs, gluten, milk, mustard · diets none · proteins beef, egg, pork
 **Unreviewed ingredients:** beef_fillet, egg_yolk, english_mustard, mushroom, olive_oil, parma_ham, plain_flour, puff_pastry
 
 | field | value | source | reason |
@@ -145,7 +145,7 @@ British · main · TheMealDB Seafood · 6 steps · [source](https://www.themeald
 
 **Ingredients:** 900g Potato; 2 tbsp Olive Oil; 600ml Milk; 800g White Fish; 1 tbsp Plain Flour; Grating Ground Nutmeg; 3 tbsp Double Cream; 200g Jerusalem Artichoke; 1 finely sliced Leek; 200g peeled raw Prawn; Large handful Parsley; Handful Dill; Grated zest of 1 Lemon; 25g grated Gruyere; Juice of 1 Lemon
 
-**Derived (preview):** allergens crustaceans, fish, gluten, milk, peanuts · diets no_pork_no_alcohol, pescatarian · proteins fish, shellfish
+**Derived (preview):** allergens crustaceans, fish, gluten, milk · diets no_pork_no_alcohol, pescatarian · proteins fish, shellfish
 **Unreviewed ingredients:** dill, double_cream, ground_nutmeg, gruyere, jerusalem_artichoke, leek, lemon, milk, olive_oil, parsley, plain_flour, potato, prawn, white_fish
 
 | field | value | source | reason |
@@ -154,7 +154,7 @@ British · main · TheMealDB Seafood · 6 steps · [source](https://www.themeald
 | mealTypes | main | rule | TheMealDB category Seafood |
 | flavor.salty | 3 | rule | from gruyere, olive oil |
 | flavor.sweet | 1 | ai | milk and leek sweetness |
-| flavor.sour | 3 | rule | from lemon |
+| flavor.sour | 1 | override | top50: a squeeze of lemon, fish pie isn't sour 3 |
 | flavor.bitter | 0 | ai | nothing bitter |
 | flavor.umami | 2 | rule | from gruyere, prawn |
 | flavor.spicy | 0 | rule | no strong ingredient |
@@ -169,17 +169,17 @@ British · main · TheMealDB Seafood · 6 steps · [source](https://www.themeald
 
 British · breakfast · TheMealDB Breakfast · 10 steps · [source](https://www.themealdb.com/meal/52896)
 
-**Ingredients:** 4 Sausage; 4 Bacon; 4 Mushroom; 3 Tomato; 2 sliced Morcilla; 2 Egg; 1 Slice Bread; 100g Baked Bean
+**Ingredients:** 4 Sausage; 4 Bacon; 4 Mushroom; 3 Tomato; 2 sliced Morcilla; 2 Egg; 1 Slice Bread; 100g Baked Bean; knob Butter
 
-**Derived (preview):** allergens eggs, gluten · diets dairy_free · proteins egg, legumes, pork
-**⚠ Method mentions allergens missing from the ingredients:** milk? (method says 'butter'); fish? (method says 'fish')
-**Unreviewed ingredients:** bacon, baked_bean, bread, egg, morcilla, mushroom, sausage, tomato
+**Derived (preview):** allergens eggs, gluten, milk, sulphites · diets none · proteins egg, legumes, pork
+**⚠ Method mentions allergens missing from the ingredients:** fish? (method says 'fish')
+**Unreviewed ingredients:** bacon, baked_bean, bread, butter, egg, morcilla, mushroom, sausage, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | British | rule | TheMealDB area |
 | mealTypes | breakfast | rule | TheMealDB category Breakfast |
-| flavor.salty | 3 | rule | from bacon, sausage |
+| flavor.salty | 4 | rule | from bacon, sausage |
 | flavor.sweet | 0 | rule | no strong ingredient |
 | flavor.sour | 2 | rule | from tomato |
 | flavor.bitter | 0 | ai | nothing bitter |
@@ -188,7 +188,7 @@ British · breakfast · TheMealDB Breakfast · 10 steps · [source](https://www.
 | textures | crispy, tender | ai | crisp bacon, soft eggs and beans |
 | moods | hearty, indulgent | ai | big fry-up |
 | servings | 2 | ai | 2 eggs, 1 slice bread |
-| prepMinutes | 25 | rule | 8 ingredients, 4 prep verbs |
+| prepMinutes | 25 | rule | 9 ingredients, 4 prep verbs |
 | cookMinutes | 40 | rule | durations in 7 step(s) |
 | difficulty | easy | ai | simple frying, juggling timing |
 
@@ -198,7 +198,7 @@ British · dessert · TheMealDB Dessert · 5 steps · [source](https://www.theme
 
 **Ingredients:** 100g Butter; 175g Muscovado Sugar; 2 large Egg; 225g Self Raising Flour; 1 tsp Baking Powder; 1 tsp Bicarbonate of Soda; 3 tbs Black Treacle; 275ml Milk; to serve Double Cream; 100g Butter; 125g Muscovado Sugar; 1 tbs Black Treacle; 300ml Double Cream; 1 tsp Vanilla Extract
 
-**Derived (preview):** allergens eggs, gluten, milk, sulphites · diets pescatarian, vegetarian · proteins egg
+**Derived (preview):** allergens eggs, gluten, milk · diets pescatarian, vegetarian · proteins egg
 **Unreviewed ingredients:** baking_powder, bicarbonate_of_soda, black_treacle, butter, double_cream, egg, milk, muscovado_sugar, self_raising_flour, vanilla_extract
 
 | field | value | source | reason |
@@ -276,7 +276,7 @@ French · main · TheMealDB Chicken · 9 steps · [source](https://www.themealdb
 
 **Ingredients:** 1½ tbsp Olive Oil; 3 rashers (100g) chopped dry-cured Bacon; 12 small Shallot; 2 (460g) Chicken Leg; 4 (650g) Chicken Thigh; 2 (280g) Chicken Breast; 3 finely chopped Garlic; 3 tbsp Brandy; 600ml Red Wine; 150ml Chicken Stock; 2 tsp Tomato Puree; 3 sprigs Thyme; 2 sprigs Rosemary; 2 Bay Leaf; garnish Parsley; 250g Mushroom; 2 tbsp Plain Flour; 1 tsp Butter
 
-**Derived (preview):** allergens gluten, milk, sulphites · diets none · proteins chicken, pork
+**Derived (preview):** allergens celery, gluten, milk, sulphites · diets none · proteins chicken, pork
 **Unreviewed ingredients:** bacon, bay_leaf, brandy, butter, chicken_breast, chicken_leg, chicken_stock, chicken_thigh, garlic, mushroom, olive_oil, parsley, plain_flour, red_wine, rosemary, shallot, thyme, tomato_puree
 
 | field | value | source | reason |
@@ -298,7 +298,7 @@ French · main · TheMealDB Chicken · 9 steps · [source](https://www.themealdb
 
 ## [ ] Ratatouille · `mdb-52908`
 
-French · main · TheMealDB Vegetarian · 4 steps · [source](https://www.themealdb.com/meal/52908)
+French · main, side · TheMealDB Vegetarian · 4 steps · [source](https://www.themealdb.com/meal/52908)
 
 **Ingredients:** 2 large Aubergine; 4 Courgette; 2 Yellow Pepper; 4 large Tomato; 5 tbs Olive Oil; Bunch Basil; 1 medium Onion; 3 finely chopped Garlic; 1 tsp Red Wine Vinegar; 1 tsp Sugar
 
@@ -308,10 +308,10 @@ French · main · TheMealDB Vegetarian · 4 steps · [source](https://www.themea
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | French | rule | TheMealDB area |
-| mealTypes | main | rule | TheMealDB category Vegetarian |
+| mealTypes | main, side | override | top50: ratatouille is as often a side; 1 tsp vinegar -> sour 2 |
 | flavor.salty | 2 | rule | from olive oil |
 | flavor.sweet | 3 | rule | from sugar |
-| flavor.sour | 3 | rule | from red wine vinegar, tomato |
+| flavor.sour | 2 | override | top50: ratatouille is as often a side; 1 tsp vinegar -> sour 2 |
 | flavor.bitter | 0 | ai | nothing bitter |
 | flavor.umami | 1 | ai | tomatoes only |
 | flavor.spicy | 0 | rule | no strong ingredient |
@@ -328,7 +328,7 @@ French · side, starter · TheMealDB Side · 3 steps · [source](https://www.the
 
 **Ingredients:** 50g Butter; 1 tbs Olive Oil; 1 kg Onion; 1 tsp Sugar; 4 sliced Garlic; 2 tbs Plain Flour; 250ml White Wine; 1L Beef Stock; 4 sliced Bread; 140g Gruyere
 
-**Derived (preview):** allergens gluten, milk, sulphites · diets none · proteins none
+**Derived (preview):** allergens celery, gluten, milk, sulphites · diets none · proteins none
 **Unreviewed ingredients:** beef_stock, bread, butter, garlic, gruyere, olive_oil, onion, plain_flour, sugar, white_wine
 
 | field | value | source | reason |
@@ -370,8 +370,8 @@ French · dessert · TheMealDB Dessert · 6 steps · [source](https://www.themea
 | textures | flaky, tender | ai | puff pastry and soft caramel apples |
 | moods | indulgent, comfort | ai | caramel dessert |
 | servings | 6 | ai | 20cm tart |
-| prepMinutes | 25 | rule | 6 ingredients, 5 prep verbs |
-| cookMinutes | 135 | rule | durations in 3 step(s) |
+| prepMinutes | 85 | override | top50: the 1 hr cool is passive -> prep; cook = caramel 7 + 30 + 45 min bake |
+| cookMinutes | 80 | override | top50: the 1 hr cool is passive -> prep; cook = caramel 7 + 30 + 45 min bake |
 | difficulty | medium | ai | caramel and flipping the tart |
 
 ## [ ] Chocolate Souffle · `mdb-52905`
@@ -380,7 +380,7 @@ French · dessert · TheMealDB Dessert · 5 steps · [source](https://www.themea
 
 **Ingredients:** 142ml Single Cream; 25g Sugar; 100g Dark Chocolate; 25g Butter; drizzle Butter; 50g Sugar; 175g Dark Chocolate; 2 tbs Double Cream; 4 Egg Yolk; 5 Egg White; 2 tbs Double Cream; to serve Icing Sugar
 
-**Derived (preview):** allergens eggs, milk · diets gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
+**Derived (preview):** allergens eggs, milk, soy · diets gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
 **Unreviewed ingredients:** butter, dark_chocolate, double_cream, egg_white, egg_yolk, icing_sugar, single_cream, sugar
 
 | field | value | source | reason |
@@ -390,7 +390,7 @@ French · dessert · TheMealDB Dessert · 5 steps · [source](https://www.themea
 | flavor.salty | 0 | ai | dessert, a little butter |
 | flavor.sweet | 5 | rule | from dark chocolate, icing sugar, sugar |
 | flavor.sour | 0 | rule | no strong ingredient |
-| flavor.bitter | 4 | rule | from dark chocolate |
+| flavor.bitter | 2 | override | top50: dark chocolate in a sweet souffle, bitter 4 -> 2 |
 | flavor.umami | 0 | ai | dessert |
 | flavor.spicy | 0 | rule | no strong ingredient |
 | textures | fluffy, smooth | ai | airy souffle, silky sauce |
@@ -413,12 +413,12 @@ Indian · main · TheMealDB Chicken · 3 steps · [source](https://www.themealdb
 |---|---|---|---|
 | cuisine | Indian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Chicken |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: seasoned marinade (salty 0 was only 'no salt listed'); 1/2 tsp chilli powder for 16 thighs is mild -> spicy 2 |
 | flavor.sweet | 0 | rule | no strong ingredient |
 | flavor.sour | 3 | rule | from greek yogurt, lemon |
 | flavor.bitter | 0 | ai | nothing bitter |
 | flavor.umami | 2 | rule | from chicken thigh |
-| flavor.spicy | 3 | rule | from chilli powder, garam masala |
+| flavor.spicy | 2 | override | top50: seasoned marinade (salty 0 was only 'no salt listed'); 1/2 tsp chilli powder for 16 thighs is mild -> spicy 2 |
 | textures | tender | ai | yogurt-marinated grilled thighs |
 | moods | hearty, fresh | ai | grilled, lemony |
 | servings | 6 | ai | 16 thighs |
@@ -432,14 +432,14 @@ Indian · main · TheMealDB Lamb · 3 steps · [source](https://www.themealdb.co
 
 **Ingredients:** 2 quartered Onion; 4 tbsp Vegetable Oil; 4 cloves Garlic; Thumb sized peeled and very finely grated Ginger; 2 tbsp Madras Paste; 2 tsp Paprika; 1 Cinnamon Stick; 6 bashed to break shells Cardamom; 4 Clove; 2 Bay Leaf; 1 tbsp Tomato Puree; 1kg cubed Lamb; 150ml Greek Yogurt; Garnish chopped Coriander
 
-**Derived (preview):** allergens milk · diets gluten_free, no_pork_no_alcohol · proteins lamb
+**Derived (preview):** allergens milk, mustard · diets gluten_free, no_pork_no_alcohol · proteins lamb
 **Unreviewed ingredients:** bay_leaf, cardamom, cinnamon_stick, clove, coriander, garlic, ginger, greek_yogurt, lamb, madras_paste, onion, paprika, tomato_puree, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | Indian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Lamb |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: curry paste is salted; salty 0 was only 'no salt listed' |
 | flavor.sweet | 2 | rule | from cinnamon stick |
 | flavor.sour | 2 | rule | from greek yogurt, tomato puree |
 | flavor.bitter | 0 | ai | warm spices, not bitter |
@@ -465,12 +465,12 @@ Indian · main · TheMealDB Vegetarian · 3 steps · [source](https://www.themea
 |---|---|---|---|
 | cuisine | Indian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Vegetarian |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2 |
 | flavor.sweet | 0 | rule | no strong ingredient |
 | flavor.sour | 1 | rule | from tomato |
 | flavor.bitter | 0 | ai | nothing bitter |
-| flavor.umami | 0 | rule | no strong ingredient |
-| flavor.spicy | 3 | rule | from garam masala, green chilli |
+| flavor.umami | 2 | override | top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2 |
+| flavor.spicy | 2 | override | top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2 |
 | textures | saucy, tender | ai | paneer in tomato sauce |
 | moods | comfort, hearty | ai | simple curry |
 | servings | 2 | ai | 225g paneer |
@@ -484,14 +484,14 @@ Indian · main · TheMealDB Lamb · 15 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 12 Cashew; ½ tbsp Khus Khus; ½ tbsp Cumin Seed; 3 sliced thinly Onion; 2 tsp Ginger Garlic Paste; 4 whole Garlic; Leaves Mint; Leaves Coriander; ½ tsp dissolved in ½ cup warm milk Saffron; 2 tbsp Ghee; 2 Cups Basmati Rice; ½ cup Yogurt; 1 tbsp Cumin Seed; ½ Bay Leaf; 1 thin piece Cinnamon; 3 Clove; 2 Cardamom; 1 lb Lamb; 1 tsp Chilli Powder; 1 tbsp Biryani Masala
 
-**Derived (preview):** allergens gluten, milk, tree_nuts · diets no_pork_no_alcohol · proteins lamb
+**Derived (preview):** allergens milk, tree_nuts · diets gluten_free, no_pork_no_alcohol · proteins lamb
 **Unreviewed ingredients:** basmati_rice, bay_leaf, biryani_masala, cardamom, cashew, chilli_powder, cinnamon, clove, coriander, cumin_seed, garlic, ghee, ginger_garlic_paste, khus_khus, lamb, mint, onion, saffron, yogurt
 
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | Indian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Lamb |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: biryani is seasoned; salty 0 was only 'no salt listed' |
 | flavor.sweet | 1 | rule | from cinnamon |
 | flavor.sour | 1 | rule | from yogurt |
 | flavor.bitter | 0 | ai | aromatic, not bitter |
@@ -510,7 +510,7 @@ Chinese · main · TheMealDB Chicken · 4 steps · [source](https://www.themeald
 
 **Ingredients:** 2 tbs Sake; 2 tbs Soy Sauce; 2 tbs Sesame Oil; 2 tbs Cornflour; 2 tbs Water; 500g Chicken; 1 tbs Chilli Powder; 1 tsp Rice Vinegar; 1 tbs Brown Sugar; 4 Chopped Spring Onion; 6 cloves Garlic; 220g Water Chestnut; 100g Peanut
 
-**Derived (preview):** allergens gluten, peanuts, sesame, soy, sulphites, tree_nuts · diets dairy_free · proteins chicken
+**Derived (preview):** allergens gluten, peanuts, sesame, soy, sulphites · diets dairy_free · proteins chicken
 **Unreviewed ingredients:** brown_sugar, chicken, chilli_powder, cornflour, garlic, peanut, rice_vinegar, sake, sesame_oil, soy_sauce, spring_onion, water, water_chestnut
 
 | field | value | source | reason |
@@ -522,7 +522,7 @@ Chinese · main · TheMealDB Chicken · 4 steps · [source](https://www.themeald
 | flavor.sour | 2 | rule | from rice vinegar |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 3 | rule | from chicken, soy sauce |
-| flavor.spicy | 2 | rule | from chilli powder |
+| flavor.spicy | 3 | override | top50: 1 tbsp chilli powder for 4 -> spicy 3 |
 | textures | crunchy, saucy | ai | peanuts and water chestnuts in sauce |
 | moods | hearty | ai | takeaway-style stir-fry |
 | servings | 4 | ai | 500g chicken |
@@ -536,7 +536,7 @@ Chinese · main · TheMealDB Beef · 9 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 450g Tofu; 100g Beef Mince; 1/2 tbs Sesame Oil; 1 1/2 tsp Doubanjiang; 1/2 tsp Fermented Black Bean; 1 tbs Black Pepper; 1/2 tsp Salt; 1/2 tsp Sichuan Pepper; 1 tbs Soy Sauce; 400ml Water; 2 tbs Olive Oil; 2 chopped Spring Onion; 4 Spring Onion; 2 cloves chopped Garlic; 4 sliced Ginger; 2 1/2 tbs Water; 1 tbs Cornflour
 
-**Derived (preview):** allergens gluten, sesame, soy · diets dairy_free, no_pork_no_alcohol · proteins beef, legumes, tofu
+**Derived (preview):** allergens gluten, sesame, soy · diets dairy_free, no_pork_no_alcohol · proteins beef, tofu
 **Unreviewed ingredients:** beef_mince, black_pepper, cornflour, doubanjiang, fermented_black_bean, garlic, ginger, olive_oil, salt, sesame_oil, sichuan_pepper, soy_sauce, spring_onion, tofu, water
 
 | field | value | source | reason |
@@ -552,23 +552,23 @@ Chinese · main · TheMealDB Beef · 9 steps · [source](https://www.themealdb.c
 | textures | smooth, saucy | ai | silken tofu in thick sauce |
 | moods | comfort, hearty | ai | fiery rice-bowl dish |
 | servings | 3 | ai | 450g tofu, 100g beef |
-| prepMinutes | 45 | rule | 17 ingredients, 7 prep verbs |
-| cookMinutes | 10 | rule | durations in 4 step(s) |
+| prepMinutes | 15 | override | top50: no passive step, so prep 45 is too long; wok work + 6-8 min simmer is about 20 |
+| cookMinutes | 20 | override | top50: no passive step, so prep 45 is too long; wok work + 6-8 min simmer is about 20 |
 | difficulty | medium | ai | several wok stages |
 
 ## [ ] Wontons · `mdb-52948`
 
-Chinese · main · TheMealDB Pork · 8 steps · [source](https://www.themealdb.com/meal/52948)
+Chinese · starter, snack · TheMealDB Pork · 8 steps · [source](https://www.themealdb.com/meal/52948)
 
 **Ingredients:** 1lb Pork; 3 chopped Garlic; 1 tsp Ginger; 1 tbs Soy Sauce; 1 tsp Sesame Oil; 3 finely chopped Carrot; 3 finely chopped Celery; 6 chopped Spring Onion; 1 Packet Wonton Skin; Fry Vegetable Oil; Bottle Water
 
-**Derived (preview):** allergens celery, gluten, sesame, soy · diets dairy_free · proteins pork
+**Derived (preview):** allergens celery, eggs, gluten, sesame, soy · diets dairy_free · proteins pork
 **Unreviewed ingredients:** carrot, celery, garlic, ginger, pork, sesame_oil, soy_sauce, spring_onion, vegetable_oil, water, wonton_skin
 
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | Chinese | rule | TheMealDB area |
-| mealTypes | main | rule | TheMealDB category Pork |
+| mealTypes | starter, snack | override | top50: fried wontons are a starter/snack, not a main |
 | flavor.salty | 2 | rule | from soy sauce |
 | flavor.sweet | 0 | ai | carrot only |
 | flavor.sour | 0 | rule | no strong ingredient |
@@ -612,11 +612,11 @@ Japanese · main, snack · TheMealDB Chicken · 4 steps · [source](https://www.
 
 Japanese · main · TheMealDB Seafood · 11 steps · [source](https://www.themealdb.com/meal/53065)
 
-**Ingredients:** 300ml Sushi Rice; 100ml Rice Wine; 2 tbs Sugar; 3 tbs Mayonnaise; 1 tbs Rice Wine; 1 tbs Soy Sauce; 1 Cucumber
+**Ingredients:** 300ml Sushi Rice; 100ml Rice Wine; 2 tbs Sugar; 3 tbs Mayonnaise; 1 tbs Rice Wine; 1 tbs Soy Sauce; 1 Cucumber; Tuna
 
-**Derived (preview):** allergens eggs, gluten, soy, sulphites · diets dairy_free, pescatarian, vegetarian · proteins none
-**⚠ Method mentions allergens missing from the ingredients:** fish? (method says 'tuna'); crustaceans? (method says 'prawn'); tree_nuts? (method says 'walnut')
-**Unreviewed ingredients:** cucumber, mayonnaise, rice_wine, soy_sauce, sugar, sushi_rice
+**Derived (preview):** allergens eggs, fish, gluten, soy, sulphites · diets dairy_free, pescatarian · proteins fish
+**⚠ Method mentions allergens missing from the ingredients:** crustaceans? (method says 'prawn'); tree_nuts? (method says 'walnut')
+**Unreviewed ingredients:** cucumber, mayonnaise, rice_wine, soy_sauce, sugar, sushi_rice, tuna
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -626,12 +626,12 @@ Japanese · main · TheMealDB Seafood · 11 steps · [source](https://www.themea
 | flavor.sweet | 3 | rule | from sugar |
 | flavor.sour | 3 | rule | from rice wine |
 | flavor.bitter | 0 | rule | no strong ingredient |
-| flavor.umami | 3 | rule | from soy sauce |
+| flavor.umami | 3 | rule | from soy sauce, tuna |
 | flavor.spicy | 0 | rule | no strong ingredient |
 | textures | chewy, crunchy | ai | sticky rice, crisp cucumber |
 | moods | fresh, light | ai | cold rolls |
 | servings | 4 | ai | 300ml rice makes about 4 rolls |
-| prepMinutes | 20 | rule | 7 ingredients, 2 prep verbs |
+| prepMinutes | 20 | rule | 8 ingredients, 2 prep verbs |
 | cookMinutes | 25 | ai | cooking the sushi rice |
 | difficulty | medium | ai | seasoning rice and rolling with a mat |
 
@@ -650,11 +650,11 @@ Thai · main · TheMealDB Seafood · 4 steps · [source](https://www.themealdb.c
 | cuisine | Thai | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Seafood |
 | flavor.salty | 2 | rule | from fish sauce |
-| flavor.sweet | 4 | rule | from muscovado sugar, sweet chilli sauce |
+| flavor.sweet | 3 | override | top50: 1/2 tsp cayenne for 2 -> spicy 2 (heat filter); sweet 4 -> 3 |
 | flavor.sour | 4 | rule | from lime |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 3 | rule | from fish sauce, prawn |
-| flavor.spicy | 4 | rule | from cayenne pepper, sweet chilli sauce |
+| flavor.spicy | 2 | override | top50: 1/2 tsp cayenne for 2 -> spicy 2 (heat filter); sweet 4 -> 3 |
 | textures | chewy, crunchy | ai | rice noodles, peanuts, beansprouts |
 | moods | fresh, light | ai | lime and herbs, quick wok dish |
 | servings | 2 | ai | 125g noodles, 200g prawns |
@@ -668,7 +668,7 @@ Thai · main · TheMealDB Chicken · 4 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 225g new Potato; 100g Green Bean; 1 tbsp Vegetable Oil; 1 clove Garlic; 4 tsp Thai Green Curry Paste; 400ml Coconut Milk; 2 tsp Fish Sauce; 1 tsp Sugar; 450g boneless Chicken; 2 fresh kaffir leaves Lime; handfull Basil; Boiled Rice
 
-**Derived (preview):** allergens fish · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins chicken, legumes
+**Derived (preview):** allergens crustaceans, fish · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins chicken
 **Unreviewed ingredients:** basil, chicken, coconut_milk, fish_sauce, garlic, green_bean, lime, potato, rice, sugar, thai_green_curry_paste, vegetable_oil
 
 | field | value | source | reason |
@@ -694,7 +694,7 @@ Thai · main, starter · TheMealDB Seafood · 3 steps · [source](https://www.th
 
 **Ingredients:** 200g Onion; 150g Tomato; 20g Red Chilli; 15g Galangal; 2 Lemongrass; 250g Prawn; 1 Chicken Stock; 120g Oyster Mushroom; 8 Makrut Lime Leaf; 25 ml Fish Sauce; 25 ml Lime Juice; 70 ml Coconut Milk; 1 tblsp Thai Chilli Jam; Handful Coriander
 
-**Derived (preview):** allergens crustaceans, fish · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins shellfish
+**Derived (preview):** allergens celery, crustaceans, fish, gluten · diets dairy_free, no_pork_no_alcohol · proteins shellfish
 **Unreviewed ingredients:** chicken_stock, coconut_milk, coriander, fish_sauce, galangal, lemongrass, lime_juice, makrut_lime_leaf, onion, oyster_mushroom, prawn, red_chilli, thai_chilli_jam, tomato
 
 | field | value | source | reason |
@@ -720,7 +720,7 @@ Vietnamese · main · TheMealDB Beef · 4 steps · [source](https://www.themeald
 
 **Ingredients:** 1 L Beef Stock; 1 large Onion; 1 Large Chopped Ginger; 1 Cinnamon Stick; 2 Star Anise; 1 tsp Coriander Seed; 1/2 teaspoon Clove; 225g Sirloin Steak; 1 tsp Palm Sugar; 1 tablespoon Fish Sauce; 1 ½ tbsp Soy Sauce; 200g Rice Noodle; 2 sliced Spring Onion; 1 small Birds Eye Chilli; Handful Basil; Handful Coriander; 1 Lime
 
-**Derived (preview):** allergens fish, gluten, soy · diets dairy_free, no_pork_no_alcohol · proteins beef
+**Derived (preview):** allergens celery, fish, gluten, soy · diets dairy_free, no_pork_no_alcohol · proteins beef
 **Unreviewed ingredients:** basil, beef_stock, birds_eye_chilli, cinnamon_stick, clove, coriander, coriander_seed, fish_sauce, ginger, lime, onion, palm_sugar, rice_noodle, sirloin_steak, soy_sauce, spring_onion, star_anise
 
 | field | value | source | reason |
@@ -732,7 +732,7 @@ Vietnamese · main · TheMealDB Beef · 4 steps · [source](https://www.themeald
 | flavor.sour | 2 | rule | from lime |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 4 | rule | from beef stock, fish sauce, soy sauce |
-| flavor.spicy | 3 | rule | from birds eye chilli |
+| flavor.spicy | 1 | override | top50: the broth isn't hot; 1 small bird's eye chilli as garnish -> spicy 1 |
 | textures | brothy, chewy, saucy | rule | keywords: brothy, chewy, saucy |
 | moods | comfort, fresh | ai | aromatic broth with fresh herbs |
 | servings | 2 | ai | 225g steak, 200g noodles |
@@ -753,12 +753,12 @@ Malaysian · main · TheMealDB Beef · 4 steps · [source](https://www.themealdb
 |---|---|---|---|
 | cuisine | Malaysian | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Beef |
-| flavor.salty | 0 | rule | no strong ingredient |
-| flavor.sweet | 4 | rule | from cinnamon stick, coconut cream, sugar |
-| flavor.sour | 4 | rule | from lime, tamarind paste |
+| flavor.salty | 2 | override | top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2 |
+| flavor.sweet | 2 | override | top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2 |
+| flavor.sour | 2 | override | top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2 |
 | flavor.bitter | 0 | rule | no strong ingredient |
-| flavor.umami | 1 | rule | from beef |
-| flavor.spicy | 0 | rule | no strong ingredient |
+| flavor.umami | 3 | override | top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2 |
+| flavor.spicy | 3 | override | top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2 |
 | textures | tender | ai | dry-cooked until meat falls apart |
 | moods | hearty, festive | ai | rich celebration curry |
 | servings | 4 | ai | 1lb beef |
@@ -779,9 +779,9 @@ Mexican · main · TheMealDB Seafood · 5 steps · [source](https://www.themeald
 |---|---|---|---|
 | cuisine | Mexican | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Seafood |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: Cajun seasoning is salted; lemon + salsa is sour 2, not 4 |
 | flavor.sweet | 0 | ai | avocado and salsa, no sugar |
-| flavor.sour | 4 | rule | from lemon, sour cream |
+| flavor.sour | 2 | override | top50: Cajun seasoning is salted; lemon + salsa is sour 2, not 4 |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 1 | ai | fish only |
 | flavor.spicy | 3 | rule | from cajun, cayenne pepper |
@@ -831,22 +831,22 @@ American · dessert · TheMealDB Dessert · 12 steps · [source](https://www.the
 |---|---|---|---|
 | cuisine | American | rule | TheMealDB area |
 | mealTypes | dessert | rule | TheMealDB category Dessert |
-| flavor.salty | 2 | rule | from cream cheese |
+| flavor.salty | 1 | override | top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min |
 | flavor.sweet | 5 | rule | from sugar |
-| flavor.sour | 5 | rule | from lemon juice, sour cream |
+| flavor.sour | 2 | override | top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 1 | rule | from cream cheese |
 | flavor.spicy | 0 | rule | no strong ingredient |
 | textures | creamy, smooth, crunchy | ai | dense filling, biscuit base |
 | moods | indulgent, festive | ai | rich baked cheesecake |
 | servings | 12 | ai | 23cm cheesecake |
-| prepMinutes | 505 | rule | 12 ingredients, 1 prep verbs, 480 min passive |
-| cookMinutes | 170 | rule | durations in 6 step(s) |
+| prepMinutes | 630 | override | top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min |
+| cookMinutes | 45 | override | top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min |
 | difficulty | medium | ai | two oven temperatures, slow cooling |
 
 ## [ ] Pancakes · `mdb-52854`
 
-American · dessert · TheMealDB Dessert · 3 steps · [source](https://www.themealdb.com/meal/52854)
+American · breakfast, dessert · TheMealDB Dessert · 3 steps · [source](https://www.themealdb.com/meal/52854)
 
 **Ingredients:** 100g Plain Flour; 2 large Egg; 300ml Milk; 1 tbls Vegetable Oil; to serve Sugar; to serve Raspberry; to serve Blueberry
 
@@ -856,10 +856,10 @@ American · dessert · TheMealDB Dessert · 3 steps · [source](https://www.them
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | American | rule | TheMealDB area |
-| mealTypes | dessert | rule | TheMealDB category Dessert |
+| mealTypes | breakfast, dessert | override | top50: pancakes are breakfast too; plain batter has no sour |
 | flavor.salty | 0 | rule | no strong ingredient |
 | flavor.sweet | 4 | rule | from blueberry, raspberry, sugar |
-| flavor.sour | 2 | rule | from raspberry |
+| flavor.sour | 0 | override | top50: pancakes are breakfast too; plain batter has no sour |
 | flavor.bitter | 0 | rule | no strong ingredient |
 | flavor.umami | 0 | ai | sweet batter |
 | flavor.spicy | 0 | rule | no strong ingredient |
@@ -885,7 +885,7 @@ Spanish · main · TheMealDB Seafood · 9 steps · [source](https://www.themeald
 | mealTypes | main | rule | TheMealDB category Seafood |
 | flavor.salty | 3 | rule | from chorizo, olive oil |
 | flavor.sweet | 0 | rule | no strong ingredient |
-| flavor.sour | 3 | rule | from lemon zest, tomato |
+| flavor.sour | 1 | override | top50: only lemon zest, sour 3 -> 1 |
 | flavor.bitter | 0 | ai | saffron is subtle |
 | flavor.umami | 4 | rule | from chorizo, mussel, prawn, squid |
 | flavor.spicy | 0 | rule | no strong ingredient |
@@ -937,15 +937,15 @@ Greek · main · TheMealDB Beef · 2 steps · [source](https://www.themealdb.com
 | mealTypes | main | rule | TheMealDB category Beef |
 | flavor.salty | 2 | rule | from parmesan |
 | flavor.sweet | 0 | rule | no strong ingredient |
-| flavor.sour | 3 | rule | from greek yogurt, tomato, tomato puree |
+| flavor.sour | 2 | override | top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short |
 | flavor.bitter | 0 | ai | aubergine is microwaved soft |
 | flavor.umami | 4 | rule | from beef, parmesan, tomato puree |
 | flavor.spicy | 0 | rule | no strong ingredient |
 | textures | creamy, tender | ai | set yogurt topping over beef |
 | moods | comfort, hearty | ai | baked beef and potato |
 | servings | 4 | ai | 500g beef |
-| prepMinutes | 20 | rule | 8 ingredients, 1 prep verbs |
-| cookMinutes | 10 | rule | durations in 1 step(s) |
+| prepMinutes | 15 | override | top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short |
+| cookMinutes | 20 | override | top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short |
 | difficulty | easy | ai | quick shortcut version |
 
 ## [ ] Falafel · `mdb-53266`
@@ -962,7 +962,7 @@ Turkish · main · TheMealDB Vegetarian · 2 steps · [source](https://www.theme
 |---|---|---|---|
 | cuisine | Turkish | rule | TheMealDB area |
 | mealTypes | main | rule | TheMealDB category Vegetarian |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: falafel is seasoned; salty 0 was only 'no salt listed' |
 | flavor.sweet | 0 | ai | savoury |
 | flavor.sour | 0 | rule | no strong ingredient |
 | flavor.bitter | 0 | ai | nothing bitter |
@@ -988,7 +988,7 @@ Turkish · side · TheMealDB Side · 3 steps · [source](https://www.themealdb.c
 |---|---|---|---|
 | cuisine | Turkish | rule | TheMealDB area |
 | mealTypes | side | rule | TheMealDB category Side |
-| flavor.salty | 0 | rule | no strong ingredient |
+| flavor.salty | 2 | override | top50: hummus is seasoned; salty 0 was only 'no salt listed' |
 | flavor.sweet | 0 | ai | savoury dip |
 | flavor.sour | 3 | rule | from greek yogurt, lemon |
 | flavor.bitter | 1 | ai | tahini |
@@ -1033,7 +1033,7 @@ Moroccan · main · TheMealDB Lamb · 4 steps · [source](https://www.themealdb.
 
 **Ingredients:** 2 tblsp Olive Oil; 1 finely sliced Onion; 2 chopped Carrot; 500g Lamb Leg; 2 cloves minced Garlic; ½ tsp Ground Cumin; ½ tsp Ginger; ¼ tsp Saffron; 1 tsp Cinnamon; 1 tblsp Honey; 100g Apricot; 1 Vegetable Stock; 1 medium chopped Butternut Squash; Steamed Couscous; Chopped Parsley
 
-**Derived (preview):** allergens gluten · diets dairy_free, no_pork_no_alcohol · proteins lamb
+**Derived (preview):** allergens celery, gluten, sulphites · diets dairy_free, no_pork_no_alcohol · proteins lamb
 **⚠ Method mentions allergens missing from the ingredients:** tree_nuts? (method says 'pine nut')
 **Unreviewed ingredients:** apricot, butternut_squash, carrot, cinnamon, couscous, garlic, ginger, ground_cumin, honey, lamb_leg, olive_oil, onion, parsley, saffron, vegetable_stock
 
@@ -1072,7 +1072,7 @@ Jamaican · main · TheMealDB Chicken · 7 steps · [source](https://www.themeal
 | flavor.sour | 3 | rule | from lime |
 | flavor.bitter | 0 | ai | nothing bitter |
 | flavor.umami | 3 | rule | from chicken thigh, soy sauce |
-| flavor.spicy | 2 | rule | from red chilli |
+| flavor.spicy | 3 | override | top50: jerk marinade with 3 chillies is hot -> spicy 3 (heat filter) |
 | textures | tender, creamy | ai | charred chicken, coconut rice |
 | moods | festive, hearty | ai | barbecue-style feast |
 | servings | 6 | ai | 12 thighs |
@@ -1084,11 +1084,10 @@ Jamaican · main · TheMealDB Chicken · 7 steps · [source](https://www.themeal
 
 Jamaican · main · TheMealDB Goat · 8 steps · [source](https://www.themealdb.com/meal/53354)
 
-**Ingredients:** 3 Lbs Goat Meat; 2.5 tbsp Curry Powder; 1/2 tsp Ground Ginger; 1/2 tsp All Purpose Seasoning; 1/4 tsp Ground Allspice; 1 chopped Onion; 6 cloves sliced Garlic; 3 sprigs Thyme; 2 tablespoons Vegetable Oil; 1 1/4 cup Water; 1 Scotch Bonnet; 1 large Potato; To taste Salt; To taste Black Pepper
+**Ingredients:** 3 Lbs Goat Meat; 2.5 tbsp Curry Powder; 1/2 tsp Ground Ginger; 1/2 tsp All Purpose Seasoning; 1/4 tsp Ground Allspice; 1 chopped Onion; 6 cloves sliced Garlic; 3 sprigs Thyme; 2 tablespoons Vegetable Oil; 1 1/4 cup Water; 1 Scotch Bonnet; 1 large Potato; To taste Salt; To taste Black Pepper; for rinsing White Vinegar
 
-**Derived (preview):** allergens celery · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins goat
-**⚠ Method mentions allergens missing from the ingredients:** sulphites? (method says 'vinegar')
-**Unreviewed ingredients:** all_purpose_seasoning, black_pepper, curry_powder, garlic, goat_meat, ground_allspice, ground_ginger, onion, potato, salt, scotch_bonnet, thyme, vegetable_oil, water
+**Derived (preview):** allergens celery, sulphites · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins goat
+**Unreviewed ingredients:** all_purpose_seasoning, black_pepper, curry_powder, garlic, goat_meat, ground_allspice, ground_ginger, onion, potato, salt, scotch_bonnet, thyme, vegetable_oil, water, white_vinegar
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1096,14 +1095,14 @@ Jamaican · main · TheMealDB Goat · 8 steps · [source](https://www.themealdb.
 | mealTypes | main | rule | TheMealDB category Goat |
 | flavor.salty | 2 | rule | from all purpose seasoning |
 | flavor.sweet | 0 | rule | no strong ingredient |
-| flavor.sour | 0 | rule | no strong ingredient |
+| flavor.sour | 2 | rule | from white vinegar |
 | flavor.bitter | 0 | ai | nothing bitter |
 | flavor.umami | 2 | rule | from goat meat |
 | flavor.spicy | 4 | rule | from curry powder, scotch bonnet |
 | textures | tender, saucy | ai | pressure-cooked goat in gravy |
 | moods | hearty, comfort | ai | rich curry |
 | servings | 6 | ai | 3lb goat |
-| prepMinutes | 265 | rule | 14 ingredients, 0 prep verbs, 240 min passive |
+| prepMinutes | 270 | rule | 15 ingredients, 0 prep verbs, 240 min passive |
 | cookMinutes | 70 | rule | durations in 4 step(s) |
 | difficulty | medium | ai | long marinade, pressure cooking |
 
@@ -1113,7 +1112,7 @@ Russian · main · TheMealDB Beef · 4 steps · [source](https://www.themealdb.c
 
 **Ingredients:** 1 tbls Olive Oil; 1 Onion; 1 clove Garlic; 1 tbsp Butter; 250g Mushroom; 500g Beef Fillet; 1tbsp Plain Flour; 150g Creme Fraiche; 1 tbsp English Mustard; 100ml Beef Stock; Topping Parsley
 
-**Derived (preview):** allergens gluten, milk, mustard · diets no_pork_no_alcohol · proteins beef
+**Derived (preview):** allergens celery, gluten, milk, mustard · diets no_pork_no_alcohol · proteins beef
 **Unreviewed ingredients:** beef_fillet, beef_stock, butter, creme_fraiche, english_mustard, garlic, mushroom, olive_oil, onion, parsley, plain_flour
 
 | field | value | source | reason |
@@ -1139,7 +1138,7 @@ Ukrainian · main, starter · TheMealDB Vegetarian · 1 steps · [source](https:
 
 **Ingredients:** 3 Beetroot; 4 tbs Olive Oil; 1 Chicken Stock; 6 cups Water; 3 Potato; 1 can Cannellini Bean; Garnish Dill
 
-**Derived (preview):** allergens none · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins legumes
+**Derived (preview):** allergens celery, gluten · diets dairy_free, no_pork_no_alcohol · proteins legumes
 **Unreviewed ingredients:** beetroot, cannellini_bean, chicken_stock, dill, olive_oil, potato, water
 
 | field | value | source | reason |
@@ -1161,7 +1160,7 @@ Ukrainian · main, starter · TheMealDB Vegetarian · 1 steps · [source](https:
 
 ## [ ] Pierogi (Polish Dumplings) · `mdb-53019`
 
-Polish · side · TheMealDB Side · 5 steps · [source](https://www.themealdb.com/meal/53019)
+Polish · main, side · TheMealDB Side · 5 steps · [source](https://www.themealdb.com/meal/53019)
 
 **Ingredients:** 2 tbs Butter; 1/3 cup Onion; 1 1/2 cups Sauerkraut; 3 tbs Butter; 1/2 cup Onion; 2 cups Potato; 3 Egg; 1 pot Sour Cream; 3 cups Plain Flour; 1/4 tsp Salt; 1 tbs Baking Powder
 
@@ -1171,7 +1170,7 @@ Polish · side · TheMealDB Side · 5 steps · [source](https://www.themealdb.co
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | Polish | rule | TheMealDB area |
-| mealTypes | side | rule | TheMealDB category Side |
+| mealTypes | main, side | override | top50: pierogi are commonly a main |
 | flavor.salty | 3 | rule | from sauerkraut |
 | flavor.sweet | 0 | ai | savoury dumplings |
 | flavor.sour | 4 | rule | from sauerkraut, sour cream |
@@ -1187,17 +1186,17 @@ Polish · side · TheMealDB Side · 5 steps · [source](https://www.themealdb.co
 
 ## [ ] Poutine · `mdb-52804`
 
-Canadian · main · TheMealDB Miscellaneous · 6 steps · [source](https://www.themealdb.com/meal/52804)
+Canadian · main, snack · TheMealDB Miscellaneous · 6 steps · [source](https://www.themealdb.com/meal/52804)
 
 **Ingredients:** Dash Vegetable Oil; 1 Can Beef Gravy; 5 thin cut Potato; 2 cups Cheese Curd
 
-**Derived (preview):** allergens milk · diets gluten_free, no_pork_no_alcohol · proteins none
+**Derived (preview):** allergens celery, gluten, milk · diets no_pork_no_alcohol · proteins none
 **Unreviewed ingredients:** beef_gravy, cheese_curd, potato, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
 | cuisine | Canadian | rule | TheMealDB area |
-| mealTypes | main | rule | TheMealDB category Miscellaneous |
+| mealTypes | main, snack | override | top50: poutine is a classic snack |
 | flavor.salty | 3 | rule | from beef gravy, cheese curd |
 | flavor.sweet | 0 | rule | no strong ingredient |
 | flavor.sour | 0 | rule | no strong ingredient |
@@ -1226,7 +1225,7 @@ Portuguese · dessert · TheMealDB Dessert · 10 steps · [source](https://www.t
 | mealTypes | dessert | rule | TheMealDB category Dessert |
 | flavor.salty | 0 | rule | no strong ingredient |
 | flavor.sweet | 5 | rule | from cinnamon, icing sugar, sugar, vanilla extract |
-| flavor.sour | 2 | rule | from lemon zest |
+| flavor.sour | 0 | override | top50: lemon zest only, pastel de nata isn't sour |
 | flavor.bitter | 0 | ai | dessert |
 | flavor.umami | 0 | ai | dessert |
 | flavor.spicy | 0 | rule | no strong ingredient |

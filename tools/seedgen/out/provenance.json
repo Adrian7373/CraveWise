@@ -1308,7 +1308,7 @@
   },
   "flavor.salty": {
    "source": "rule",
-   "reason": "from olive oil",
+   "reason": "from olive oil, worcestershire sauce",
    "confidence": 0.8
   },
   "flavor.sweet": {
@@ -1327,9 +1327,9 @@
    "confidence": 0.8
   },
   "flavor.umami": {
-   "source": "ai",
-   "reason": "tomato, cocoa, lentils",
-   "batch": 4
+   "source": "rule",
+   "reason": "from worcestershire sauce",
+   "confidence": 0.8
   },
   "flavor.spicy": {
    "source": "rule",
@@ -1353,7 +1353,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "19 ingredients, 5 prep verbs",
+   "reason": "20 ingredients, 5 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -2167,9 +2167,8 @@
    "batch": 1
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lemon",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: a squeeze of lemon, fish pie isn't sour 3"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -2296,9 +2295,8 @@
    "confidence": 1.0
   },
   "mealTypes": {
-   "source": "rule",
-   "reason": "TheMealDB category Miscellaneous",
-   "confidence": 0.9
+   "source": "override",
+   "reason": "top50: poutine is a classic snack"
   },
   "flavor.salty": {
    "source": "rule",
@@ -2373,9 +2371,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: biryani is seasoned; salty 0 was only 'no salt listed'"
   },
   "flavor.sweet": {
    "source": "rule",
@@ -2445,9 +2442,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: seasoned marinade (salty 0 was only 'no salt listed'); 1/2 tsp chilli powder for 16 thighs is mild -> spicy 2"
   },
   "flavor.sweet": {
    "source": "rule",
@@ -2470,9 +2466,8 @@
    "confidence": 0.8
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from chilli powder, garam masala",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: seasoned marinade (salty 0 was only 'no salt listed'); 1/2 tsp chilli powder for 16 thighs is mild -> spicy 2"
   },
   "textures": {
    "source": "ai",
@@ -2589,9 +2584,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: curry paste is salted; salty 0 was only 'no salt listed'"
   },
   "flavor.sweet": {
    "source": "rule",
@@ -2927,9 +2921,8 @@
    "confidence": 0.7
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 5 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: method is about 20 min on the hob + 3 hr + 1 hr in the oven; 460 was too long"
   },
   "difficulty": {
    "source": "ai",
@@ -3211,7 +3204,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "15 ingredients, 2 prep verbs",
+   "reason": "16 ingredients, 2 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -3381,9 +3374,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: Cajun seasoning is salted; lemon + salsa is sour 2, not 4"
   },
   "flavor.sweet": {
    "source": "ai",
@@ -3391,9 +3383,8 @@
    "batch": 2
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lemon, sour cream",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: Cajun seasoning is salted; lemon + salsa is sour 2, not 4"
   },
   "flavor.bitter": {
    "source": "rule",
@@ -5100,14 +5091,12 @@
    "confidence": 0.8
   },
   "flavor.sweet": {
-   "source": "rule",
-   "reason": "from honey",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: 1 tbsp honey in a savoury lasagne isn't sweet 3; sour 3 -> 2"
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from chopped tomatoes, creme fraiche, tomato puree",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: 1 tbsp honey in a savoury lasagne isn't sweet 3; sour 3 -> 2"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -5810,9 +5799,8 @@
    "confidence": 1.0
   },
   "mealTypes": {
-   "source": "rule",
-   "reason": "TheMealDB category Dessert",
-   "confidence": 0.9
+   "source": "override",
+   "reason": "top50: pancakes are breakfast too; plain batter has no sour"
   },
   "flavor.salty": {
    "source": "rule",
@@ -5825,9 +5813,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from raspberry",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: pancakes are breakfast too; plain batter has no sour"
   },
   "flavor.bitter": {
    "source": "rule",
@@ -6103,9 +6090,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "from cream cheese",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min"
   },
   "flavor.sweet": {
    "source": "rule",
@@ -6113,9 +6099,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lemon juice, sour cream",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min"
   },
   "flavor.bitter": {
    "source": "rule",
@@ -6148,14 +6133,12 @@
    "batch": 2
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "12 ingredients, 1 prep verbs, 480 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 6 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min"
   },
   "difficulty": {
    "source": "ai",
@@ -6607,9 +6590,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2"
   },
   "flavor.sweet": {
    "source": "rule",
@@ -6627,14 +6609,12 @@
    "batch": 1
   },
   "flavor.umami": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2"
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from garam masala, green chilli",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2"
   },
   "textures": {
    "source": "ai",
@@ -7184,7 +7164,7 @@
   },
   "flavor.salty": {
    "source": "rule",
-   "reason": "from beef stock, olive oil",
+   "reason": "from beef stock, olive oil, worcestershire sauce",
    "confidence": 0.8
   },
   "flavor.sweet": {
@@ -7204,7 +7184,7 @@
   },
   "flavor.umami": {
    "source": "rule",
-   "reason": "from beef, beef stock",
+   "reason": "from beef, beef stock, worcestershire sauce",
    "confidence": 0.8
   },
   "flavor.spicy": {
@@ -7229,7 +7209,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "19 ingredients, 1 prep verbs",
+   "reason": "20 ingredients, 1 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -8741,7 +8721,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "7 ingredients, 4 prep verbs",
+   "reason": "8 ingredients, 4 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -8813,7 +8793,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "8 ingredients, 4 prep verbs",
+   "reason": "9 ingredients, 4 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -9430,9 +9410,8 @@
    "confidence": 0.8
   },
   "flavor.bitter": {
-   "source": "rule",
-   "reason": "from dark chocolate",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: dark chocolate in a sweet souffle, bitter 4 -> 2"
   },
   "flavor.umami": {
    "source": "ai",
@@ -9626,9 +9605,8 @@
    "confidence": 1.0
   },
   "mealTypes": {
-   "source": "rule",
-   "reason": "TheMealDB category Vegetarian",
-   "confidence": 0.9
+   "source": "override",
+   "reason": "top50: ratatouille is as often a side; 1 tsp vinegar -> sour 2"
   },
   "flavor.salty": {
    "source": "rule",
@@ -9641,9 +9619,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from red wine vinegar, tomato",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: ratatouille is as often a side; 1 tsp vinegar -> sour 2"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -9748,14 +9725,12 @@
    "batch": 1
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "6 ingredients, 5 prep verbs",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "top50: the 1 hr cool is passive -> prep; cook = caramel 7 + 30 + 45 min bake"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 3 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "top50: the 1 hr cool is passive -> prep; cook = caramel 7 + 30 + 45 min bake"
   },
   "difficulty": {
    "source": "ai",
@@ -10397,7 +10372,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "18 ingredients, 5 prep verbs",
+   "reason": "19 ingredients, 5 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -11744,9 +11719,8 @@
    "confidence": 0.8
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from red chilli",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: jerk marinade with 3 chillies is hot -> spicy 3 (heat filter)"
   },
   "textures": {
    "source": "ai",
@@ -11847,7 +11821,7 @@
   },
   "difficulty": {
    "source": "rule",
-   "reason": "29 steps, 20 ingredients, 125 min, technique: crimp, make the pastry",
+   "reason": "25 steps, 20 ingredients, 125 min, technique: crimp, make the pastry",
    "confidence": 0.75
   }
  },
@@ -12052,14 +12026,12 @@
    "batch": 10
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "15 ingredients, 0 prep verbs, 5 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: minimum 2 hr soak is prep; cook = 20 + 75 + 15 + 15 min (350 was wrong)"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 7 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: minimum 2 hr soak is prep; cook = 20 + 75 + 15 + 15 min (350 was wrong)"
   },
   "difficulty": {
    "source": "ai",
@@ -12320,9 +12292,8 @@
    "confidence": 0.8
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from chilli powder",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: 1 tbsp chilli powder for 4 -> spicy 3"
   },
   "textures": {
    "source": "ai",
@@ -12378,7 +12349,7 @@
   },
   "flavor.sour": {
    "source": "rule",
-   "reason": "from tomato puree",
+   "reason": "from tomato puree, white vinegar",
    "confidence": 0.8
   },
   "flavor.bitter": {
@@ -12413,7 +12384,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "12 ingredients, 0 prep verbs, 10 min passive",
+   "reason": "13 ingredients, 0 prep verbs, 10 min passive",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -12484,14 +12455,12 @@
    "batch": 1
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "17 ingredients, 7 prep verbs",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "top50: no passive step, so prep 45 is too long; wok work + 6-8 min simmer is about 20"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 4 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "top50: no passive step, so prep 45 is too long; wok work + 6-8 min simmer is about 20"
   },
   "difficulty": {
    "source": "ai",
@@ -12506,9 +12475,8 @@
    "confidence": 1.0
   },
   "mealTypes": {
-   "source": "rule",
-   "reason": "TheMealDB category Pork",
-   "confidence": 0.9
+   "source": "override",
+   "reason": "top50: fried wontons are a starter/snack, not a main"
   },
   "flavor.salty": {
    "source": "rule",
@@ -12989,7 +12957,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "15 ingredients, 1 prep verbs",
+   "reason": "16 ingredients, 1 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -13061,7 +13029,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "10 ingredients, 0 prep verbs",
+   "reason": "11 ingredients, 0 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -15639,7 +15607,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "13 ingredients, 10 prep verbs",
+   "reason": "14 ingredients, 10 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -15763,7 +15731,7 @@
   },
   "flavor.spicy": {
    "source": "rule",
-   "reason": "no strong ingredient",
+   "reason": "from sriracha",
    "confidence": 0.8
   },
   "textures": {
@@ -15783,7 +15751,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "8 ingredients, 17 prep verbs",
+   "reason": "11 ingredients, 17 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -15892,7 +15860,7 @@
   },
   "flavor.sour": {
    "source": "rule",
-   "reason": "no strong ingredient",
+   "reason": "from red wine vinegar",
    "confidence": 0.8
   },
   "flavor.bitter": {
@@ -15927,7 +15895,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "9 ingredients, 4 prep verbs",
+   "reason": "10 ingredients, 4 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -16107,9 +16075,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from greek yogurt, tomato, tomato puree",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -16142,14 +16109,12 @@
    "batch": 2
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "8 ingredients, 1 prep verbs",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 1 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short"
   },
   "difficulty": {
    "source": "ai",
@@ -16678,9 +16643,8 @@
    "confidence": 0.8
   },
   "flavor.sweet": {
-   "source": "rule",
-   "reason": "from sugar",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: tomato + mozzarella pizza is umami, not 0; sweet 2 -> 1"
   },
   "flavor.sour": {
    "source": "rule",
@@ -16693,9 +16657,8 @@
    "batch": 1
   },
   "flavor.umami": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: tomato + mozzarella pizza is umami, not 0; sweet 2 -> 1"
   },
   "flavor.spicy": {
    "source": "rule",
@@ -17028,9 +16991,8 @@
    "confidence": 1.0
   },
   "mealTypes": {
-   "source": "rule",
-   "reason": "TheMealDB category Side",
-   "confidence": 0.9
+   "source": "override",
+   "reason": "top50: pierogi are commonly a main"
   },
   "flavor.salty": {
    "source": "rule",
@@ -18987,9 +18949,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lemon zest",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: lemon zest only, pastel de nata isn't sour"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -19481,19 +19442,16 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
   },
   "flavor.sweet": {
-   "source": "rule",
-   "reason": "from cinnamon stick, coconut cream, sugar",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lime, tamarind paste",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
   },
   "flavor.bitter": {
    "source": "rule",
@@ -19501,14 +19459,12 @@
    "confidence": 0.8
   },
   "flavor.umami": {
-   "source": "rule",
-   "reason": "from beef",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
   },
   "textures": {
    "source": "ai",
@@ -20294,7 +20250,7 @@
   },
   "flavor.umami": {
    "source": "rule",
-   "reason": "from soy sauce",
+   "reason": "from soy sauce, tuna",
    "confidence": 0.8
   },
   "flavor.spicy": {
@@ -20319,7 +20275,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "7 ingredients, 2 prep verbs",
+   "reason": "8 ingredients, 2 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -20428,7 +20384,7 @@
   },
   "flavor.sour": {
    "source": "rule",
-   "reason": "from lemon, tomato puree",
+   "reason": "from lemon, tomato puree, white vinegar",
    "confidence": 0.8
   },
   "flavor.bitter": {
@@ -20463,7 +20419,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "12 ingredients, 1 prep verbs",
+   "reason": "14 ingredients, 1 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -24062,7 +24018,7 @@
   },
   "flavor.salty": {
    "source": "rule",
-   "reason": "from sausage, vegetable stock",
+   "reason": "from bouillon cube, sausage",
    "confidence": 0.8
   },
   "flavor.sweet": {
@@ -24082,7 +24038,7 @@
   },
   "flavor.umami": {
    "source": "rule",
-   "reason": "from pork knuckle, sausage, vegetable stock",
+   "reason": "from pork knuckle, sausage",
    "confidence": 0.8
   },
   "flavor.spicy": {
@@ -24323,7 +24279,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "6 ingredients, 2 prep verbs, 60 min passive",
+   "reason": "7 ingredients, 2 prep verbs, 60 min passive",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -25172,14 +25128,12 @@
    "batch": 18
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "5 ingredients, 1 prep verbs, 120 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: the 4 hr batter rest is prep; the bake is 25-30 min (cook 265 was wrong)"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 3 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: the 4 hr batter rest is prep; the bake is 25-30 min (cook 265 was wrong)"
   },
   "difficulty": {
    "source": "ai",
@@ -26001,9 +25955,8 @@
    "confidence": 0.8
   },
   "flavor.sour": {
-   "source": "rule",
-   "reason": "from lemon zest, tomato",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: only lemon zest, sour 3 -> 1"
   },
   "flavor.bitter": {
    "source": "ai",
@@ -28876,9 +28829,8 @@
    "confidence": 0.8
   },
   "flavor.sweet": {
-   "source": "rule",
-   "reason": "from muscovado sugar, sweet chilli sauce",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: 1/2 tsp cayenne for 2 -> spicy 2 (heat filter); sweet 4 -> 3"
   },
   "flavor.sour": {
    "source": "rule",
@@ -28896,9 +28848,8 @@
    "confidence": 0.8
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from cayenne pepper, sweet chilli sauce",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: 1/2 tsp cayenne for 2 -> spicy 2 (heat filter); sweet 4 -> 3"
   },
   "textures": {
    "source": "ai",
@@ -30761,7 +30712,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "12 ingredients, 3 prep verbs",
+   "reason": "14 ingredients, 3 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -30833,7 +30784,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "14 ingredients, 3 prep verbs, 600 min passive",
+   "reason": "15 ingredients, 3 prep verbs, 600 min passive",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -31049,7 +31000,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "6 ingredients, 1 prep verbs, 60 min passive",
+   "reason": "7 ingredients, 1 prep verbs, 60 min passive",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -32252,9 +32203,8 @@
    "confidence": 0.8
   },
   "flavor.spicy": {
-   "source": "rule",
-   "reason": "from birds eye chilli",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: the broth isn't hot; 1 small bird's eye chilli as garnish -> spicy 1"
   },
   "textures": {
    "source": "rule",
@@ -32947,9 +32897,9 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "rule-low",
+   "reason": "weak signals only",
+   "confidence": 0.55
   },
   "flavor.sweet": {
    "source": "ai",
@@ -32993,7 +32943,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "7 ingredients, 1 prep verbs",
+   "reason": "8 ingredients, 1 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -34242,9 +34192,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: falafel is seasoned; salty 0 was only 'no salt listed'"
   },
   "flavor.sweet": {
    "source": "ai",
@@ -34458,9 +34407,8 @@
    "confidence": 0.9
   },
   "flavor.salty": {
-   "source": "rule",
-   "reason": "no strong ingredient",
-   "confidence": 0.8
+   "source": "override",
+   "reason": "top50: hummus is seasoned; salty 0 was only 'no salt listed'"
   },
   "flavor.sweet": {
    "source": "ai",
@@ -40517,7 +40465,7 @@
   },
   "flavor.sour": {
    "source": "rule",
-   "reason": "no strong ingredient",
+   "reason": "from white vinegar",
    "confidence": 0.8
   },
   "flavor.bitter": {
@@ -40552,7 +40500,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "14 ingredients, 0 prep verbs, 240 min passive",
+   "reason": "15 ingredients, 0 prep verbs, 240 min passive",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -40983,9 +40931,8 @@
    "batch": 29
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "2 ingredients, 0 prep verbs, 480 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: the balls can be eaten straight away; setting overnight is optional"
   },
   "cookMinutes": {
    "source": "ai",
@@ -45664,7 +45611,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "17 ingredients, 2 prep verbs",
+   "reason": "18 ingredients, 2 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -45674,7 +45621,7 @@
   },
   "difficulty": {
    "source": "rule",
-   "reason": "15 steps, 17 ingredients, 65 min, technique: deep fr, water bath",
+   "reason": "15 steps, 18 ingredients, 65 min, technique: deep fr, water bath",
    "confidence": 0.75
   }
  },
@@ -47463,9 +47410,8 @@
    "batch": 33
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "6 ingredients, 0 prep verbs, 600 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: the batter rests 2 hr; 'overnight' is only a storage tip"
   },
   "cookMinutes": {
    "source": "rule",
@@ -48764,9 +48710,8 @@
    "confidence": 0.7
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 2 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: 4 hr in the oven + boil/reduce on the hob; the '4 hours' was counted twice (480)"
   },
   "difficulty": {
    "source": "ai",
@@ -49583,13 +49528,13 @@
    "confidence": 0.8
   },
   "flavor.sweet": {
-   "source": "ai",
-   "reason": "savoury",
-   "batch": 35
+   "source": "rule",
+   "reason": "no strong ingredient",
+   "confidence": 0.8
   },
   "flavor.sour": {
    "source": "rule",
-   "reason": "no strong ingredient",
+   "reason": "from white wine vinegar",
    "confidence": 0.8
   },
   "flavor.bitter": {
@@ -49623,14 +49568,12 @@
    "batch": 35
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "10 ingredients, 1 prep verbs",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: method adds white wine vinegar with the meat; audit: hob method is 8 min + 2 hr; slow-cooker/oven alternatives were summed into 550"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 4 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: method adds white wine vinegar with the meat; audit: hob method is 8 min + 2 hr; slow-cooker/oven alternatives were summed into 550"
   },
   "difficulty": {
    "source": "ai",
@@ -50344,7 +50287,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "9 ingredients, 2 prep verbs",
+   "reason": "10 ingredients, 2 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {
@@ -51789,7 +51732,7 @@
   },
   "cookMinutes": {
    "source": "rule",
-   "reason": "durations in 2 step(s)",
+   "reason": "durations in 3 step(s)",
    "confidence": 0.75
   },
   "difficulty": {
@@ -53960,9 +53903,8 @@
  },
  "mdb-53543": {
   "cuisine": {
-   "source": "ai",
-   "reason": "dulce de leche, Maria cookies; sits in the Costa Rican set",
-   "batch": 38
+   "source": "override",
+   "reason": "audit: Cuban, not Costa Rican: the Costa Rican block ends at mdb-53542 (Chorreadas) and mdb-53544+ is the Cuban set (Cafe La Llave, Ropa Vieja, Cuban Sandwich); Maria-cookie + dulce de leche cheesecake is a Miami-Cuban staple. Times: the 1 hr in-oven cool + 4 hr chill are passive -> prep; cook = 10 + 55 min bake"
   },
   "mealTypes": {
    "source": "rule",
@@ -54015,14 +53957,12 @@
    "batch": 38
   },
   "prepMinutes": {
-   "source": "rule",
-   "reason": "8 ingredients, 2 prep verbs, 240 min passive",
-   "confidence": 0.7
+   "source": "override",
+   "reason": "audit: Cuban, not Costa Rican: the Costa Rican block ends at mdb-53542 (Chorreadas) and mdb-53544+ is the Cuban set (Cafe La Llave, Ropa Vieja, Cuban Sandwich); Maria-cookie + dulce de leche cheesecake is a Miami-Cuban staple. Times: the 1 hr in-oven cool + 4 hr chill are passive -> prep; cook = 10 + 55 min bake"
   },
   "cookMinutes": {
-   "source": "rule",
-   "reason": "durations in 8 step(s)",
-   "confidence": 0.75
+   "source": "override",
+   "reason": "audit: Cuban, not Costa Rican: the Costa Rican block ends at mdb-53542 (Chorreadas) and mdb-53544+ is the Cuban set (Cafe La Llave, Ropa Vieja, Cuban Sandwich); Maria-cookie + dulce de leche cheesecake is a Miami-Cuban staple. Times: the 1 hr in-oven cool + 4 hr chill are passive -> prep; cook = 10 + 55 min bake"
   },
   "difficulty": {
    "source": "ai",
@@ -54808,7 +54748,7 @@
   },
   "prepMinutes": {
    "source": "rule",
-   "reason": "9 ingredients, 7 prep verbs",
+   "reason": "10 ingredients, 7 prep verbs",
    "confidence": 0.7
   },
   "cookMinutes": {

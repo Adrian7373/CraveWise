@@ -256,12 +256,14 @@
   "name": "Apricot",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "sulphites"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: Lamb Tagine uses 100g (dried) apricots, usually sulphured",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -511,12 +513,14 @@
   "name": "Barbeque Sauce",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "mustard"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: many BBQ sauces list mustard; some add Worcestershire (fish); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -696,14 +700,17 @@
   "name": "Beef Gravy",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
   "contains": [
    "meat"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: gravy granules/jars usually thickened with wheat; often celery; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -763,14 +770,17 @@
    "Unsalted Beef Stock"
   ],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
   "contains": [
    "meat"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 33,
@@ -1039,6 +1049,30 @@
   }
  },
  {
+  "id": "bouillon_cube",
+  "name": "Bouillon Cube",
+  "synonyms": [
+   "Bouillon Cubes"
+  ],
+  "aisle": "condiments",
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
+  "contains": [
+   "meat"
+  ],
+  "protein": null,
+  "isPantryStaple": false,
+  "reviewed": false,
+  "notes": "review: split from vegetable_stock; flavour unknown (Raspeballer = meat cubes), so safe side: meat, celery, wheat; BRAND-DEPENDENT",
+  "proposal": {
+   "by": "review",
+   "uses": 1,
+   "merged": false
+  }
+ },
+ {
   "id": "bouquet_garni",
   "name": "Bouquet Garni",
   "synonyms": [],
@@ -1145,13 +1179,13 @@
   "id": "breadfruit",
   "name": "Breadfruit",
   "synonyms": [],
-  "aisle": "bakery",
+  "aisle": "produce",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: fresh fruit, not bakery; not brand-dependent",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -1299,14 +1333,12 @@
   "name": "Buckwheat",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [
-   "gluten"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: buckwheat is not a gluten grain ('wheat' regex); cross-contact possible",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -1318,14 +1350,12 @@
   "name": "Buckwheat Flour",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [
-   "gluten"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: buckwheat is not a gluten grain; BRAND-DEPENDENT: some flours are blended with wheat",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -1357,8 +1387,7 @@
   "synonyms": [
    "Bread Rolls",
    "Bun",
-   "Buns",
-   "Sesame Seed Burger Buns"
+   "Buns"
   ],
   "aisle": "bakery",
   "allergens": [
@@ -1368,7 +1397,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: sesame-seed buns split out to sesame_seed_burger_bun; plain buns may still contain milk/sesame (BRAND-DEPENDENT)",
   "proposal": {
    "by": "rules",
    "uses": 5,
@@ -1671,17 +1700,13 @@
   "id": "caramelized_sugar_sauce",
   "name": "Caramelized Sugar Sauce",
   "synonyms": [],
-  "aisle": "dairy_eggs",
-  "allergens": [
-   "milk"
-  ],
-  "contains": [
-   "dairy"
-  ],
+  "aisle": "condiments",
+  "allergens": [],
+  "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Jamaican browning (burnt sugar), no milk; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -1786,13 +1811,13 @@
   "id": "cassaba",
   "name": "Cassaba",
   "synonyms": [],
-  "aisle": "pantry",
+  "aisle": "international",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: in Venezuelan Sancocho; almost certainly cassava (yuca)",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -2121,13 +2146,12 @@
   "aisle": "meat_seafood",
   "allergens": [],
   "contains": [
-   "meat",
    "poultry"
   ],
-  "protein": null,
+  "protein": "chicken",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: chicken offal -> poultry/chicken",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -2142,14 +2166,17 @@
    "Chicken Stock Cube"
   ],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
   "contains": [
    "poultry"
   ],
   "protein": null,
   "isPantryStaple": true,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 62,
@@ -2241,13 +2268,14 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
+   "gluten",
    "soy"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: doubanjiang is broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -2317,12 +2345,14 @@
   "name": "Chimichurri Sauce",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "sulphites"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: made with red wine vinegar; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -2372,13 +2402,13 @@
   "synonyms": [
    "Chinese Long Beans"
   ],
-  "aisle": "pantry",
+  "aisle": "produce",
   "allergens": [],
   "contains": [],
-  "protein": "legumes",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -2431,12 +2461,17 @@
    "Chocolate Chips"
   ],
   "aisle": "pantry",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "milk",
+   "soy"
+  ],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: most chips are milk/semi-sweet with soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 4,
@@ -2486,13 +2521,21 @@
   "synonyms": [],
   "aisle": "pantry",
   "allergens": [
-   "gluten"
+   "eggs",
+   "gluten",
+   "milk",
+   "sulphites",
+   "tree_nuts"
   ],
-  "contains": [],
+  "contains": [
+   "alcohol",
+   "dairy",
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: typically egg, suet, dried fruit, almonds, brandy/stout; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -3301,11 +3344,14 @@
   "allergens": [
    "gluten"
   ],
-  "contains": [],
+  "contains": [
+   "meat",
+   "pork"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: traditional Cuban bread is made with lard; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -3415,7 +3461,7 @@
   "id": "custard_powder",
   "name": "Custard Powder",
   "synonyms": [],
-  "aisle": "dairy_eggs",
+  "aisle": "pantry",
   "allergens": [
    "milk"
   ],
@@ -3425,7 +3471,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: shelf powder; Bird's has no milk but instant mixes do, milk kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -3476,12 +3522,17 @@
   "name": "Dark Chocolate",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "milk",
+   "soy"
+  ],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: many dark chocolates contain milk fat and soy lecithin; vegan bars exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 11,
@@ -3495,12 +3546,17 @@
    "Dark Chocolate Chips"
   ],
   "aisle": "pantry",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "milk",
+   "soy"
+  ],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: many contain milk fat and soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -3726,15 +3782,18 @@
   "synonyms": [],
   "aisle": "meat_seafood",
   "allergens": [
-   "gluten"
+   "gluten",
+   "milk",
+   "soy"
   ],
   "contains": [
+   "dairy",
    "meat"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: doner products commonly list wheat, soy and milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -3747,13 +3806,14 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
+   "gluten",
    "soy"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4106,15 +4166,13 @@
   "id": "dutch_stroop",
   "name": "Dutch Stroop",
   "synonyms": [],
-  "aisle": "pantry",
-  "allergens": [
-   "gluten"
-  ],
+  "aisle": "condiments",
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: stroopwafel syrup (sugar/glucose syrup), no wheat ('stroop' regex)",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4183,16 +4241,19 @@
   ],
   "aisle": "bakery",
   "allergens": [
+   "crustaceans",
    "eggs",
    "gluten"
   ],
   "contains": [
-   "egg"
+   "egg",
+   "pork",
+   "shellfish"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: ready-made Vietnamese egg rolls (cha gio) are usually pork, often shrimp; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4327,13 +4388,14 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
+   "gluten",
    "mustard"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Colman's English mustard contains wheat flour; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 5,
@@ -4384,13 +4446,14 @@
   "synonyms": [],
   "aisle": "pantry",
   "allergens": [
-   "gluten"
+   "gluten",
+   "sesame"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: ready-made falafel often contains wheat flour and sesame; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4554,10 +4617,10 @@
    "soy"
   ],
   "contains": [],
-  "protein": "legumes",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: salted condiment, not a protein source",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4593,13 +4656,16 @@
   "synonyms": [],
   "aisle": "pantry",
   "allergens": [
+   "eggs",
    "gluten"
   ],
-  "contains": [],
+  "contains": [
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: fettuccine is often egg pasta; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4675,7 +4741,9 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
-   "fish"
+   "celery",
+   "fish",
+   "gluten"
   ],
   "contains": [
    "fish"
@@ -4683,7 +4751,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 6,
@@ -4758,16 +4826,12 @@
    "Flax Eggs"
   ],
   "aisle": "pantry",
-  "allergens": [
-   "eggs"
-  ],
-  "contains": [
-   "egg"
-  ],
+  "allergens": [],
+  "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: flaxseed + water egg substitute; no egg",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -4915,13 +4979,13 @@
   "id": "fruit_mix",
   "name": "Fruit Mix",
   "synonyms": [],
-  "aisle": "pantry",
+  "aisle": "produce",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: fresh fruit to serve",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -5026,12 +5090,18 @@
   "name": "Garlic Sauce",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "eggs",
+   "milk"
+  ],
+  "contains": [
+   "dairy",
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Dutch/kebab garlic sauce is mayo- or yogurt-based; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -5148,15 +5218,13 @@
   "id": "gingerbread_spice",
   "name": "Gingerbread Spice",
   "synonyms": [],
-  "aisle": "bakery",
-  "allergens": [
-   "gluten"
-  ],
+  "aisle": "spices",
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: 1 tsp spice blend in Gingerbread Waffles, not bread; BRAND-DEPENDENT: check a typical label",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -5222,18 +5290,17 @@
   "id": "goats_cheese",
   "name": "Goats Cheese",
   "synonyms": [],
-  "aisle": "meat_seafood",
+  "aisle": "dairy_eggs",
   "allergens": [
    "milk"
   ],
   "contains": [
-   "dairy",
-   "meat"
+   "dairy"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: not meat ('goat' regex); dairy aisle",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -5245,12 +5312,15 @@
   "name": "Gochujang",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "gluten",
+   "soy"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: most gochujang contains wheat and soybean; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -5320,17 +5390,17 @@
   "synonyms": [
    "Graham Cracker Crumbs"
   ],
-  "aisle": "meat_seafood",
+  "aisle": "pantry",
   "allergens": [
    "gluten"
   ],
   "contains": [
-   "meat"
+   "honey"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: not meat ('graham' matched 'ham'); most graham crackers contain honey; BRAND-DEPENDENT: may contain milk/soy",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -5362,7 +5432,7 @@
   "id": "grape_nut_cereal",
   "name": "Grape Nut Cereal",
   "synonyms": [],
-  "aisle": "produce",
+  "aisle": "pantry",
   "allergens": [
    "gluten"
   ],
@@ -5370,7 +5440,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: breakfast cereal (wheat + barley), pantry not produce; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -5445,10 +5515,10 @@
   "aisle": "produce",
   "allergens": [],
   "contains": [],
-  "protein": "legumes",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
    "uses": 13,
@@ -5713,14 +5783,12 @@
    "Nutmeg"
   ],
   "aisle": "spices",
-  "allergens": [
-   "peanuts"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: nutmeg is a seed spice, not a peanut ('ground nut' regex misfire)",
   "proposal": {
    "by": "rules",
    "uses": 32,
@@ -6015,13 +6083,14 @@
   "aisle": "condiments",
   "allergens": [
    "gluten",
+   "sesame",
    "soy"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: common brands (e.g. Lee Kum Kee) include sesame paste; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -6148,15 +6217,17 @@
   "synonyms": [],
   "aisle": "frozen",
   "allergens": [
+   "eggs",
    "milk"
   ],
   "contains": [
-   "dairy"
+   "dairy",
+   "egg"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: custard-base ice creams contain egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -6268,10 +6339,10 @@
    "meat",
    "pork"
   ],
-  "protein": null,
+  "protein": "pork",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: cured pork, protein was missing; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -6427,15 +6498,13 @@
   "id": "khus_khus",
   "name": "Khus Khus",
   "synonyms": [],
-  "aisle": "pantry",
-  "allergens": [
-   "gluten"
-  ],
+  "aisle": "spices",
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: in Lamb Biryani 'khus khus' = Indian poppy seeds, not couscous; no gluten",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -6661,14 +6730,17 @@
   "name": "Lamb Stock",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
   "contains": [
    "meat"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -6703,13 +6775,16 @@
   ],
   "aisle": "pantry",
   "allergens": [
+   "eggs",
    "gluten"
   ],
-  "contains": [],
+  "contains": [
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: egg lasagne sheets are common; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -7024,12 +7099,14 @@
   "name": "Madras Paste",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "mustard"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Patak's-style curry pastes list mustard; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7160,12 +7237,17 @@
    "Maria Cookies"
   ],
   "aisle": "pantry",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "gluten",
+   "milk"
+  ],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: wheat biscuit, many brands contain milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7178,13 +7260,14 @@
   "synonyms": [],
   "aisle": "international",
   "allergens": [
+   "gluten",
    "soy"
   ],
   "contains": [],
   "protein": "tofu",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: marinades are usually soy sauce (wheat); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7212,18 +7295,21 @@
   "id": "mars_bar",
   "name": "Mars Bar",
   "synonyms": [],
-  "aisle": "dairy_eggs",
+  "aisle": "pantry",
   "allergens": [
+   "eggs",
    "gluten",
-   "milk"
+   "milk",
+   "soy"
   ],
   "contains": [
-   "dairy"
+   "dairy",
+   "egg"
   ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: UK Mars lists egg white and barley malt; soy lecithin in some markets; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7275,12 +7361,16 @@
   "name": "Massaman Curry Paste",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "crustaceans"
+  ],
+  "contains": [
+   "shellfish"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: usually contains shrimp paste; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7379,13 +7469,16 @@
   "aisle": "pantry",
   "allergens": [
    "gluten",
-   "sulphites"
+   "sulphites",
+   "tree_nuts"
   ],
-  "contains": [],
-  "protein": "beef",
+  "contains": [
+   "meat"
+  ],
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: sweet mincemeat (dried fruit, suet), not beef; suet may be beef (safe side: meat); often almonds; BRAND-DEPENDENT. NB Mutabbaq uses this line for minced meat",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -7473,12 +7566,14 @@
   "name": "Mixed Grain",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "gluten"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: packet mixed grains usually include spelt/wheat/barley; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7510,13 +7605,13 @@
   "synonyms": [
    "Mixed Peppers"
   ],
-  "aisle": "spices",
+  "aisle": "produce",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: 5 mixed (bell) peppers in Pisto, produce not spices",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7680,14 +7775,12 @@
   "name": "Mung Bean Paste",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [
-   "soy"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: mung beans + sugar; not soy ('bean paste' regex); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7828,7 +7921,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: whole seed; not brand-dependent",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -7841,13 +7934,16 @@
   "synonyms": [],
   "aisle": "bakery",
   "allergens": [
-   "gluten"
+   "gluten",
+   "milk"
   ],
-  "contains": [],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: naan is usually made with yogurt/milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -7885,13 +7981,16 @@
   ],
   "aisle": "pantry",
   "allergens": [
+   "eggs",
    "gluten"
   ],
-  "contains": [],
+  "contains": [
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: used for lo mein / mee goreng (egg noodles) and instant ramen; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 4,
@@ -7930,12 +8029,14 @@
    "Rolled Oats"
   ],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "gluten"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: oats are an EU-14 gluten cereal; certified GF oats exist",
   "proposal": {
    "by": "rules",
    "uses": 7,
@@ -8086,10 +8187,11 @@
   "synonyms": [
    "Oreo Cream Biscuits"
   ],
-  "aisle": "dairy_eggs",
+  "aisle": "pantry",
   "allergens": [
    "gluten",
-   "milk"
+   "milk",
+   "soy"
   ],
   "contains": [
    "dairy"
@@ -8097,7 +8199,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: soy lecithin; milk kept (may-contain); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -8155,10 +8257,10 @@
   "aisle": "produce",
   "allergens": [],
   "contains": [],
-  "protein": "shellfish",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: a mushroom, not shellfish",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -8208,13 +8310,13 @@
   "synonyms": [
    "Padron Peppers"
   ],
-  "aisle": "spices",
+  "aisle": "produce",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: fresh pepper, produce not spices",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -8299,12 +8401,16 @@
   "name": "Panang Curry Paste",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "crustaceans"
+  ],
+  "contains": [
+   "shellfish"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: usually contains shrimp paste; some add peanuts; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -8634,13 +8740,19 @@
   ],
   "aisle": "pantry",
   "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
    "peanuts"
   ],
-  "contains": [],
+  "contains": [
+   "dairy",
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: biscuits are wheat-based, usually with butter and egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -9084,12 +9196,17 @@
   "name": "Plain Chocolate",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "milk",
+   "soy"
+  ],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: UK 'plain' = dark; often milk fat + soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -9177,13 +9294,16 @@
   "synonyms": [
    "Polish Kabanos"
   ],
-  "aisle": "pantry",
+  "aisle": "meat_seafood",
   "allergens": [],
-  "contains": [],
-  "protein": null,
+  "contains": [
+   "meat",
+   "pork"
+  ],
+  "protein": "pork",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: kabanos is a pork sausage (was untagged); same food as kabanos_sausage",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -9530,10 +9650,10 @@
    "meat",
    "pork"
   ],
-  "protein": null,
+  "protein": "pork",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: cured pork, protein was missing",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -9567,13 +9687,16 @@
   "synonyms": [],
   "aisle": "bakery",
   "allergens": [
-   "gluten"
+   "gluten",
+   "milk"
   ],
-  "contains": [],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: all-butter puff is common; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 10,
@@ -9845,12 +9968,16 @@
    "Thai Red Curry Paste"
   ],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "crustaceans"
+  ],
+  "contains": [
+   "shellfish"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 11,
@@ -10019,14 +10146,12 @@
    "Redcurrants"
   ],
   "aisle": "produce",
-  "allergens": [
-   "sulphites"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: fresh berries; sulphites only apply to dried currants",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10041,11 +10166,13 @@
   ],
   "aisle": "pantry",
   "allergens": [],
-  "contains": [],
+  "contains": [
+   "pork"
+  ],
   "protein": "legumes",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: traditional refried beans use lard; vegetarian tins exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10127,12 +10254,14 @@
   "name": "Rice Krispies",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "gluten"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Kellogg's Rice Krispies contain barley malt flavouring; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10360,10 +10489,10 @@
   "aisle": "produce",
   "allergens": [],
   "contains": [],
-  "protein": "legumes",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10537,12 +10666,14 @@
   "name": "Salsa Lizano",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "mustard"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Lizano lists mustard (unverified label, safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10664,7 +10795,10 @@
    "Sausages"
   ],
   "aisle": "meat_seafood",
-  "allergens": [],
+  "allergens": [
+   "gluten",
+   "sulphites"
+  ],
   "contains": [
    "meat",
    "pork"
@@ -10672,7 +10806,7 @@
   "protein": "pork",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: UK sausages usually contain rusk (wheat) and sulphite preservative; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 11,
@@ -10800,7 +10934,9 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
+   "celery",
    "crustaceans",
+   "gluten",
    "molluscs"
   ],
   "contains": [
@@ -10809,7 +10945,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10840,12 +10976,14 @@
    "Seeds"
   ],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "sesame"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: unspecified 'seeds' in Danish rye bread often include sesame (safe side)",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -10860,14 +10998,13 @@
   ],
   "aisle": "pantry",
   "allergens": [
-   "gluten",
-   "sulphites"
+   "gluten"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: removed sulphites ('raisin' matched inside 'raising')",
   "proposal": {
    "by": "rules",
    "uses": 21,
@@ -10956,6 +11093,28 @@
   }
  },
  {
+  "id": "sesame_seed_burger_bun",
+  "name": "Sesame Seed Burger Bun",
+  "synonyms": [
+   "Sesame Seed Burger Buns"
+  ],
+  "aisle": "bakery",
+  "allergens": [
+   "gluten",
+   "sesame"
+  ],
+  "contains": [],
+  "protein": null,
+  "isPantryStaple": false,
+  "reviewed": false,
+  "notes": "review: split from burger_bun so sesame isn't lost (Big Mac, Chick-Fil-A); BRAND-DEPENDENT: may contain milk",
+  "proposal": {
+   "by": "review",
+   "uses": 2,
+   "merged": true
+  }
+ },
+ {
   "id": "sevaiiya",
   "name": "Sevaiiya",
   "synonyms": [],
@@ -11000,6 +11159,7 @@
   "synonyms": [],
   "aisle": "beverages",
   "allergens": [
+   "gluten",
    "sulphites"
   ],
   "contains": [
@@ -11008,7 +11168,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: Shaoxing is brewed with a wheat starter and is often salted; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -11085,13 +11245,16 @@
   ],
   "aisle": "bakery",
   "allergens": [
-   "gluten"
+   "gluten",
+   "milk"
   ],
-  "contains": [],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: usually made with butter; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 7,
@@ -11187,10 +11350,10 @@
   "contains": [
    "shellfish"
   ],
-  "protein": "shellfish",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: condiment, not the dish's protein (allergen kept); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -11203,15 +11366,17 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
-   "crustaceans"
+   "celery",
+   "crustaceans",
+   "gluten"
   ],
   "contains": [
    "shellfish"
   ],
-  "protein": "shellfish",
+  "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: condiment, not the dish's protein; review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -11304,15 +11469,13 @@
   "synonyms": [
    "Sirop de Liège"
   ],
-  "aisle": "pantry",
-  "allergens": [
-   "gluten"
-  ],
+  "aisle": "condiments",
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: Liege syrup = apples/pears/sugar, no wheat",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -11642,14 +11805,12 @@
   "name": "Speculaas Spice Mix",
   "synonyms": [],
   "aisle": "spices",
-  "allergens": [
-   "gluten"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: ground spice blend, no flour; BRAND-DEPENDENT: check a typical label",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -11738,12 +11899,14 @@
   "name": "Sriracha",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "sulphites"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: Huy Fong sriracha lists sodium bisulfite; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12044,12 +12207,14 @@
    "Sun-dried Tomatoes"
   ],
   "aisle": "produce",
-  "allergens": [],
+  "allergens": [
+   "sulphites"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: often preserved with sulphur dioxide; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12113,13 +12278,13 @@
   "synonyms": [
    "Sweet Peppadew Peppers"
   ],
-  "aisle": "spices",
+  "aisle": "condiments",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: jarred pickled peppers; may contain sulphites (BRAND-DEPENDENT)",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12138,7 +12303,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: fresh vegetable; brand flag was a 'sweet' regex misfire",
   "proposal": {
    "by": "rules",
    "uses": 4,
@@ -12176,7 +12341,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: plain vegetable; brand flag was a 'sweet' regex misfire",
   "proposal": {
    "by": "rules",
    "uses": 10,
@@ -12341,12 +12506,18 @@
   "name": "Thai Chilli Jam",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "crustaceans",
+   "fish"
+  ],
+  "contains": [
+   "fish",
+   "shellfish"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: nam prik pao contains dried shrimp + fish sauce; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12358,12 +12529,16 @@
   "name": "Thai Green Curry Paste",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
-  "contains": [],
+  "allergens": [
+   "crustaceans"
+  ],
+  "contains": [
+   "shellfish"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -12412,7 +12587,7 @@
   "id": "toffee_popcorn",
   "name": "Toffee Popcorn",
   "synonyms": [],
-  "aisle": "dairy_eggs",
+  "aisle": "pantry",
   "allergens": [
    "milk"
   ],
@@ -12422,7 +12597,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: snack aisle; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12477,12 +12652,14 @@
   "name": "Tomato Ketchup",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: Heinz (UK) lists 'spice and herb extracts (contain celery)'; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 9,
@@ -12627,14 +12804,12 @@
   "aisle": "meat_seafood",
   "allergens": [],
   "contains": [
-   "meat",
-   "pork",
    "poultry"
   ],
-  "protein": "pork",
+  "protein": "turkey",
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: turkey ham is turkey, not pork ('ham' regex); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12913,13 +13088,17 @@
   "id": "vegetable_millk",
   "name": "Vegetable Millk",
   "synonyms": [],
-  "aisle": "produce",
-  "allergens": [],
+  "aisle": "pantry",
+  "allergens": [
+   "gluten",
+   "soy",
+   "tree_nuts"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: unspecified plant milk (rijstevlaai); covers soy/almond/oat (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -12957,13 +13136,13 @@
   "id": "vegetable_shortening",
   "name": "Vegetable Shortening",
   "synonyms": [],
-  "aisle": "produce",
+  "aisle": "pantry",
   "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: shelf fat, pantry not produce",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -12974,16 +13153,18 @@
   "id": "vegetable_stock",
   "name": "Vegetable Stock",
   "synonyms": [
-   "Bouillon Cubes",
    "Vegetable Stock Cube"
   ],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "celery",
+   "gluten"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; 'Bouillon Cubes' moved to bouillon_cube (flavour unknown); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
    "uses": 34,
@@ -13014,12 +13195,15 @@
   "name": "Vinaigrette Dressing",
   "synonyms": [],
   "aisle": "condiments",
-  "allergens": [],
+  "allergens": [
+   "mustard",
+   "sulphites"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: vinaigrettes usually contain mustard and wine vinegar; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -13095,14 +13279,12 @@
   "name": "Water Chestnut",
   "synonyms": [],
   "aisle": "produce",
-  "allergens": [
-   "tree_nuts"
-  ],
+  "allergens": [],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: aquatic vegetable corm, not a tree nut",
   "proposal": {
    "by": "rules",
    "uses": 3,
@@ -13358,13 +13540,14 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
-   "mustard"
+   "mustard",
+   "sulphites"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: made with white wine/vinegar, labels list sulphites; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -13396,13 +13579,16 @@
   "synonyms": [],
   "aisle": "bakery",
   "allergens": [
+   "eggs",
    "gluten"
   ],
-  "contains": [],
+  "contains": [
+   "egg"
+  ],
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "",
+  "notes": "review: most wonton wrappers contain egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -13435,6 +13621,7 @@
   "aisle": "condiments",
   "allergens": [
    "fish",
+   "gluten",
    "sulphites"
   ],
   "contains": [
@@ -13443,7 +13630,7 @@
   "protein": null,
   "isPantryStaple": false,
   "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "notes": "review: UK Lea & Perrins uses barley malt vinegar -> gluten; anchovy -> fish; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 13,

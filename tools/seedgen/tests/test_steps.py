@@ -42,6 +42,16 @@ class StepSplitterTest(unittest.TestCase):
         self.assertTrue(all(len(s) <= 400 for s in steps))
         self.assertEqual(" ".join(steps), (sentence * 8).strip())
 
+    def test_section_headings_label_the_next_step(self):
+        text = ("Make the Pastry Dough\r\n\r\nRub the fat into the flour.\r\n\r\n"
+                "Make the Filling\r\nBrown the beef.\r\nServe warm")
+        self.assertEqual(split_steps(text), ["Make the Pastry Dough: Rub the fat into the flour.",
+                                             "Make the Filling: Brown the beef.", "Serve warm."])
+
+    def test_title_case_words_mid_paragraph_are_not_headings(self):
+        text = "Blend 1 cup Raw Cashews with a\r\nPinch Sea Salt\r\nuntil smooth."
+        self.assertEqual(split_steps(text), ["Blend 1 cup Raw Cashews with a Pinch Sea Salt until smooth."])
+
     def test_empty(self):
         self.assertEqual(split_steps(""), [])
         self.assertEqual(split_steps("\r\n\r\n"), [])

@@ -238,5 +238,516 @@
   "cookMinutes": 20,
   "difficulty": "easy",
   "notes": "pilot"
+ },
+ "mdb-52784": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "worcestershire_sauce",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: method adds Worcestershire sauce with the spices"
+ },
+ "mdb-52816": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "tahini",
+    "rawMeasure": "a few tablespoons"
+   }
+  ],
+  "notes": "audit: method spreads tahini sauce over each eggplant half"
+ },
+ "mdb-52873": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "worcestershire_sauce",
+    "rawMeasure": "to taste"
+   }
+  ],
+  "notes": "audit: method adds Worcestershire sauce to the stew"
+ },
+ "mdb-52895": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "knob"
+   }
+  ],
+  "notes": "audit: method bastes the fried eggs with a knob of butter"
+ },
+ "mdb-52896": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "knob"
+   }
+  ],
+  "notes": "audit: method bastes the fried eggs with a knob of butter"
+ },
+ "mdb-52918": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "mayonnaise",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: rouille is harissa stirred through mayonnaise"
+ },
+ "mdb-52946": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "white_vinegar",
+    "rawMeasure": "1 tbsp"
+   }
+  ],
+  "notes": "audit: sauce uses vinegar (type unstated)"
+ },
+ "mdb-52954": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "egg",
+    "rawMeasure": "1"
+   }
+  ],
+  "notes": "audit: method stirs in 1 beaten egg"
+ },
+ "mdb-52955": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "egg",
+    "rawMeasure": "1"
+   }
+  ],
+  "notes": "audit: Egg Drop Soup with no egg listed; method adds 1 beaten egg"
+ },
+ "mdb-52995": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "1 tbsp"
+   }
+  ],
+  "notes": "audit: method melts 1 tbsp butter for the buns"
+ },
+ "mdb-52997": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "1 tbsp"
+   },
+   {
+    "ingredientId": "mayonnaise",
+    "rawMeasure": ""
+   },
+   {
+    "ingredientId": "sriracha",
+    "rawMeasure": "to taste"
+   }
+  ],
+  "notes": "audit: method lists 'Add'l ingredients: mayonnaise, sriracha' and stirs 1 tbsp butter into the rice"
+ },
+ "mdb-52999": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "red_wine_vinegar",
+    "rawMeasure": "splash"
+   }
+  ],
+  "notes": "audit: greens are tossed with a splash of vinegar (sherry or red wine)"
+ },
+ "mdb-53065": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "tuna",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: rolls are filled with tuna and cucumber; prawn/smoked salmon toppings are optional"
+ },
+ "mdb-53068": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "sesame_oil",
+    "rawMeasure": ""
+   },
+   {
+    "ingredientId": "white_vinegar",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: marinade uses sesame oil and vinegar"
+ },
+ "mdb-53127": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "semolina",
+    "rawMeasure": "for the tins"
+   }
+  ],
+  "notes": "audit: tins are coated with semolina, flour or breadcrumbs (all gluten), otherwise the cake is gluten-free"
+ },
+ "mdb-53217": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "pita_bread",
+    "rawMeasure": ""
+   },
+   {
+    "ingredientId": "garlic_sauce",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: the wrap is built on pita spread with garlic sauce"
+ },
+ "mdb-53218": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "pita_bread",
+    "rawMeasure": "flatbreads"
+   }
+  ],
+  "notes": "audit: served in toasted flatbreads (closest id: pita_bread)"
+ },
+ "mdb-53221": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "sesame_seed",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: date filling is fried with sesame"
+ },
+ "mdb-53248": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: method mixes butter into the noodles"
+ },
+ "mdb-53354": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "white_vinegar",
+    "rawMeasure": "for rinsing"
+   }
+  ],
+  "notes": "audit: goat meat is rinsed with vinegar and water"
+ },
+ "mdb-53427": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "egg",
+    "rawMeasure": "2"
+   }
+  ],
+  "notes": "audit: rice balls are dipped in 2 beaten eggs before frying"
+ },
+ "mdb-53482": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "white_wine_vinegar",
+    "rawMeasure": ""
+   }
+  ],
+  "notes": "audit: method adds white wine vinegar with the meat; audit: hob method is 8 min + 2 hr; slow-cooker/oven alternatives were summed into 550",
+  "prepMinutes": 20,
+  "cookMinutes": 135
+ },
+ "mdb-53492": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "egg",
+    "rawMeasure": "hard-boiled, to top"
+   }
+  ],
+  "notes": "audit: salad is topped with sliced hard-boiled eggs (traditional; 'if using' reads as herbs only)"
+ },
+ "mdb-53554": {
+  "reviewed": false,
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "for spreading"
+   }
+  ],
+  "notes": "audit: rye bread is buttered"
+ },
+ "mdb-52844": {
+  "reviewed": false,
+  "flavor": {
+   "sweet": 1,
+   "sour": 2
+  },
+  "notes": "top50: 1 tbsp honey in a savoury lasagne isn't sweet 3; sour 3 -> 2"
+ },
+ "mdb-53014": {
+  "reviewed": false,
+  "flavor": {
+   "umami": 3,
+   "sweet": 1
+  },
+  "notes": "top50: tomato + mozzarella pizza is umami, not 0; sweet 2 -> 1"
+ },
+ "mdb-52802": {
+  "reviewed": false,
+  "flavor": {
+   "sour": 1
+  },
+  "notes": "top50: a squeeze of lemon, fish pie isn't sour 3"
+ },
+ "mdb-52908": {
+  "reviewed": false,
+  "mealTypes": [
+   "main",
+   "side"
+  ],
+  "flavor": {
+   "sour": 2
+  },
+  "notes": "top50: ratatouille is as often a side; 1 tsp vinegar -> sour 2"
+ },
+ "mdb-52909": {
+  "reviewed": false,
+  "prepMinutes": 85,
+  "cookMinutes": 80,
+  "notes": "top50: the 1 hr cool is passive -> prep; cook = caramel 7 + 30 + 45 min bake"
+ },
+ "mdb-52905": {
+  "reviewed": false,
+  "flavor": {
+   "bitter": 2
+  },
+  "notes": "top50: dark chocolate in a sweet souffle, bitter 4 -> 2"
+ },
+ "mdb-52806": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2,
+   "spicy": 2
+  },
+  "notes": "top50: seasoned marinade (salty 0 was only 'no salt listed'); 1/2 tsp chilli powder for 16 thighs is mild -> spicy 2"
+ },
+ "mdb-52808": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2
+  },
+  "notes": "top50: curry paste is salted; salty 0 was only 'no salt listed'"
+ },
+ "mdb-52865": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2,
+   "umami": 2,
+   "spicy": 2
+  },
+  "notes": "top50: salty/umami 0 was only 'no salt listed'; 1 green chilli for 2 is spicy 2"
+ },
+ "mdb-52805": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2
+  },
+  "notes": "top50: biryani is seasoned; salty 0 was only 'no salt listed'"
+ },
+ "mdb-52945": {
+  "reviewed": false,
+  "flavor": {
+   "spicy": 3
+  },
+  "notes": "top50: 1 tbsp chilli powder for 4 -> spicy 3"
+ },
+ "mdb-52947": {
+  "reviewed": false,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "notes": "top50: no passive step, so prep 45 is too long; wok work + 6-8 min simmer is about 20"
+ },
+ "mdb-52948": {
+  "reviewed": false,
+  "mealTypes": [
+   "starter",
+   "snack"
+  ],
+  "notes": "top50: fried wontons are a starter/snack, not a main"
+ },
+ "mdb-53191": {
+  "reviewed": false,
+  "flavor": {
+   "spicy": 2,
+   "sweet": 3
+  },
+  "notes": "top50: 1/2 tsp cayenne for 2 -> spicy 2 (heat filter); sweet 4 -> 3"
+ },
+ "mdb-53238": {
+  "reviewed": false,
+  "flavor": {
+   "spicy": 1
+  },
+  "notes": "top50: the broth isn't hot; 1 small bird's eye chilli as garnish -> spicy 1"
+ },
+ "mdb-53053": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2,
+   "sweet": 2,
+   "sour": 2,
+   "umami": 3,
+   "spicy": 3
+  },
+  "notes": "top50: the method blends a spice paste that isn't in the source list (rendang paste is chilli-based) -> spicy 3; '6 Lime' are probably lime leaves, so sour 4 -> 2"
+ },
+ "mdb-52819": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2,
+   "sour": 2
+  },
+  "notes": "top50: Cajun seasoning is salted; lemon + salsa is sour 2, not 4"
+ },
+ "mdb-52858": {
+  "reviewed": false,
+  "flavor": {
+   "sour": 2,
+   "salty": 1
+  },
+  "notes": "top50: sour cream + lemon is tangy, not sour 5; audit: the 2 hr cool in the oven is passive -> prep (with the 8 hr chill); cook = 10 + 10 + 25 min",
+  "prepMinutes": 630,
+  "cookMinutes": 45
+ },
+ "mdb-52854": {
+  "reviewed": false,
+  "mealTypes": [
+   "breakfast",
+   "dessert"
+  ],
+  "flavor": {
+   "sour": 0
+  },
+  "notes": "top50: pancakes are breakfast too; plain batter has no sour"
+ },
+ "mdb-53151": {
+  "reviewed": false,
+  "flavor": {
+   "sour": 1
+  },
+  "notes": "top50: only lemon zest, sour 3 -> 1"
+ },
+ "mdb-53006": {
+  "reviewed": false,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "flavor": {
+   "sour": 2
+  },
+  "notes": "top50: quick grill moussaka: 5 min brown + heat through + grill, cook 10 is too short"
+ },
+ "mdb-53269": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2
+  },
+  "notes": "top50: hummus is seasoned; salty 0 was only 'no salt listed'"
+ },
+ "mdb-53266": {
+  "reviewed": false,
+  "flavor": {
+   "salty": 2
+  },
+  "notes": "top50: falafel is seasoned; salty 0 was only 'no salt listed'"
+ },
+ "mdb-52937": {
+  "reviewed": false,
+  "flavor": {
+   "spicy": 3
+  },
+  "notes": "top50: jerk marinade with 3 chillies is hot -> spicy 3 (heat filter)"
+ },
+ "mdb-53019": {
+  "reviewed": false,
+  "mealTypes": [
+   "main",
+   "side"
+  ],
+  "notes": "top50: pierogi are commonly a main"
+ },
+ "mdb-52804": {
+  "reviewed": false,
+  "mealTypes": [
+   "main",
+   "snack"
+  ],
+  "notes": "top50: poutine is a classic snack"
+ },
+ "mdb-53046": {
+  "reviewed": false,
+  "flavor": {
+   "sour": 0
+  },
+  "notes": "top50: lemon zest only, pastel de nata isn't sour"
+ },
+ "mdb-53543": {
+  "reviewed": false,
+  "cuisine": "Cuban",
+  "prepMinutes": 315,
+  "cookMinutes": 65,
+  "notes": "audit: Cuban, not Costa Rican: the Costa Rican block ends at mdb-53542 (Chorreadas) and mdb-53544+ is the Cuban set (Cafe La Llave, Ropa Vieja, Cuban Sandwich); Maria-cookie + dulce de leche cheesecake is a Miami-Cuban staple. Times: the 1 hr in-oven cool + 4 hr chill are passive -> prep; cook = 10 + 55 min bake"
+ },
+ "mdb-52812": {
+  "reviewed": false,
+  "cookMinutes": 260,
+  "notes": "audit: method is about 20 min on the hob + 3 hr + 1 hr in the oven; 460 was too long"
+ },
+ "mdb-53139": {
+  "reviewed": false,
+  "prepMinutes": 245,
+  "cookMinutes": 30,
+  "notes": "audit: the 4 hr batter rest is prep; the bake is 25-30 min (cook 265 was wrong)"
+ },
+ "mdb-52941": {
+  "reviewed": false,
+  "prepMinutes": 150,
+  "cookMinutes": 130,
+  "notes": "audit: minimum 2 hr soak is prep; cook = 20 + 75 + 15 + 15 min (350 was wrong)"
+ },
+ "mdb-53470": {
+  "reviewed": false,
+  "cookMinutes": 300,
+  "notes": "audit: 4 hr in the oven + boil/reduce on the hob; the '4 hours' was counted twice (480)"
+ },
+ "mdb-53452": {
+  "reviewed": false,
+  "prepMinutes": 135,
+  "notes": "audit: the batter rests 2 hr; 'overnight' is only a storage tip"
+ },
+ "mdb-53360": {
+  "reviewed": false,
+  "prepMinutes": 30,
+  "notes": "audit: the balls can be eaten straight away; setting overnight is optional"
  }
 }
