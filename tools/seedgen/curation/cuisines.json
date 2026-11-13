@@ -1,5 +1,10 @@
 {
- "_comment": "Allowed cuisines = every strArea from TheMealDB list.php?a=list, plus `extra`. `aliases` maps a raw strArea (or another spelling) to the cuisine shown in the app.",
- "aliases": {},
- "extra": []
+ "_comment": "Allowed cuisines = every strArea from TheMealDB list.php?a=list (after aliases), plus `extra`. `aliases` maps a raw strArea (or another spelling) to the cuisine shown in the app; it keeps the names the v1 dataset already used. 'International' is for dishes with no clear origin (agreed 2026-11-12).",
+ "aliases": {
+  "Argentine": "Argentinian",
+  "Argentina": "Argentinian",
+  "Saudi Arabian": "Saudi",
+  "Saudi Arabia": "Saudi"
+ },
+ "extra": ["International"]
 }

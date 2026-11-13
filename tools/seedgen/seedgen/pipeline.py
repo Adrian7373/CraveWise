@@ -85,6 +85,52 @@ def cmd_show(meal_ids: list[str]) -> int:
     return 0
 
 
+def top50_ids() -> list[str]:
+    import json
+    from .paths import CURATION
+    f = CURATION / "top50.json"
+    return json.loads(f.read_text(encoding="utf-8"))["ids"] if f.exists() else []
+
+
+def tag_all(table: IngredientTable):
+    """Normalize, run rules, load AI answers and overrides, merge. Shared by tags/review/build."""
+    import json
+    from . import ai, rules, vocab
+    from .merge import merge
+    from .paths import OVERRIDES
+    recipes, exclude = N.load_recipes(table)
+    allowed = N.allowed_cuisines()
+    v = vocab.load()
+    overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
+    proposals = {r.id: rules.propose(r, allowed) for r in recipes}
+    answers, errors = ai.load_answers(v, allowed)
+    merged = {}
+    for r in recipes:
+        merged[r.id] = merge(proposals[r.id], answers.get(r.id, {}), overrides.get(r.id, {}))
+    return recipes, proposals, answers, overrides, merged, errors
+
+
+def cmd_tags() -> int:
+    """Queues AI batches for rule gaps and prints where each field's value comes from."""
+    from . import ai
+    table = IngredientTable.load()
+    recipes, proposals, answers, overrides, merged, errors = tag_all(table)
+    names = {i["id"]: i["name"] for i in table.items}
+    pending, queued = ai.write_todos(recipes, proposals, overrides, answers, names, top50_ids())
+    sources: dict[str, Counter] = {}
+    for _, prov, missing in merged.values():
+        for f, p in prov.items():
+            sources.setdefault(f, Counter())[p["source"]] += 1
+        for f in missing:
+            sources.setdefault(f, Counter())["MISSING"] += 1
+    for f, c in sources.items():
+        print(f"  {f:<14} {dict(c)}")
+    print(f"AI: {len(answers)} recipes answered, {queued} newly queued, pending batches: {pending}")
+    for e in errors:
+        print("  ERROR " + e)
+    return 1 if errors else 0
+
+
 def cmd_build(allow_unreviewed: bool = False) -> int:
     print("build: tagging (Phase C), nutrition (Phase E) and dataset output (Phase F) are not wired yet.")
     return 1

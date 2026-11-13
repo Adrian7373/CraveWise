@@ -1,0 +1,19 @@
+{
+ "_comment": "Recipes hand-reviewed first (Phase D). Picked for coverage of cuisine, meal type, protein and difficulty, leaning on well-known dishes. Proposed by Claude 2026-11-12; awaiting approval.",
+ "approved": false,
+ "ids": [
+  "mdb-52770", "mdb-52982", "mdb-52844", "mdb-53014",
+  "mdb-52803", "mdb-52802", "mdb-52896", "mdb-52883", "mdb-52791",
+  "mdb-52904", "mdb-52832", "mdb-52908", "mdb-52903", "mdb-52909", "mdb-52905",
+  "mdb-52806", "mdb-52808", "mdb-52865", "mdb-52805",
+  "mdb-52945", "mdb-52947", "mdb-52948",
+  "mdb-52831", "mdb-53065",
+  "mdb-53191", "mdb-52814", "mdb-53194",
+  "mdb-53238", "mdb-53053", "mdb-52819",
+  "mdb-52813", "mdb-52858", "mdb-52854",
+  "mdb-53151", "mdb-52872",
+  "mdb-53006", "mdb-53266", "mdb-53269", "mdb-53215", "mdb-52843",
+  "mdb-52937", "mdb-53354", "mdb-52834", "mdb-53078", "mdb-53019",
+  "mdb-52804", "mdb-53046", "mdb-53069", "mdb-53027", "mdb-53134"
+ ]
+}
