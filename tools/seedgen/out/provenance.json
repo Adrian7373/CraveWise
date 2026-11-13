@@ -31104,7 +31104,7 @@
   },
   "flavor.sweet": {
    "source": "rule",
-   "reason": "from mincemeat, sugar",
+   "reason": "from sugar",
    "confidence": 0.8
   },
   "flavor.sour": {
@@ -31118,9 +31118,9 @@
    "batch": 22
   },
   "flavor.umami": {
-   "source": "ai",
-   "reason": "spiced meat",
-   "batch": 22
+   "source": "rule",
+   "reason": "from beef mince",
+   "confidence": 0.8
   },
   "flavor.spicy": {
    "source": "rule",

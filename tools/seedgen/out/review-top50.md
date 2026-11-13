@@ -16,7 +16,6 @@ Italian · main · TheMealDB Beef · 3 steps · [source](https://www.themealdb.c
 **Ingredients:** 2 Onion; 1tbsp Olive Oil; 1 clove Garlic; 500g Beef Mince; 90g Mushroom; 1tsp Dried Oregano; 400g can Tomato; 300ml Beef Stock; 1tbsp Tomato Puree; 1tbsp Worcestershire Sauce; 350g Spaghetti; Topping Parmesan
 
 **Derived (preview):** allergens celery, fish, gluten, milk, sulphites · diets no_pork_no_alcohol · proteins beef
-**Unreviewed ingredients:** beef_mince, beef_stock, dried_oregano, garlic, mushroom, olive_oil, onion, parmesan, spaghetti, tomato, tomato_puree, worcestershire_sauce
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -42,7 +41,6 @@ Italian · main · TheMealDB Pasta · 12 steps · [source](https://www.themealdb
 **Ingredients:** 320g Spaghetti; 6 Egg Yolk; As required Salt; 150g Bacon; 50g Pecorino; As required Black Pepper; 50g Butter; 50g Parmesan; 2 cloves Garlic
 
 **Derived (preview):** allergens eggs, gluten, milk · diets none · proteins egg, pork
-**Unreviewed ingredients:** bacon, black_pepper, butter, egg_yolk, garlic, parmesan, pecorino, salt, spaghetti
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -68,7 +66,6 @@ Italian · main · TheMealDB Pasta · 6 steps · [source](https://www.themealdb.
 **Ingredients:** 1 tblsp Olive Oil; 2 Bacon; 1 finely chopped Onion; 1 Stick Celery; 1 medium Carrot; 2 cloves chopped Garlic; 500g Beef Mince; 1 tbls Tomato Puree; 800g Chopped Tomatoes; 1 tblsp Honey; 500g Lasagne Sheet; 400ml Creme Fraiche; 125g Mozzarella; 50g Parmesan; Topping Basil
 
 **Derived (preview):** allergens celery, eggs, gluten, milk · diets none · proteins beef, pork
-**Unreviewed ingredients:** bacon, basil, beef_mince, carrot, celery, chopped_tomatoes, creme_fraiche, garlic, honey, lasagne_sheet, mozzarella, olive_oil, onion, parmesan, tomato_puree
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -94,7 +91,6 @@ Italian · main · TheMealDB Miscellaneous · 12 steps · [source](https://www.t
 **Ingredients:** 150ml Water; 1 tsp Sugar; 15g Yeast; 225g Plain Flour; 1 1/2 tsp Salt; Drizzle Olive Oil; 80g Passata; 70g Mozzarella; Peeled and Sliced Oregano; Leaves Basil; Pinch Black Pepper
 
 **Derived (preview):** allergens gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins none
-**Unreviewed ingredients:** basil, black_pepper, mozzarella, olive_oil, oregano, passata, plain_flour, salt, sugar, water, yeast
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -120,7 +116,6 @@ British · main · TheMealDB Beef · 8 steps · [source](https://www.themealdb.c
 **Ingredients:** 400g Mushroom; 1-2tbsp English Mustard; Dash Olive Oil; 750g piece Beef Fillet; 6-8 slices Parma Ham; 500g Puff Pastry; Dusting Plain Flour; 2 Beaten Egg Yolk
 
 **Derived (preview):** allergens eggs, gluten, milk, mustard · diets none · proteins beef, egg, pork
-**Unreviewed ingredients:** beef_fillet, egg_yolk, english_mustard, mushroom, olive_oil, parma_ham, plain_flour, puff_pastry
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -146,7 +141,6 @@ British · main · TheMealDB Seafood · 6 steps · [source](https://www.themeald
 **Ingredients:** 900g Potato; 2 tbsp Olive Oil; 600ml Milk; 800g White Fish; 1 tbsp Plain Flour; Grating Ground Nutmeg; 3 tbsp Double Cream; 200g Jerusalem Artichoke; 1 finely sliced Leek; 200g peeled raw Prawn; Large handful Parsley; Handful Dill; Grated zest of 1 Lemon; 25g grated Gruyere; Juice of 1 Lemon
 
 **Derived (preview):** allergens crustaceans, fish, gluten, milk · diets no_pork_no_alcohol, pescatarian · proteins fish, shellfish
-**Unreviewed ingredients:** dill, double_cream, ground_nutmeg, gruyere, jerusalem_artichoke, leek, lemon, milk, olive_oil, parsley, plain_flour, potato, prawn, white_fish
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -171,9 +165,8 @@ British · breakfast · TheMealDB Breakfast · 10 steps · [source](https://www.
 
 **Ingredients:** 4 Sausage; 4 Bacon; 4 Mushroom; 3 Tomato; 2 sliced Morcilla; 2 Egg; 1 Slice Bread; 100g Baked Bean; knob Butter
 
-**Derived (preview):** allergens eggs, gluten, milk, sulphites · diets none · proteins egg, legumes, pork
+**Derived (preview):** allergens eggs, gluten, milk, soy, sulphites · diets none · proteins egg, legumes, pork
 **⚠ Method mentions allergens missing from the ingredients:** fish? (method says 'fish')
-**Unreviewed ingredients:** bacon, baked_bean, bread, butter, egg, morcilla, mushroom, sausage, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -199,7 +192,6 @@ British · dessert · TheMealDB Dessert · 5 steps · [source](https://www.theme
 **Ingredients:** 100g Butter; 175g Muscovado Sugar; 2 large Egg; 225g Self Raising Flour; 1 tsp Baking Powder; 1 tsp Bicarbonate of Soda; 3 tbs Black Treacle; 275ml Milk; to serve Double Cream; 100g Butter; 125g Muscovado Sugar; 1 tbs Black Treacle; 300ml Double Cream; 1 tsp Vanilla Extract
 
 **Derived (preview):** allergens eggs, gluten, milk · diets pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** baking_powder, bicarbonate_of_soda, black_treacle, butter, double_cream, egg, milk, muscovado_sugar, self_raising_flour, vanilla_extract
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -225,7 +217,6 @@ British · dessert · TheMealDB Dessert · 3 steps · [source](https://www.theme
 **Ingredients:** 500g Strawberries; 400ml Double Cream; 3 x 7.5cm Meringue Nests; 1 tbsp Ginger Cordial; sprigs of fresh Mint
 
 **Derived (preview):** allergens eggs, milk, sulphites · diets gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins none
-**Unreviewed ingredients:** double_cream, ginger_cordial, meringue_nests, mint, strawberries
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -251,7 +242,6 @@ French · main · TheMealDB Beef · 10 steps · [source](https://www.themealdb.c
 **Ingredients:** 3 tsp Goose Fat; 600g Beef Shin; 100g Bacon; 350g Shallot; 250g Mushroom; 2 sliced Garlic; 1 Bouquet Garni; 1 tbs Tomato Puree; 750 ml Red Wine; 600g Celeriac; 2 tbs Olive Oil; sprigs of fresh Thyme; sprigs of fresh Rosemary; 2 Bay Leaf; 4 Cardamom
 
 **Derived (preview):** allergens celery, sulphites · diets dairy_free, gluten_free · proteins beef, pork
-**Unreviewed ingredients:** bacon, bay_leaf, beef_shin, bouquet_garni, cardamom, celeriac, garlic, goose_fat, mushroom, olive_oil, red_wine, rosemary, shallot, thyme, tomato_puree
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -277,7 +267,6 @@ French · main · TheMealDB Chicken · 9 steps · [source](https://www.themealdb
 **Ingredients:** 1½ tbsp Olive Oil; 3 rashers (100g) chopped dry-cured Bacon; 12 small Shallot; 2 (460g) Chicken Leg; 4 (650g) Chicken Thigh; 2 (280g) Chicken Breast; 3 finely chopped Garlic; 3 tbsp Brandy; 600ml Red Wine; 150ml Chicken Stock; 2 tsp Tomato Puree; 3 sprigs Thyme; 2 sprigs Rosemary; 2 Bay Leaf; garnish Parsley; 250g Mushroom; 2 tbsp Plain Flour; 1 tsp Butter
 
 **Derived (preview):** allergens celery, gluten, milk, sulphites · diets none · proteins chicken, pork
-**Unreviewed ingredients:** bacon, bay_leaf, brandy, butter, chicken_breast, chicken_leg, chicken_stock, chicken_thigh, garlic, mushroom, olive_oil, parsley, plain_flour, red_wine, rosemary, shallot, thyme, tomato_puree
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -303,7 +292,6 @@ French · main, side · TheMealDB Vegetarian · 4 steps · [source](https://www.
 **Ingredients:** 2 large Aubergine; 4 Courgette; 2 Yellow Pepper; 4 large Tomato; 5 tbs Olive Oil; Bunch Basil; 1 medium Onion; 3 finely chopped Garlic; 1 tsp Red Wine Vinegar; 1 tsp Sugar
 
 **Derived (preview):** allergens sulphites · diets dairy_free, gluten_free, no_pork_no_alcohol, pescatarian, vegan, vegetarian · proteins none
-**Unreviewed ingredients:** aubergine, basil, courgette, garlic, olive_oil, onion, red_wine_vinegar, sugar, tomato, yellow_pepper
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -328,8 +316,7 @@ French · side, starter · TheMealDB Side · 3 steps · [source](https://www.the
 
 **Ingredients:** 50g Butter; 1 tbs Olive Oil; 1 kg Onion; 1 tsp Sugar; 4 sliced Garlic; 2 tbs Plain Flour; 250ml White Wine; 1L Beef Stock; 4 sliced Bread; 140g Gruyere
 
-**Derived (preview):** allergens celery, gluten, milk, sulphites · diets none · proteins none
-**Unreviewed ingredients:** beef_stock, bread, butter, garlic, gruyere, olive_oil, onion, plain_flour, sugar, white_wine
+**Derived (preview):** allergens celery, gluten, milk, soy, sulphites · diets none · proteins none
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -355,7 +342,6 @@ French · dessert · TheMealDB Dessert · 6 steps · [source](https://www.themea
 **Ingredients:** 300g Puff Pastry; Dusting Plain Flour; 6 Apple; 100g Sugar; 85g Butter; to serve Creme Fraiche
 
 **Derived (preview):** allergens gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins none
-**Unreviewed ingredients:** apple, butter, creme_fraiche, plain_flour, puff_pastry, sugar
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -381,7 +367,6 @@ French · dessert · TheMealDB Dessert · 5 steps · [source](https://www.themea
 **Ingredients:** 142ml Single Cream; 25g Sugar; 100g Dark Chocolate; 25g Butter; drizzle Butter; 50g Sugar; 175g Dark Chocolate; 2 tbs Double Cream; 4 Egg Yolk; 5 Egg White; 2 tbs Double Cream; to serve Icing Sugar
 
 **Derived (preview):** allergens eggs, milk, soy · diets gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** butter, dark_chocolate, double_cream, egg_white, egg_yolk, icing_sugar, single_cream, sugar
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -407,7 +392,6 @@ Indian · main · TheMealDB Chicken · 3 steps · [source](https://www.themealdb
 **Ingredients:** 2 Juice Lemon; 4 tsp Paprika; 2 finely chopped Red Onion; 16 skinnless Chicken Thigh; For brushing Vegetable Oil; 300ml Greek Yogurt; large piece Ginger; 4 Garlic; ¾ tsp Garam Masala; ¾ tsp Ground Cumin; ½ tsp Chilli Powder; ¼ tsp Turmeric
 
 **Derived (preview):** allergens milk · diets gluten_free, no_pork_no_alcohol · proteins chicken
-**Unreviewed ingredients:** chicken_thigh, chilli_powder, garam_masala, garlic, ginger, greek_yogurt, ground_cumin, lemon, paprika, red_onion, turmeric, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -433,7 +417,6 @@ Indian · main · TheMealDB Lamb · 3 steps · [source](https://www.themealdb.co
 **Ingredients:** 2 quartered Onion; 4 tbsp Vegetable Oil; 4 cloves Garlic; Thumb sized peeled and very finely grated Ginger; 2 tbsp Madras Paste; 2 tsp Paprika; 1 Cinnamon Stick; 6 bashed to break shells Cardamom; 4 Clove; 2 Bay Leaf; 1 tbsp Tomato Puree; 1kg cubed Lamb; 150ml Greek Yogurt; Garnish chopped Coriander
 
 **Derived (preview):** allergens milk, mustard · diets gluten_free, no_pork_no_alcohol · proteins lamb
-**Unreviewed ingredients:** bay_leaf, cardamom, cinnamon_stick, clove, coriander, garlic, ginger, greek_yogurt, lamb, madras_paste, onion, paprika, tomato_puree, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -459,7 +442,6 @@ Indian · main · TheMealDB Vegetarian · 3 steps · [source](https://www.themea
 **Ingredients:** 1 tbls Vegetable Oil; 225g Paneer; 2 Ginger; 1 tsp Ground Cumin; 1 tsp Turmeric; 1 tsp Coriander; 1 Green Chilli; 4 large Tomato; 150g Pea; 1 tsp Garam Masala; Small bunch Coriander; to serve Naan Bread
 
 **Derived (preview):** allergens gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins cheese
-**Unreviewed ingredients:** coriander, garam_masala, ginger, green_chilli, ground_cumin, naan_bread, paneer, pea, tomato, turmeric, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -485,7 +467,6 @@ Indian · main · TheMealDB Lamb · 15 steps · [source](https://www.themealdb.c
 **Ingredients:** 12 Cashew; ½ tbsp Khus Khus; ½ tbsp Cumin Seed; 3 sliced thinly Onion; 2 tsp Ginger Garlic Paste; 4 whole Garlic; Leaves Mint; Leaves Coriander; ½ tsp dissolved in ½ cup warm milk Saffron; 2 tbsp Ghee; 2 Cups Basmati Rice; ½ cup Yogurt; 1 tbsp Cumin Seed; ½ Bay Leaf; 1 thin piece Cinnamon; 3 Clove; 2 Cardamom; 1 lb Lamb; 1 tsp Chilli Powder; 1 tbsp Biryani Masala
 
 **Derived (preview):** allergens milk, tree_nuts · diets gluten_free, no_pork_no_alcohol · proteins lamb
-**Unreviewed ingredients:** basmati_rice, bay_leaf, biryani_masala, cardamom, cashew, chilli_powder, cinnamon, clove, coriander, cumin_seed, garlic, ghee, ginger_garlic_paste, khus_khus, lamb, mint, onion, saffron, yogurt
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -511,7 +492,6 @@ Chinese · main · TheMealDB Chicken · 4 steps · [source](https://www.themeald
 **Ingredients:** 2 tbs Sake; 2 tbs Soy Sauce; 2 tbs Sesame Oil; 2 tbs Cornflour; 2 tbs Water; 500g Chicken; 1 tbs Chilli Powder; 1 tsp Rice Vinegar; 1 tbs Brown Sugar; 4 Chopped Spring Onion; 6 cloves Garlic; 220g Water Chestnut; 100g Peanut
 
 **Derived (preview):** allergens gluten, peanuts, sesame, soy, sulphites · diets dairy_free · proteins chicken
-**Unreviewed ingredients:** brown_sugar, chicken, chilli_powder, cornflour, garlic, peanut, rice_vinegar, sake, sesame_oil, soy_sauce, spring_onion, water, water_chestnut
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -537,7 +517,6 @@ Chinese · main · TheMealDB Beef · 9 steps · [source](https://www.themealdb.c
 **Ingredients:** 450g Tofu; 100g Beef Mince; 1/2 tbs Sesame Oil; 1 1/2 tsp Doubanjiang; 1/2 tsp Fermented Black Bean; 1 tbs Black Pepper; 1/2 tsp Salt; 1/2 tsp Sichuan Pepper; 1 tbs Soy Sauce; 400ml Water; 2 tbs Olive Oil; 2 chopped Spring Onion; 4 Spring Onion; 2 cloves chopped Garlic; 4 sliced Ginger; 2 1/2 tbs Water; 1 tbs Cornflour
 
 **Derived (preview):** allergens gluten, sesame, soy · diets dairy_free, no_pork_no_alcohol · proteins beef, tofu
-**Unreviewed ingredients:** beef_mince, black_pepper, cornflour, doubanjiang, fermented_black_bean, garlic, ginger, olive_oil, salt, sesame_oil, sichuan_pepper, soy_sauce, spring_onion, tofu, water
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -563,7 +542,6 @@ Chinese · starter, snack · TheMealDB Pork · 8 steps · [source](https://www.t
 **Ingredients:** 1lb Pork; 3 chopped Garlic; 1 tsp Ginger; 1 tbs Soy Sauce; 1 tsp Sesame Oil; 3 finely chopped Carrot; 3 finely chopped Celery; 6 chopped Spring Onion; 1 Packet Wonton Skin; Fry Vegetable Oil; Bottle Water
 
 **Derived (preview):** allergens celery, eggs, gluten, sesame, soy · diets dairy_free · proteins pork
-**Unreviewed ingredients:** carrot, celery, garlic, ginger, pork, sesame_oil, soy_sauce, spring_onion, vegetable_oil, water, wonton_skin
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -589,7 +567,6 @@ Japanese · main, snack · TheMealDB Chicken · 4 steps · [source](https://www.
 **Ingredients:** 450 grams Boneless skin Chicken; 1 tablespoon Ginger; 1 clove Garlic; 2 tablespoons Soy Sauce; 1 tablespoon Sake; 2 teaspoon Sugar; 1/3 cup Potato Starch; 1/3 cup Vegetable Oil; 1/3 cup Lemon
 
 **Derived (preview):** allergens gluten, soy · diets dairy_free · proteins chicken
-**Unreviewed ingredients:** chicken, garlic, ginger, lemon, potato_starch, sake, soy_sauce, sugar, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -614,9 +591,8 @@ Japanese · main · TheMealDB Seafood · 11 steps · [source](https://www.themea
 
 **Ingredients:** 300ml Sushi Rice; 100ml Rice Wine; 2 tbs Sugar; 3 tbs Mayonnaise; 1 tbs Rice Wine; 1 tbs Soy Sauce; 1 Cucumber; Tuna
 
-**Derived (preview):** allergens eggs, fish, gluten, soy, sulphites · diets dairy_free, pescatarian · proteins fish
+**Derived (preview):** allergens eggs, fish, gluten, mustard, soy, sulphites · diets dairy_free, pescatarian · proteins fish
 **⚠ Method mentions allergens missing from the ingredients:** crustaceans? (method says 'prawn'); tree_nuts? (method says 'walnut')
-**Unreviewed ingredients:** cucumber, mayonnaise, rice_wine, soy_sauce, sugar, sushi_rice, tuna
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -643,7 +619,6 @@ Thai · main · TheMealDB Seafood · 4 steps · [source](https://www.themealdb.c
 
 **Derived (preview):** allergens crustaceans, fish, peanuts · diets dairy_free, gluten_free, no_pork_no_alcohol, pescatarian · proteins shellfish
 **⚠ Method mentions allergens missing from the ingredients:** gluten? (method says 'noodle')
-**Unreviewed ingredients:** bean_sprout, cayenne_pepper, coriander, fish_sauce, lime, muscovado_sugar, peanut, prawn, rice_noodle, spring_onion, sweet_chilli_sauce, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -669,7 +644,6 @@ Thai · main · TheMealDB Chicken · 4 steps · [source](https://www.themealdb.c
 **Ingredients:** 225g new Potato; 100g Green Bean; 1 tbsp Vegetable Oil; 1 clove Garlic; 4 tsp Thai Green Curry Paste; 400ml Coconut Milk; 2 tsp Fish Sauce; 1 tsp Sugar; 450g boneless Chicken; 2 fresh kaffir leaves Lime; handfull Basil; Boiled Rice
 
 **Derived (preview):** allergens crustaceans, fish · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins chicken
-**Unreviewed ingredients:** basil, chicken, coconut_milk, fish_sauce, garlic, green_bean, lime, potato, rice, sugar, thai_green_curry_paste, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -695,7 +669,6 @@ Thai · main, starter · TheMealDB Seafood · 3 steps · [source](https://www.th
 **Ingredients:** 200g Onion; 150g Tomato; 20g Red Chilli; 15g Galangal; 2 Lemongrass; 250g Prawn; 1 Chicken Stock; 120g Oyster Mushroom; 8 Makrut Lime Leaf; 25 ml Fish Sauce; 25 ml Lime Juice; 70 ml Coconut Milk; 1 tblsp Thai Chilli Jam; Handful Coriander
 
 **Derived (preview):** allergens celery, crustaceans, fish, gluten · diets dairy_free, no_pork_no_alcohol · proteins shellfish
-**Unreviewed ingredients:** chicken_stock, coconut_milk, coriander, fish_sauce, galangal, lemongrass, lime_juice, makrut_lime_leaf, onion, oyster_mushroom, prawn, red_chilli, thai_chilli_jam, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -721,7 +694,6 @@ Vietnamese · main · TheMealDB Beef · 4 steps · [source](https://www.themeald
 **Ingredients:** 1 L Beef Stock; 1 large Onion; 1 Large Chopped Ginger; 1 Cinnamon Stick; 2 Star Anise; 1 tsp Coriander Seed; 1/2 teaspoon Clove; 225g Sirloin Steak; 1 tsp Palm Sugar; 1 tablespoon Fish Sauce; 1 ½ tbsp Soy Sauce; 200g Rice Noodle; 2 sliced Spring Onion; 1 small Birds Eye Chilli; Handful Basil; Handful Coriander; 1 Lime
 
 **Derived (preview):** allergens celery, fish, gluten, soy · diets dairy_free, no_pork_no_alcohol · proteins beef
-**Unreviewed ingredients:** basil, beef_stock, birds_eye_chilli, cinnamon_stick, clove, coriander, coriander_seed, fish_sauce, ginger, lime, onion, palm_sugar, rice_noodle, sirloin_steak, soy_sauce, spring_onion, star_anise
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -747,7 +719,6 @@ Malaysian · main · TheMealDB Beef · 4 steps · [source](https://www.themealdb
 **Ingredients:** 1lb Beef; 5 tbs Vegetable Oil; 1 Cinnamon Stick; 3 Clove; 3 Star Anise; 3 Cardamom; 1 cup Coconut Cream; 1 cup Water; 2 tbs Tamarind Paste; 6 Lime; 1 tbs Sugar; 5 Shallot
 
 **Derived (preview):** allergens none · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins beef
-**Unreviewed ingredients:** beef, cardamom, cinnamon_stick, clove, coconut_cream, lime, shallot, star_anise, sugar, tamarind_paste, vegetable_oil, water
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -773,7 +744,6 @@ Mexican · main · TheMealDB Seafood · 5 steps · [source](https://www.themeald
 **Ingredients:** 2 tbsp Cajun; 1 tsp Cayenne Pepper; 4 fillets White Fish; 1 tsp Vegetable Oil; 8 Flour Tortilla; 1 sliced Avocado; 2 shredded Lettuce; 4 shredded Spring Onion; 1 x 300ml Salsa; 1 pot Sour Cream; 1 Lemon; 1 clove finely chopped Garlic
 
 **Derived (preview):** allergens fish, gluten, milk · diets no_pork_no_alcohol, pescatarian · proteins fish
-**Unreviewed ingredients:** avocado, cajun, cayenne_pepper, flour_tortilla, garlic, lemon, lettuce, salsa, sour_cream, spring_onion, vegetable_oil, white_fish
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -799,7 +769,6 @@ American · main · TheMealDB Chicken · 6 steps · [source](https://www.themeal
 **Ingredients:** 1 whole Chicken; 2 quarts neutral frying Vegetable Oil; 1 Egg White; 1 1/2 cups Plain Flour; 1 tablespoon Brown Sugar; 1 tablespoon Salt; 1 tablespoon Paprika; 2 teaspoons Onion Salt; 1 teaspoon Chilli Powder; 1 teaspoon Black Pepper; 1/2 teaspoon Celery Salt; 1/2 teaspoon Sage; 1/2 teaspoon Garlic Powder; 1/2 teaspoon Ground Allspice; 1/2 teaspoon Oregano; 1/2 teaspoon Basil; 1/2 teaspoon Marjoram
 
 **Derived (preview):** allergens celery, eggs, gluten · diets dairy_free, no_pork_no_alcohol · proteins chicken, egg
-**Unreviewed ingredients:** basil, black_pepper, brown_sugar, celery_salt, chicken, chilli_powder, egg_white, garlic_powder, ground_allspice, marjoram, onion_salt, oregano, paprika, plain_flour, sage, salt, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -825,7 +794,6 @@ American · dessert · TheMealDB Dessert · 12 steps · [source](https://www.the
 **Ingredients:** 85g Butter; 140g Sour Cream; 1tbsp Sugar; 900g Cream Cheese; 250g Sugar; 3 tbs Plain Flour; 1 ½ teaspoons Lemon Juice; 3 Large Egg; 250ml Sour Cream; 150ml Sour Cream; 1 tbsp Sugar; 2 tsp Lemon Juice
 
 **Derived (preview):** allergens eggs, gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** butter, cream_cheese, egg, lemon_juice, plain_flour, sour_cream, sugar
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -851,7 +819,6 @@ American · breakfast, dessert · TheMealDB Dessert · 3 steps · [source](https
 **Ingredients:** 100g Plain Flour; 2 large Egg; 300ml Milk; 1 tbls Vegetable Oil; to serve Sugar; to serve Raspberry; to serve Blueberry
 
 **Derived (preview):** allergens eggs, gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** blueberry, egg, milk, plain_flour, raspberry, sugar, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -877,7 +844,6 @@ Spanish · main · TheMealDB Seafood · 9 steps · [source](https://www.themeald
 **Ingredients:** 3 tablespoons Olive Oil; 10 Prawn; Bunch Parsley; 100 ml Sherry; 500g Mussel; Pinch Saffron; 150g Chorizo; 1 chopped Onion; 3 cloves Garlic; 1 medium Squid; 2 Tomato; 250g Paella Rice; 100g Broad Bean; 1 Lemon Zest
 
 **Derived (preview):** allergens crustaceans, molluscs, sulphites · diets dairy_free, gluten_free · proteins legumes, pork, shellfish
-**Unreviewed ingredients:** broad_bean, chorizo, garlic, lemon_zest, mussel, olive_oil, onion, paella_rice, parsley, prawn, saffron, sherry, squid, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -903,7 +869,6 @@ Spanish · main · TheMealDB Vegetarian · 5 steps · [source](https://www.theme
 **Ingredients:** 1 sliced Onion; 4 tbsp Olive Oil; 25g Butter; 400g Potato; 6 cloves Garlic; 8 Egg; Handful Parsley; 1 Baguette; 4 Tomato; drizzle Olive Oil
 
 **Derived (preview):** allergens eggs, gluten, milk · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** baguette, butter, egg, garlic, olive_oil, onion, parsley, potato, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -929,7 +894,6 @@ Greek · main · TheMealDB Beef · 2 steps · [source](https://www.themealdb.com
 **Ingredients:** 500g Beef; 1 large Aubergine; 150g Greek Yogurt; 1 beaten Egg; 3 tbs Parmesan; 400g Tomato; 4 tbs Tomato Puree; 350g Potato
 
 **Derived (preview):** allergens eggs, milk · diets gluten_free, no_pork_no_alcohol · proteins beef, egg
-**Unreviewed ingredients:** aubergine, beef, egg, greek_yogurt, parmesan, potato, tomato, tomato_puree
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -956,7 +920,6 @@ Turkish · main · TheMealDB Vegetarian · 2 steps · [source](https://www.theme
 
 **Derived (preview):** allergens eggs · diets dairy_free, gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins egg, legumes
 **⚠ Method mentions allergens missing from the ingredients:** gluten? (method says 'couscous')
-**Unreviewed ingredients:** chickpea, egg, garlic, ground_coriander, ground_cumin, onion, parsley, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -982,7 +945,6 @@ Turkish · side · TheMealDB Side · 3 steps · [source](https://www.themealdb.c
 **Ingredients:** 400g Chickpea; 1 tablespoon Tahini; 1 large Garlic; 3 tablespoons Greek Yogurt; Juice of half Lemon
 
 **Derived (preview):** allergens milk, sesame · diets gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins legumes
-**Unreviewed ingredients:** chickpea, garlic, greek_yogurt, lemon, tahini
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1008,7 +970,6 @@ Saudi · breakfast, main · TheMealDB Miscellaneous · 8 steps · [source](https
 **Ingredients:** 250g Tomato; 40 ml Olive Oil; 4 Egg; 4 sliced Garlic; To taste Black Pepper; To taste Salt
 
 **Derived (preview):** allergens eggs · diets dairy_free, gluten_free, no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** black_pepper, egg, garlic, olive_oil, salt, tomato
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1035,7 +996,6 @@ Moroccan · main · TheMealDB Lamb · 4 steps · [source](https://www.themealdb.
 
 **Derived (preview):** allergens celery, gluten, sulphites · diets dairy_free, no_pork_no_alcohol · proteins lamb
 **⚠ Method mentions allergens missing from the ingredients:** tree_nuts? (method says 'pine nut')
-**Unreviewed ingredients:** apricot, butternut_squash, carrot, cinnamon, couscous, garlic, ginger, ground_cumin, honey, lamb_leg, olive_oil, onion, parsley, saffron, vegetable_stock
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1061,7 +1021,6 @@ Jamaican · main · TheMealDB Chicken · 7 steps · [source](https://www.themeal
 **Ingredients:** 12 Chicken Thigh; 1/2 Lime; 1 bunch Spring Onion; 1 tbs chopped Ginger; 3 cloves Garlic; 1/2 Onion; 3 chopped Red Chilli; 1/2 teaspoon Thyme; Juice of 1 Lime; 2 tbs Soy Sauce; 2 tbs Vegetable Oil; 3 tbs Brown Sugar; 1 tbs Ground Allspice; 200g Basmati Rice; 400g Coconut Milk; 1 bunch Spring Onion; 2 sprigs Thyme; 2 cloves chopped Garlic; 1 tbs Ground Allspice; 800g Kidney Bean
 
 **Derived (preview):** allergens gluten, soy · diets dairy_free, no_pork_no_alcohol · proteins chicken, legumes
-**Unreviewed ingredients:** basmati_rice, brown_sugar, chicken_thigh, coconut_milk, garlic, ginger, ground_allspice, kidney_bean, lime, onion, red_chilli, soy_sauce, spring_onion, thyme, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1086,8 +1045,7 @@ Jamaican · main · TheMealDB Goat · 8 steps · [source](https://www.themealdb.
 
 **Ingredients:** 3 Lbs Goat Meat; 2.5 tbsp Curry Powder; 1/2 tsp Ground Ginger; 1/2 tsp All Purpose Seasoning; 1/4 tsp Ground Allspice; 1 chopped Onion; 6 cloves sliced Garlic; 3 sprigs Thyme; 2 tablespoons Vegetable Oil; 1 1/4 cup Water; 1 Scotch Bonnet; 1 large Potato; To taste Salt; To taste Black Pepper; for rinsing White Vinegar
 
-**Derived (preview):** allergens celery, sulphites · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins goat
-**Unreviewed ingredients:** all_purpose_seasoning, black_pepper, curry_powder, garlic, goat_meat, ground_allspice, ground_ginger, onion, potato, salt, scotch_bonnet, thyme, vegetable_oil, water, white_vinegar
+**Derived (preview):** allergens celery, mustard, sulphites · diets dairy_free, gluten_free, no_pork_no_alcohol · proteins goat
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1113,7 +1071,6 @@ Russian · main · TheMealDB Beef · 4 steps · [source](https://www.themealdb.c
 **Ingredients:** 1 tbls Olive Oil; 1 Onion; 1 clove Garlic; 1 tbsp Butter; 250g Mushroom; 500g Beef Fillet; 1tbsp Plain Flour; 150g Creme Fraiche; 1 tbsp English Mustard; 100ml Beef Stock; Topping Parsley
 
 **Derived (preview):** allergens celery, gluten, milk, mustard · diets no_pork_no_alcohol · proteins beef
-**Unreviewed ingredients:** beef_fillet, beef_stock, butter, creme_fraiche, english_mustard, garlic, mushroom, olive_oil, onion, parsley, plain_flour
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1139,7 +1096,6 @@ Ukrainian · main, starter · TheMealDB Vegetarian · 1 steps · [source](https:
 **Ingredients:** 3 Beetroot; 4 tbs Olive Oil; 1 Chicken Stock; 6 cups Water; 3 Potato; 1 can Cannellini Bean; Garnish Dill
 
 **Derived (preview):** allergens celery, gluten · diets dairy_free, no_pork_no_alcohol · proteins legumes
-**Unreviewed ingredients:** beetroot, cannellini_bean, chicken_stock, dill, olive_oil, potato, water
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1165,7 +1121,6 @@ Polish · main, side · TheMealDB Side · 5 steps · [source](https://www.themea
 **Ingredients:** 2 tbs Butter; 1/3 cup Onion; 1 1/2 cups Sauerkraut; 3 tbs Butter; 1/2 cup Onion; 2 cups Potato; 3 Egg; 1 pot Sour Cream; 3 cups Plain Flour; 1/4 tsp Salt; 1 tbs Baking Powder
 
 **Derived (preview):** allergens eggs, gluten, milk, sulphites · diets no_pork_no_alcohol, pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** baking_powder, butter, egg, onion, plain_flour, potato, salt, sauerkraut, sour_cream
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1191,7 +1146,6 @@ Canadian · main, snack · TheMealDB Miscellaneous · 6 steps · [source](https:
 **Ingredients:** Dash Vegetable Oil; 1 Can Beef Gravy; 5 thin cut Potato; 2 cups Cheese Curd
 
 **Derived (preview):** allergens celery, gluten, milk · diets no_pork_no_alcohol · proteins none
-**Unreviewed ingredients:** beef_gravy, cheese_curd, potato, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1217,7 +1171,6 @@ Portuguese · dessert · TheMealDB Dessert · 10 steps · [source](https://www.t
 **Ingredients:** 2 tbs Plain Flour; 2 tbs Icing Sugar; 375g Puff Pastry; 250g Sugar; 2 strips Lemon Zest; 1 Stick Cinnamon; 2 Egg; 4 Egg Yolk; 50g Cornflour; 500ml Milk; Pod of Vanilla Extract; To serve Cinnamon
 
 **Derived (preview):** allergens eggs, gluten, milk · diets pescatarian, vegetarian · proteins egg
-**Unreviewed ingredients:** cinnamon, cornflour, egg, egg_yolk, icing_sugar, lemon_zest, milk, plain_flour, puff_pastry, sugar, vanilla_extract
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1243,7 +1196,6 @@ Filipino · main · TheMealDB Beef · 8 steps · [source](https://www.themealdb.
 **Ingredients:** 1 lb Beef; 5 tablespoons Soy Sauce; 1 Lemon; 3 cloves Garlic; 3 parts Onion; 4 tbs Olive Oil; 1 cup Water; 1 pinch Salt
 
 **Derived (preview):** allergens gluten, soy · diets dairy_free, no_pork_no_alcohol · proteins beef
-**Unreviewed ingredients:** beef, garlic, lemon, olive_oil, onion, salt, soy_sauce, water
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1269,7 +1221,6 @@ Egyptian · main · TheMealDB Vegetarian · 10 steps · [source](https://www.the
 **Ingredients:** 1 1/2 cups Brown Lentil; 1 1/2 cups Rice; 1/2 tsp Coriander; 2 cups Macaroni; Can Chickpea; 1 large Onion; Sprinking Salt; 1/2 cup Vegetable Oil
 
 **Derived (preview):** allergens gluten · diets dairy_free, no_pork_no_alcohol, pescatarian, vegan, vegetarian · proteins legumes
-**Unreviewed ingredients:** brown_lentil, chickpea, coriander, macaroni, onion, rice, salt, vegetable_oil
 
 | field | value | source | reason |
 |---|---|---|---|
@@ -1296,7 +1247,6 @@ Argentinian · main · TheMealDB Beef · 7 steps · [source](https://www.themeal
 
 **Derived (preview):** allergens eggs, gluten, milk · diets no_pork_no_alcohol · proteins beef, egg
 **⚠ Method mentions allergens missing from the ingredients:** sulphites? (method says 'vinegar')
-**Unreviewed ingredients:** beef_mince, black_pepper, butter, egg, green_olive, ground_cumin, onion, paprika, plain_flour, salt, water
 
 | field | value | source | reason |
 |---|---|---|---|
