@@ -18,7 +18,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy'] (0.50, keywords: creamy)
 - `moods` rule: ['fresh', 'indulgent'] (0.50, keywords/category: fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 9 ingredients, 130 min, technique: caramelis, temper)
+- `difficulty` rule: 'medium' (0.55, 5 steps, 9 ingredients, 130 min, technique: caramelis)
 
 ### mdb-53149
 **Ensaimada** · Dessert · area: Spanish
@@ -28,7 +28,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'flaky'] (0.50, keywords: creamy, flaky)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 11 steps, 6 ingredients, 1560 min, technique: knead, temper)
+- `difficulty` rule: 'medium' (0.55, 11 steps, 6 ingredients, 1560 min, technique: knead)
 
 ### mdb-53150
 **Padron peppers** · Vegan · area: Spanish
@@ -78,7 +78,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy'] (0.50, keywords: creamy, saucy)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 9 ingredients, 55 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 9 ingredients, 55 min)
 
 ### mdb-53156
 **Arroz al horno (baked rice)** · Pork · area: Spanish
@@ -130,7 +130,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy'] (0.50, keywords: saucy)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 12 ingredients, 85 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 12 ingredients, 85 min)
 
 ### mdb-53161
 **Chicken & chorizo rice pot** · Chicken · area: Spanish
@@ -141,7 +141,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 12 ingredients, 95 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 12 ingredients, 95 min)
 
 ### mdb-53162
 **Pollo en pepitoria** · Chicken · area: Spanish
@@ -172,7 +172,7 @@ Write `tools/seedgen/tags/ai/batch-019.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['comfort', 'fresh'] (0.50, keywords/category: comfort, fresh)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 7 ingredients, 60 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 7 ingredients, 60 min)
 
 ### mdb-53165
 **Torrijas with sherry** · Breakfast · area: Spanish

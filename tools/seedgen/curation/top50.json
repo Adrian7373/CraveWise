@@ -1,6 +1,6 @@
 {
- "_comment": "Recipes hand-reviewed first (Phase D). Picked for coverage of cuisine, meal type, protein and difficulty, leaning on well-known dishes. Proposed by Claude 2026-11-12; awaiting approval.",
- "approved": false,
+ "_comment": "Recipes hand-reviewed first (Phase D). Picked for coverage of cuisine, meal type, protein and difficulty, leaning on well-known dishes. Proposed by Claude, approved by the user 2026-11-12.",
+ "approved": true,
  "ids": [
   "mdb-52770", "mdb-52982", "mdb-52844", "mdb-53014",
   "mdb-52803", "mdb-52802", "mdb-52896", "mdb-52883", "mdb-52791",

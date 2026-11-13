@@ -31,7 +31,7 @@ MOOD_HINTS: dict[str, re.Pattern[str]] = {
 }
 STRONG_TEXTURE = {"brothy": re.compile(r"\bsoup\b|broth|ramen|pho|laksa", re.I),
                   "crispy": re.compile(r"deep[- ]?fr|tempura|karaage|schnitzel|katsu|pakora|fritter", re.I)}
-SERVES = re.compile(r"\b(?:serves|feeds)\s+(\d{1,2})\b"
+SERVES = re.compile(r"\b(?:serves|feeds|to serve)\s+(\d{1,2})\b(?!\s*(?:min|hour|g\b|ml))"
                     r"|\bfor\s+(\d{1,2})\s+(?:people|persons|portions|servings)\b"
                     r"|\bmakes\s+(\d{1,2})\s+(?:portions|servings)\b", re.I)
 

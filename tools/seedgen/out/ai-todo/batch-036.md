@@ -18,7 +18,7 @@ Write `tools/seedgen/tags/ai/batch-036.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'creamy', 'crunchy'] (0.50, keywords: chewy, creamy, crunchy)
 - `moods` rule: ['hearty'] (0.50, keywords/category: hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 13 steps, 6 ingredients, 140 min, technique: cure, steamer basket)
+- `difficulty` rule: 'medium' (0.55, 13 steps, 6 ingredients, 140 min, technique: steamer basket)
 
 ### mdb-53501
 **Num Pang – Cambodian Baguette Sandwich** · Chicken · area: none
@@ -28,7 +28,7 @@ Write `tools/seedgen/tags/ai/batch-036.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy'] (0.50, keywords: crispy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 12 steps, 13 ingredients, 60 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 12 steps, 13 ingredients, 60 min)
 
 ### mdb-53502
 **Khmer Banh Xeo – Cambodian Savory Pancake** · Pork · area: none

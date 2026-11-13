@@ -39,7 +39,7 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'crunchy'] (0.50, keywords: creamy, crispy, crunchy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 14 steps, 16 ingredients, 65 min, technique: whisk together the egg yolks, cornstarch and sugar in a bowl. ▢ heat the cream and milk in a saucepan. split open the vanilla pod and add the beans to the saucepan. once the milk begins to bubble pour about half of it into the bowl with the egg mixture, whisking constantly. then return the saucepan to the heat and pour the egg mixture back into the saucepan with remaining milk, whisking constantly. once the mixture thickens lower the heat and continue whisking for about 30 seconds. ▢ pour the custard into a clean bowl and cover with plastic wrap, placing the plastic directly on the top layer of the custard. chill in the fridge. cake ▢ mix together butter and sugar until light and fluffy. add egg yolks one at a time, setting aside the egg whites for the meringue. add the flour mixed with baking powder. stir in the milk, beating until smooth (you can use an electric mixer if you prefer). ▢ preheat oven to 320°f (160°c). cover a baking sheet with baking paper and spread out the batter into a large, even rectangle. meringue topping ▢ whisk together the egg whites and sugar until you get glossy, stiff peaks. the meringue should hold its form – if it still melts continue whisking. ▢ spread out the meringue on top of the cake batter. use a spatula to form light waves with the meringue. sprinkle almonds on top of the meringue. bake for about 30 minutes, until the meringue and almonds are golden. cream filling ▢ whisk the cream into stiff peaks)
+- `difficulty` rule: 'medium' (0.55, 14 steps, 16 ingredients, 65 min, technique: stiff peaks)
 
 ### mdb-53129
 **Norwegian Krumkake** · Dessert · area: Norway
@@ -51,7 +51,7 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'easy' (0.55, 7 steps, 8 ingredients, 75 min, technique: prove)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 8 ingredients, 75 min)
 
 ### mdb-53130
 **Suksessterte (Norwegian almond “success cake”)** · Dessert · area: Norway
@@ -62,7 +62,7 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'crunchy'] (0.50, keywords: creamy, crispy, crunchy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 7 steps, 10 ingredients, 80 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 10 ingredients, 80 min)
 
 ### mdb-53131
 **Fyrstekake – Norwegian Prince Cake** · Dessert · area: Norway
@@ -177,7 +177,7 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy'] (0.50, keywords: crispy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 12 ingredients, 80 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 12 ingredients, 80 min)
 
 ### mdb-53144
 **Gambas al ajillo** · Seafood · area: Spanish
@@ -187,7 +187,7 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['fresh', 'hearty', 'indulgent'] (0.50, keywords/category: fresh, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 5 ingredients, 20 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 5 ingredients, 20 min)
 
 ### mdb-53145
 **Jamon & wild garlic croquetas** · Pork · area: Spanish
@@ -219,4 +219,4 @@ Write `tools/seedgen/tags/ai/batch-018.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 10 ingredients, 55 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 10 ingredients, 55 min)

@@ -65,7 +65,7 @@ Write `tools/seedgen/tags/ai/batch-017.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['hearty'] (0.50, keywords/category: hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 2 steps, 6 ingredients, 80 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 2 steps, 6 ingredients, 80 min)
 
 ### mdb-53111
 **Anzac biscuits** · Dessert · area: Australian

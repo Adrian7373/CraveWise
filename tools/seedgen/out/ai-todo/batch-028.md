@@ -108,7 +108,7 @@ Write `tools/seedgen/tags/ai/batch-028.json`. For each recipe, give EVERY listed
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 4 ingredients, 400 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 4 ingredients, 400 min, technique: stiff peaks)
 
 ### mdb-53347
 **No-Churn Rum Raisin Ice Cream** · Dessert · area: Jamaican
@@ -118,7 +118,7 @@ Write `tools/seedgen/tags/ai/batch-028.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'smooth'] (0.50, keywords: creamy, smooth)
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 9 ingredients, 415 min, technique: temper, whisk together the sweetened condensed milk, dark brown sugar, cinnamon, allspice, salt, and reserved rum (¼ cup). stir until the brown sugar is fully dissolved. in a separate bowl, whip the cold heavy cream with an electric mixer until stiff peaks)
+- `difficulty` rule: 'medium' (0.55, 6 steps, 9 ingredients, 415 min, technique: stiff peaks)
 
 ### mdb-53348
 **Jamaican Spice Bun Recipe** · Dessert · area: Jamaican
@@ -189,7 +189,7 @@ Write `tools/seedgen/tags/ai/batch-028.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'fluffy'] (0.50, keywords: crispy, fluffy)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 8 ingredients, 20 min, technique: deep fr, temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 8 ingredients, 20 min, technique: deep fr)
 
 ### mdb-53356
 **Jamaican Fried Dumplings** · Side · area: Jamaican

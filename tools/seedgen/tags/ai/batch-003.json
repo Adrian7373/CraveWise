@@ -1,0 +1,154 @@
+{
+ "batch": 3,
+ "recipes": {
+  "mdb-53019": {
+   "flavor.sweet": {"value": 0, "reason": "savoury dumplings"},
+   "flavor.umami": {"value": 1, "reason": "fried onion, sauerkraut"},
+   "textures": {"value": ["tender", "creamy"], "reason": "soft dough, potato filling"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "filling dumplings"},
+   "servings": {"value": 6, "reason": "3 cups flour makes ~30 pierogi"},
+   "difficulty": {"value": "medium", "reason": "two fillings, dough, shaping"}
+  },
+  "mdb-52804": {
+   "textures": {"value": ["crispy", "saucy", "chewy"], "reason": "fries, gravy, squeaky curds"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "late-night classic"},
+   "servings": {"value": 4, "reason": "5 potatoes"},
+   "difficulty": {"value": "easy", "reason": "fry and top"}
+  },
+  "mdb-53046": {
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "creamy"], "reason": "puff pastry with custard"},
+   "moods": {"value": ["indulgent"], "reason": "sweet pastry"},
+   "servings": {"value": 12, "reason": "24 tarts"},
+   "difficulty": {"value": "medium", "reason": "rolled pastry, syrup and custard"}
+  },
+  "mdb-53027": {
+   "flavor.salty": {"value": 2, "reason": "seasoned lentils and rice"},
+   "flavor.sweet": {"value": 1, "reason": "caramelised onions"},
+   "flavor.umami": {"value": 2, "reason": "lentils and fried onion"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crispy onions over grains"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "carb-heavy street food"},
+   "servings": {"value": 6, "reason": "large pot of lentils, rice and pasta"},
+   "difficulty": {"value": "medium", "reason": "several components cooked separately"}
+  },
+  "mdb-53134": {
+   "flavor.bitter": {"value": 0, "reason": "olives are briny, not bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "buttery pastry, mince filling"},
+   "moods": {"value": ["comfort", "festive"], "reason": "party pastries"},
+   "servings": {"value": 6, "reason": "500g flour, about 18 empanadas"},
+   "difficulty": {"value": "medium", "reason": "dough, filling, sealing"}
+  },
+  "mdb-52764": {
+   "flavor.sweet": {"value": 1, "reason": "tomato"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["saucy", "tender"], "reason": "prawns in tomato sauce"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "feta and seafood"},
+   "servings": {"value": 4, "reason": "500g prawns"},
+   "difficulty": {"value": "easy", "reason": "simmer sauce, add prawns"}
+  },
+  "mdb-52765": {
+   "textures": {"value": ["saucy", "creamy"], "reason": "melted cheese, enchilada sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy bake"},
+   "servings": {"value": 4, "reason": "2 breasts, 6 tortillas"},
+   "difficulty": {"value": "easy", "reason": "4 ingredients, layer and bake"}
+  },
+  "mdb-52767": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "crunchy"], "reason": "pastry, almond topping"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "teatime bake"},
+   "servings": {"value": 8, "reason": "20cm tart"},
+   "difficulty": {"value": "medium", "reason": "pastry and blind baking"}
+  },
+  "mdb-52768": {
+   "flavor.salty": {"value": 1, "reason": "butter and digestive base"},
+   "flavor.sour": {"value": 1, "reason": "cooking apple"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "biscuit base, soft frangipane"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "sweet tart"},
+   "servings": {"value": 8, "reason": "one tart"},
+   "difficulty": {"value": "easy", "reason": "no-roll biscuit base"}
+  },
+  "mdb-52769": {
+   "textures": {"value": ["crispy", "saucy"], "reason": "fries under meat, cheese and sauce"},
+   "moods": {"value": ["indulgent", "hearty"], "reason": "takeaway box"},
+   "servings": {"value": 2, "reason": "250g fries, 500g doner"},
+   "difficulty": {"value": "easy", "reason": "layer and grill"}
+  },
+  "mdb-52771": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["saucy"], "reason": "tomato sauce pasta"},
+   "moods": {"value": ["comfort"], "reason": "simple spicy pasta"},
+   "servings": {"value": 4, "reason": "1lb penne"},
+   "difficulty": {"value": "easy", "reason": "15-minute sauce"}
+  },
+  "mdb-52772": {
+   "textures": {"value": ["saucy", "tender"], "reason": "baked in teriyaki sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "rice casserole"},
+   "servings": {"value": 4, "reason": "9x13 pan, 3 cups rice"},
+   "difficulty": {"value": "easy", "reason": "sauce and bake"}
+  },
+  "mdb-52773": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "flaky"], "reason": "glazed pan-fried fillet"},
+   "moods": {"value": ["light"], "reason": "quick fish supper"},
+   "servings": {"value": 2, "reason": "1lb salmon"},
+   "cookMinutes": {"value": 10, "reason": "pan-fry both sides"},
+   "difficulty": {"value": "easy", "reason": "mix glaze, pan-fry"}
+  },
+  "mdb-52774": {
+   "flavor.bitter": {"value": 1, "reason": "Chinese broccoli, charred noodles"},
+   "textures": {"value": ["chewy", "tender"], "reason": "wide noodles"},
+   "moods": {"value": ["comfort"], "reason": "wok noodles"},
+   "servings": {"value": 2, "reason": "180g noodles, 1 cup chicken"},
+   "cookMinutes": {"value": 10, "reason": "high-heat wok"},
+   "difficulty": {"value": "easy", "reason": "single wok"}
+  },
+  "mdb-52775": {
+   "flavor.salty": {"value": 1, "reason": "lightly seasoned"},
+   "flavor.sweet": {"value": 1, "reason": "carrot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["saucy", "creamy"], "reason": "lentil ragu, white sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "baked pasta"},
+   "servings": {"value": 4, "reason": "10 sheets"},
+   "difficulty": {"value": "medium", "reason": "ragu, roux sauce, layering"}
+  },
+  "mdb-52776": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "rich sponge"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "chocolate cake"},
+   "servings": {"value": 10, "reason": "8 inch cake"},
+   "difficulty": {"value": "easy", "reason": "creamed cake"}
+  },
+  "mdb-52777": {
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "pasta and mozzarella"},
+   "moods": {"value": ["fresh", "light"], "reason": "cold summer salad"},
+   "servings": {"value": 4, "reason": "350g pasta"},
+   "difficulty": {"value": "easy", "reason": "boil and toss"}
+  },
+  "mdb-52779": {
+   "textures": {"value": ["creamy", "flaky"], "reason": "cheese filling, shortcrust"},
+   "moods": {"value": ["indulgent"], "reason": "rich tart"},
+   "servings": {"value": 8, "reason": "one tart"},
+   "difficulty": {"value": "medium", "reason": "pastry plus filling"}
+  },
+  "mdb-52780": {
+   "flavor.sweet": {"value": 1, "reason": "soft onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creme fraiche gratin"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "creamy bake"},
+   "servings": {"value": 4, "reason": "method says to serve 4"},
+   "difficulty": {"value": "easy", "reason": "quick gratin"}
+  },
+  "mdb-52781": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "braised lamb and roots"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow stew"},
+   "servings": {"value": 8, "reason": "2kg lamb"},
+   "difficulty": {"value": "medium", "reason": "soaked wheat, searing, long braise"}
+  }
+ }
+}

@@ -86,7 +86,7 @@ Write `tools/seedgen/tags/ai/batch-039.json`. For each recipe, give EVERY listed
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 20 (0.30, no durations in the method; Side guess)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 4 ingredients, 40 min, technique: cure)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 4 ingredients, 40 min)
 
 ### mdb-53567
 **Dominican Bakes** · Starter · area: none
@@ -176,7 +176,7 @@ Write `tools/seedgen/tags/ai/batch-039.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 9 steps, 12 ingredients, 165 min, technique: knead, temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 12 ingredients, 165 min, technique: knead)
 
 ### mdb-53575
 **Apple Pie** · Dessert · area: none

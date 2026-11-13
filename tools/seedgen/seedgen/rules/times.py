@@ -16,7 +16,8 @@ import re
 from ..tags import Proposal
 from ..timers import find_seconds
 
-PASSIVE = re.compile(r"marinat|soak|chill|refrigerat|fridge|freez|rest(?:ing)?\b|prove|proof|rise|"
+PASSIVE = re.compile(r"marinat|soak|chill|refrigerat|fridge|freez|\brest(?:ing)?\b|\bprove\b|\bproof(?:ing)?\b|"
+                     r"\bleave to rise|\b(?:let|allow)(?: it)? (?:to )?rise|"
                      r"leave (?:it |them )?to (?:stand|cool|set|infuse)|set aside for|cool (?:completely|for)|"
                      r"stand for|overnight|infuse|steep", re.I)
 HEAT = re.compile(r"simmer|bake|roast|fry|boil|grill|cook|braise|stew|steam|saut|sear|toast|heat|"
@@ -27,6 +28,9 @@ OVERNIGHT = re.compile(r"overnight", re.I)
 
 
 MIN_SECONDS = 30
+MAX_PASSIVE = 12 * 60  # longer "waits" are storage notes, not part of making the dish
+_OPTIONAL = re.compile(r"\b(?:or |for |and )?up to (?:a |an |\d)[^,.;)]*|\b(?:will )?keeps? (?:well )?(?:in [^,.;]* )?for [^,.;]*|"
+                       r"\bfreeze[^,.;]* for [^,.;]*|\bmake[^,.;]* (?:a day|\d+ (?:days?|hours?|hrs?)) ahead[^,.;]*", re.I)
 
 
 def _round5(minutes: float) -> int:
@@ -46,6 +50,7 @@ def split_time(steps: list[str]) -> tuple[float, float, int]:
     passive = cook = 0.0
     timed_steps = 0
     for step in steps:
+        step = _OPTIONAL.sub("", step)  # "chill for 2 hrs, or up to 24 hrs": the 24 is optional
         step_timed = False
         step_has_duration = any(s >= MIN_SECONDS for s in find_seconds(step))
         for clause in _CLAUSE.split(step):
@@ -63,7 +68,7 @@ def split_time(steps: list[str]) -> tuple[float, float, int]:
             else:
                 cook += longest
         timed_steps += step_timed
-    return passive, cook, timed_steps
+    return min(passive, MAX_PASSIVE), cook, timed_steps
 
 
 def propose(steps: list[str], ingredient_count: int, category: str) -> dict[str, Proposal]:

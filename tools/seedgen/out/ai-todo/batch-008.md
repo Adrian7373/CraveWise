@@ -17,7 +17,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'smooth'] (0.50, keywords: creamy, crunchy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 8 steps, 7 ingredients, 85 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 8 steps, 7 ingredients, 85 min)
 
 ### mdb-52891
 **Blackberry Fool** · Dessert · area: British
@@ -38,7 +38,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['flaky'] (0.50, keywords: flaky)
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 16 steps, 6 ingredients, 75 min, technique: rub in, temper)
+- `difficulty` rule: 'medium' (0.55, 16 steps, 6 ingredients, 75 min, technique: rub in)
 
 ### mdb-52893
 **Apple & Blackberry Crumble** · Dessert · area: British
@@ -48,7 +48,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy'] (0.50, keywords: creamy, crunchy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 9 ingredients, 60 min, technique: proof, rub in)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 9 ingredients, 60 min, technique: rub in)
 
 ### mdb-52894
 **Battenberg Cake** · Dessert · area: British
@@ -99,7 +99,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'fluffy'] (0.50, keywords: creamy, crunchy, fluffy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 9 steps, 14 ingredients, 205 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 14 ingredients, 205 min)
 
 ### mdb-52900
 **Madeira Cake** · Dessert · area: British
@@ -110,7 +110,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'fluffy'] (0.50, keywords: creamy, fluffy)
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 7 steps, 7 ingredients, 60 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 7 ingredients, 60 min)
 
 ### mdb-52901
 **Rock Cakes** · Dessert · area: British
@@ -141,7 +141,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'flaky', 'smooth'] (0.50, keywords: crispy, flaky, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 7 steps, 13 ingredients, 130 min, technique: blind bake, knead, temper)
+- `difficulty` rule: 'hard' (0.55, 7 steps, 13 ingredients, 130 min, technique: blind bake, knead)
 
 ### mdb-52907
 **Duck Confit** · Miscellaneous · area: France
@@ -152,7 +152,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy', 'tender'] (0.50, keywords: crispy, saucy, tender)
 - `moods` rule: ['fresh', 'hearty', 'indulgent'] (0.50, keywords/category: fresh, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 6 ingredients, 765 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 6 ingredients, 765 min)
 
 ### mdb-52910
 **Chinon Apple Tarts** · Dessert · area: France
@@ -161,7 +161,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['flaky'] (0.50, keywords: flaky)
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 7 ingredients, 80 min, technique: caramelis, temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 7 ingredients, 80 min, technique: caramelis)
 
 ### mdb-52911
 **Summer Pistou** · Vegetarian · area: France
@@ -191,7 +191,7 @@ Write `tools/seedgen/tags/ai/batch-008.json`. For each recipe, give EVERY listed
 - `textures` rule: ['smooth'] (0.50, keywords: smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 9 ingredients, 535 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 9 ingredients, 535 min)
 
 ### mdb-52914
 **Boulangère Potatoes** · Side · area: France

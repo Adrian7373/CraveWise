@@ -37,7 +37,7 @@ Write `tools/seedgen/tags/ai/batch-013.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 10 ingredients, 145 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 10 ingredients, 145 min)
 
 ### mdb-53013
 **Big Mac** · Beef · area: United States

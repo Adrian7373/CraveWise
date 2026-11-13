@@ -1,0 +1,149 @@
+{
+ "batch": 1,
+ "recipes": {
+  "mdb-52770": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter; oregano is minor"},
+   "textures": {"value": ["saucy", "tender"], "reason": "meat sauce over pasta"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "classic family pasta"},
+   "servings": {"value": 4, "reason": "350g spaghetti, 500g mince"},
+   "difficulty": {"value": "easy", "reason": "one-pot sauce, basic frying"}
+  },
+  "mdb-52844": {
+   "flavor.bitter": {"value": 0, "reason": "no bitter ingredients"},
+   "textures": {"value": ["saucy", "creamy", "tender"], "reason": "ragu layered with creme fraiche"},
+   "moods": {"value": ["comfort", "hearty", "indulgent"], "reason": "rich baked pasta"},
+   "servings": {"value": 6, "reason": "500g mince, 800g tomatoes, full dish"},
+   "difficulty": {"value": "medium", "reason": "sauce plus layering and baking"}
+  },
+  "mdb-53014": {
+   "flavor.bitter": {"value": 0, "reason": "no bitter ingredients"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "thin crisp base, chewy dough"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "pizza night"},
+   "servings": {"value": 2, "reason": "225g flour makes one large pizza"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, kneading and proving"}
+  },
+  "mdb-52803": {
+   "flavor.sour": {"value": 0, "reason": "nothing sour"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "puff pastry around pink fillet"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "showpiece roast"},
+   "servings": {"value": 6, "reason": "750g fillet"},
+   "difficulty": {"value": "hard", "reason": "wrapping, chilling and timing the beef"}
+  },
+  "mdb-52802": {
+   "flavor.sweet": {"value": 1, "reason": "milk and leek sweetness"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "flaky"], "reason": "mash top over flaked fish in sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "baked pie"},
+   "servings": {"value": 4, "reason": "800g fish, 900g potato"},
+   "difficulty": {"value": "medium", "reason": "mash, poach, sauce, assemble"}
+  },
+  "mdb-52896": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp bacon, soft eggs and beans"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "big fry-up"},
+   "servings": {"value": 2, "reason": "2 eggs, 1 slice bread"},
+   "difficulty": {"value": "easy", "reason": "simple frying, juggling timing"}
+  },
+  "mdb-52883": {
+   "flavor.salty": {"value": 1, "reason": "butter only"},
+   "textures": {"value": ["fluffy", "saucy"], "reason": "light sponge in toffee sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich pudding"},
+   "servings": {"value": 6, "reason": "1.7 litre dish"},
+   "difficulty": {"value": "easy", "reason": "all-in-one batter and simple sauce"}
+  },
+  "mdb-52904": {
+   "flavor.bitter": {"value": 1, "reason": "red wine and herbs"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-braised beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "long winter braise"},
+   "servings": {"value": 4, "reason": "600g beef shin"},
+   "difficulty": {"value": "medium", "reason": "browning in batches then long braise"}
+  },
+  "mdb-52832": {
+   "flavor.bitter": {"value": 1, "reason": "red wine and herbs"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised chicken in wine sauce"},
+   "moods": {"value": ["comfort", "hearty", "festive"], "reason": "classic Sunday braise"},
+   "servings": {"value": 6, "reason": "about 1.4kg chicken pieces"},
+   "difficulty": {"value": "medium", "reason": "several browning stages and flambe"}
+  },
+  "mdb-52908": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomatoes only"},
+   "textures": {"value": ["tender", "saucy"], "reason": "soft stewed vegetables"},
+   "moods": {"value": ["light", "fresh"], "reason": "summer vegetables"},
+   "servings": {"value": 4, "reason": "side or light main for 4"},
+   "difficulty": {"value": "easy", "reason": "chopping and simmering"}
+  },
+  "mdb-52903": {
+   "flavor.bitter": {"value": 0, "reason": "caramelised, not bitter"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy toast on rich broth"},
+   "servings": {"value": 4, "reason": "4 bread slices, 1L stock"},
+   "difficulty": {"value": "easy", "reason": "slow onions, simple steps"}
+  },
+  "mdb-52909": {
+   "flavor.salty": {"value": 1, "reason": "butter in caramel"},
+   "textures": {"value": ["flaky", "tender"], "reason": "puff pastry and soft caramel apples"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "caramel dessert"},
+   "servings": {"value": 6, "reason": "20cm tart"},
+   "difficulty": {"value": "medium", "reason": "caramel and flipping the tart"}
+  },
+  "mdb-52905": {
+   "flavor.salty": {"value": 0, "reason": "dessert, a little butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "airy souffle, silky sauce"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "dinner-party dessert"},
+   "servings": {"value": 6, "reason": "6 ramekins"},
+   "difficulty": {"value": "hard", "reason": "whisked whites, must rise and serve at once"}
+  },
+  "mdb-52806": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "yogurt-marinated grilled thighs"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "grilled, lemony"},
+   "servings": {"value": 6, "reason": "16 thighs"},
+   "difficulty": {"value": "easy", "reason": "marinate and grill"}
+  },
+  "mdb-52808": {
+   "flavor.bitter": {"value": 0, "reason": "warm spices, not bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-simmered lamb curry"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "rich curry"},
+   "servings": {"value": 6, "reason": "1kg lamb"},
+   "difficulty": {"value": "easy", "reason": "fry, add, simmer"}
+  },
+  "mdb-52865": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["saucy", "tender"], "reason": "paneer in tomato sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "simple curry"},
+   "servings": {"value": 2, "reason": "225g paneer"},
+   "difficulty": {"value": "easy", "reason": "quick fry and simmer"}
+  },
+  "mdb-52805": {
+   "flavor.bitter": {"value": 0, "reason": "aromatic, not bitter"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "layered rice and lamb"},
+   "moods": {"value": ["festive", "hearty"], "reason": "celebration rice dish"},
+   "servings": {"value": 4, "reason": "2 cups rice, 1lb lamb"}
+  },
+  "mdb-52945": {
+   "textures": {"value": ["crunchy", "saucy"], "reason": "peanuts and water chestnuts in sauce"},
+   "moods": {"value": ["hearty"], "reason": "takeaway-style stir-fry"},
+   "servings": {"value": 4, "reason": "500g chicken"},
+   "cookMinutes": {"value": 15, "reason": "sauce heat plus saute"},
+   "difficulty": {"value": "easy", "reason": "marinate and stir-fry"}
+  },
+  "mdb-52947": {
+   "flavor.sweet": {"value": 0, "reason": "no sugar"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["smooth", "saucy"], "reason": "silken tofu in thick sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "fiery rice-bowl dish"},
+   "servings": {"value": 3, "reason": "450g tofu, 100g beef"},
+   "difficulty": {"value": "medium", "reason": "several wok stages"}
+  },
+  "mdb-52948": {
+   "flavor.sweet": {"value": 0, "reason": "carrot only"},
+   "textures": {"value": ["crispy"], "reason": "deep-fried wontons"},
+   "moods": {"value": ["indulgent"], "reason": "fried snack"},
+   "servings": {"value": 6, "reason": "1lb pork, one packet of skins"},
+   "cookMinutes": {"value": 20, "reason": "frying in batches"},
+   "difficulty": {"value": "medium", "reason": "folding many wontons, deep frying"}
+  }
+ }
+}

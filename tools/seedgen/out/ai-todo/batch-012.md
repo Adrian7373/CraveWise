@@ -69,7 +69,7 @@ Write `tools/seedgen/tags/ai/batch-012.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'smooth'] (0.50, keywords: creamy, crunchy, smooth)
 - `moods` rule: ['comfort', 'festive', 'fresh'] (0.50, keywords/category: comfort, festive, fresh)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 16 ingredients, 190 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 6 steps, 16 ingredients, 190 min)
 
 ### mdb-52991
 **Mince Pies** · Dessert · area: British
@@ -172,6 +172,7 @@ Write `tools/seedgen/tags/ai/batch-012.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'flaky'] (0.50, keywords: creamy, flaky)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
+- `difficulty` rule: 'hard' (0.55, 17 steps, 14 ingredients, 150 min)
 
 ### mdb-53007
 **Honey Yogurt Cheesecake** · Dessert · area: Greek

@@ -1,0 +1,146 @@
+{
+ "batch": 2,
+ "recipes": {
+  "mdb-53065": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "sticky rice, crisp cucumber"},
+   "moods": {"value": ["fresh", "light"], "reason": "cold rolls"},
+   "servings": {"value": 4, "reason": "300ml rice makes about 4 rolls"},
+   "cookMinutes": {"value": 25, "reason": "cooking the sushi rice"},
+   "difficulty": {"value": "medium", "reason": "seasoning rice and rolling with a mat"}
+  },
+  "mdb-53191": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "rice noodles, peanuts, beansprouts"},
+   "moods": {"value": ["fresh", "light"], "reason": "lime and herbs, quick wok dish"},
+   "servings": {"value": 2, "reason": "125g noodles, 200g prawns"},
+   "difficulty": {"value": "easy", "reason": "soak noodles, quick stir-fry"}
+  },
+  "mdb-52814": {
+   "textures": {"value": ["creamy", "saucy"], "reason": "coconut curry sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "fragrant curry with basil and lime leaf"},
+   "servings": {"value": 4, "reason": "450g chicken, 400ml coconut milk"},
+   "difficulty": {"value": "easy", "reason": "par-boil veg, simmer curry"}
+  },
+  "mdb-53194": {
+   "moods": {"value": ["light", "fresh"], "reason": "hot and sour broth"},
+   "servings": {"value": 4, "reason": "1.3 litres of broth"},
+   "difficulty": {"value": "easy", "reason": "simmer, strain, season"}
+  },
+  "mdb-53238": {
+   "moods": {"value": ["comfort", "fresh"], "reason": "aromatic broth with fresh herbs"},
+   "servings": {"value": 2, "reason": "225g steak, 200g noodles"},
+   "difficulty": {"value": "medium", "reason": "charring, spiced broth, thin-slicing steak"}
+  },
+  "mdb-53053": {
+   "textures": {"value": ["tender"], "reason": "dry-cooked until meat falls apart"},
+   "moods": {"value": ["hearty", "festive"], "reason": "rich celebration curry"},
+   "servings": {"value": 4, "reason": "1lb beef"},
+   "difficulty": {"value": "medium", "reason": "spice paste and long reduction"}
+  },
+  "mdb-52819": {
+   "flavor.sweet": {"value": 0, "reason": "avocado and salsa, no sugar"},
+   "flavor.umami": {"value": 1, "reason": "fish only"},
+   "textures": {"value": ["flaky", "creamy"], "reason": "flaky fish, sour cream and avocado"},
+   "moods": {"value": ["fresh", "light"], "reason": "zesty summery tacos"},
+   "servings": {"value": 4, "reason": "4 fillets, 8 tortillas"},
+   "difficulty": {"value": "easy", "reason": "season, pan-fry, assemble"}
+  },
+  "mdb-52813": {
+   "flavor.salty": {"value": 3, "reason": "salt, celery and onion salt in coating"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "deep-fried crust, juicy meat"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fried chicken"},
+   "servings": {"value": 4, "reason": "one whole chicken"},
+   "difficulty": {"value": "medium", "reason": "jointing and deep frying at temperature"}
+  },
+  "mdb-52858": {
+   "textures": {"value": ["creamy", "smooth", "crunchy"], "reason": "dense filling, biscuit base"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "rich baked cheesecake"},
+   "servings": {"value": 12, "reason": "23cm cheesecake"},
+   "difficulty": {"value": "medium", "reason": "two oven temperatures, slow cooling"}
+  },
+  "mdb-52854": {
+   "flavor.umami": {"value": 0, "reason": "sweet batter"},
+   "textures": {"value": ["fluffy"], "reason": "thin soft pancakes"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "treat with sugar and berries"},
+   "servings": {"value": 4, "reason": "about 8 pancakes from 300ml milk"},
+   "difficulty": {"value": "easy", "reason": "one batter, one pan"}
+  },
+  "mdb-53151": {
+   "flavor.bitter": {"value": 0, "reason": "saffron is subtle"},
+   "textures": {"value": ["tender"], "reason": "rice and seafood"},
+   "moods": {"value": ["festive", "hearty"], "reason": "sharing pan for a crowd"},
+   "servings": {"value": 4, "reason": "250g rice"},
+   "difficulty": {"value": "medium", "reason": "stock, mussels and rice timing"}
+  },
+  "mdb-52872": {
+   "flavor.sweet": {"value": 1, "reason": "slow-cooked onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "egg and tomato"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "soft potato in set egg"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "potato and egg"},
+   "servings": {"value": 6, "reason": "8 eggs, cut in wedges"},
+   "difficulty": {"value": "medium", "reason": "slow cooking and flipping the tortilla"}
+  },
+  "mdb-53006": {
+   "flavor.bitter": {"value": 0, "reason": "aubergine is microwaved soft"},
+   "textures": {"value": ["creamy", "tender"], "reason": "set yogurt topping over beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "baked beef and potato"},
+   "servings": {"value": 4, "reason": "500g beef"},
+   "difficulty": {"value": "easy", "reason": "quick shortcut version"}
+  },
+  "mdb-53266": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "fried onion"},
+   "textures": {"value": ["crispy"], "reason": "pan-fried patties"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby veggie patties"},
+   "servings": {"value": 2, "reason": "6 patties"},
+   "difficulty": {"value": "easy", "reason": "mash, shape, fry"}
+  },
+  "mdb-53269": {
+   "flavor.sweet": {"value": 0, "reason": "savoury dip"},
+   "flavor.bitter": {"value": 1, "reason": "tahini"},
+   "flavor.umami": {"value": 1, "reason": "chickpeas and garlic"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "blended dip"},
+   "moods": {"value": ["fresh", "light"], "reason": "dip with lemon"},
+   "servings": {"value": 4, "reason": "one 400g can"},
+   "cookMinutes": {"value": 0, "reason": "no cooking, blend only"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-52843": {
+   "flavor.bitter": {"value": 0, "reason": "sweet spices, not bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-cooked lamb"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "warming stew"},
+   "servings": {"value": 4, "reason": "500g lamb"},
+   "difficulty": {"value": "easy", "reason": "brown, simmer, add squash"}
+  },
+  "mdb-52937": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "charred chicken, coconut rice"},
+   "moods": {"value": ["festive", "hearty"], "reason": "barbecue-style feast"},
+   "servings": {"value": 6, "reason": "12 thighs"},
+   "difficulty": {"value": "medium", "reason": "marinade, grilling and rice and peas"}
+  },
+  "mdb-53354": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "pressure-cooked goat in gravy"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "rich curry"},
+   "servings": {"value": 6, "reason": "3lb goat"},
+   "difficulty": {"value": "medium", "reason": "long marinade, pressure cooking"}
+  },
+  "mdb-52834": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creme fraiche sauce, fillet strips"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "creamy beef"},
+   "servings": {"value": 4, "reason": "500g fillet"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53078": {
+   "flavor.sweet": {"value": 2, "reason": "beetroot"},
+   "flavor.bitter": {"value": 1, "reason": "earthy beetroot"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "filling soup"},
+   "servings": {"value": 6, "reason": "6 cups water"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  }
+ }
+}

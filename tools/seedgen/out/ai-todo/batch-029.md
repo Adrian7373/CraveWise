@@ -89,7 +89,7 @@ Write `tools/seedgen/tags/ai/batch-029.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy'] (0.50, keywords: crispy, saucy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 14 steps, 20 ingredients, 55 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 14 steps, 20 ingredients, 55 min)
 
 ### mdb-53366
 **Beef and Broccoli Stir-Fry** · Beef · area: Chinese
@@ -199,7 +199,7 @@ Write `tools/seedgen/tags/ai/batch-029.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy'] (0.50, keywords: saucy)
 - `moods` rule: ['comfort', 'hearty', 'light'] (0.50, keywords/category: comfort, hearty, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 16 steps, 13 ingredients, 45 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 16 steps, 13 ingredients, 45 min)
 
 ### mdb-53377
 **Napa Cabbage with Dried Shrimp** · Seafood · area: Chinese

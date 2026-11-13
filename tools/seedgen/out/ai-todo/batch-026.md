@@ -39,7 +39,7 @@ Write `tools/seedgen/tags/ai/batch-026.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'smooth'] (0.50, keywords: creamy, crunchy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 7 steps, 18 ingredients, 200 min, technique: knead, piping, proof)
+- `difficulty` rule: 'hard' (0.55, 7 steps, 18 ingredients, 200 min, technique: knead, piping)
 
 ### mdb-53299
 **Polish patties (kotlety)** · Side · area: Polish
@@ -59,7 +59,7 @@ Write `tools/seedgen/tags/ai/batch-026.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth', 'tender'] (0.50, keywords: saucy, smooth, tender)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 4 steps, 16 ingredients, 165 min, technique: piping, prove)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 16 ingredients, 165 min, technique: piping)
 
 ### mdb-53301
 **Pork & sauerkraut goulash** · Pork · area: Polish
@@ -80,7 +80,7 @@ Write `tools/seedgen/tags/ai/batch-026.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy'] (0.50, keywords: saucy)
 - `moods` rule: ['fresh', 'hearty'] (0.50, keywords/category: fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 7 steps, 7 ingredients, 300 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 7 ingredients, 300 min)
 
 ### mdb-53303
 **Raspberry mousse** · Dessert · area: Polish
@@ -110,7 +110,7 @@ Write `tools/seedgen/tags/ai/batch-026.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy', 'saucy', 'tender'] (0.50, keywords: crunchy, saucy, tender)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 11 ingredients, 110 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 11 ingredients, 110 min)
 
 ### mdb-53306
 **Pork rib bortsch** · Pork · area: Polish
@@ -134,7 +134,7 @@ Write `tools/seedgen/tags/ai/batch-026.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy'] (0.50, keywords: crunchy)
 - `moods` rule: ['fresh'] (0.50, keywords/category: fresh)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 5 ingredients, 15 min, technique: ferment, temper)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 5 ingredients, 15 min, technique: ferment)
 
 ### mdb-53308
 **Rye bread** · Side · area: Polish

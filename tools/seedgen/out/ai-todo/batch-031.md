@@ -228,7 +228,7 @@ Write `tools/seedgen/tags/ai/batch-031.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy'] (0.50, keywords: crispy, saucy)
 - `moods` rule: ['hearty', 'indulgent', 'light'] (0.50, keywords/category: hearty, indulgent, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 8 ingredients, 25 min, technique: ferment)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 8 ingredients, 25 min)
 
 ### mdb-53419
 **Crispy fried fish with ginger and fermented soybeans (trey chien chuon)** · Seafood · area: none
@@ -239,4 +239,4 @@ Write `tools/seedgen/tags/ai/batch-031.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy'] (0.50, keywords: crispy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 9 ingredients, 30 min, technique: ferment)
+- `difficulty` rule: 'easy' (0.55, 9 steps, 9 ingredients, 30 min)

@@ -17,7 +17,7 @@ Write `tools/seedgen/tags/ai/batch-009.json`. For each recipe, give EVERY listed
 - `textures` rule: ['flaky', 'saucy'] (0.50, keywords: flaky, saucy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 8 ingredients, 75 min, technique: caramelis, flamb, proof)
+- `difficulty` rule: 'medium' (0.55, 8 steps, 8 ingredients, 75 min, technique: caramelis, flamb)
 
 ### mdb-52917
 **White chocolate creme brulee** · Dessert · area: France
@@ -57,7 +57,7 @@ Write `tools/seedgen/tags/ai/batch-009.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'saucy'] (0.50, keywords: creamy, crunchy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 2 steps, 7 ingredients, 60 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 2 steps, 7 ingredients, 60 min)
 
 ### mdb-52921
 **Provençal Omelette Cake** · Vegetarian · area: France
@@ -130,7 +130,7 @@ Write `tools/seedgen/tags/ai/batch-009.json`. For each recipe, give EVERY listed
 - `textures` rule: ['tender'] (0.50, keywords: tender)
 - `moods` rule: ['hearty'] (0.50, keywords/category: hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 6 steps, 16 ingredients, 575 min, technique: cure, temper)
+- `difficulty` rule: 'medium' (0.55, 6 steps, 16 ingredients, 575 min, technique: cure)
 
 ### mdb-52928
 **BeaverTails** · Dessert · area: Canadian
@@ -174,7 +174,7 @@ Write `tools/seedgen/tags/ai/batch-009.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy'] (0.50, keywords: creamy, crispy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 3 steps, 7 ingredients, 110 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 7 ingredients, 110 min)
 
 ### mdb-52932
 **Pouding chomeur** · Dessert · area: Canadian
@@ -205,7 +205,7 @@ Write `tools/seedgen/tags/ai/batch-009.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 19 ingredients, 110 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 6 steps, 19 ingredients, 110 min)
 
 ### mdb-52935
 **Steak Diane** · Beef · area: France

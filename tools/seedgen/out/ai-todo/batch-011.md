@@ -124,7 +124,7 @@ Write `tools/seedgen/tags/ai/batch-011.json`. For each recipe, give EVERY listed
 - `textures` rule: ['fluffy', 'smooth'] (0.50, keywords: fluffy, smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 6 steps, 7 ingredients, 75 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 7 ingredients, 75 min)
 
 ### mdb-52971
 **Kafteji** · Vegetarian · area: Tunisian
@@ -187,7 +187,7 @@ Write `tools/seedgen/tags/ai/batch-011.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy', 'smooth'] (0.50, keywords: crunchy, smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 6 ingredients, 35 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 6 ingredients, 35 min)
 
 ### mdb-52977
 **Corba** · Side · area: Turkish

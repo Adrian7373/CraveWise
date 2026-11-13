@@ -55,7 +55,7 @@ Write `tools/seedgen/tags/ai/batch-038.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'creamy', 'flaky'] (0.50, keywords: chewy, creamy, flaky)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 15 steps, 8 ingredients, 385 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 15 steps, 8 ingredients, 385 min)
 
 ### mdb-53544
 **CAFE LA LLAVE ESPRESSO ICE CREAM** · Dessert · area: none
@@ -135,7 +135,7 @@ Write `tools/seedgen/tags/ai/batch-038.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'fluffy'] (0.50, keywords: creamy, fluffy)
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 14 ingredients, 60 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 14 ingredients, 60 min)
 
 ### mdb-53551
 **Old-fashioned Danish Apple Trifle** · Dessert · area: none
@@ -205,7 +205,7 @@ Write `tools/seedgen/tags/ai/batch-038.json`. For each recipe, give EVERY listed
 - `textures` rule: ['smooth'] (0.50, keywords: smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 9 ingredients, 1610 min, technique: knead, temper)
+- `difficulty` rule: 'medium' (0.55, 8 steps, 9 ingredients, 1610 min, technique: knead)
 
 ### mdb-53557
 **Extra crispy chicken wings** · Chicken · area: none
@@ -238,4 +238,4 @@ Write `tools/seedgen/tags/ai/batch-038.json`. For each recipe, give EVERY listed
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 15 (0.30, no durations in the method; Starter guess)
-- `difficulty` rule: 'medium' (0.55, 15 steps, 12 ingredients, 45 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 15 steps, 12 ingredients, 45 min)

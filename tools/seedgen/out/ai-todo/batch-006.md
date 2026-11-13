@@ -37,7 +37,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy', 'saucy'] (0.50, keywords: crunchy, saucy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 8 steps, 11 ingredients, 75 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 8 steps, 11 ingredients, 75 min)
 
 ### mdb-52847
 **Pork Cassoulet** · Pork · area: France
@@ -48,7 +48,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['smooth'] (0.50, keywords: smooth)
 - `moods` rule: ['fresh', 'hearty'] (0.50, keywords/category: fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 16 ingredients, 200 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 16 ingredients, 200 min)
 
 ### mdb-52848
 **Bean & Sausage Hotpot** · Miscellaneous · area: British
@@ -68,7 +68,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 15 ingredients, 90 min, technique: piping, proof)
+- `difficulty` rule: 'medium' (0.55, 6 steps, 15 ingredients, 90 min, technique: piping)
 
 ### mdb-52850
 **Chicken Couscous** · Chicken · area: Moroccan
@@ -129,7 +129,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'flaky'] (0.50, keywords: creamy, crunchy, flaky)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 12 ingredients, 250 min, technique: knead, make the pastry, temper)
+- `difficulty` rule: 'medium' (0.55, 8 steps, 12 ingredients, 250 min, technique: knead, make the pastry)
 
 ### mdb-52857
 **Pumpkin Pie** · Dessert · area: United States
@@ -139,7 +139,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['flaky', 'smooth'] (0.50, keywords: flaky, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 7 steps, 11 ingredients, 125 min, technique: roll out the pastry, temper)
+- `difficulty` rule: 'medium' (0.55, 7 steps, 11 ingredients, 125 min, technique: roll out the pastry)
 
 ### mdb-52859
 **Key Lime Pie** · Dessert · area: United States
@@ -182,7 +182,7 @@ Write `tools/seedgen/tags/ai/batch-006.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy'] (0.50, keywords: crispy, saucy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 11 ingredients, 60 min, technique: knead, proof)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 11 ingredients, 60 min, technique: knead)
 
 ### mdb-52863
 **Vegetarian Casserole** · Vegetarian · area: British

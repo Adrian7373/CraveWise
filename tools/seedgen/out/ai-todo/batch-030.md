@@ -146,7 +146,7 @@ Write `tools/seedgen/tags/ai/batch-030.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'crispy', 'flaky'] (0.50, keywords: chewy, crispy, flaky)
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 5 ingredients, 55 min, technique: caramelis, puff pastry from)
+- `difficulty` rule: 'easy' (0.55, 8 steps, 5 ingredients, 55 min, technique: caramelis)
 
 ### mdb-53393
 **Dutch doughnuts** · Dessert · area: none
@@ -157,8 +157,7 @@ Write `tools/seedgen/tags/ai/batch-030.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'crunchy'] (0.50, keywords: creamy, crispy, crunchy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'medium' (0.55, 7 steps, 5 ingredients, 100 min, technique: deep fr)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 5 ingredients, 70 min, technique: deep fr)
 
 ### mdb-53394
 **Zeeuwse bolussen** · Dessert · area: none
@@ -169,7 +168,7 @@ Write `tools/seedgen/tags/ai/batch-030.json`. For each recipe, give EVERY listed
 - `textures` rule: ['smooth'] (0.50, keywords: smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 10 steps, 11 ingredients, 120 min, technique: cure)
+- `difficulty` rule: 'medium' (0.55, 10 steps, 11 ingredients, 120 min)
 
 ### mdb-53395
 **Slagroomtaart** · Dessert · area: none
@@ -193,7 +192,7 @@ Write `tools/seedgen/tags/ai/batch-030.json`. For each recipe, give EVERY listed
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 9 ingredients, 50 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 9 steps, 9 ingredients, 50 min)
 
 ### mdb-53397
 **Haft Mewa Recipe** · Side · area: none
@@ -230,4 +229,4 @@ Write `tools/seedgen/tags/ai/batch-030.json`. For each recipe, give EVERY listed
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 7 ingredients, 110 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 7 ingredients, 110 min)

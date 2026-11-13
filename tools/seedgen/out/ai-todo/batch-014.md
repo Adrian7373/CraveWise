@@ -81,7 +81,7 @@ Write `tools/seedgen/tags/ai/batch-014.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy'] (0.50, keywords: crunchy)
 - `moods` rule: ['fresh', 'hearty'] (0.50, keywords/category: fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 3 steps, 17 ingredients, 190 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 3 steps, 17 ingredients, 190 min)
 
 ### mdb-53040
 **Spring onion and prawn empanadas** · Seafood · area: Portuguese

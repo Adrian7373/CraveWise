@@ -40,7 +40,7 @@ Write `tools/seedgen/tags/ai/batch-037.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy'] (0.50, keywords: creamy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 9 ingredients, 185 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 9 ingredients, 185 min)
 
 ### mdb-53523
 **Colombian Buñuelos Recipe** · Side · area: none
@@ -51,7 +51,7 @@ Write `tools/seedgen/tags/ai/batch-037.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'smooth'] (0.50, keywords: chewy, smooth)
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 10 ingredients, 25 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 10 ingredients, 25 min)
 
 ### mdb-53524
 **Coconut Natilla Recipe** · Dessert · area: none
@@ -62,7 +62,7 @@ Write `tools/seedgen/tags/ai/batch-037.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'smooth'] (0.50, keywords: creamy, crunchy, smooth)
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 12 ingredients, 155 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 12 ingredients, 155 min)
 
 ### mdb-53525
 **Ají de Aguacate Recipe (Colombian Spicy Avocado Sauce)** · Miscellaneous · area: none
@@ -98,7 +98,7 @@ Write `tools/seedgen/tags/ai/batch-037.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: [] (0.50, keywords/category: none)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 2 steps, 2 ingredients, 20 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 2 steps, 2 ingredients, 20 min)
 
 ### mdb-53528
 **Chuletas de Cerdo a la Criolla (Pork Chops in Creole Sauce)** · Pork · area: none
@@ -135,7 +135,7 @@ Write `tools/seedgen/tags/ai/batch-037.json`. For each recipe, give EVERY listed
 - `textures` rule: ['brothy', 'creamy'] (0.50, keywords: brothy, creamy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 12 ingredients, 85 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 12 ingredients, 85 min)
 
 ### mdb-53531
 **Chicken in Orange Sauce Recipe (Pollo a la Naranja)** · Chicken · area: none

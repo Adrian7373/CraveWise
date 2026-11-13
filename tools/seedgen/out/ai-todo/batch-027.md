@@ -82,7 +82,6 @@ Write `tools/seedgen/tags/ai/batch-027.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'fluffy'] (0.50, keywords: creamy, crispy, fluffy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 13 steps, 14 ingredients, 115 min, technique: pipe)
 
 ### mdb-53324
 **Chocolate empanadas** · Dessert · area: Uruguayan
@@ -103,7 +102,7 @@ Write `tools/seedgen/tags/ai/batch-027.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth', 'tender'] (0.50, keywords: saucy, smooth, tender)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 14 steps, 4 ingredients, 40 min, technique: knead, temper)
+- `difficulty` rule: 'medium' (0.55, 14 steps, 4 ingredients, 40 min, technique: knead)
 
 ### mdb-53326
 **Venezuelan Sancocho** · Beef · area: Venezuela
@@ -188,7 +187,7 @@ Write `tools/seedgen/tags/ai/batch-027.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'smooth'] (0.50, keywords: creamy, smooth)
 - `moods` rule: ['fresh', 'indulgent'] (0.50, keywords/category: fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 6 ingredients, 140 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 6 ingredients, 140 min)
 
 ### mdb-53334
 **Arepa Pabellón** · Beef · area: Venezuela

@@ -29,7 +29,7 @@ Write `tools/seedgen/tags/ai/batch-034.json`. For each recipe, give EVERY listed
 - `textures` rule: ['fluffy', 'saucy'] (0.50, keywords: fluffy, saucy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 13 ingredients, 70 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 13 ingredients, 70 min)
 
 ### mdb-53462
 **Cinnamon Roll Cookies** · Dessert · area: none
@@ -100,7 +100,7 @@ Write `tools/seedgen/tags/ai/batch-034.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy'] (0.50, keywords: crunchy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 11 ingredients, 35 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 11 ingredients, 35 min)
 
 ### mdb-53468
 **Belgian Stoemp** · Pork · area: none
@@ -183,7 +183,7 @@ Write `tools/seedgen/tags/ai/batch-034.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'crispy', 'crunchy'] (0.50, keywords: chewy, crispy, crunchy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 9 steps, 8 ingredients, 95 min, technique: knead, temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 8 ingredients, 95 min, technique: knead)
 
 ### mdb-53475
 **Brazilian chocolate truffles - brigadeiro** · Dessert · area: none

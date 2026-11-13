@@ -176,7 +176,7 @@ Write `tools/seedgen/tags/ai/batch-003.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'fluffy', 'smooth'] (0.50, keywords: creamy, fluffy, smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 6 ingredients, 80 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 6 ingredients, 80 min)
 
 ### mdb-52777
 **Mediterranean Pasta Salad** · Seafood · area: Italian

@@ -83,7 +83,7 @@ Write `tools/seedgen/tags/ai/batch-020.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'tender'] (0.50, keywords: saucy, tender)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 4 steps, 14 ingredients, 1685 min, technique: proof, rub in)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 14 ingredients, 1685 min, technique: rub in)
 
 ### mdb-53176
 **Spanish tomato bread with jamón Serrano** · Pork · area: Spanish

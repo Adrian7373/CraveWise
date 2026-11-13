@@ -18,7 +18,7 @@ Write `tools/seedgen/tags/ai/batch-016.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['fresh', 'hearty', 'light'] (0.50, keywords/category: fresh, hearty, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 10 ingredients, 105 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 10 ingredients, 105 min)
 
 ### mdb-53082
 **Strawberries Romanoff** · Dessert · area: Russian
@@ -28,7 +28,7 @@ Write `tools/seedgen/tags/ai/batch-016.json`. For each recipe, give EVERY listed
 - `moods` rule: ['fresh', 'indulgent'] (0.50, keywords/category: fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
 - `cookMinutes` rule: 30 (0.30, no durations in the method; Dessert guess)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 5 ingredients, 285 min)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 5 ingredients, 285 min, technique: stiff peaks)
 
 ### mdb-53083
 **Lamb Pilaf (Plov)** · Lamb · area: Russian
@@ -49,7 +49,7 @@ Write `tools/seedgen/tags/ai/batch-016.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy', 'smooth'] (0.50, keywords: creamy, saucy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 6 steps, 11 ingredients, 55 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 11 ingredients, 55 min)
 
 ### mdb-53086
 **Migas** · Miscellaneous · area: Spanish

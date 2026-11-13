@@ -55,7 +55,7 @@ Write `tools/seedgen/tags/ai/batch-010.json`. For each recipe, give EVERY listed
 - `flavor.bitter` rule: 1 (0.55, weak signals only)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 9 steps, 15 ingredients, 380 min, technique: cure)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 15 ingredients, 380 min)
 
 ### mdb-52942
 **Roast fennel and aubergine paella** · Vegan · area: Spanish
@@ -203,4 +203,4 @@ Write `tools/seedgen/tags/ai/batch-010.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['comfort', 'fresh'] (0.50, keywords/category: comfort, fresh)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 7 ingredients, 55 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 7 ingredients, 55 min)

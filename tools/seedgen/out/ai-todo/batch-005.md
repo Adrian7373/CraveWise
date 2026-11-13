@@ -146,7 +146,7 @@ Write `tools/seedgen/tags/ai/batch-005.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy'] (0.50, keywords: creamy, saucy)
 - `moods` rule: ['indulgent'] (0.50, keywords/category: indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 5 steps, 7 ingredients, 20 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 7 ingredients, 20 min)
 
 ### mdb-52836
 **Seafood fideuà** · Seafood · area: Spanish

@@ -178,7 +178,7 @@ Write `tools/seedgen/tags/ai/batch-024.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy'] (0.50, keywords: creamy, crunchy)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 9 ingredients, 115 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 9 ingredients, 115 min)
 
 ### mdb-53272
 **Griddled flatbreads** · Side · area: Turkish
@@ -219,4 +219,4 @@ Write `tools/seedgen/tags/ai/batch-024.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['fresh', 'hearty', 'light'] (0.50, keywords/category: fresh, hearty, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 8 ingredients, 45 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 8 ingredients, 45 min)

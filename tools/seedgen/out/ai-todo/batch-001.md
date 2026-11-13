@@ -48,7 +48,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['flaky'] (0.50, keywords: flaky)
 - `moods` rule: ['comfort', 'festive'] (0.50, keywords/category: comfort, festive)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 8 ingredients, 115 min, technique: cure)
+- `difficulty` rule: 'easy' (0.55, 8 steps, 8 ingredients, 115 min)
 
 ### mdb-52802
 **Fish pie** · Seafood · area: British
@@ -59,7 +59,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'saucy'] (0.50, keywords: creamy, crispy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 15 ingredients, 90 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 15 ingredients, 90 min)
 
 ### mdb-52896
 **Full English Breakfast** · Breakfast · area: British
@@ -79,7 +79,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy', 'smooth'] (0.50, keywords: creamy, saucy, smooth)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 5 steps, 14 ingredients, 65 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 5 steps, 14 ingredients, 65 min)
 
 ### mdb-52904
 **Beef Bourguignon** · Beef · area: France
@@ -99,7 +99,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'saucy', 'smooth'] (0.50, keywords: crispy, saucy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 9 steps, 18 ingredients, 110 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 18 ingredients, 110 min)
 
 ### mdb-52908
 **Ratatouille** · Vegetarian · area: France
@@ -110,7 +110,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 10 ingredients, 55 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 10 ingredients, 55 min)
 
 ### mdb-52903
 **French Onion Soup** · Side · area: France
@@ -119,7 +119,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `flavor.bitter` rule: 1 (0.55, weak signals only)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 3 steps, 10 ingredients, 65 min, technique: caramelis, proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 10 ingredients, 65 min, technique: caramelis)
 
 ### mdb-52909
 **Tarte Tatin** · Dessert · area: France
@@ -129,7 +129,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'flaky'] (0.50, keywords: creamy, crispy, flaky)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 6 ingredients, 160 min, technique: proof, temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 6 ingredients, 160 min)
 
 ### mdb-52905
 **Chocolate Souffle** · Dessert · area: France
@@ -200,7 +200,7 @@ Write `tools/seedgen/tags/ai/batch-001.json`. For each recipe, give EVERY listed
 - `textures` rule: ['brothy', 'crispy', 'saucy'] (0.50, keywords: brothy, crispy, saucy)
 - `moods` rule: ['hearty', 'light'] (0.50, keywords/category: hearty, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 17 ingredients, 55 min, technique: ferment)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 17 ingredients, 55 min)
 
 ### mdb-52948
 **Wontons** · Pork · area: Chinese

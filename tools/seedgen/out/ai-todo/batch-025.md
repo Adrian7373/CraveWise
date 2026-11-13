@@ -49,7 +49,7 @@ Write `tools/seedgen/tags/ai/batch-025.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crunchy', 'flaky'] (0.50, keywords: crunchy, flaky)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 13 steps, 14 ingredients, 75 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 13 steps, 14 ingredients, 75 min)
 
 ### mdb-53280
 **Poulet Roti a l'Algerienne (Algerian Roast Chicken)** · Chicken · area: Algerian
@@ -124,7 +124,7 @@ Write `tools/seedgen/tags/ai/batch-025.json`. For each recipe, give EVERY listed
 - `textures` rule: [] (0.50, keywords: none)
 - `moods` rule: ['comfort'] (0.50, keywords/category: comfort)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 13 ingredients, 195 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 8 steps, 13 ingredients, 195 min)
 
 ### mdb-53287
 **Tajine de Poulet aux Carottes et Patates Douces (Chicken and Sweet Potato Tagine)** · Chicken · area: Algerian
@@ -186,7 +186,7 @@ Write `tools/seedgen/tags/ai/batch-025.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'smooth'] (0.50, keywords: creamy, crispy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 14 ingredients, 100 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 8 steps, 14 ingredients, 100 min)
 
 ### mdb-53293
 **Pistachio cake** · Dessert · area: Polish

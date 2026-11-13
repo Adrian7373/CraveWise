@@ -74,7 +74,7 @@ Write `tools/seedgen/tags/ai/batch-021.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'saucy'] (0.50, keywords: creamy, crunchy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 3 steps, 12 ingredients, 50 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 12 ingredients, 50 min)
 
 ### mdb-53198
 **Thai fried rice with prawns & peas** · Seafood · area: Thai
@@ -111,7 +111,7 @@ Write `tools/seedgen/tags/ai/batch-021.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy'] (0.50, keywords: saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 2 steps, 7 ingredients, 35 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 2 steps, 7 ingredients, 35 min)
 
 ### mdb-53203
 **Thai rice noodle salad** · Vegetarian · area: Thai
@@ -120,7 +120,7 @@ Write `tools/seedgen/tags/ai/batch-021.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'saucy'] (0.50, keywords: chewy, saucy)
 - `moods` rule: ['fresh', 'hearty', 'light'] (0.50, keywords/category: fresh, hearty, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 15 ingredients, 70 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 15 ingredients, 70 min)
 
 ### mdb-53204
 **Red curry chicken kebabs** · Chicken · area: Thai

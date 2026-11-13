@@ -100,7 +100,7 @@ Write `tools/seedgen/tags/ai/batch-004.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'saucy'] (0.50, keywords: creamy, crispy, saucy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 12 steps, 15 ingredients, 100 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 12 steps, 15 ingredients, 100 min)
 
 ### mdb-52794
 **Vegan Chocolate Cake** · Vegan · area: United States
@@ -195,6 +195,7 @@ Write `tools/seedgen/tags/ai/batch-004.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'creamy', 'saucy'] (0.50, keywords: chewy, creamy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
+- `difficulty` rule: 'hard' (0.55, 17 steps, 11 ingredients, 495 min, technique: proof)
 
 ### mdb-52815
 **French Lentils With Garlic and Thyme** · Miscellaneous · area: France

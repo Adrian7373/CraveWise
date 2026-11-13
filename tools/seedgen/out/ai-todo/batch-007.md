@@ -73,7 +73,7 @@ Write `tools/seedgen/tags/ai/batch-007.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'fluffy', 'saucy'] (0.50, keywords: creamy, fluffy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 11 steps, 19 ingredients, 300 min, technique: proof)
+- `difficulty` rule: 'medium' (0.55, 11 steps, 19 ingredients, 300 min)
 
 ### mdb-52874
 **Beef and Mustard Pie** · Beef · area: British
@@ -133,7 +133,7 @@ Write `tools/seedgen/tags/ai/batch-007.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'smooth'] (0.50, keywords: creamy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 17 ingredients, 80 min, technique: piping, proof)
+- `difficulty` rule: 'medium' (0.55, 4 steps, 17 ingredients, 80 min, technique: piping)
 
 ### mdb-52880
 **McSinghs Scotch pie** · Lamb · area: British
@@ -163,7 +163,7 @@ Write `tools/seedgen/tags/ai/batch-007.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy', 'smooth'] (0.50, keywords: creamy, saucy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 6 steps, 14 ingredients, 70 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 14 ingredients, 70 min)
 
 ### mdb-52884
 **Lancashire hotpot** · Lamb · area: British

@@ -48,7 +48,7 @@ Write `tools/seedgen/tags/ai/batch-015.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'tender'] (0.50, keywords: saucy, tender)
 - `moods` rule: ['comfort', 'hearty'] (0.50, keywords/category: comfort, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 1 steps, 7 ingredients, 70 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 1 steps, 7 ingredients, 70 min)
 
 ### mdb-53059
 **Mushroom soup with buckwheat** · Side · area: Croatian
@@ -167,7 +167,7 @@ Write `tools/seedgen/tags/ai/batch-015.json`. For each recipe, give EVERY listed
 - `textures` rule: ['crispy', 'crunchy', 'saucy'] (0.50, keywords: crispy, crunchy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 9 steps, 10 ingredients, 185 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 9 steps, 10 ingredients, 185 min)
 
 ### mdb-53074
 **Grilled eggplant with coconut milk** · Vegetarian · area: Filipino

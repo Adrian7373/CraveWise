@@ -124,7 +124,7 @@ Write `tools/seedgen/tags/ai/batch-035.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'saucy', 'smooth'] (0.50, keywords: creamy, saucy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'hard' (0.55, 14 steps, 20 ingredients, 120 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 14 steps, 20 ingredients, 120 min)
 
 ### mdb-53490
 **Cottage Cheese And Feta Stuffed Peppers** · Vegetarian · area: none
@@ -175,7 +175,7 @@ Write `tools/seedgen/tags/ai/batch-035.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy'] (0.50, keywords: chewy)
 - `moods` rule: ['comfort', 'indulgent'] (0.50, keywords/category: comfort, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 7 steps, 11 ingredients, 40 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 7 steps, 11 ingredients, 40 min)
 
 ### mdb-53494
 **Keto Banitsa** · Side · area: none
@@ -207,7 +207,7 @@ Write `tools/seedgen/tags/ai/batch-035.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'saucy'] (0.50, keywords: creamy, crunchy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 12 steps, 12 ingredients, 90 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 12 steps, 12 ingredients, 90 min)
 
 ### mdb-53497
 **Nom Banh Chok – Cambodian Noodle Soup** · Chicken · area: none

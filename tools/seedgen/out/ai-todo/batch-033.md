@@ -83,7 +83,7 @@ Write `tools/seedgen/tags/ai/batch-033.json`. For each recipe, give EVERY listed
 - `cuisine` rule: none
 - `moods` rule: ['comfort', 'indulgent', 'light'] (0.50, keywords/category: comfort, indulgent, light)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 6 steps, 8 ingredients, 40 min, technique: temper)
+- `difficulty` rule: 'easy' (0.55, 6 steps, 8 ingredients, 40 min)
 
 ### mdb-53447
 **Tafelspitz** · Beef · area: none
@@ -188,7 +188,7 @@ Write `tools/seedgen/tags/ai/batch-033.json`. For each recipe, give EVERY listed
 - `textures` rule: ['saucy', 'smooth'] (0.50, keywords: saucy, smooth)
 - `moods` rule: ['comfort', 'hearty', 'indulgent'] (0.50, keywords/category: comfort, hearty, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 8 steps, 9 ingredients, 140 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 8 steps, 9 ingredients, 140 min)
 
 ### mdb-53456
 **Bajan Salt Bread Recipe** · Side · area: none

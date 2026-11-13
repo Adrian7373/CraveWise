@@ -92,6 +92,24 @@ def top50_ids() -> list[str]:
     return json.loads(f.read_text(encoding="utf-8"))["ids"] if f.exists() else []
 
 
+def add_extra_ingredients(recipes, overrides: dict, table: IngredientTable) -> list[str]:
+    """Appends `extraIngredients` from overrides.json as real lines, e.g. the egg TheMealDB forgot to
+    list for Egg Drop Soup. They count for allergens/diets like any other line (safety rule)."""
+    from .measures import parse_measure
+    by_id = table.by_id
+    errors = []
+    for r in recipes:
+        for extra in overrides.get(r.id, {}).get("extraIngredients", []):
+            iid = extra.get("ingredientId")
+            if iid not in by_id:
+                errors.append(f"overrides {r.id}: extraIngredients id {iid!r} not in ingredients.json")
+                continue
+            raw = extra.get("rawMeasure", "")
+            p = parse_measure(raw)
+            r.lines.append(N.Line(by_id[iid]["name"], raw, iid, p["amount"], p["amountMax"], p["unit"], p["note"]))
+    return errors
+
+
 def tag_all(table: IngredientTable):
     """Normalize, run rules, load AI answers and overrides, merge. Shared by tags/review/build."""
     import json
@@ -102,8 +120,10 @@ def tag_all(table: IngredientTable):
     allowed = N.allowed_cuisines()
     v = vocab.load()
     overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
+    errors = add_extra_ingredients(recipes, overrides, table)
     proposals = {r.id: rules.propose(r, allowed) for r in recipes}
-    answers, errors = ai.load_answers(v, allowed)
+    answers, ai_errors = ai.load_answers(v, allowed)
+    errors += ai_errors
     merged = {}
     for r in recipes:
         merged[r.id] = merge(proposals[r.id], answers.get(r.id, {}), overrides.get(r.id, {}))
@@ -129,6 +149,24 @@ def cmd_tags() -> int:
     for e in errors:
         print("  ERROR " + e)
     return 1 if errors else 0
+
+
+def cmd_review() -> int:
+    """Writes out/review-top50.md, out/audit.md and out/provenance.json."""
+    from . import review, vocab
+    from .paths import OUT
+    table = IngredientTable.load()
+    recipes, proposals, answers, overrides, merged, errors = tag_all(table)
+    by_id = table.by_id
+    ids = [i for i in top50_ids() if i in merged]
+    rmap = {r.id: r for r in recipes}
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "review-top50.md").write_text(review.review_sheet(ids, rmap, merged, overrides, by_id), encoding="utf-8")
+    (OUT / "audit.md").write_text(
+        review.audit(recipes, merged, by_id, vocab.load(), N.allowed_cuisines(), errors), encoding="utf-8")
+    review.write_json(OUT / "provenance.json", review.provenance(merged))
+    print(f"review: {len(ids)} recipes -> out/review-top50.md, audit -> out/audit.md, provenance -> out/provenance.json")
+    return 0
 
 
 def cmd_build(allow_unreviewed: bool = False) -> int:

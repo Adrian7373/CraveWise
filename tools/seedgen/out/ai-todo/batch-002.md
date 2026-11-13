@@ -26,7 +26,7 @@ Write `tools/seedgen/tags/ai/batch-002.json`. For each recipe, give EVERY listed
 - `textures` rule: ['chewy', 'crunchy', 'saucy'] (0.50, keywords: chewy, crunchy, saucy)
 - `moods` rule: ['fresh', 'hearty'] (0.50, keywords/category: fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 4 steps, 13 ingredients, 30 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 13 ingredients, 30 min)
 
 ### mdb-52814
 **Thai Green Curry** · Chicken · area: Thai
@@ -35,7 +35,7 @@ Write `tools/seedgen/tags/ai/batch-002.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crunchy', 'saucy'] (0.50, keywords: creamy, crunchy, saucy)
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 4 steps, 12 ingredients, 45 min, technique: truss)
+- `difficulty` rule: 'easy' (0.55, 4 steps, 12 ingredients, 45 min)
 
 ### mdb-53194
 **Tom yum soup with prawns** · Seafood · area: Thai
@@ -43,7 +43,7 @@ Write `tools/seedgen/tags/ai/batch-002.json`. For each recipe, give EVERY listed
 - method (3 steps): Pour 1.3 litres water into a large saucepan over a high heat. Add the onion, tomato, chilli, galangal, lemongrass, prawn heads and chicken stock cube. Stir and bring to a boil, then reduce the heat to medium and simmer for 20 mins until the liquid has reduced. Carefully strain the hot broth into a large heatproof bowl or jug, then discard the prawn heads. Return the strained veg and herb mixture to the saucepan and pour over the broth. Stir through the mushrooms and lime leaves, then cook for 3 mins until the mushrooms are tender. Add 1 tbsp sugar, the fish sauce, lime juice, coconut milk and …
 - `moods` rule: ['comfort', 'fresh', 'hearty'] (0.50, keywords/category: comfort, fresh, hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 3 steps, 14 ingredients, 55 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 3 steps, 14 ingredients, 55 min)
 
 ### mdb-53238
 **Beef pho** · Beef · area: Vietnamese
@@ -91,7 +91,7 @@ Write `tools/seedgen/tags/ai/batch-002.json`. For each recipe, give EVERY listed
 - `textures` rule: ['creamy', 'crispy', 'smooth'] (0.50, keywords: creamy, crispy, smooth)
 - `moods` rule: ['comfort', 'fresh', 'indulgent'] (0.50, keywords/category: comfort, fresh, indulgent)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'medium' (0.55, 12 steps, 12 ingredients, 675 min, technique: temper)
+- `difficulty` rule: 'medium' (0.55, 12 steps, 12 ingredients, 675 min)
 
 ### mdb-52854
 **Pancakes** · Dessert · area: United States
@@ -133,7 +133,7 @@ Write `tools/seedgen/tags/ai/batch-002.json`. For each recipe, give EVERY listed
 - `textures` rule: ['smooth'] (0.50, keywords: smooth)
 - `moods` rule: ['hearty'] (0.50, keywords/category: hearty)
 - `servings` rule: 4 (0.30, not stated; default 4)
-- `difficulty` rule: 'easy' (0.55, 2 steps, 8 ingredients, 30 min, technique: proof)
+- `difficulty` rule: 'easy' (0.55, 2 steps, 8 ingredients, 30 min)
 
 ### mdb-53266
 **Falafel** · Vegetarian · area: Turkish
