@@ -1,0 +1,181 @@
+{
+ "batch": 32,
+ "recipes": {
+  "mdb-53420": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "crisp waffle, chewy rice flour"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "street snack"},
+   "servings": {"value": 4, "reason": "1 cup flour"},
+   "cookMinutes": {"value": 15, "reason": "waffle iron batches"},
+   "difficulty": {"value": "easy", "reason": "one batter"}
+  },
+  "mdb-53421": {
+   "cuisine": {"value": "Cambodian", "reason": "lok lak"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "beef on crisp salad"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "beef with lime-pepper dip"},
+   "servings": {"value": 4, "reason": "1kg beef, 4 eggs"},
+   "difficulty": {"value": "easy", "reason": "marinate and sear"}
+  },
+  "mdb-53422": {
+   "cuisine": {"value": "Cambodian", "reason": "num plae ai"},
+   "flavor.salty": {"value": 1, "reason": "salted coconut cream"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "glutinous balls in coconut"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "festival dessert"},
+   "servings": {"value": 8, "reason": "700g flour"},
+   "cookMinutes": {"value": 30, "reason": "boiling batches and syrup"},
+   "difficulty": {"value": "medium", "reason": "three coloured doughs"}
+  },
+  "mdb-53423": {
+   "cuisine": {"value": "Laotian", "reason": "miang wraps"},
+   "flavor.bitter": {"value": 1, "reason": "bitter orange zest"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "peanuts, toasted rice"},
+   "moods": {"value": ["fresh", "festive"], "reason": "sharing wraps"},
+   "servings": {"value": 6, "reason": "snack platter"},
+   "difficulty": {"value": "medium", "reason": "toasting and many small parts"}
+  },
+  "mdb-53424": {
+   "cuisine": {"value": "Laotian", "reason": "title says Laos"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "dense plantain muffins"},
+   "moods": {"value": ["comfort"], "reason": "simple sweet bake"},
+   "servings": {"value": 12, "reason": "muffin pan"},
+   "difficulty": {"value": "easy", "reason": "3 ingredients"}
+  },
+  "mdb-53425": {
+   "cuisine": {"value": "Laotian", "reason": "title says Laos"},
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "tapioca in coconut"},
+   "moods": {"value": ["comfort", "light"], "reason": "warm pudding"},
+   "servings": {"value": 4, "reason": "3 cups banana"},
+   "difficulty": {"value": "easy", "reason": "soak and simmer"}
+  },
+  "mdb-53426": {
+   "cuisine": {"value": "Laotian", "reason": "title says Lao"},
+   "flavor.salty": {"value": 2, "reason": "brined"},
+   "flavor.sweet": {"value": 0, "reason": "sour pickle"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "fermentation"},
+   "textures": {"value": ["crunchy"], "reason": "pickled cabbage"},
+   "moods": {"value": ["fresh"], "reason": "tangy condiment"},
+   "servings": {"value": 12, "reason": "large jar"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "brine and wait"}
+  },
+  "mdb-53427": {
+   "cuisine": {"value": "Laotian", "reason": "title says Lao"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "crunchy", "chewy"], "reason": "crispy rice salad"},
+   "moods": {"value": ["festive", "fresh"], "reason": "party salad"},
+   "servings": {"value": 6, "reason": "3 cups rice"},
+   "cookMinutes": {"value": 30, "reason": "deep-frying rice balls"},
+   "difficulty": {"value": "hard", "reason": "shaping and deep frying, many parts"}
+  },
+  "mdb-53428": {
+   "cuisine": {"value": "Angolan", "reason": "Angolan grilled prawns"},
+   "flavor.salty": {"value": 1, "reason": "quarter tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "grilled prawns, sauce"},
+   "moods": {"value": ["fresh", "festive"], "reason": "barbecue"},
+   "servings": {"value": 3, "reason": "1lb prawns"},
+   "difficulty": {"value": "easy", "reason": "blend, skewer, grill"}
+  },
+  "mdb-53429": {
+   "cuisine": {"value": "Angolan", "reason": "paracuca"},
+   "flavor.salty": {"value": 1, "reason": "quarter tsp salt"},
+   "textures": {"value": ["crunchy"], "reason": "candied peanuts"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "snack"},
+   "servings": {"value": 12, "reason": "5 cups peanuts"},
+   "difficulty": {"value": "easy", "reason": "boil and roast"}
+  },
+  "mdb-53430": {
+   "cuisine": {"value": "Antiguan", "reason": "title says Antiguan"},
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "pumpkin"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "garlic, onion"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "mashed vegetables"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "national breakfast"},
+   "servings": {"value": 4, "reason": "4 aubergines, 1lb pumpkin"},
+   "difficulty": {"value": "easy", "reason": "simmer and mash"}
+  },
+  "mdb-53431": {
+   "cuisine": {"value": "Antiguan", "reason": "Caribbean coconut corn"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "charred corn, coconut butter"},
+   "moods": {"value": ["fresh", "festive"], "reason": "barbecue side"},
+   "servings": {"value": 6, "reason": "6 cobs"},
+   "difficulty": {"value": "easy", "reason": "boil, char, sauce"}
+  },
+  "mdb-53432": {
+   "cuisine": {"value": "Antiguan", "reason": "Wadadli is Antigua"},
+   "textures": {"value": ["tender", "crispy"], "reason": "slow belly, crackling"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "slow roast for a crowd"},
+   "servings": {"value": 8, "reason": "whole pork belly"},
+   "difficulty": {"value": "medium", "reason": "overnight marinade, long roast"}
+  },
+  "mdb-53433": {
+   "cuisine": {"value": "Antiguan", "reason": "Caribbean mango chow"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.umami": {"value": 0, "reason": "fruit"},
+   "textures": {"value": ["tender"], "reason": "fresh mango"},
+   "moods": {"value": ["fresh", "light"], "reason": "spicy fruit relish"},
+   "servings": {"value": 2, "reason": "half a mango"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "mix in a bowl"}
+  },
+  "mdb-53434": {
+   "cuisine": {"value": "Armenian", "reason": "Armenian Easter bread"},
+   "flavor.salty": {"value": 1, "reason": "1 tbsp salt in large dough"},
+   "flavor.umami": {"value": 0, "reason": "sweet bread"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "biscuit-like bread"},
+   "moods": {"value": ["festive"], "reason": "Easter bake"},
+   "servings": {"value": 24, "reason": "6 cups flour"},
+   "difficulty": {"value": "easy", "reason": "mix, cut, bake"}
+  },
+  "mdb-53435": {
+   "cuisine": {"value": "Armenian", "reason": "Armenian dolma filling"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "spiced rice, pine nuts"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "rice side"},
+   "servings": {"value": 4, "reason": "1 cup rice"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53436": {
+   "cuisine": {"value": "Armenian", "reason": "jajek"},
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.umami": {"value": 0, "reason": "yogurt"},
+   "textures": {"value": ["smooth", "crunchy"], "reason": "yogurt with cucumber"},
+   "moods": {"value": ["fresh", "light"], "reason": "chilled yogurt soup"},
+   "servings": {"value": 4, "reason": "method says about four servings"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend and chill"}
+  },
+  "mdb-53437": {
+   "cuisine": {"value": "Armenian", "reason": "title says Armenian"},
+   "flavor.sweet": {"value": 1, "reason": "balsamic"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "roast leg"},
+   "moods": {"value": ["festive", "hearty"], "reason": "family roast"},
+   "servings": {"value": 8, "reason": "whole leg"},
+   "difficulty": {"value": "easy", "reason": "marinate and roast"}
+  },
+  "mdb-53438": {
+   "cuisine": {"value": "Aruban", "reason": "bolita di keshi"},
+   "flavor.sour": {"value": 1, "reason": "feta tang"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "fried cheese balls"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party snack"},
+   "servings": {"value": 8, "reason": "2lb cheese"},
+   "cookMinutes": {"value": 15, "reason": "deep-frying batches"},
+   "difficulty": {"value": "medium", "reason": "deep frying"}
+  },
+  "mdb-53439": {
+   "cuisine": {"value": "Aruban", "reason": "Aruban arepa"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "crusty corn cakes"},
+   "moods": {"value": ["comfort"], "reason": "bread side"},
+   "servings": {"value": 4, "reason": "1 cup corn flour"},
+   "difficulty": {"value": "easy", "reason": "3 ingredients"}
+  }
+ }
+}

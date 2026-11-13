@@ -1,0 +1,171 @@
+{
+ "batch": 36,
+ "recipes": {
+  "mdb-53500": {
+   "cuisine": {"value": "Cambodian", "reason": "num ansom"},
+   "flavor.salty": {"value": 1, "reason": "salted coconut rice"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "sticky rice, bean paste"},
+   "moods": {"value": ["festive"], "reason": "Khmer New Year cake"},
+   "servings": {"value": 8, "reason": "8 banana-leaf parcels"},
+   "difficulty": {"value": "medium", "reason": "wrapping and steaming"}
+  },
+  "mdb-53501": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "baguette, pickles, chicken"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "loaded sandwich"},
+   "servings": {"value": 4, "reason": "4 baguettes"},
+   "difficulty": {"value": "easy", "reason": "marinate, pickle, assemble"}
+  },
+  "mdb-53502": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "crunchy"], "reason": "lacy pancake, beansprouts"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "street pancake"},
+   "servings": {"value": 4, "reason": "about 4 pancakes"},
+   "difficulty": {"value": "medium", "reason": "thin pancakes, flipping"}
+  },
+  "mdb-53503": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "textures": {"value": ["brothy", "tender"], "reason": "sour broth"},
+   "moods": {"value": ["fresh", "comfort"], "reason": "tangy soup"},
+   "servings": {"value": 4, "reason": "4 cups water, 1lb chicken"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53504": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman macaroni pudding"},
+   "flavor.salty": {"value": 1, "reason": "salted pasta water"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "custardy macaroni"},
+   "moods": {"value": ["comfort", "festive"], "reason": "holiday pudding"},
+   "servings": {"value": 12, "reason": "4 cups macaroni"},
+   "difficulty": {"value": "easy", "reason": "boil, mix, bake"}
+  },
+  "mdb-53505": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman conch fritters"},
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 2, "reason": "conch"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "fried fritters"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "beach snack"},
+   "servings": {"value": 6, "reason": "one can conch"},
+   "difficulty": {"value": "medium", "reason": "day-ahead mix, deep frying"}
+  },
+  "mdb-53506": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman rice and beans"},
+   "flavor.salty": {"value": 1, "reason": "seasoned"},
+   "flavor.umami": {"value": 1, "reason": "beans"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "coconut rice and beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "staple side"},
+   "servings": {"value": 6, "reason": "half bag beans, one can coconut"},
+   "cookMinutes": {"value": 60, "reason": "beans then rice"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53507": {
+   "cuisine": {"value": "Caymanian", "reason": "title says Cayman"},
+   "flavor.salty": {"value": 1, "reason": "salted potatoes"},
+   "flavor.umami": {"value": 0, "reason": "salad"},
+   "textures": {"value": ["creamy", "tender"], "reason": "mayo potato salad"},
+   "moods": {"value": ["festive", "comfort"], "reason": "party side"},
+   "servings": {"value": 10, "reason": "10 potatoes"},
+   "cookMinutes": {"value": 20, "reason": "boiling potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and mix"}
+  },
+  "mdb-53508": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman heavy cake"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "dense sticky cake"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "holiday cake"},
+   "servings": {"value": 12, "reason": "2lb cassava"},
+   "difficulty": {"value": "medium", "reason": "long syrup and 2-3 hour bake"}
+  },
+  "mdb-53509": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman fried crab"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.sweet": {"value": 1, "reason": "crab, onion"},
+   "textures": {"value": ["tender"], "reason": "sauteed crab meat"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "served with bread kind"},
+   "servings": {"value": 3, "reason": "1lb crab meat"},
+   "difficulty": {"value": "medium", "reason": "boiling and picking crabs"}
+  },
+  "mdb-53510": {
+   "cuisine": {"value": "Caymanian", "reason": "title says Cayman"},
+   "flavor.sweet": {"value": 1, "reason": "lobster, peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "lobster in sauce"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "special-occasion seafood"},
+   "servings": {"value": 6, "reason": "6 lobsters"},
+   "difficulty": {"value": "medium", "reason": "boiling and shelling lobsters"}
+  },
+  "mdb-53511": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman salt beef and beans"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "beans in coconut"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow stew"},
+   "servings": {"value": 6, "reason": "1lb beef, 1.5 cups beans"},
+   "difficulty": {"value": "easy", "reason": "long simmer"}
+  },
+  "mdb-53512": {
+   "cuisine": {"value": "Caymanian", "reason": "Cayman conch stew"},
+   "flavor.umami": {"value": 2, "reason": "conch"},
+   "textures": {"value": ["tender", "saucy", "chewy"], "reason": "stew with sea pie dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "island stew"},
+   "servings": {"value": 6, "reason": "2lb conch"},
+   "difficulty": {"value": "medium", "reason": "tenderising and dumplings"}
+  },
+  "mdb-53513": {
+   "cuisine": {"value": "Chilean", "reason": "title says Chilean"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "squash"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried squash dough"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rainy-day snack"},
+   "servings": {"value": 12, "reason": "5 cups flour"},
+   "difficulty": {"value": "medium", "reason": "dough and deep frying"}
+  },
+  "mdb-53514": {
+   "cuisine": {"value": "Chilean", "reason": "title says Chilean"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["flaky", "tender"], "reason": "pastry, pino filling"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Fiestas Patrias"},
+   "servings": {"value": 10, "reason": "5 cups flour"},
+   "difficulty": {"value": "medium", "reason": "filling, dough, folding"}
+  },
+  "mdb-53515": {
+   "cuisine": {"value": "Chilean", "reason": "manjar"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "thick caramel"},
+   "moods": {"value": ["indulgent"], "reason": "sweet spread"},
+   "servings": {"value": 10, "reason": "1 quart milk"},
+   "difficulty": {"value": "medium", "reason": "over an hour of stirring"}
+  },
+  "mdb-53516": {
+   "cuisine": {"value": "Chilean", "reason": "title says Chilean"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury bread"},
+   "textures": {"value": ["flaky", "fluffy"], "reason": "folded buttery bread"},
+   "moods": {"value": ["comfort"], "reason": "teatime bread"},
+   "servings": {"value": 8, "reason": "4 cups flour"},
+   "difficulty": {"value": "easy", "reason": "knead, fold, bake"}
+  },
+  "mdb-53517": {
+   "cuisine": {"value": "Chilean", "reason": "title says Chilean"},
+   "textures": {"value": ["creamy", "tender"], "reason": "mash over beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "potato pie"},
+   "servings": {"value": 6, "reason": "1lb beef, 5 cups potato"},
+   "difficulty": {"value": "easy", "reason": "mash, filling, bake"}
+  },
+  "mdb-53518": {
+   "cuisine": {"value": "Chilean", "reason": "Chilean fried cheese empanadas"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp pastry, melted cheese"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "snack"},
+   "servings": {"value": 6, "reason": "3 cups flour"},
+   "difficulty": {"value": "medium", "reason": "dough, sealing, frying"}
+  },
+  "mdb-53519": {
+   "cuisine": {"value": "Chilean", "reason": "leche asada"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "baked custard"},
+   "moods": {"value": ["comfort"], "reason": "homey dessert"},
+   "servings": {"value": 6, "reason": "1 quart milk"},
+   "difficulty": {"value": "easy", "reason": "infuse and bake"}
+  }
+ }
+}

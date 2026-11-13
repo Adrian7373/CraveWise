@@ -1,0 +1,180 @@
+{
+ "batch": 37,
+ "recipes": {
+  "mdb-53520": {
+   "cuisine": {"value": "Chilean", "reason": "pastel de choclo"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["creamy", "tender"], "reason": "corn crust over pino"},
+   "moods": {"value": ["comfort", "festive"], "reason": "summer classic"},
+   "servings": {"value": 6, "reason": "1lb beef, half chicken"},
+   "difficulty": {"value": "medium", "reason": "pino, corn topping, bake"}
+  },
+  "mdb-53521": {
+   "cuisine": {"value": "Chilean", "reason": "title says Chilean"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "thick bean and squash stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "summer bean stew"},
+   "servings": {"value": 4, "reason": "one can plus 1 cup beans"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53522": {
+   "cuisine": {"value": "Chilean", "reason": "Chilean recipe set"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["creamy"], "reason": "rice pudding"},
+   "moods": {"value": ["comfort"], "reason": "nostalgic dessert"},
+   "servings": {"value": 8, "reason": "1 cup rice, 4 cups milk"},
+   "difficulty": {"value": "easy", "reason": "long slow simmer"}
+  },
+  "mdb-53523": {
+   "cuisine": {"value": "Colombian", "reason": "title says Colombian"},
+   "flavor.sour": {"value": 1, "reason": "feta tang"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "fried cheese balls"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Christmas snack"},
+   "servings": {"value": 6, "reason": "about 15 balls"},
+   "difficulty": {"value": "medium", "reason": "oil temperature matters"}
+  },
+  "mdb-53524": {
+   "cuisine": {"value": "Colombian", "reason": "natilla"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "set custard"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas dessert"},
+   "servings": {"value": 8, "reason": "4 cups milk"},
+   "difficulty": {"value": "easy", "reason": "stir until thick"}
+  },
+  "mdb-53525": {
+   "cuisine": {"value": "Colombian", "reason": "title says Colombian"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 1, "reason": "avocado, egg"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "blended sauce"},
+   "moods": {"value": ["fresh"], "reason": "zingy condiment"},
+   "servings": {"value": 6, "reason": "2 avocados"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-53526": {
+   "cuisine": {"value": "Colombian", "reason": "title says Colombian"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "fried mash with beef"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fried snack"},
+   "servings": {"value": 6, "reason": "5 potatoes"},
+   "difficulty": {"value": "medium", "reason": "mash, filling, batter, fry"}
+  },
+  "mdb-53527": {
+   "cuisine": {"value": "Colombian", "reason": "Colombian recipe set"},
+   "textures": {"value": ["smooth"], "reason": "infused oil"},
+   "moods": {"value": ["fresh"], "reason": "cooking staple"},
+   "servings": {"value": 24, "reason": "2 cups oil"},
+   "difficulty": {"value": "easy", "reason": "heat and strain"}
+  },
+  "mdb-53528": {
+   "cuisine": {"value": "Colombian", "reason": "chuletas a la criolla"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.sweet": {"value": 1, "reason": "onions, tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chops in creole sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "home dinner"},
+   "servings": {"value": 4, "reason": "4 chops"},
+   "difficulty": {"value": "easy", "reason": "marinate and pan-fry"}
+  },
+  "mdb-53529": {
+   "cuisine": {"value": "Colombian", "reason": "title says Colombian"},
+   "flavor.salty": {"value": 2, "reason": "lots of cheese"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 2, "reason": "cheese"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "cheesy bread rolls"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "breakfast bread"},
+   "servings": {"value": 8, "reason": "8 rolls"},
+   "difficulty": {"value": "easy", "reason": "blend and bake"}
+  },
+  "mdb-53530": {
+   "cuisine": {"value": "Colombian", "reason": "Colombian recipe set"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creamy mustard sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "creamy chicken"},
+   "servings": {"value": 4, "reason": "8 chicken legs"},
+   "difficulty": {"value": "easy", "reason": "sear and simmer"}
+  },
+  "mdb-53531": {
+   "cuisine": {"value": "Colombian", "reason": "pollo a la naranja"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised legs in orange sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "citrus chicken"},
+   "servings": {"value": 4, "reason": "4 chicken legs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53532": {
+   "cuisine": {"value": "Colombian", "reason": "Colombian recipe set"},
+   "flavor.sweet": {"value": 2, "reason": "sweetcorn"},
+   "moods": {"value": ["comfort"], "reason": "creamy soup"},
+   "servings": {"value": 6, "reason": "6 cups water"},
+   "difficulty": {"value": "easy", "reason": "boil and blend"}
+  },
+  "mdb-53533": {
+   "cuisine": {"value": "Colombian", "reason": "lomo de res apanado"},
+   "flavor.salty": {"value": 1, "reason": "seasoned crumb"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "breaded fried steak"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family dinner"},
+   "servings": {"value": 6, "reason": "2lb beef"},
+   "difficulty": {"value": "medium", "reason": "pound, marinate, bread, fry"}
+  },
+  "mdb-53534": {
+   "cuisine": {"value": "Colombian", "reason": "papas chorreadas"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "potatoes in cheese sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy potatoes"},
+   "servings": {"value": 4, "reason": "8 potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and sauce"}
+  },
+  "mdb-53535": {
+   "cuisine": {"value": "Costa Rican", "reason": "tamal de maicena"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "baked cornstarch custard"},
+   "moods": {"value": ["comfort", "festive"], "reason": "holiday sweet"},
+   "servings": {"value": 10, "reason": "4 cups milk"},
+   "difficulty": {"value": "medium", "reason": "tempering eggs, constant stirring"}
+  },
+  "mdb-53536": {
+   "cuisine": {"value": "Costa Rican", "reason": "Costa Rican black beans"},
+   "flavor.salty": {"value": 1, "reason": "1.5 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "soupy beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday beans"},
+   "servings": {"value": 6, "reason": "400g dried beans"},
+   "difficulty": {"value": "easy", "reason": "pressure cooker"}
+  },
+  "mdb-53537": {
+   "cuisine": {"value": "Costa Rican", "reason": "pan de yuca"},
+   "textures": {"value": ["chewy", "fluffy"], "reason": "moist yucca cake"},
+   "moods": {"value": ["comfort"], "reason": "sweet bread"},
+   "servings": {"value": 12, "reason": "12x8 dish"},
+   "difficulty": {"value": "easy", "reason": "creamed batter"}
+  },
+  "mdb-53538": {
+   "cuisine": {"value": "Costa Rican", "reason": "Costa Rican recipe set"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.umami": {"value": 1, "reason": "tomato"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "chopped veg, avocado"},
+   "moods": {"value": ["fresh", "festive"], "reason": "party salsa"},
+   "servings": {"value": 6, "reason": "4 cups salsa"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "chop and mix"}
+  },
+  "mdb-53539": {
+   "cuisine": {"value": "Costa Rican", "reason": "picadillo de vainicas"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "shredded beef"},
+   "textures": {"value": ["tender"], "reason": "finely chopped beans and beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "tortilla filling"},
+   "servings": {"value": 4, "reason": "1lb beans"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  }
+ }
+}

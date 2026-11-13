@@ -1,0 +1,176 @@
+{
+ "batch": 38,
+ "recipes": {
+  "mdb-53540": {
+   "cuisine": {"value": "Costa Rican", "reason": "achiote chicken in the Costa Rican set"},
+   "flavor.sweet": {"value": 1, "reason": "onion, pepper, tomato"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "pressure-cooked thighs in sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "served over rice and beans"},
+   "servings": {"value": 4, "reason": "4 thighs"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53541": {
+   "cuisine": {"value": "Costa Rican", "reason": "gallo pinto with Salsa Lizano"},
+   "flavor.salty": {"value": 2, "reason": "Lizano and salt"},
+   "flavor.sweet": {"value": 1, "reason": "Lizano is slightly sweet"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "rice and beans fried together"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "national breakfast"},
+   "servings": {"value": 4, "reason": "1 1/4 cup rice"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53542": {
+   "cuisine": {"value": "Costa Rican", "reason": "chorreadas"},
+   "flavor.salty": {"value": 1, "reason": "pinch salt, butter"},
+   "flavor.umami": {"value": 0, "reason": "sweet pancake"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "corn pancakes"},
+   "moods": {"value": ["comfort"], "reason": "breakfast treat"},
+   "servings": {"value": 4, "reason": "about 8 pancakes"},
+   "cookMinutes": {"value": 15, "reason": "a few batches of pancakes"},
+   "difficulty": {"value": "easy", "reason": "blend and fry"}
+  },
+  "mdb-53543": {
+   "cuisine": {"value": "Costa Rican", "reason": "dulce de leche, Maria cookies; sits in the Costa Rican set"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "baked cheesecake"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "rich party dessert"},
+   "servings": {"value": 12, "reason": "9-inch springform"},
+   "difficulty": {"value": "medium", "reason": "water bath, long chill"}
+  },
+  "mdb-53544": {
+   "cuisine": {"value": "Cuban", "reason": "Cafe La Llave Cuban espresso"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "custard ice cream"},
+   "moods": {"value": ["indulgent"], "reason": "rich coffee dessert"},
+   "servings": {"value": 6, "reason": "3 cups dairy"},
+   "difficulty": {"value": "medium", "reason": "tempered custard, churning"}
+  },
+  "mdb-53545": {
+   "cuisine": {"value": "Cuban", "reason": "ropa vieja"},
+   "flavor.sweet": {"value": 1, "reason": "peppers, tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny not bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "shredded braised beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow braise"},
+   "servings": {"value": 6, "reason": "2 lb flank steak"},
+   "difficulty": {"value": "medium", "reason": "sear, braise, shred"}
+  },
+  "mdb-53546": {
+   "cuisine": {"value": "Cuban", "reason": "Cuban recipe set"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "thick bean soup"},
+   "servings": {"value": 6, "reason": "3 cans beans"},
+   "difficulty": {"value": "easy", "reason": "simmer and blend"}
+  },
+  "mdb-53547": {
+   "cuisine": {"value": "Cuban", "reason": "Cuban sandwich"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "pressed toasted bread, roast pork"},
+   "moods": {"value": ["indulgent", "hearty"], "reason": "loaded pressed sandwich"},
+   "servings": {"value": 4, "reason": "8 oz loaf, 1 lb pork"},
+   "difficulty": {"value": "medium", "reason": "marinate, roast, press"}
+  },
+  "mdb-53548": {
+   "cuisine": {"value": "Cuban", "reason": "yuca with Cuban set"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "baked fries with avocado dip"},
+   "moods": {"value": ["comfort"], "reason": "fries"},
+   "servings": {"value": 4, "reason": "2 large yuca"},
+   "difficulty": {"value": "easy", "reason": "boil then bake"}
+  },
+  "mdb-53549": {
+   "cuisine": {"value": "Danish", "reason": "Danish recipe set"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "creamy dressing, crisp bacon"},
+   "moods": {"value": ["light", "fresh"], "reason": "chicken salad"},
+   "servings": {"value": 4, "reason": "300g chicken"},
+   "difficulty": {"value": "easy", "reason": "poach, mix, fry"}
+  },
+  "mdb-53550": {
+   "cuisine": {"value": "Danish", "reason": "jordbaertaerte, Danish set"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "marzipan base, custard"},
+   "moods": {"value": ["festive", "fresh"], "reason": "summer strawberry tart"},
+   "servings": {"value": 10, "reason": "24 cm tart"},
+   "difficulty": {"value": "medium", "reason": "shell, custard, assemble"}
+  },
+  "mdb-53551": {
+   "cuisine": {"value": "Danish", "reason": "title says Danish"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "apple, cream, toasted crumbs"},
+   "moods": {"value": ["comfort"], "reason": "old-fashioned dessert"},
+   "servings": {"value": 6, "reason": "800g apples"},
+   "difficulty": {"value": "easy", "reason": "stew, toast, layer"}
+  },
+  "mdb-53552": {
+   "cuisine": {"value": "Danish", "reason": "title says Danish"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt in 500g flour"},
+   "flavor.umami": {"value": 0, "reason": "sweet bun"},
+   "textures": {"value": ["fluffy"], "reason": "soft yeast buns"},
+   "moods": {"value": ["comfort"], "reason": "warm buns"},
+   "servings": {"value": 12, "reason": "10-12 buns"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, two rises"}
+  },
+  "mdb-53553": {
+   "cuisine": {"value": "Danish", "reason": "title says Danish"},
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["tender"], "reason": "browned meatballs"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family dinner"},
+   "servings": {"value": 4, "reason": "500g mince"},
+   "cookMinutes": {"value": 20, "reason": "pan-fry in batches"},
+   "difficulty": {"value": "easy", "reason": "mix, chill, fry"}
+  },
+  "mdb-53554": {
+   "cuisine": {"value": "Danish", "reason": "kartoffelmad smorrebrod"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp onions, mayo, potato"},
+   "moods": {"value": ["hearty"], "reason": "open sandwich lunch"},
+   "servings": {"value": 4, "reason": "8 slices rye"},
+   "difficulty": {"value": "easy", "reason": "boil, fry, assemble"}
+  },
+  "mdb-53555": {
+   "cuisine": {"value": "Danish", "reason": "Danish recipe set"},
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "dressing, radish, asparagus"},
+   "moods": {"value": ["fresh"], "reason": "spring salad"},
+   "servings": {"value": 4, "reason": "600g potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and toss"}
+  },
+  "mdb-53556": {
+   "cuisine": {"value": "Danish", "reason": "rugbrod"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "dark sour bread"},
+   "textures": {"value": ["chewy"], "reason": "dense seeded loaf"},
+   "moods": {"value": ["hearty"], "reason": "dense bread"},
+   "servings": {"value": 16, "reason": "2.5 l loaf"},
+   "difficulty": {"value": "medium", "reason": "knead, long rise, long bake"}
+  },
+  "mdb-53557": {
+   "cuisine": {"value": "Dominican", "reason": "Dominican recipe set"},
+   "flavor.salty": {"value": 2, "reason": "salted wings"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy"], "reason": "double-fried"},
+   "moods": {"value": ["indulgent"], "reason": "fried wings"},
+   "servings": {"value": 4, "reason": "2 lb wings"},
+   "difficulty": {"value": "medium", "reason": "double deep-fry"}
+  },
+  "mdb-53558": {
+   "cuisine": {"value": "Dominican", "reason": "tostones cups"},
+   "textures": {"value": ["crispy"], "reason": "twice-fried plantain"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party bites"},
+   "servings": {"value": 6, "reason": "3 plantains"},
+   "difficulty": {"value": "medium", "reason": "twice deep-fried, shaping"}
+  },
+  "mdb-53559": {
+   "cuisine": {"value": "Dominican", "reason": "sorrel, Caribbean set"},
+   "textures": {"value": ["flaky", "creamy"], "reason": "puff pastry, molten brie"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "holiday appetizer"},
+   "servings": {"value": 8, "reason": "2 lb brie"},
+   "cookMinutes": {"value": 45, "reason": "jam simmer plus bake"},
+   "difficulty": {"value": "medium", "reason": "jam plus wrapped bake"}
+  }
+ }
+}

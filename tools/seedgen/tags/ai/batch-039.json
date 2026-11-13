@@ -1,0 +1,172 @@
+{
+ "batch": 39,
+ "recipes": {
+  "mdb-53560": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "flavor.salty": {"value": 1, "reason": "2.5 tsp salt in 4-5 lb flour"},
+   "flavor.umami": {"value": 0, "reason": "plain bread"},
+   "textures": {"value": ["fluffy"], "reason": "soft enriched buns"},
+   "moods": {"value": ["comfort"], "reason": "warm butter buns"},
+   "servings": {"value": 24, "reason": "huge batch of mini buns"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, two rises"}
+  },
+  "mdb-53561": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "flavor.sour": {"value": 1, "reason": "mustard, mayo tang"},
+   "textures": {"value": ["creamy"], "reason": "whipped yolk filling"},
+   "moods": {"value": ["festive"], "reason": "party appetizer"},
+   "servings": {"value": 8, "reason": "24 egg halves"},
+   "difficulty": {"value": "easy", "reason": "boil, mash, pipe"}
+  },
+  "mdb-53562": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "textures": {"value": ["crispy"], "reason": "deep-fried breadfruit shells"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "fried party bites"},
+   "servings": {"value": 4, "reason": "1 breadfruit"},
+   "difficulty": {"value": "medium", "reason": "boil, shape, deep-fry"}
+  },
+  "mdb-53563": {
+   "cuisine": {"value": "Dominican", "reason": "title says Dominica"},
+   "flavor.salty": {"value": 1, "reason": "1.5 tbsp salt in 3 lb flour"},
+   "textures": {"value": ["chewy"], "reason": "dense kneaded bread"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday bread"},
+   "servings": {"value": 16, "reason": "3 lb flour"},
+   "difficulty": {"value": "medium", "reason": "heavy kneading, two rises"}
+  },
+  "mdb-53564": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica cassava bread"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "coarse griddled farine"},
+   "moods": {"value": ["hearty"], "reason": "plain flatbread"},
+   "servings": {"value": 6, "reason": "4 cups flour"},
+   "cookMinutes": {"value": 20, "reason": "griddle in batches"},
+   "difficulty": {"value": "easy", "reason": "mix and griddle"}
+  },
+  "mdb-53565": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "fried and glazed"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party wings"},
+   "servings": {"value": 4, "reason": "2 lb wings"},
+   "cookMinutes": {"value": 25, "reason": "deep-fry then glaze in oven"},
+   "difficulty": {"value": "medium", "reason": "frenching and deep-frying"}
+  },
+  "mdb-53566": {
+   "cuisine": {"value": "Dominican", "reason": "codfish buljol, Dominica set"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried plantain wraps"},
+   "moods": {"value": ["festive"], "reason": "appetizer"},
+   "servings": {"value": 6, "reason": "3 plantains"},
+   "cookMinutes": {"value": 15, "reason": "pan-fry slices"},
+   "difficulty": {"value": "easy", "reason": "fry and roll"}
+  },
+  "mdb-53567": {
+   "cuisine": {"value": "Dominican", "reason": "title says Dominican"},
+   "flavor.salty": {"value": 2, "reason": "1 tbsp salt"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried dough"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "fried breakfast bread"},
+   "servings": {"value": 8, "reason": "4 cups flour"},
+   "cookMinutes": {"value": 20, "reason": "deep-fry in batches"},
+   "difficulty": {"value": "medium", "reason": "dough plus deep-fry"}
+  },
+  "mdb-53568": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "flavor.salty": {"value": 1, "reason": "salted crust"},
+   "textures": {"value": ["flaky"], "reason": "pie crust"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "party dessert"},
+   "servings": {"value": 12, "reason": "about 12 pops"},
+   "difficulty": {"value": "medium", "reason": "pastry, filling, shaping"}
+  },
+  "mdb-53569": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "blended"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "sweet mango drink"},
+   "servings": {"value": 2, "reason": "3 mangoes"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-53570": {
+   "cuisine": {"value": "Dominican", "reason": "Dominica recipe set"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "set cream and puree"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "rich layered dessert"},
+   "servings": {"value": 8, "reason": "6 cups dairy, small glasses"},
+   "difficulty": {"value": "easy", "reason": "heat, set, layer"}
+  },
+  "mdb-53571": {
+   "cuisine": {"value": "Dominican", "reason": "title says Dominica"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "rough coconut drops"},
+   "moods": {"value": ["comfort"], "reason": "spiced coconut cake"},
+   "servings": {"value": 16, "reason": "4 cups flour, drop cakes"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53572": {
+   "cuisine": {"value": "Dominican", "reason": "cocoy banana, Dominica set"},
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crumbed fried banana"},
+   "moods": {"value": ["indulgent"], "reason": "fried dessert"},
+   "servings": {"value": 4, "reason": "7 small bananas"},
+   "cookMinutes": {"value": 10, "reason": "fry until golden"},
+   "difficulty": {"value": "easy", "reason": "dip and fry"}
+  },
+  "mdb-53573": {
+   "cuisine": {"value": "Dominican", "reason": "end of the Dominica set"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.umami": {"value": 1, "reason": "tomato, peanut"},
+   "textures": {"value": ["crunchy"], "reason": "shredded raw papaya"},
+   "moods": {"value": ["fresh", "light"], "reason": "raw salad"},
+   "servings": {"value": 4, "reason": "half a papaya"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "shred and toss"}
+  },
+  "mdb-53574": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "flavor.salty": {"value": 1, "reason": "1/2 tsp salt"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "yeast base, quark topping"},
+   "moods": {"value": ["comfort"], "reason": "home-baked pie"},
+   "servings": {"value": 8, "reason": "one pie"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, two rises"}
+  },
+  "mdb-53575": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "sponge with apples"},
+   "moods": {"value": ["comfort"], "reason": "simple apple cake"},
+   "servings": {"value": 8, "reason": "one pan"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53576": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "light"], "reason": "veg fritters"},
+   "servings": {"value": 4, "reason": "400g carrots"},
+   "difficulty": {"value": "easy", "reason": "mash, shape, fry, bake"}
+  },
+  "mdb-53577": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "flavor.umami": {"value": 2, "reason": "smoked fish"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "kraut, toast, flaked fish"},
+   "moods": {"value": ["fresh", "light"], "reason": "tangy salad"},
+   "servings": {"value": 2, "reason": "100g fish, 1 egg"},
+   "cookMinutes": {"value": 10, "reason": "boil egg, toast bread"},
+   "difficulty": {"value": "easy", "reason": "boil and mix"}
+  },
+  "mdb-53578": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "waffles"},
+   "moods": {"value": ["comfort", "festive"], "reason": "gingerbread spice"},
+   "servings": {"value": 2, "reason": "100ml flour"},
+   "cookMinutes": {"value": 15, "reason": "a few waffles"},
+   "difficulty": {"value": "easy", "reason": "batter and waffle iron"}
+  },
+  "mdb-53579": {
+   "cuisine": {"value": "Estonian", "reason": "Estonian recipe set"},
+   "textures": {"value": ["chewy"], "reason": "rye honey cakes"},
+   "moods": {"value": ["comfort"], "reason": "simple cookies"},
+   "servings": {"value": 6, "reason": "about 12 small cookies"},
+   "difficulty": {"value": "easy", "reason": "three ingredients"}
+  }
+ }
+}

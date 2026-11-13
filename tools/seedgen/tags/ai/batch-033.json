@@ -1,0 +1,175 @@
+{
+ "batch": 33,
+ "recipes": {
+  "mdb-53440": {
+   "cuisine": {"value": "Aruban", "reason": "Papiamento name, Aruban fish balls"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried cod and potato balls"},
+   "moods": {"value": ["comfort", "festive"], "reason": "party snack"},
+   "servings": {"value": 6, "reason": "one salt cod, 3 potatoes"},
+   "cookMinutes": {"value": 40, "reason": "simmer cod, boil potatoes, fry"},
+   "difficulty": {"value": "medium", "reason": "24-hour soak, shaping, frying"}
+  },
+  "mdb-53441": {
+   "cuisine": {"value": "Aruban", "reason": "Papiamento name"},
+   "textures": {"value": ["tender", "saucy"], "reason": "syrupy baked bananas"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "warm dessert"},
+   "servings": {"value": 4, "reason": "4 bananas"},
+   "difficulty": {"value": "easy", "reason": "boil and bake"}
+  },
+  "mdb-53442": {
+   "cuisine": {"value": "Aruban", "reason": "pastechi-style cheese sticks"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "lots of cheese"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "fried dough, melted cheese"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party snack"},
+   "servings": {"value": 8, "reason": "1kg mozzarella"},
+   "cookMinutes": {"value": 20, "reason": "frying batches"},
+   "difficulty": {"value": "medium", "reason": "wrapping and deep frying"}
+  },
+  "mdb-53443": {
+   "cuisine": {"value": "Aruban", "reason": "Dutch-Caribbean satay"},
+   "textures": {"value": ["tender", "chewy"], "reason": "marinated skewers"},
+   "moods": {"value": ["festive", "hearty"], "reason": "party skewers"},
+   "servings": {"value": 12, "reason": "36 skewers, 5lb beef"},
+   "cookMinutes": {"value": 20, "reason": "frying in batches"},
+   "difficulty": {"value": "easy", "reason": "marinate, skewer, fry"}
+  },
+  "mdb-53444": {
+   "cuisine": {"value": "Austrian", "reason": "Tirolean knodel"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "bread dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Alpine dumplings"},
+   "servings": {"value": 4, "reason": "200g bread, 3 eggs"},
+   "difficulty": {"value": "medium", "reason": "shaping and poaching"}
+  },
+  "mdb-53445": {
+   "cuisine": {"value": "Austrian", "reason": "kaspressknodel"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried cheese dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Alpine comfort food"},
+   "servings": {"value": 4, "reason": "250g bread, 250g cheese"},
+   "cookMinutes": {"value": 15, "reason": "frying both sides"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, fry"}
+  },
+  "mdb-53446": {
+   "cuisine": {"value": "Austrian", "reason": "griessnockerlsuppe"},
+   "moods": {"value": ["comfort", "light"], "reason": "clear dumpling soup"},
+   "servings": {"value": 4, "reason": "1 litre stock"},
+   "difficulty": {"value": "medium", "reason": "shaping quenelles"}
+  },
+  "mdb-53447": {
+   "cuisine": {"value": "Austrian", "reason": "tafelspitz"},
+   "flavor.salty": {"value": 1, "reason": "lightly salted broth"},
+   "flavor.sweet": {"value": 1, "reason": "root veg"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "boiled beef in broth"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Viennese Sunday dish"},
+   "servings": {"value": 6, "reason": "1.5kg brisket"},
+   "difficulty": {"value": "easy", "reason": "long gentle simmer"}
+  },
+  "mdb-53448": {
+   "cuisine": {"value": "Azerbaijani", "reason": "method says Azerbaijani"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.umami": {"value": 0, "reason": "bread"},
+   "textures": {"value": ["chewy", "crispy"], "reason": "crusty flatbread"},
+   "moods": {"value": ["comfort"], "reason": "everyday bread"},
+   "servings": {"value": 8, "reason": "3 cups flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough"}
+  },
+  "mdb-53449": {
+   "cuisine": {"value": "Azerbaijani", "reason": "kelem dolmasi"},
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "cabbage rolls in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "stuffed cabbage"},
+   "servings": {"value": 6, "reason": "large cabbage, 500g lamb"},
+   "difficulty": {"value": "hard", "reason": "blanching, rolling, weighted simmer"}
+  },
+  "mdb-53450": {
+   "cuisine": {"value": "Bahamian", "reason": "Bahamian breakfast grits"},
+   "flavor.salty": {"value": 2, "reason": "1 tsp salt for 1/4 cup grits"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "porridge"},
+   "moods": {"value": ["comfort"], "reason": "breakfast porridge"},
+   "servings": {"value": 1, "reason": "quarter cup grits"},
+   "difficulty": {"value": "easy", "reason": "boil and stir"}
+  },
+  "mdb-53451": {
+   "cuisine": {"value": "Bangladeshi", "reason": "title says Bangladeshi"},
+   "flavor.salty": {"value": 2, "reason": "2 tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "fish"},
+   "textures": {"value": ["tender", "saucy"], "reason": "fish and radish curry"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "home curry"},
+   "servings": {"value": 4, "reason": "450g fish"},
+   "difficulty": {"value": "medium", "reason": "prepping fish and daikon"}
+  },
+  "mdb-53452": {
+   "cuisine": {"value": "Bangladeshi", "reason": "title says Bangladeshi"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "crisp edge, spongy middle"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid sweet"},
+   "servings": {"value": 10, "reason": "about 20 cakes"},
+   "difficulty": {"value": "medium", "reason": "batter rest and deep frying"}
+  },
+  "mdb-53453": {
+   "cuisine": {"value": "Bangladeshi", "reason": "Bengali curry"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chicken and potato curry"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "home curry"},
+   "servings": {"value": 4, "reason": "4 breasts"},
+   "difficulty": {"value": "easy", "reason": "one skillet"}
+  },
+  "mdb-53454": {
+   "cuisine": {"value": "Barbadian", "reason": "Bajan breadfruit dish"},
+   "flavor.sweet": {"value": 1, "reason": "onion, tomato; savoury dish"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "tomato butter sauce"},
+   "textures": {"value": ["tender", "saucy"], "reason": "breadfruit in sauce"},
+   "moods": {"value": ["comfort"], "reason": "starchy side"},
+   "servings": {"value": 4, "reason": "half a breadfruit"},
+   "difficulty": {"value": "easy", "reason": "boil and sauce"}
+  },
+  "mdb-53455": {
+   "cuisine": {"value": "Barbadian", "reason": "Bajan recipe set"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 0, "reason": "nothing sour"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "blended pate"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party spread"},
+   "servings": {"value": 8, "reason": "1lb livers"},
+   "difficulty": {"value": "easy", "reason": "slow cook and blend"}
+  },
+  "mdb-53456": {
+   "cuisine": {"value": "Barbadian", "reason": "title says Bajan"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "soft rolls"},
+   "moods": {"value": ["comfort"], "reason": "everyday bread"},
+   "servings": {"value": 12, "reason": "12 rolls"},
+   "difficulty": {"value": "medium", "reason": "kneading and proving"}
+  },
+  "mdb-53457": {
+   "cuisine": {"value": "Barbadian", "reason": "title says Barbados"},
+   "flavor.salty": {"value": 2, "reason": "seasoned stew"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-cooked meats"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Christmas pepperpot"},
+   "servings": {"value": 8, "reason": "4lb meat plus trotters"},
+   "cookMinutes": {"value": 180, "reason": "slow stewing"},
+   "difficulty": {"value": "medium", "reason": "long simmer, several meats"}
+  },
+  "mdb-53458": {
+   "cuisine": {"value": "Barbadian", "reason": "Bajan breadfruit dish"},
+   "flavor.sweet": {"value": 1, "reason": "onions, tomato"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "tomato butter sauce"},
+   "textures": {"value": ["tender", "saucy"], "reason": "breadfruit in sauce"},
+   "moods": {"value": ["comfort"], "reason": "starchy side"},
+   "difficulty": {"value": "easy", "reason": "boil and sauce"}
+  },
+  "mdb-53459": {
+   "cuisine": {"value": "Barbadian", "reason": "Bajan roti"},
+   "flavor.salty": {"value": 1, "reason": "pinches of salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "tender", "saucy"], "reason": "flatbread with curried filling"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "street roti"},
+   "servings": {"value": 6, "reason": "6 breasts, 1lb flour"}
+  }
+ }
+}

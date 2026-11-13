@@ -1,0 +1,13 @@
+{
+ "batch": 40,
+ "recipes": {
+  "mdb-53580": {
+   "cuisine": {"value": "Indian", "reason": "modak, Ganesh Chaturthi sweet"},
+   "textures": {"value": ["chewy"], "reason": "pressed coconut and jaggery"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "festival sweet"},
+   "servings": {"value": 6, "reason": "2 cups coconut, about 12 modaks"},
+   "cookMinutes": {"value": 0, "reason": "no cooking, mix and shape"},
+   "difficulty": {"value": "easy", "reason": "mix and mould"}
+  }
+ }
+}

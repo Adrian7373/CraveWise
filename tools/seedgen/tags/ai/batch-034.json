@@ -1,0 +1,178 @@
+{
+ "batch": 34,
+ "recipes": {
+  "mdb-53460": {
+   "cuisine": {"value": "Barbadian", "reason": "title says Bajan"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "coconut bread"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas bread"},
+   "servings": {"value": 16, "reason": "4 cups flour, two loaves"},
+   "difficulty": {"value": "easy", "reason": "quick bread"}
+  },
+  "mdb-53461": {
+   "cuisine": {"value": "Barbadian", "reason": "Bajan macaroni pie"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "cheesy bake, crumb top"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "Sunday side"},
+   "servings": {"value": 6, "reason": "250g macaroni"},
+   "difficulty": {"value": "easy", "reason": "boil, mix, bake"}
+  },
+  "mdb-53462": {
+   "cuisine": {"value": "Belgian", "reason": "uses Belgian cassonade"},
+   "flavor.salty": {"value": 1, "reason": "butter, salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "spiral butter cookies"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "teatime cookies"},
+   "servings": {"value": 12, "reason": "250g flour"},
+   "difficulty": {"value": "medium", "reason": "chill, roll, slice"}
+  },
+  "mdb-53463": {
+   "cuisine": {"value": "Belgian", "reason": "title says Belgian"},
+   "textures": {"value": ["tender", "saucy"], "reason": "meatballs in syrup sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Liege bistro classic"},
+   "servings": {"value": 4, "reason": "600g mince"},
+   "difficulty": {"value": "medium", "reason": "meatballs plus long sauce"}
+  },
+  "mdb-53464": {
+   "cuisine": {"value": "Belgian", "reason": "Flemish hutsepot"},
+   "flavor.sweet": {"value": 1, "reason": "carrots, turnip"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "veg and sausage stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "winter hotpot"},
+   "servings": {"value": 4, "reason": "4 sausages"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53465": {
+   "cuisine": {"value": "Belgian", "reason": "Belgian recipe set"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "garlic butter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "pan-fried legs"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "bistro dish"},
+   "servings": {"value": 2, "reason": "300g frog legs"},
+   "difficulty": {"value": "easy", "reason": "soak and pan-fry"}
+  },
+  "mdb-53466": {
+   "cuisine": {"value": "Belgian", "reason": "title says Belgian"},
+   "flavor.salty": {"value": 1, "reason": "seasoned broth"},
+   "flavor.sweet": {"value": 1, "reason": "leeks, carrot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "brothy"], "reason": "creamy chicken stew"},
+   "moods": {"value": ["comfort"], "reason": "Ghent classic"},
+   "servings": {"value": 4, "reason": "leg and breast"},
+   "difficulty": {"value": "medium", "reason": "poach, julienne, egg liaison"}
+  },
+  "mdb-53467": {
+   "cuisine": {"value": "Belgian", "reason": "Liege salad"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy", "crispy"], "reason": "potatoes, beans, bacon"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "warm salad"},
+   "servings": {"value": 4, "reason": "350g potatoes, 2 eggs"},
+   "difficulty": {"value": "easy", "reason": "boil and toss"}
+  },
+  "mdb-53468": {
+   "cuisine": {"value": "Belgian", "reason": "title says Belgian"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "tender"], "reason": "cabbage mash"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Brussels mash"},
+   "servings": {"value": 2, "reason": "2 sausages, 450g potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil, saute, mash"}
+  },
+  "mdb-53469": {
+   "cuisine": {"value": "International", "reason": "generic pumpkin beef stew"},
+   "flavor.sweet": {"value": 1, "reason": "pumpkin"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "thick stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "autumn stew"},
+   "servings": {"value": 8, "reason": "3lb beef, 3lb potatoes"},
+   "difficulty": {"value": "easy", "reason": "brown and simmer"}
+  },
+  "mdb-53470": {
+   "cuisine": {"value": "Motswana", "reason": "seswaa, Botswana's national dish"},
+   "flavor.salty": {"value": 2, "reason": "simple salt seasoning"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "pounded shredded beef"},
+   "moods": {"value": ["festive", "hearty"], "reason": "celebration dish"},
+   "servings": {"value": 6, "reason": "1kg beef"},
+   "difficulty": {"value": "easy", "reason": "slow cook and pound"}
+  },
+  "mdb-53471": {
+   "cuisine": {"value": "Motswana", "reason": "Botswana flatbread"},
+   "flavor.salty": {"value": 1, "reason": "1.5 tsp salt"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "pan-cooked bread"},
+   "moods": {"value": ["comfort"], "reason": "everyday bread"},
+   "servings": {"value": 12, "reason": "12 portions"},
+   "difficulty": {"value": "easy", "reason": "simple dough, pan-cook"}
+  },
+  "mdb-53472": {
+   "cuisine": {"value": "Motswana", "reason": "title says Botswana"},
+   "flavor.salty": {"value": 1, "reason": "1.5 tsp salt"},
+   "textures": {"value": ["fluffy"], "reason": "steamed dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "stew topping"},
+   "servings": {"value": 8, "reason": "3 cups flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, steaming on stew"}
+  },
+  "mdb-53473": {
+   "cuisine": {"value": "Motswana", "reason": "title says Botswana"},
+   "flavor.salty": {"value": 1, "reason": "salt to taste"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "spinach"},
+   "flavor.umami": {"value": 1, "reason": "tomato"},
+   "textures": {"value": ["tender", "saucy"], "reason": "wilted curried greens"},
+   "moods": {"value": ["comfort", "light"], "reason": "veg side"},
+   "servings": {"value": 4, "reason": "one bunch spinach"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53474": {
+   "cuisine": {"value": "Motswana", "reason": "title says Botswana"},
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried doughnut bites"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "street snack"},
+   "servings": {"value": 8, "reason": "300g flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, deep frying"}
+  },
+  "mdb-53475": {
+   "cuisine": {"value": "Brazilian", "reason": "title says Brazilian"},
+   "flavor.salty": {"value": 1, "reason": "butter, pinch salt"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "fudgy truffles, nut coating"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "party sweets"},
+   "servings": {"value": 12, "reason": "about 25 truffles"},
+   "difficulty": {"value": "easy", "reason": "stir, chill, roll"}
+  },
+  "mdb-53476": {
+   "cuisine": {"value": "Brazilian", "reason": "title says Brazilian"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["chewy", "crispy"], "reason": "crisp shell, stretchy middle"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy bread"},
+   "servings": {"value": 8, "reason": "about 24 balls"},
+   "difficulty": {"value": "easy", "reason": "choux-style dough"}
+  },
+  "mdb-53477": {
+   "cuisine": {"value": "Brazilian", "reason": "quindim"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["smooth", "chewy"], "reason": "glossy custard, coconut base"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "party sweet"},
+   "servings": {"value": 4, "reason": "4 ramekins"},
+   "difficulty": {"value": "medium", "reason": "water bath, unmoulding"}
+  },
+  "mdb-53478": {
+   "cuisine": {"value": "Brazilian", "reason": "Brazilian street corn"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "charred corn, mayo"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "barbecue side"},
+   "servings": {"value": 6, "reason": "6 cobs"},
+   "difficulty": {"value": "easy", "reason": "boil and grill"}
+  },
+  "mdb-53479": {
+   "cuisine": {"value": "Brazilian", "reason": "Brazilian recipe set"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomato"},
+   "textures": {"value": ["crunchy"], "reason": "chunky raw salsa"},
+   "moods": {"value": ["fresh", "light"], "reason": "fresh salsa"},
+   "servings": {"value": 4, "reason": "125g tomatoes, condiment"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "pulse in a processor"}
+  }
+ }
+}

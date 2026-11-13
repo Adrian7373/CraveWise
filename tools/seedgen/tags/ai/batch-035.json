@@ -1,0 +1,174 @@
+{
+ "batch": 35,
+ "recipes": {
+  "mdb-53480": {
+   "cuisine": {"value": "Brazilian", "reason": "Brazilian recipe set"},
+   "flavor.sweet": {"value": 0, "reason": "savoury sauce"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "mayo, garlic"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "blended sauce"},
+   "moods": {"value": ["fresh"], "reason": "zingy condiment"},
+   "servings": {"value": 6, "reason": "small bowl of sauce"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-53481": {
+   "cuisine": {"value": "Brazilian", "reason": "Bahia moqueca"},
+   "textures": {"value": ["creamy", "saucy", "tender"], "reason": "coconut stew"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "coconut seafood stew"},
+   "servings": {"value": 4, "reason": "450g prawns"},
+   "difficulty": {"value": "easy", "reason": "marinate and simmer"}
+  },
+  "mdb-53482": {
+   "cuisine": {"value": "Brazilian", "reason": "feijoada"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow bean and meat stew"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Saturday feast"},
+   "servings": {"value": 8, "reason": "1.4kg mixed meats"},
+   "difficulty": {"value": "medium", "reason": "searing many meats, long simmer"}
+  },
+  "mdb-53483": {
+   "cuisine": {"value": "Brazilian", "reason": "acaraje from Bahia"},
+   "flavor.salty": {"value": 1, "reason": "seasoned batter"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "street food"},
+   "servings": {"value": 6, "reason": "800g peas"},
+   "difficulty": {"value": "medium", "reason": "purees, shaping, deep frying"}
+  },
+  "mdb-53484": {
+   "cuisine": {"value": "Brazilian", "reason": "palmito salad"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomatoes"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "palm hearts, tomatoes"},
+   "moods": {"value": ["fresh", "light"], "reason": "simple salad"},
+   "servings": {"value": 4, "reason": "400g palm hearts"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "toss"}
+  },
+  "mdb-53485": {
+   "cuisine": {"value": "Brazilian", "reason": "title says Brazilian"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "sponge with glossy glaze"},
+   "moods": {"value": ["comfort", "festive"], "reason": "birthday cake"},
+   "servings": {"value": 10, "reason": "20cm cake"},
+   "difficulty": {"value": "easy", "reason": "blender batter"}
+  },
+  "mdb-53486": {
+   "cuisine": {"value": "Bulgarian", "reason": "bob chorba"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "peppers, carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "bean soup"},
+   "servings": {"value": 8, "reason": "1lb beans, 6 cups water"},
+   "difficulty": {"value": "easy", "reason": "soak and simmer"}
+  },
+  "mdb-53487": {
+   "cuisine": {"value": "Bulgarian", "reason": "Bulgarian recipe set"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "moods": {"value": ["comfort"], "reason": "creamy soup"},
+   "servings": {"value": 4, "reason": "1lb mushrooms"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53488": {
+   "cuisine": {"value": "Bulgarian", "reason": "Bulgarian recipe set"},
+   "flavor.sweet": {"value": 1, "reason": "carrots, cabbage"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised cabbage and beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-pan dinner"},
+   "servings": {"value": 4, "reason": "1lb beef"},
+   "difficulty": {"value": "easy", "reason": "one braiser"}
+  },
+  "mdb-53489": {
+   "cuisine": {"value": "Bulgarian", "reason": "Bulgarian potato moussaka"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "tender"], "reason": "custard top, potatoes"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family bake"},
+   "servings": {"value": 6, "reason": "9x13 dish"},
+   "difficulty": {"value": "medium", "reason": "meat, bake, custard topping"}
+  },
+  "mdb-53490": {
+   "cuisine": {"value": "Bulgarian", "reason": "Bulgarian stuffed peppers"},
+   "flavor.sweet": {"value": 1, "reason": "red pepper"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "raw pepper, cheese filling"},
+   "moods": {"value": ["fresh", "light"], "reason": "no-cook starter"},
+   "servings": {"value": 4, "reason": "4 peppers"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "mix and fill"}
+  },
+  "mdb-53491": {
+   "cuisine": {"value": "Bulgarian", "reason": "shopska salad"},
+   "flavor.sweet": {"value": 1, "reason": "ripe tomatoes"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "feta, tomato"},
+   "textures": {"value": ["crunchy"], "reason": "chopped raw veg"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer salad"},
+   "servings": {"value": 4, "reason": "3 cups tomato"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "chop and toss"}
+  },
+  "mdb-53492": {
+   "cuisine": {"value": "Bulgarian", "reason": "title says Bulgarian"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "lettuce, radish"},
+   "flavor.umami": {"value": 0, "reason": "raw greens"},
+   "textures": {"value": ["crunchy"], "reason": "crisp greens"},
+   "moods": {"value": ["fresh", "light"], "reason": "spring salad"},
+   "servings": {"value": 4, "reason": "half a lettuce"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "slice and dress"}
+  },
+  "mdb-53493": {
+   "cuisine": {"value": "Bulgarian", "reason": "title says Bulgarian"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "soft cookies, set chocolate"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "holiday cookies"},
+   "servings": {"value": 16, "reason": "4 cups flour"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, dip"}
+  },
+  "mdb-53494": {
+   "cuisine": {"value": "Bulgarian", "reason": "banitsa"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 1, "reason": "feta tang"},
+   "textures": {"value": ["creamy", "fluffy"], "reason": "cheesy egg bake"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy breakfast bake"},
+   "servings": {"value": 6, "reason": "8x8 dish"},
+   "difficulty": {"value": "easy", "reason": "whisk and bake"}
+  },
+  "mdb-53495": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "textures": {"value": ["creamy", "tender"], "reason": "custardy coconut fish"},
+   "moods": {"value": ["comfort", "festive"], "reason": "national dish"},
+   "servings": {"value": 4, "reason": "1lb fish"},
+   "difficulty": {"value": "medium", "reason": "banana-leaf steaming"}
+  },
+  "mdb-53496": {
+   "cuisine": {"value": "Cambodian", "reason": "bai sach chrouk"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "grilled pork, rice"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "street breakfast"},
+   "servings": {"value": 4, "reason": "650g pork, 2 cups rice"},
+   "difficulty": {"value": "easy", "reason": "marinate and grill"}
+  },
+  "mdb-53497": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "herby noodle soup"},
+   "servings": {"value": 4, "reason": "8 cups water, 8oz noodles"},
+   "difficulty": {"value": "easy", "reason": "one pot plus noodles"}
+  },
+  "mdb-53498": {
+   "cuisine": {"value": "Cambodian", "reason": "Khmer red curry"},
+   "textures": {"value": ["creamy", "saucy", "tender"], "reason": "coconut curry"},
+   "moods": {"value": ["comfort", "festive"], "reason": "celebration curry"},
+   "servings": {"value": 4, "reason": "1lb chicken"},
+   "difficulty": {"value": "easy", "reason": "brown and simmer"}
+  },
+  "mdb-53499": {
+   "cuisine": {"value": "Cambodian", "reason": "prahok ktis"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "coconut pork dip"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "dip with veg"},
+   "servings": {"value": 6, "reason": "1lb pork dip"},
+   "difficulty": {"value": "easy", "reason": "one skillet"}
+  }
+ }
+}
