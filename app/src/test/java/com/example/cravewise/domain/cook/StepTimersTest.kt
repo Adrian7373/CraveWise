@@ -48,6 +48,9 @@ class StepTimersTest {
         assertTrue(StepTimers.find("Add 2 cups of stock and a few minutes later the rice").isEmpty())
         assertTrue(StepTimers.find("Preheat to 180C, gas mark 4").isEmpty())
         assertTrue(StepTimers.find("Leave for 48 hours").isEmpty()) // over a day
+        assertTrue(StepTimers.find("Fry the chicken a second time until darker").isEmpty()) // ordinal
+        assertEquals(listOf(60), seconds("Stir for a minute"))
+        assertEquals(listOf(30), seconds("Blend for thirty seconds"))
     }
 
     @Test fun rangeCoversTheMatchedText() {

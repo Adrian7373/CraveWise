@@ -50,6 +50,8 @@ def find_seconds(text: str) -> list[int]:
     found: list[int] = []
     for m in PATTERN.finditer(text):
         unit = _unit(m.group(3))
+        if unit == 1.0 and m.group(1).strip().lower() in ("a", "an"):
+            continue  # "a second time" is an ordinal, not a 1-second timer (same as StepTimers.kt)
         low = _parse(m.group(1))
         if unit is None or low is None:
             continue

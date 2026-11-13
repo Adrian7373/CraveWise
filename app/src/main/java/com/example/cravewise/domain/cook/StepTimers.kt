@@ -20,6 +20,8 @@ object StepTimers {
         for (m in PATTERN.findAll(text)) {
             // Numbered groups: named-group lookup needs API 26.
             val unit = unitSeconds(m.groupValues[3]) ?: continue
+            // "a second time", "a second batch": ordinal, not a 1-second timer.
+            if (unit == 1.0 && m.groupValues[1].trim().lowercase() in ARTICLES) continue
             val low = parse(m.groupValues[1]) ?: continue
             val high = m.groupValues[2].takeIf { it.isNotEmpty() }?.let(::parse)
             val extraMinutes = m.groupValues[4].takeIf { it.isNotEmpty() }?.let(::parse)
@@ -54,6 +56,7 @@ object StepTimers {
     private const val MINUTE = 60.0
     private const val HOUR = 3600.0
     private const val MAX_SECONDS = 24 * 3600
+    private val ARTICLES = setOf("a", "an")
 
     private val WORDS = mapOf(
         "a" to 1.0, "an" to 1.0, "one" to 1.0, "two" to 2.0, "three" to 3.0, "four" to 4.0,
