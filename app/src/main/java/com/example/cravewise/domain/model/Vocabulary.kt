@@ -4,9 +4,9 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /*
- * Controlled vocabularies shared by the seed dataset (tools/dataset.py) and the app.
+ * Controlled vocabularies shared by the seed generator (tools/seedgen, which reads this file) and the app.
  * The @SerialName values are the wire format AND what Room stores, so never rename them;
- * add new entries instead (and mirror them in tools/dataset.py).
+ * add new entries instead. tools/seedgen parses the @SerialName values here, so there's nothing to mirror.
  */
 
 /** EU 14 allergens. Derived per recipe from canonical ingredients, never hand-tagged. */

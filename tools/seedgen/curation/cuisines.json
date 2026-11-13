@@ -1,0 +1,5 @@
+{
+ "_comment": "Allowed cuisines = every strArea from TheMealDB list.php?a=list, plus `extra`. `aliases` maps a raw strArea (or another spelling) to the cuisine shown in the app.",
+ "aliases": {},
+ "extra": []
+}

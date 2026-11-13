@@ -23,7 +23,7 @@ data class DerivedTags(
  * canonical ingredient data, never from hand tags or heuristics). Every line counts, including
  * garnishes and "optional" ones, so we err on the side of excluding a recipe.
  *
- * tools/dataset.py has a preview copy of these rules for the review CSV; keep them in step.
+ * tools/seedgen has a preview copy of these rules for its review sheets; keep them in step.
  */
 object DietRules {
     private val animalFlesh = setOf(

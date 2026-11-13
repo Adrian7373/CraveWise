@@ -9,7 +9,7 @@ import org.junit.Test
 import java.io.File
 
 /**
- * Guards the bundled dataset (output of tools/dataset.py build) so a bad export fails CI instead
+ * Guards the bundled dataset (output of tools/seedgen/build.py) so a bad export fails CI instead
  * of crashing the import on a tester's phone.
  */
 class SeedAssetTest {

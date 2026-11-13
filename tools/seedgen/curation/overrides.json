@@ -1,0 +1,237 @@
+{
+ "mdb-52791": {
+  "reviewed": false,
+  "cuisine": "British",
+  "mealTypes": [
+   "dessert"
+  ],
+  "flavor": {
+   "salty": 0,
+   "sweet": 5,
+   "sour": 2,
+   "bitter": 0,
+   "umami": 0,
+   "spicy": 0
+  },
+  "textures": [
+   "creamy",
+   "crunchy"
+  ],
+  "moods": [
+   "indulgent",
+   "fresh"
+  ],
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "difficulty": "easy",
+  "notes": "pilot"
+ },
+ "mdb-52831": {
+  "reviewed": false,
+  "cuisine": "Japanese",
+  "mealTypes": [
+   "main",
+   "snack"
+  ],
+  "flavor": {
+   "salty": 3,
+   "sweet": 1,
+   "sour": 1,
+   "bitter": 0,
+   "umami": 4,
+   "spicy": 0
+  },
+  "textures": [
+   "crispy",
+   "tender"
+  ],
+  "moods": [
+   "indulgent",
+   "comfort"
+  ],
+  "servings": 4,
+  "prepMinutes": 70,
+  "cookMinutes": 20,
+  "difficulty": "medium",
+  "notes": "pilot; prep includes 1h marinade"
+ },
+ "mdb-52982": {
+  "reviewed": false,
+  "cuisine": "Italian",
+  "mealTypes": [
+   "main"
+  ],
+  "flavor": {
+   "salty": 4,
+   "sweet": 0,
+   "sour": 0,
+   "bitter": 0,
+   "umami": 4,
+   "spicy": 0
+  },
+  "textures": [
+   "creamy"
+  ],
+  "moods": [
+   "comfort",
+   "indulgent"
+  ],
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 15,
+  "difficulty": "medium",
+  "extraIngredients": [
+   {
+    "ingredientId": "butter",
+    "rawMeasure": "50g"
+   },
+   {
+    "ingredientId": "parmesan",
+    "rawMeasure": "50g"
+   },
+   {
+    "ingredientId": "garlic",
+    "rawMeasure": "2 cloves"
+   }
+  ],
+  "notes": "pilot; steps use butter/parmesan/garlic not in source list"
+ },
+ "mdb-53069": {
+  "reviewed": false,
+  "cuisine": "Filipino",
+  "mealTypes": [
+   "main"
+  ],
+  "flavor": {
+   "salty": 4,
+   "sweet": 1,
+   "sour": 3,
+   "bitter": 0,
+   "umami": 4,
+   "spicy": 0
+  },
+  "textures": [
+   "tender",
+   "saucy"
+  ],
+  "moods": [
+   "comfort",
+   "hearty"
+  ],
+  "servings": 4,
+  "prepMinutes": 70,
+  "cookMinutes": 30,
+  "difficulty": "easy",
+  "notes": "pilot; prep includes 1h marinade"
+ },
+ "mdb-53076": {
+  "reviewed": false,
+  "cuisine": "Indian",
+  "mealTypes": [
+   "breakfast",
+   "snack"
+  ],
+  "flavor": {
+   "salty": 2,
+   "sweet": 0,
+   "sour": 0,
+   "bitter": 0,
+   "umami": 2,
+   "spicy": 0
+  },
+  "textures": [
+   "fluffy"
+  ],
+  "moods": [
+   "comfort",
+   "light"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "cookMinutes": 5,
+  "difficulty": "easy",
+  "notes": "pilot"
+ },
+ "mdb-53133": {
+  "reviewed": false,
+  "cuisine": "Argentinian",
+  "mealTypes": [
+   "main"
+  ],
+  "flavor": {
+   "salty": 3,
+   "sweet": 0,
+   "sour": 0,
+   "bitter": 1,
+   "umami": 4,
+   "spicy": 0
+  },
+  "textures": [
+   "tender"
+  ],
+  "moods": [
+   "festive",
+   "hearty"
+  ],
+  "servings": 8,
+  "prepMinutes": 20,
+  "cookMinutes": 120,
+  "difficulty": "medium",
+  "notes": "pilot"
+ },
+ "mdb-53199": {
+  "reviewed": false,
+  "cuisine": "Thai",
+  "mealTypes": [
+   "main"
+  ],
+  "flavor": {
+   "salty": 3,
+   "sweet": 1,
+   "sour": 0,
+   "bitter": 0,
+   "umami": 4,
+   "spicy": 3
+  },
+  "textures": [
+   "tender",
+   "saucy"
+  ],
+  "moods": [
+   "light"
+  ],
+  "servings": 2,
+  "prepMinutes": 10,
+  "cookMinutes": 5,
+  "difficulty": "easy",
+  "notes": "pilot"
+ },
+ "mdb-53215": {
+  "reviewed": false,
+  "cuisine": "Saudi",
+  "mealTypes": [
+   "breakfast",
+   "main"
+  ],
+  "flavor": {
+   "salty": 2,
+   "sweet": 1,
+   "sour": 2,
+   "bitter": 0,
+   "umami": 3,
+   "spicy": 1
+  },
+  "textures": [
+   "saucy"
+  ],
+  "moods": [
+   "comfort"
+  ],
+  "servings": 2,
+  "prepMinutes": 5,
+  "cookMinutes": 20,
+  "difficulty": "easy",
+  "notes": "pilot"
+ }
+}

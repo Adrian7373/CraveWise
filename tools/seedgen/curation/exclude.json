@@ -1,0 +1,8 @@
+{
+ "_comment": "manual: {idMeal: reason} you add by hand. duplicates: recomputed by build.py.",
+ "manual": {},
+ "duplicates": {
+  "53064": "duplicate of 52835 Fettucine alfredo",
+  "53314": "duplicate of 53296 Sauerkraut pierogi"
+ }
+}

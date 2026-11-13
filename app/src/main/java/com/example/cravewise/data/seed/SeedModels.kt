@@ -12,7 +12,7 @@ import com.example.cravewise.domain.model.Texture
 import kotlinx.serialization.Serializable
 
 /*
- * Wire format of the JSON files in assets/seed, produced by tools/dataset.py `build`. Holds raw facts only:
+ * Wire format of the JSON files in assets/seed, produced by `python tools/seedgen/build.py`. Holds raw facts only:
  * derived tags (allergens, diets, proteins) are computed on import by DietRules.
  */
 
