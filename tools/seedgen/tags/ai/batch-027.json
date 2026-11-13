@@ -1,0 +1,156 @@
+{
+ "batch": 27,
+ "recipes": {
+  "mdb-53317": {
+   "flavor.salty": {"value": 2, "reason": "seasoned filling"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 3, "reason": "steak, egg"},
+   "textures": {"value": ["flaky", "tender"], "reason": "lard pastry, beef filling"},
+   "moods": {"value": ["hearty", "festive"], "reason": "party pastries"},
+   "servings": {"value": 8, "reason": "600g flour, 750g steak"},
+   "difficulty": {"value": "medium", "reason": "dough, filling, shaping"}
+  },
+  "mdb-53318": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "batter cake with melted cheese"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "picnic bake"},
+   "servings": {"value": 6, "reason": "20cm springform"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53319": {
+   "textures": {"value": ["tender", "fluffy", "crispy"], "reason": "steak, brioche, bacon"},
+   "moods": {"value": ["indulgent", "hearty"], "reason": "monster sandwich"},
+   "servings": {"value": 8, "reason": "8 buns, 8 steaks"},
+   "difficulty": {"value": "hard", "reason": "homemade brioche plus many fillings"}
+  },
+  "mdb-53320": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "chocolate-dipped sandwich cookies"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "gift cookies"},
+   "servings": {"value": 15, "reason": "30 cookies, 15 sandwiches"},
+   "difficulty": {"value": "medium", "reason": "rolling, sandwiching, dipping"}
+  },
+  "mdb-53321": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "crumbly cookies, caramel"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "sandwich cookies"},
+   "servings": {"value": 12, "reason": "about 24 cookies"},
+   "difficulty": {"value": "medium", "reason": "chill, roll, sandwich"}
+  },
+  "mdb-53322": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "set custard"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "caramel custard"},
+   "servings": {"value": 4, "reason": "4 flan containers"},
+   "difficulty": {"value": "medium", "reason": "caramel and water bath"}
+  },
+  "mdb-53323": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "creamy", "crunchy"], "reason": "sponge, cream, meringue"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "celebration cake"},
+   "servings": {"value": 12, "reason": "20cm layered cake"}
+  },
+  "mdb-53324": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "cocoa pastry, caramel"},
+   "moods": {"value": ["indulgent"], "reason": "sweet pastries"},
+   "servings": {"value": 12, "reason": "250g flour"},
+   "difficulty": {"value": "medium", "reason": "pastry, filling, folding"}
+  },
+  "mdb-53325": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "crisp outside, soft inside"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday bread"},
+   "servings": {"value": 4, "reason": "2 cups masarepa, about 8 arepas"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, bake"}
+  },
+  "mdb-53326": {
+   "flavor.sweet": {"value": 1, "reason": "corn, squash"},
+   "textures": {"value": ["brothy", "tender"], "reason": "hearty soup-stew"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "Sunday soup"},
+   "servings": {"value": 8, "reason": "8 cups stock, 2lb shank"},
+   "difficulty": {"value": "medium", "reason": "many root veg, long simmer"}
+  },
+  "mdb-53327": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender", "saucy"], "reason": "coconut sauce"},
+   "moods": {"value": ["comfort"], "reason": "mild coconut curry"},
+   "servings": {"value": 4, "reason": "2 breasts"},
+   "difficulty": {"value": "easy", "reason": "blend sauce, simmer"}
+  },
+  "mdb-53328": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "shredded beef in sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "pabellon beef"},
+   "servings": {"value": 6, "reason": "2lb steak"},
+   "difficulty": {"value": "easy", "reason": "pressure cook and shred"}
+  },
+  "mdb-53329": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender", "chewy"], "reason": "arepa, shredded beef, cheese"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "stuffed arepas"},
+   "servings": {"value": 6, "reason": "6 arepas"},
+   "difficulty": {"value": "medium", "reason": "2-hour beef plus arepas"}
+  },
+  "mdb-53330": {
+   "flavor.sweet": {"value": 1, "reason": "sweetcorn"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp cassava, melted cheese"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "pizza night"},
+   "servings": {"value": 3, "reason": "6 casabe slices"},
+   "difficulty": {"value": "easy", "reason": "top and bake"}
+  },
+  "mdb-53331": {
+   "flavor.salty": {"value": 1, "reason": "butter, pinch salt"},
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "oat pancakes"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "breakfast with berries"},
+   "servings": {"value": 2, "reason": "1 egg, 150g oats"},
+   "cookMinutes": {"value": 10, "reason": "pan-frying"},
+   "difficulty": {"value": "easy", "reason": "blend and fry"}
+  },
+  "mdb-53332": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried corn turnovers"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party empanadas"},
+   "servings": {"value": 6, "reason": "450g beef"},
+   "difficulty": {"value": "medium", "reason": "filling, shaping, frying"}
+  },
+  "mdb-53333": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "airy set mousse"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "tropical dessert"},
+   "servings": {"value": 8, "reason": "6 egg whites, 1 can milk"},
+   "difficulty": {"value": "medium", "reason": "gelatine and whisked whites"}
+  },
+  "mdb-53334": {
+   "textures": {"value": ["crispy", "tender"], "reason": "grilled arepa, shredded meat"},
+   "moods": {"value": ["hearty", "festive"], "reason": "national dish in a bun"},
+   "servings": {"value": 2, "reason": "2 arepas"},
+   "cookMinutes": {"value": 15, "reason": "warm fillings, grill arepas"},
+   "difficulty": {"value": "easy", "reason": "assemble prepared parts"}
+  },
+  "mdb-53335": {
+   "flavor.salty": {"value": 4, "reason": "salt beef"},
+   "flavor.sweet": {"value": 1, "reason": "carrots, turnip"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "boiled dinner"},
+   "moods": {"value": ["hearty", "festive"], "reason": "Newfoundland Sunday dinner"},
+   "servings": {"value": 8, "reason": "8 potatoes, 2lb beef"},
+   "difficulty": {"value": "medium", "reason": "overnight soak, pease pudding bag"}
+  },
+  "mdb-53336": {
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-baked beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "baked beans"},
+   "servings": {"value": 6, "reason": "2 cups dried beans"},
+   "difficulty": {"value": "easy", "reason": "soak and slow bake"}
+  }
+ }
+}

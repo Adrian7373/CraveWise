@@ -1,0 +1,146 @@
+{
+ "batch": 22,
+ "recipes": {
+  "mdb-53212": {
+   "textures": {"value": ["tender", "chewy"], "reason": "sticky glazed drumsticks"},
+   "moods": {"value": ["hearty", "festive"], "reason": "picnic chicken"},
+   "servings": {"value": 4, "reason": "8 drumsticks"},
+   "difficulty": {"value": "easy", "reason": "coat and roast"}
+  },
+  "mdb-53213": {
+   "moods": {"value": ["light", "fresh"], "reason": "clear fish broth"},
+   "servings": {"value": 2, "reason": "100g noodles, 200g fish"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53214": {
+   "moods": {"value": ["comfort", "fresh"], "reason": "fragrant soup"},
+   "servings": {"value": 8, "reason": "2 litres stock"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53216": {
+   "textures": {"value": ["crispy", "creamy", "chewy"], "reason": "crisp pastry, stretchy cheese"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "Ramadan dessert"},
+   "servings": {"value": 8, "reason": "400g kataifi"},
+   "difficulty": {"value": "medium", "reason": "cheese layer, syrup, baking"}
+  },
+  "mdb-53217": {
+   "flavor.bitter": {"value": 0, "reason": "warm spices"},
+   "textures": {"value": ["tender", "saucy"], "reason": "pulled beef"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "slow-cooker wraps"},
+   "servings": {"value": 6, "reason": "1kg chuck"},
+   "difficulty": {"value": "easy", "reason": "slow cooker does the work"}
+  },
+  "mdb-53218": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "spiced chicken, yogurt sauce"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "wraps with sauce"},
+   "servings": {"value": 6, "reason": "1kg chicken"},
+   "difficulty": {"value": "medium", "reason": "overnight marinade, several parts"}
+  },
+  "mdb-53219": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "egg, feta, tomato"},
+   "textures": {"value": ["saucy", "tender"], "reason": "eggs in sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "brunch skillet"},
+   "servings": {"value": 2, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53220": {
+   "flavor.salty": {"value": 2, "reason": "stock cube"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "spiced rice and chicken"},
+   "moods": {"value": ["hearty", "festive"], "reason": "family rice platter"},
+   "servings": {"value": 4, "reason": "1 cup rice, 400g chicken"},
+   "difficulty": {"value": "easy", "reason": "boil, saute, bake"}
+  },
+  "mdb-53221": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "shortbread with date filling"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid biscuits"},
+   "servings": {"value": 16, "reason": "about 25 biscuits"},
+   "difficulty": {"value": "hard", "reason": "filling and moulding each biscuit"}
+  },
+  "mdb-53222": {
+   "flavor.sweet": {"value": 1, "reason": "tomato, pepper"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "tomato, egg"},
+   "textures": {"value": ["saucy", "tender"], "reason": "eggs in sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "brunch"},
+   "servings": {"value": 1, "reason": "2 eggs, 2 toast"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53223": {
+   "flavor.salty": {"value": 2, "reason": "1 tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "spiced meat"},
+   "textures": {"value": ["crispy", "flaky"], "reason": "fried filo parcels"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "street snack"},
+   "servings": {"value": 6, "reason": "12 filo sheets"},
+   "difficulty": {"value": "medium", "reason": "folding and frying parcels"}
+  },
+  "mdb-53224": {
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "kunafa layer, pistachio cream"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "showpiece dessert"},
+   "servings": {"value": 8, "reason": "one cake plus cupcakes"},
+   "difficulty": {"value": "hard", "reason": "many components"}
+  },
+  "mdb-53225": {
+   "flavor.sweet": {"value": 1, "reason": "tomato, onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "soft eggs, cheese"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "breakfast eggs"},
+   "servings": {"value": 2, "reason": "5 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53226": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["chewy", "fluffy"], "reason": "puffed flatbread"},
+   "moods": {"value": ["comfort"], "reason": "bread"},
+   "servings": {"value": 4, "reason": "1 cup flour"},
+   "cookMinutes": {"value": 10, "reason": "pan-cooking rounds"},
+   "difficulty": {"value": "easy", "reason": "knead and pan-cook"}
+  },
+  "mdb-53227": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "fried rice-paper parcels"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "dumpling party"},
+   "servings": {"value": 4, "reason": "20 dumplings"},
+   "difficulty": {"value": "medium", "reason": "wrapping 20 dumplings"}
+  },
+  "mdb-53228": {
+   "textures": {"value": ["tender", "saucy"], "reason": "fish in caramel sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "sweet-salty fish"},
+   "servings": {"value": 2, "reason": "2 trout"},
+   "difficulty": {"value": "medium", "reason": "making a dark caramel"}
+  },
+  "mdb-53229": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "raw veg, seared steak"},
+   "moods": {"value": ["fresh", "light"], "reason": "noodle salad"},
+   "servings": {"value": 2, "reason": "250g steak, 85g noodles"},
+   "difficulty": {"value": "easy", "reason": "dress, toss, sear"}
+  },
+  "mdb-53230": {
+   "flavor.bitter": {"value": 1, "reason": "broccoli"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "fried veg with dipping sauce"},
+   "servings": {"value": 2, "reason": "200g broccoli"},
+   "difficulty": {"value": "medium", "reason": "tempura batter and deep frying"}
+  },
+  "mdb-53231": {
+   "textures": {"value": ["tender", "saucy"], "reason": "braised shanks"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow braise"},
+   "servings": {"value": 4, "reason": "4 shanks"},
+   "difficulty": {"value": "medium", "reason": "browning and long braise"}
+  },
+  "mdb-53232": {
+   "flavor.sweet": {"value": 0, "reason": "savoury dressing"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "raw veg, noodles, peanuts"},
+   "moods": {"value": ["fresh", "light"], "reason": "noodle salad"},
+   "servings": {"value": 2, "reason": "2 breasts, 140g noodles"},
+   "cookMinutes": {"value": 15, "reason": "noodles and poaching chicken"},
+   "difficulty": {"value": "easy", "reason": "toss together"}
+  }
+ }
+}

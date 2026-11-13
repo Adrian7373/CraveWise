@@ -1,0 +1,147 @@
+{
+ "batch": 29,
+ "recipes": {
+  "mdb-53358": {
+   "flavor.salty": {"value": 2, "reason": "1.5 tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "warm spices"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "spiced rice, chicken"},
+   "moods": {"value": ["hearty", "festive"], "reason": "sharing platter"},
+   "servings": {"value": 6, "reason": "whole chicken, 2 cups rice"},
+   "difficulty": {"value": "medium", "reason": "stock then rice in the same pot"}
+  },
+  "mdb-53359": {
+   "flavor.bitter": {"value": 0, "reason": "warm spices"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "spiced rice, slow beef"},
+   "moods": {"value": ["festive", "hearty"], "reason": "feast platter"},
+   "servings": {"value": 10, "reason": "1kg rice"},
+   "difficulty": {"value": "medium", "reason": "long simmer then rice"}
+  },
+  "mdb-53360": {
+   "textures": {"value": ["chewy"], "reason": "sticky sugared balls"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "tangy sweet"},
+   "servings": {"value": 12, "reason": "16oz tamarind, marble-sized"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "mash and roll"}
+  },
+  "mdb-53361": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "greens"},
+   "textures": {"value": ["tender", "flaky"], "reason": "greens with flaked fish"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "Jamaican breakfast"},
+   "servings": {"value": 4, "reason": "half lb salt cod"},
+   "difficulty": {"value": "easy", "reason": "soak, boil, saute"}
+  },
+  "mdb-53362": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "saucy", "tender"], "reason": "coconut curry sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "spicy curry"},
+   "servings": {"value": 3, "reason": "1lb prawns"},
+   "difficulty": {"value": "easy", "reason": "one skillet"}
+  },
+  "mdb-53363": {
+   "textures": {"value": ["creamy", "smooth"], "reason": "silky porridge"},
+   "moods": {"value": ["comfort"], "reason": "warming breakfast"},
+   "servings": {"value": 4, "reason": "1 cup cornmeal"},
+   "difficulty": {"value": "easy", "reason": "whisk and simmer"}
+  },
+  "mdb-53364": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomato, garlic"},
+   "textures": {"value": ["tender"], "reason": "steamed cabbage"},
+   "moods": {"value": ["comfort", "light"], "reason": "veg side"},
+   "servings": {"value": 4, "reason": "half a cabbage"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53365": {
+   "textures": {"value": ["crispy", "saucy"], "reason": "fried chicken in glossy sauce"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "takeaway favourite"},
+   "servings": {"value": 4, "reason": "650g chicken"},
+   "difficulty": {"value": "medium", "reason": "batter and shallow-fry, sauce"}
+  },
+  "mdb-53366": {
+   "flavor.bitter": {"value": 0, "reason": "broccoli is mild"},
+   "textures": {"value": ["tender", "crunchy", "saucy"], "reason": "velveted beef, crisp broccoli"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "takeaway classic"},
+   "servings": {"value": 4, "reason": "1lb steak, 1lb broccoli"},
+   "difficulty": {"value": "easy", "reason": "marinate, blanch, stir-fry"}
+  },
+  "mdb-53367": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, peas"},
+   "textures": {"value": ["tender", "chewy"], "reason": "wok-fried rice"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "fried rice"},
+   "servings": {"value": 4, "reason": "4 cups cooked rice"},
+   "difficulty": {"value": "easy", "reason": "leftover rice, one wok"}
+  },
+  "mdb-53368": {
+   "flavor.sweet": {"value": 1, "reason": "sweet onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "thin noodles, crisp veg"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "curry noodles"},
+   "servings": {"value": 4, "reason": "6oz noodles plus ham and prawns"},
+   "difficulty": {"value": "medium", "reason": "lots of prep, quick wok"}
+  },
+  "mdb-53369": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["smooth", "saucy"], "reason": "silken tofu, sauce"},
+   "moods": {"value": ["light", "fresh"], "reason": "cold tofu dish"},
+   "servings": {"value": 2, "reason": "16oz tofu"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "slice and dress"}
+  },
+  "mdb-53370": {
+   "textures": {"value": ["crispy", "fluffy", "saucy"], "reason": "fried omelettes in gravy"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "takeaway classic"},
+   "servings": {"value": 4, "reason": "8 eggs, 2 cups rice"},
+   "difficulty": {"value": "medium", "reason": "gravy plus deep-fried omelettes"}
+  },
+  "mdb-53371": {
+   "textures": {"value": ["crunchy", "tender"], "reason": "blistered beans"},
+   "moods": {"value": ["fresh", "light"], "reason": "spicy veg side"},
+   "servings": {"value": 2, "reason": "half lb beans"},
+   "cookMinutes": {"value": 10, "reason": "quick wok"},
+   "difficulty": {"value": "easy", "reason": "one wok"}
+  },
+  "mdb-53372": {
+   "textures": {"value": ["fluffy", "saucy"], "reason": "soft eggs in tomato"},
+   "moods": {"value": ["comfort", "light"], "reason": "home-style dish"},
+   "servings": {"value": 3, "reason": "5 eggs"},
+   "difficulty": {"value": "easy", "reason": "scramble and stir-fry"}
+  },
+  "mdb-53373": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp wrapper, pork filling"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party snack"},
+   "servings": {"value": 6, "reason": "12 egg rolls"},
+   "difficulty": {"value": "medium", "reason": "filling and rolling"}
+  },
+  "mdb-53374": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "silky aubergine"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "rice dish"},
+   "servings": {"value": 4, "reason": "1.5lb aubergine"},
+   "difficulty": {"value": "medium", "reason": "specialist pastes, careful frying"}
+  },
+  "mdb-53375": {
+   "flavor.sweet": {"value": 1, "reason": "snow peas"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "crisp peas, prawns"},
+   "moods": {"value": ["fresh", "light"], "reason": "quick stir-fry"},
+   "servings": {"value": 4, "reason": "1lb prawns"},
+   "difficulty": {"value": "easy", "reason": "marinate and wok"}
+  },
+  "mdb-53376": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["tender", "saucy"], "reason": "velveted chicken in sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "takeaway favourite"},
+   "servings": {"value": 4, "reason": "1lb chicken"},
+   "difficulty": {"value": "easy", "reason": "velvet and stir-fry"}
+  },
+  "mdb-53377": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised cabbage"},
+   "moods": {"value": ["light", "comfort"], "reason": "simple veg side"},
+   "servings": {"value": 4, "reason": "one head cabbage"},
+   "difficulty": {"value": "easy", "reason": "rehydrate and stir-fry"}
+  }
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "batch": 28,
+ "recipes": {
+  "mdb-53337": {
+   "flavor.salty": {"value": 1, "reason": "salted pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "saucy"], "reason": "pastry, jammy berries"},
+   "moods": {"value": ["comfort", "festive"], "reason": "prairie berry pie"},
+   "servings": {"value": 8, "reason": "one double-crust pie"},
+   "difficulty": {"value": "medium", "reason": "double-crust pastry"}
+  },
+  "mdb-53338": {
+   "flavor.salty": {"value": 1, "reason": "butter, salt"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "oat crumble, date filling"},
+   "moods": {"value": ["comfort"], "reason": "traybake"},
+   "servings": {"value": 16, "reason": "8-inch square pan"},
+   "difficulty": {"value": "easy", "reason": "simmer dates, layer, bake"}
+  },
+  "mdb-53339": {
+   "flavor.salty": {"value": 1, "reason": "salted dough"},
+   "textures": {"value": ["chewy"], "reason": "soft molasses cookies"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "jam sandwich cookies"},
+   "servings": {"value": 18, "reason": "4 cups flour"},
+   "difficulty": {"value": "easy", "reason": "roll, cut, sandwich"}
+  },
+  "mdb-53340": {
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.sweet": {"value": 1, "reason": "new veg"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "brothy", "tender"], "reason": "creamy veg soup"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "summer garden soup"},
+   "servings": {"value": 4, "reason": "1lb each potatoes, carrots"},
+   "difficulty": {"value": "easy", "reason": "boil and simmer"}
+  },
+  "mdb-53341": {
+   "textures": {"value": ["creamy", "crunchy", "fluffy"], "reason": "custard, crumb crust, meringue"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "prairie custard pie"},
+   "servings": {"value": 8, "reason": "9-inch pie"},
+   "difficulty": {"value": "medium", "reason": "custard plus meringue"}
+  },
+  "mdb-53342": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["tender", "chewy"], "reason": "boiled pudding"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Jiggs dinner pudding"},
+   "servings": {"value": 8, "reason": "2 cups flour"},
+   "difficulty": {"value": "easy", "reason": "mix, bag, boil"}
+  },
+  "mdb-53343": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "pastry, spiced meat"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas pie"},
+   "servings": {"value": 8, "reason": "2lb meat, two crusts"},
+   "difficulty": {"value": "medium", "reason": "filling must chill, double crust"}
+  },
+  "mdb-53344": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "dense spiced pudding"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Jamaican pudding"},
+   "servings": {"value": 10, "reason": "9-inch pan"},
+   "difficulty": {"value": "easy", "reason": "grate, mix, bake"}
+  },
+  "mdb-53345": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "curried chicken"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Sunday curry"},
+   "servings": {"value": 4, "reason": "2lb thighs"},
+   "difficulty": {"value": "easy", "reason": "marinate and stew"}
+  },
+  "mdb-53346": {
+   "textures": {"value": ["creamy", "crunchy"], "reason": "ice cream, cereal"},
+   "moods": {"value": ["indulgent"], "reason": "frozen treat"},
+   "servings": {"value": 8, "reason": "loaf pan"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "no-churn"}
+  },
+  "mdb-53347": {
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "ice cream, raisins"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "boozy ice cream"},
+   "servings": {"value": 8, "reason": "loaf pan"},
+   "difficulty": {"value": "easy", "reason": "no-churn"}
+  },
+  "mdb-53348": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "fruited loaf"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Easter bun"},
+   "servings": {"value": 10, "reason": "8x4 loaf"},
+   "difficulty": {"value": "easy", "reason": "quick bread"}
+  },
+  "mdb-53349": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "simmered shrimp"},
+   "moods": {"value": ["fresh", "festive"], "reason": "fiery street food"},
+   "servings": {"value": 3, "reason": "1lb prawns"},
+   "difficulty": {"value": "easy", "reason": "marinate and simmer"}
+  },
+  "mdb-53350": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "corned beef with cabbage"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "storecupboard dinner"},
+   "servings": {"value": 4, "reason": "12oz corned beef, half cabbage"},
+   "difficulty": {"value": "easy", "reason": "one pan, 15 minutes"}
+  },
+  "mdb-53351": {
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "sweet fritters"},
+   "servings": {"value": 4, "reason": "3 bananas"},
+   "cookMinutes": {"value": 15, "reason": "frying spoonfuls"},
+   "difficulty": {"value": "easy", "reason": "mash, mix, fry"}
+  },
+  "mdb-53352": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "beans"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "coconut rice and beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Sunday side"},
+   "servings": {"value": 6, "reason": "2 cups rice"},
+   "difficulty": {"value": "easy", "reason": "pressure cooker"}
+  },
+  "mdb-53353": {
+   "flavor.salty": {"value": 1, "reason": "salted water and dough"},
+   "textures": {"value": ["chewy", "smooth"], "reason": "dense boiled dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "filling side"},
+   "servings": {"value": 4, "reason": "2 cups flour"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, boil"}
+  },
+  "mdb-53355": {
+   "flavor.salty": {"value": 0, "reason": "sweet dough"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried sweet dumplings"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "fried with fish"},
+   "servings": {"value": 6, "reason": "12 festivals"},
+   "difficulty": {"value": "medium", "reason": "deep frying at temperature"}
+  },
+  "mdb-53356": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried dumplings"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "breakfast side"},
+   "servings": {"value": 5, "reason": "10 dumplings"},
+   "difficulty": {"value": "easy", "reason": "simple dough, shallow fry"}
+  },
+  "mdb-53357": {
+   "flavor.salty": {"value": 1, "reason": "2 tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "beans"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "coconut rice and beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Sunday side"},
+   "servings": {"value": 6, "reason": "2 cups rice"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  }
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "batch": 31,
+ "recipes": {
+  "mdb-53400": {
+   "cuisine": {"value": "Afghan", "reason": "Afghan lamb rice"},
+   "flavor.salty": {"value": 1, "reason": "seasoned"},
+   "flavor.bitter": {"value": 0, "reason": "orange peel soaked"},
+   "textures": {"value": ["tender", "creamy"], "reason": "sticky rice, yogurt"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "lamb and rice"},
+   "servings": {"value": 6, "reason": "700g lamb"},
+   "difficulty": {"value": "medium", "reason": "long simmer, shredding"}
+  },
+  "mdb-53401": {
+   "cuisine": {"value": "Afghan", "reason": "bolani flatbread"},
+   "flavor.salty": {"value": 2, "reason": "3 tsp salt"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 1, "reason": "spring onion, potato"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "fried bread, mash filling"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "stuffed flatbread"},
+   "servings": {"value": 4, "reason": "3-4 large bolani"},
+   "difficulty": {"value": "medium", "reason": "dough rolled very thin"}
+  },
+  "mdb-53402": {
+   "cuisine": {"value": "Afghan", "reason": "title says Afghan"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["tender", "creamy", "saucy"], "reason": "steamed dumplings, yogurt"},
+   "moods": {"value": ["festive", "comfort"], "reason": "special-occasion dumplings"},
+   "servings": {"value": 6, "reason": "450g lamb, 450g flour"},
+   "difficulty": {"value": "hard", "reason": "rolling, folding, steaming"}
+  },
+  "mdb-53403": {
+   "cuisine": {"value": "Afghan", "reason": "Afghan preserve"},
+   "textures": {"value": ["chewy", "smooth"], "reason": "syrupy candied pumpkin"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "sweet preserve"},
+   "servings": {"value": 20, "reason": "1kg pumpkin, jars"},
+   "difficulty": {"value": "easy", "reason": "macerate and simmer"}
+  },
+  "mdb-53404": {
+   "cuisine": {"value": "Albanian", "reason": "tave kosi"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "tender"], "reason": "set yogurt over lamb"},
+   "moods": {"value": ["comfort", "festive"], "reason": "national dish"},
+   "servings": {"value": 6, "reason": "600g lamb, 6 eggs"},
+   "difficulty": {"value": "medium", "reason": "braise plus yogurt custard"}
+  },
+  "mdb-53405": {
+   "cuisine": {"value": "Albanian", "reason": "tave me presh"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "baked leek rice"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "veg bake"},
+   "servings": {"value": 4, "reason": "200g rice"},
+   "difficulty": {"value": "easy", "reason": "simmer then bake"}
+  },
+  "mdb-53406": {
+   "cuisine": {"value": "Albanian", "reason": "Albanian dessert"},
+   "flavor.bitter": {"value": 0, "reason": "walnuts are mild"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "soft figs, walnuts"},
+   "moods": {"value": ["light", "festive"], "reason": "simple fruit dessert"},
+   "servings": {"value": 4, "reason": "4 figs"},
+   "difficulty": {"value": "easy", "reason": "poach and syrup"}
+  },
+  "mdb-53407": {
+   "cuisine": {"value": "Albanian", "reason": "lakror pie"},
+   "flavor.sweet": {"value": 1, "reason": "squash"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "egg"},
+   "textures": {"value": ["tender", "crispy"], "reason": "baked squash batter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "home bake"},
+   "servings": {"value": 6, "reason": "2 squash, 300g flour"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53408": {
+   "cuisine": {"value": "Albanian", "reason": "kulac bread"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "yogurt soda bread"},
+   "moods": {"value": ["comfort"], "reason": "fresh bread"},
+   "servings": {"value": 8, "reason": "450g flour"},
+   "difficulty": {"value": "easy", "reason": "no yeast"}
+  },
+  "mdb-53409": {
+   "cuisine": {"value": "Albanian", "reason": "shendetlie"},
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.bitter": {"value": 0, "reason": "walnuts are mild"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "syrup-soaked cake, walnuts"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "holiday cake"},
+   "servings": {"value": 16, "reason": "30cm tray"},
+   "difficulty": {"value": "medium", "reason": "dough, bake, syrup"}
+  },
+  "mdb-53410": {
+   "cuisine": {"value": "Albanian", "reason": "presh me oriz"},
+   "flavor.sweet": {"value": 1, "reason": "leeks"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "baked rice"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-tray bake"},
+   "servings": {"value": 4, "reason": "400g lamb, 200g rice"},
+   "difficulty": {"value": "easy", "reason": "fry and bake"}
+  },
+  "mdb-53411": {
+   "cuisine": {"value": "Albanian", "reason": "dolma japrak"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "chewy"], "reason": "rolled vine leaves"},
+   "moods": {"value": ["festive", "comfort"], "reason": "family gathering dish"},
+   "servings": {"value": 8, "reason": "600g leaves"},
+   "difficulty": {"value": "hard", "reason": "rolling many vine leaves"}
+  },
+  "mdb-53412": {
+   "cuisine": {"value": "Albanian", "reason": "lakra me mish"},
+   "flavor.sweet": {"value": 1, "reason": "cabbage, peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "winter stew"},
+   "servings": {"value": 4, "reason": "500g beef"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53413": {
+   "cuisine": {"value": "Albanian", "reason": "flija"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "many buttery layers"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "communal dish"},
+   "servings": {"value": 10, "reason": "1kg flour"},
+   "difficulty": {"value": "hard", "reason": "layer-by-layer grilling for hours"}
+  },
+  "mdb-53414": {
+   "cuisine": {"value": "Albanian", "reason": "kurabie"},
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "soft cookies"},
+   "moods": {"value": ["comfort", "festive"], "reason": "holiday cookies"},
+   "servings": {"value": 10, "reason": "20 cookies"},
+   "difficulty": {"value": "easy", "reason": "mix and roll"}
+  },
+  "mdb-53415": {
+   "cuisine": {"value": "Andorran", "reason": "Catalan-Pyrenean Easter toast"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried soaked bread"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "Easter treat"},
+   "servings": {"value": 8, "reason": "16 slices"},
+   "difficulty": {"value": "easy", "reason": "soak and fry"}
+  },
+  "mdb-53416": {
+   "cuisine": {"value": "Andorran", "reason": "trinxat"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "fried mash cakes"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "mountain hash"},
+   "servings": {"value": 4, "reason": "half cabbage, 2 potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil, mash, fry"}
+  },
+  "mdb-53417": {
+   "cuisine": {"value": "Andorran", "reason": "pa amb tomaquet"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomato, garlic"},
+   "textures": {"value": ["crispy"], "reason": "toast"},
+   "moods": {"value": ["fresh", "light"], "reason": "simple snack"},
+   "servings": {"value": 2, "reason": "2 slices"},
+   "cookMinutes": {"value": 5, "reason": "toasting"},
+   "difficulty": {"value": "easy", "reason": "rub and drizzle"}
+  },
+  "mdb-53418": {
+   "cuisine": {"value": "Cambodian", "reason": "title says Cambodian"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "crisp greens, pork"},
+   "moods": {"value": ["fresh", "light"], "reason": "quick greens"},
+   "servings": {"value": 2, "reason": "one bunch, 150g pork"},
+   "difficulty": {"value": "easy", "reason": "one wok"}
+  },
+  "mdb-53419": {
+   "cuisine": {"value": "Cambodian", "reason": "trey chien chuon"},
+   "flavor.umami": {"value": 3, "reason": "fermented soybeans, fish"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "fried fish in bean sauce"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "rice dish"},
+   "servings": {"value": 4, "reason": "1lb fish"},
+   "difficulty": {"value": "medium", "reason": "two rounds of frying"}
+  }
+ }
+}

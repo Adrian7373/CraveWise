@@ -1,0 +1,154 @@
+{
+ "batch": 25,
+ "recipes": {
+  "mdb-53276": {
+   "textures": {"value": ["creamy", "crunchy", "chewy"], "reason": "cream, meringue, Turkish delight"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "fruity mess"},
+   "servings": {"value": 2, "reason": "divided between 2 glasses"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "whisk and fold"}
+  },
+  "mdb-53277": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "meatballs in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family meatballs"},
+   "servings": {"value": 4, "reason": "500g lamb"},
+   "difficulty": {"value": "easy", "reason": "shape, fry, simmer"}
+  },
+  "mdb-53278": {
+   "flavor.bitter": {"value": 1, "reason": "walnuts, char"},
+   "flavor.umami": {"value": 1, "reason": "hummus"},
+   "textures": {"value": ["crunchy", "creamy", "tender"], "reason": "crumb crust over hummus"},
+   "moods": {"value": ["fresh", "light"], "reason": "veg starter"},
+   "servings": {"value": 4, "reason": "2 aubergines"},
+   "difficulty": {"value": "easy", "reason": "grill twice"}
+  },
+  "mdb-53279": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "crunchy", "creamy"], "reason": "filo, nuts, ricotta"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "celebration pastry"},
+   "servings": {"value": 20, "reason": "500g filo tray"},
+   "difficulty": {"value": "hard", "reason": "syrup, layering filo, long bake"}
+  },
+  "mdb-53280": {
+   "flavor.sweet": {"value": 1, "reason": "balsamic"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "roast chicken"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "roast dinner"},
+   "servings": {"value": 4, "reason": "one chicken"},
+   "difficulty": {"value": "easy", "reason": "coat and roast"}
+  },
+  "mdb-53281": {
+   "flavor.salty": {"value": 1, "reason": "seasoned"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "browned meatballs in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family meatballs"},
+   "servings": {"value": 4, "reason": "1lb beef"},
+   "difficulty": {"value": "easy", "reason": "shape and fry"}
+  },
+  "mdb-53282": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "steamed carrots"},
+   "moods": {"value": ["fresh", "light"], "reason": "spiced veg side"},
+   "servings": {"value": 6, "reason": "2lb carrots"},
+   "difficulty": {"value": "easy", "reason": "steam and dress"}
+  },
+  "mdb-53283": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "potatoes in spiced sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "potato stew"},
+   "servings": {"value": 4, "reason": "2lb potatoes"},
+   "difficulty": {"value": "easy", "reason": "paste and simmer"}
+  },
+  "mdb-53284": {
+   "flavor.bitter": {"value": 1, "reason": "charred peppers"},
+   "flavor.umami": {"value": 1, "reason": "roast tomato"},
+   "textures": {"value": ["crispy", "saucy"], "reason": "griddled bread with sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "bread and sauce"},
+   "servings": {"value": 8, "reason": "2lb semolina"},
+   "difficulty": {"value": "medium", "reason": "dough plus roasted sauce"}
+  },
+  "mdb-53285": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "crisp shell, almond filling"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid pastries"},
+   "servings": {"value": 20, "reason": "large batch of tarts"},
+   "difficulty": {"value": "hard", "reason": "day-ahead almonds, shaping, syrup"}
+  },
+  "mdb-53286": {
+   "flavor.salty": {"value": 1, "reason": "salted dough"},
+   "flavor.umami": {"value": 0, "reason": "bread"},
+   "textures": {"value": ["fluffy"], "reason": "soft round loaf"},
+   "moods": {"value": ["comfort"], "reason": "homemade bread"},
+   "servings": {"value": 8, "reason": "one large loaf"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, two rests"}
+  },
+  "mdb-53287": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised chicken"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "sweet-spiced tagine"},
+   "servings": {"value": 4, "reason": "4 thighs"},
+   "difficulty": {"value": "easy", "reason": "simmer then bake"}
+  },
+  "mdb-53288": {
+   "flavor.sweet": {"value": 1, "reason": "roast peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomato"},
+   "textures": {"value": ["tender"], "reason": "soft roast peppers"},
+   "moods": {"value": ["fresh", "light"], "reason": "salad side"},
+   "servings": {"value": 4, "reason": "3 peppers"},
+   "difficulty": {"value": "easy", "reason": "roast and saute"}
+  },
+  "mdb-53289": {
+   "flavor.salty": {"value": 1, "reason": "seasoned"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Ramadan soup"},
+   "servings": {"value": 6, "reason": "4 cups water, lots of veg"},
+   "difficulty": {"value": "medium", "reason": "several stages"}
+  },
+  "mdb-53290": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["flaky", "crispy", "creamy"], "reason": "filo triangles, melted cheese"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party pastries"},
+   "servings": {"value": 12, "reason": "48 small triangles"},
+   "difficulty": {"value": "medium", "reason": "folding many filo triangles"}
+  },
+  "mdb-53291": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "thin pastry, almond paste"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid biscuits"},
+   "servings": {"value": 16, "reason": "about 30 horns"}
+  },
+  "mdb-53292": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "smooth"], "reason": "spiced sponge, ganache"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Christmas cake"},
+   "servings": {"value": 12, "reason": "20cm deep cake"},
+   "difficulty": {"value": "medium", "reason": "layers with jam and ganache"}
+  },
+  "mdb-53293": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "sponge with mascarpone cream"},
+   "moods": {"value": ["festive", "fresh"], "reason": "celebration cake with berries"},
+   "servings": {"value": 12, "reason": "23cm cake"},
+   "difficulty": {"value": "medium", "reason": "sponge and whipped topping"}
+  },
+  "mdb-53294": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "toasted baguette, melted cheese"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "street-food toast"},
+   "servings": {"value": 4, "reason": "4 baguette halves"},
+   "difficulty": {"value": "easy", "reason": "top and bake"}
+  },
+  "mdb-53295": {
+   "flavor.bitter": {"value": 1, "reason": "cocoa, walnuts"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "crunchy", "creamy"], "reason": "sponge, nutty meringue, cream"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "layered celebration cake"},
+   "servings": {"value": 16, "reason": "30x22cm tray"},
+   "difficulty": {"value": "hard", "reason": "sponge plus nut meringue layers"}
+  }
+ }
+}

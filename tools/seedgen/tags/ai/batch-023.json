@@ -1,0 +1,141 @@
+{
+ "batch": 23,
+ "recipes": {
+  "mdb-53233": {
+   "textures": {"value": ["crispy", "tender"], "reason": "fried squid"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "sharing starter"},
+   "servings": {"value": 4, "reason": "400g squid"},
+   "difficulty": {"value": "medium", "reason": "deep frying in batches"}
+  },
+  "mdb-53234": {
+   "moods": {"value": ["comfort", "fresh"], "reason": "noodle soup"},
+   "servings": {"value": 4, "reason": "ladled into 4 bowls"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53235": {
+   "textures": {"value": ["tender", "saucy"], "reason": "glossy caramel pork"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "sticky sweet pork"},
+   "servings": {"value": 4, "reason": "500g pork"},
+   "difficulty": {"value": "easy", "reason": "wok, 20 minutes"}
+  },
+  "mdb-53236": {
+   "textures": {"value": ["tender", "saucy"], "reason": "simmered squash"},
+   "moods": {"value": ["comfort", "light"], "reason": "simple veg hotpot"},
+   "servings": {"value": 2, "reason": "half a squash"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53237": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "raw veg, sliced pork"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby salad"},
+   "servings": {"value": 4, "reason": "500g pork"},
+   "difficulty": {"value": "medium", "reason": "make-ahead dressing, sear and roast"}
+  },
+  "mdb-53239": {
+   "flavor.salty": {"value": 1, "reason": "peanut butter"},
+   "textures": {"value": ["creamy", "crunchy", "chewy"], "reason": "peanut sauce, beansprouts, noodles"},
+   "moods": {"value": ["fresh", "light"], "reason": "noodle salad"},
+   "servings": {"value": 2, "reason": "140g noodles, 200g prawns"},
+   "cookMinutes": {"value": 10, "reason": "noodles and warm sauce"},
+   "difficulty": {"value": "easy", "reason": "toss together"}
+  },
+  "mdb-53240": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "greens, cashews, tofu"},
+   "moods": {"value": ["fresh", "light"], "reason": "green stir-fry"},
+   "servings": {"value": 2, "reason": "300g tofu"},
+   "difficulty": {"value": "easy", "reason": "one wok"}
+  },
+  "mdb-53241": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "rice wrappers, raw veg"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer rolls"},
+   "servings": {"value": 4, "reason": "100g wrappers"},
+   "difficulty": {"value": "medium", "reason": "rolling each parcel"}
+  },
+  "mdb-53242": {
+   "textures": {"value": ["fluffy", "tender"], "reason": "soft buns, sticky filling"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party buns"},
+   "servings": {"value": 8, "reason": "500g bread mix"},
+   "difficulty": {"value": "medium", "reason": "yeast dough and filling"}
+  },
+  "mdb-53243": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "rice paper, raw veg"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer rolls"},
+   "servings": {"value": 2, "reason": "6 rolls"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "medium", "reason": "rolling rice paper"}
+  },
+  "mdb-53244": {
+   "textures": {"value": ["chewy", "crispy", "crunchy"], "reason": "noodles, crisp shallots, peanuts"},
+   "moods": {"value": ["fresh", "light"], "reason": "zingy salad"},
+   "servings": {"value": 4, "reason": "200g noodles"},
+   "difficulty": {"value": "easy", "reason": "fry shallots, toss"}
+  },
+  "mdb-53245": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "noodles, sugar snaps"},
+   "moods": {"value": ["fresh", "light"], "reason": "packed-lunch salad"},
+   "servings": {"value": 2, "reason": "125g noodles"},
+   "difficulty": {"value": "easy", "reason": "soak and toss"}
+  },
+  "mdb-53246": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "raw veg"},
+   "textures": {"value": ["crunchy"], "reason": "raw slaw"},
+   "moods": {"value": ["fresh", "light"], "reason": "tangy salad"},
+   "servings": {"value": 6, "reason": "half a cabbage"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "slice and dress"}
+  },
+  "mdb-53247": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "flaky"], "reason": "crisp skin, flaky fish"},
+   "moods": {"value": ["fresh", "festive"], "reason": "dinner-party fish"},
+   "servings": {"value": 6, "reason": "6 fillets"},
+   "difficulty": {"value": "easy", "reason": "pan-fry and sizzle"}
+  },
+  "mdb-53248": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 2, "reason": "salmon"},
+   "textures": {"value": ["tender", "chewy"], "reason": "steamed salmon on noodles"},
+   "moods": {"value": ["light", "fresh"], "reason": "parcel-baked fish"},
+   "servings": {"value": 2, "reason": "two parcels"},
+   "difficulty": {"value": "easy", "reason": "wrap and bake"}
+  },
+  "mdb-53249": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "crusty bread, pickled slaw, pate"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "loaded sandwich"},
+   "servings": {"value": 2, "reason": "2 small baguettes"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "pickle and assemble"}
+  },
+  "mdb-53250": {
+   "textures": {"value": ["crunchy", "creamy"], "reason": "pickles, hummus, baguette"},
+   "moods": {"value": ["fresh", "light"], "reason": "vegan sandwich"},
+   "servings": {"value": 4, "reason": "4 sandwiches"},
+   "difficulty": {"value": "easy", "reason": "quick pickle, assemble"}
+  },
+  "mdb-53251": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "thin crisp flatbread"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "Turkish pizza with lemon and herbs"},
+   "servings": {"value": 6, "reason": "500g flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, rolling thin"}
+  },
+  "mdb-53252": {
+   "textures": {"value": ["fluffy"], "reason": "buttery pilaf"},
+   "moods": {"value": ["comfort"], "reason": "everyday side"},
+   "servings": {"value": 4, "reason": "300g rice"},
+   "difficulty": {"value": "easy", "reason": "toast and simmer"}
+  },
+  "mdb-53253": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "stuffed aubergine, tzatziki"},
+   "moods": {"value": ["festive", "fresh"], "reason": "barbecue feast"},
+   "servings": {"value": 6, "reason": "12 chops, 3 aubergines"},
+   "difficulty": {"value": "medium", "reason": "several components"}
+  }
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "batch": 21,
+ "recipes": {
+  "mdb-53189": {
+   "flavor.salty": {"value": 1, "reason": "seasoned batter"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 1, "reason": "garlic, onion"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried potato pancakes"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "fried street snack"},
+   "servings": {"value": 4, "reason": "1kg potatoes"},
+   "cookMinutes": {"value": 25, "reason": "frying in batches"},
+   "difficulty": {"value": "easy", "reason": "grate, mix, fry"}
+  },
+  "mdb-53190": {
+   "textures": {"value": ["chewy", "creamy", "crispy"], "reason": "dumplings, sheep cheese, bacon"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "national dish"},
+   "servings": {"value": 4, "reason": "500g potatoes"},
+   "difficulty": {"value": "medium", "reason": "dumplings by hand"}
+  },
+  "mdb-53192": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "thick coconut curry"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich curry"},
+   "servings": {"value": 2, "reason": "200g chicken"},
+   "difficulty": {"value": "medium", "reason": "homemade curry paste"}
+  },
+  "mdb-53193": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "tender"], "reason": "wide noodles, steak"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "spicy wok noodles"},
+   "servings": {"value": 2, "reason": "200g noodles"},
+   "difficulty": {"value": "easy", "reason": "quick stir-fry"}
+  },
+  "mdb-53195": {
+   "moods": {"value": ["comfort", "fresh"], "reason": "curry noodle soup"},
+   "servings": {"value": 2, "reason": "divided between two bowls"},
+   "difficulty": {"value": "easy", "reason": "one pot, 10 minutes"}
+  },
+  "mdb-53196": {
+   "moods": {"value": ["light", "fresh"], "reason": "clear hot and sour soup"},
+   "servings": {"value": 2, "reason": "700ml stock, 6 prawns"},
+   "difficulty": {"value": "easy", "reason": "5 minutes"}
+  },
+  "mdb-53197": {
+   "textures": {"value": ["creamy", "saucy", "tender"], "reason": "peanut coconut sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich curry"},
+   "servings": {"value": 4, "reason": "400g pork"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53198": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["tender", "crispy"], "reason": "rice with fried egg"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "fried rice"},
+   "servings": {"value": 4, "reason": "divided between 4 bowls"},
+   "difficulty": {"value": "easy", "reason": "wok and fried eggs"}
+  },
+  "mdb-53200": {
+   "textures": {"value": ["crunchy", "tender"], "reason": "water chestnuts, beansprouts"},
+   "moods": {"value": ["fresh", "light"], "reason": "zingy stir-fry"},
+   "servings": {"value": 2, "reason": "200g prawns"},
+   "difficulty": {"value": "easy", "reason": "blitz and stir-fry"}
+  },
+  "mdb-53201": {
+   "textures": {"value": ["tender", "saucy"], "reason": "glazed stir-fried chicken"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "rice dish"},
+   "servings": {"value": 4, "reason": "450g chicken"},
+   "difficulty": {"value": "easy", "reason": "wok"}
+  },
+  "mdb-53202": {
+   "textures": {"value": ["tender", "flaky"], "reason": "steamed fish"},
+   "moods": {"value": ["light", "fresh"], "reason": "steamed parcel"},
+   "servings": {"value": 2, "reason": "2 trout"},
+   "difficulty": {"value": "easy", "reason": "wrap and steam"}
+  },
+  "mdb-53203": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "noodles, lettuce, beansprouts"},
+   "moods": {"value": ["fresh", "light"], "reason": "noodle salad"},
+   "servings": {"value": 4, "reason": "divided between 4"},
+   "difficulty": {"value": "easy", "reason": "soak and toss"}
+  },
+  "mdb-53204": {
+   "textures": {"value": ["tender", "crispy"], "reason": "charred skewers"},
+   "moods": {"value": ["fresh", "festive"], "reason": "barbecue skewers"},
+   "servings": {"value": 2, "reason": "2 chicken breasts"},
+   "difficulty": {"value": "easy", "reason": "coat and grill"}
+  },
+  "mdb-53205": {
+   "textures": {"value": ["saucy", "tender"], "reason": "tomato coconut curry"},
+   "moods": {"value": ["comfort"], "reason": "quick curry"},
+   "servings": {"value": 4, "reason": "400g prawns"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-53206": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "pan-fried cakes"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby fishcake-style"},
+   "servings": {"value": 3, "reason": "6 small cakes"},
+   "difficulty": {"value": "easy", "reason": "blitz and fry"}
+  },
+  "mdb-53207": {
+   "textures": {"value": ["creamy", "brothy"], "reason": "coconut soup"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "fragrant soup"},
+   "servings": {"value": 6, "reason": "1.6 litres liquid"},
+   "difficulty": {"value": "easy", "reason": "simmer"}
+  },
+  "mdb-53208": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "noodle broth"},
+   "servings": {"value": 4, "reason": "1.4 litres broth"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53209": {
+   "textures": {"value": ["chewy", "crunchy"], "reason": "noodles, peanuts"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby noodles"},
+   "servings": {"value": 2, "reason": "200g noodles"},
+   "difficulty": {"value": "easy", "reason": "quick wok"}
+  },
+  "mdb-53210": {
+   "moods": {"value": ["comfort"], "reason": "warming soup"},
+   "servings": {"value": 6, "reason": "1.5kg pumpkin"},
+   "difficulty": {"value": "easy", "reason": "roast and blend"}
+  },
+  "mdb-53211": {
+   "textures": {"value": ["tender", "chewy", "brothy"], "reason": "stewed beef over noodles"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow stew"},
+   "servings": {"value": 2, "reason": "divided between 2 bowls"},
+   "difficulty": {"value": "easy", "reason": "blend paste and simmer"}
+  }
+ }
+}

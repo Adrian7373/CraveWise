@@ -1,0 +1,167 @@
+{
+ "batch": 30,
+ "recipes": {
+  "mdb-53378": {
+   "flavor.salty": {"value": 1, "reason": "salted cucumber"},
+   "textures": {"value": ["crunchy"], "reason": "raw cucumber"},
+   "moods": {"value": ["fresh", "light"], "reason": "cold side salad"},
+   "servings": {"value": 4, "reason": "2 cucumbers"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "slice and dress"}
+  },
+  "mdb-53379": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.umami": {"value": 0, "reason": "sweet batter"},
+   "textures": {"value": ["fluffy"], "reason": "puffy mini pancakes"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "fairground treat"},
+   "servings": {"value": 4, "reason": "250g flour"},
+   "cookMinutes": {"value": 20, "reason": "batches in the poffertjes pan"},
+   "difficulty": {"value": "medium", "reason": "yeast batter, special pan, turning"}
+  },
+  "mdb-53380": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.sour": {"value": 1, "reason": "apples"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "sponge with soft apple"},
+   "moods": {"value": ["comfort"], "reason": "teatime cake"},
+   "servings": {"value": 10, "reason": "one cake"},
+   "difficulty": {"value": "easy", "reason": "whisked sponge"}
+  },
+  "mdb-53381": {
+   "flavor.salty": {"value": 1, "reason": "butter, pinch salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "spiced biscuit, almond paste"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Sinterklaas bake"},
+   "servings": {"value": 12, "reason": "20x20cm tray"},
+   "difficulty": {"value": "medium", "reason": "overnight dough, layering"}
+  },
+  "mdb-53382": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "crisp waffle, caramel"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "market treat"},
+   "servings": {"value": 12, "reason": "35g balls from 250g flour"},
+   "difficulty": {"value": "hard", "reason": "waffle iron, splitting and filling"}
+  },
+  "mdb-53383": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "moods": {"value": ["comfort", "light"], "reason": "quick noodle bowl"},
+   "servings": {"value": 1, "reason": "one packet"},
+   "difficulty": {"value": "easy", "reason": "boil noodles and egg"}
+  },
+  "mdb-53385": {
+   "flavor.salty": {"value": 1, "reason": "salted butter dough"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "creamy"], "reason": "dense buttery cake, caramel"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "coffee-time cake"},
+   "servings": {"value": 12, "reason": "one tin"},
+   "difficulty": {"value": "easy", "reason": "press and bake"}
+  },
+  "mdb-53386": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.sour": {"value": 1, "reason": "apples"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "lattice crust, soft apples"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Dutch apple pie"},
+   "servings": {"value": 10, "reason": "22cm pie"},
+   "difficulty": {"value": "medium", "reason": "dough, lattice"}
+  },
+  "mdb-53387": {
+   "flavor.salty": {"value": 0, "reason": "pinch salt"},
+   "textures": {"value": ["chewy"], "reason": "dense spice cake"},
+   "moods": {"value": ["comfort"], "reason": "breakfast cake"},
+   "servings": {"value": 12, "reason": "loaf"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53388": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 1, "reason": "mustard"},
+   "textures": {"value": ["creamy", "tender"], "reason": "mash with beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "stamppot"},
+   "servings": {"value": 4, "reason": "800g potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and mash"}
+  },
+  "mdb-53389": {
+   "flavor.sour": {"value": 1, "reason": "apples"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "mash, crispy bacon"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "sweet-savoury mash"},
+   "servings": {"value": 2, "reason": "250g potatoes, 250g apples"},
+   "difficulty": {"value": "easy", "reason": "boil and mash"}
+  },
+  "mdb-53391": {
+   "cuisine": {"value": "Dutch", "reason": "Limburg rice tart"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "rice pudding in yeast crust"},
+   "moods": {"value": ["comfort", "festive"], "reason": "birthday tart"},
+   "servings": {"value": 10, "reason": "one tart"},
+   "difficulty": {"value": "medium", "reason": "yeast dough and rice pudding"}
+  },
+  "mdb-53392": {
+   "cuisine": {"value": "Dutch", "reason": "biscuits from Arnhem"},
+   "textures": {"value": ["crispy", "flaky"], "reason": "caramelised puff pastry"},
+   "moods": {"value": ["indulgent"], "reason": "sweet biscuits"},
+   "servings": {"value": 10, "reason": "5 sheets pastry"},
+   "difficulty": {"value": "easy", "reason": "roll, cut, bake"}
+  },
+  "mdb-53393": {
+   "cuisine": {"value": "Dutch", "reason": "oliebollen"},
+   "flavor.salty": {"value": 1, "reason": "10g salt"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried yeast balls"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "New Year's Eve"},
+   "servings": {"value": 10, "reason": "500g flour"},
+   "difficulty": {"value": "medium", "reason": "yeast batter, deep frying"}
+  },
+  "mdb-53394": {
+   "cuisine": {"value": "Dutch", "reason": "Zeeland sticky buns"},
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "textures": {"value": ["chewy", "fluffy"], "reason": "sticky caramel buns"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "coffee-time bun"},
+   "servings": {"value": 10, "reason": "10 bolussen"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, shaping"}
+  },
+  "mdb-53395": {
+   "cuisine": {"value": "Dutch", "reason": "Dutch whipped cream cake"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "creamy", "crunchy"], "reason": "sponge, cream, nougatine"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "birthday cake"},
+   "servings": {"value": 12, "reason": "750ml cream"},
+   "difficulty": {"value": "medium", "reason": "whisked sponge, assembly"}
+  },
+  "mdb-53396": {
+   "cuisine": {"value": "Afghan", "reason": "Afghan fried pastry"},
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crispy", "crunchy"], "reason": "fried syrup pastries"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid sweet"},
+   "servings": {"value": 16, "reason": "600g flour"},
+   "cookMinutes": {"value": 40, "reason": "frying batches and syrup"},
+   "difficulty": {"value": "medium", "reason": "folding and deep frying"}
+  },
+  "mdb-53397": {
+   "cuisine": {"value": "Afghan", "reason": "Nowruz fruit compote"},
+   "flavor.bitter": {"value": 0, "reason": "nuts are soaked"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "soaked fruit, nuts"},
+   "moods": {"value": ["festive", "fresh"], "reason": "New Year dish"},
+   "servings": {"value": 8, "reason": "about 500g fruit and nuts"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "medium", "reason": "peeling nuts, two-day soak"}
+  },
+  "mdb-53398": {
+   "cuisine": {"value": "Afghan", "reason": "Afghan squash dish"},
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "fried onion, garlic"},
+   "textures": {"value": ["tender", "creamy"], "reason": "sweet squash with yogurt"},
+   "moods": {"value": ["comfort", "festive"], "reason": "dinner-party side"},
+   "servings": {"value": 4, "reason": "one squash"},
+   "cookMinutes": {"value": 45, "reason": "frying then slow cook"},
+   "difficulty": {"value": "medium", "reason": "deep frying and layering"}
+  },
+  "mdb-53399": {
+   "cuisine": {"value": "Afghan", "reason": "Afghan milk pudding"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "set milk pudding"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Eid dessert"},
+   "servings": {"value": 8, "reason": "6 cups milk"},
+   "cookMinutes": {"value": 15, "reason": "thickening the milk"},
+   "difficulty": {"value": "easy", "reason": "whisk and chill"}
+  }
+ }
+}

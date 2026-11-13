@@ -1,0 +1,157 @@
+{
+ "batch": 24,
+ "recipes": {
+  "mdb-53254": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "saucy"], "reason": "finely chopped relish"},
+   "moods": {"value": ["fresh", "light"], "reason": "tangy mezze"},
+   "servings": {"value": 6, "reason": "3 tomatoes, condiment"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blitz and mix"}
+  },
+  "mdb-53255": {
+   "flavor.sweet": {"value": 1, "reason": "tomato"},
+   "flavor.bitter": {"value": 1, "reason": "grilled aubergine, walnuts"},
+   "flavor.umami": {"value": 1, "reason": "chickpeas, tomato"},
+   "textures": {"value": ["tender", "saucy", "creamy"], "reason": "aubergine, chickpeas, yogurt"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "veg main"},
+   "servings": {"value": 4, "reason": "2 aubergines, one can chickpeas"},
+   "difficulty": {"value": "easy", "reason": "simmer and grill"}
+  },
+  "mdb-53256": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "yogurt dip"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "strained yogurt, cucumber"},
+   "moods": {"value": ["fresh", "light"], "reason": "cooling dip"},
+   "servings": {"value": 6, "reason": "500g yogurt"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "strain and mix"}
+  },
+  "mdb-53257": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "kofta, raw slaw"},
+   "moods": {"value": ["hearty", "festive"], "reason": "party burgers"},
+   "servings": {"value": 8, "reason": "16 burgers"},
+   "difficulty": {"value": "easy", "reason": "mix and grill"}
+  },
+  "mdb-53258": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "slaw, griddled lamb"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "loaded wrap"},
+   "servings": {"value": 4, "reason": "4 steaks, 4 pitas"},
+   "difficulty": {"value": "easy", "reason": "griddle and assemble"}
+  },
+  "mdb-53259": {
+   "flavor.bitter": {"value": 1, "reason": "charred aubergine"},
+   "flavor.umami": {"value": 1, "reason": "smoky aubergine"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "smoky puree"},
+   "moods": {"value": ["fresh", "light"], "reason": "mezze dip"},
+   "servings": {"value": 4, "reason": "2 aubergines"},
+   "difficulty": {"value": "easy", "reason": "grill and mash"}
+  },
+  "mdb-53260": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "slow-roast lamb"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Sunday roast"},
+   "servings": {"value": 6, "reason": "one leg of lamb"},
+   "difficulty": {"value": "medium", "reason": "overnight marinade, long roast"}
+  },
+  "mdb-53261": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "baked wings"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party wings"},
+   "servings": {"value": 4, "reason": "12 wings"},
+   "difficulty": {"value": "easy", "reason": "marinate and bake"}
+  },
+  "mdb-53262": {
+   "flavor.sweet": {"value": 1, "reason": "red pepper"},
+   "textures": {"value": ["tender", "chewy"], "reason": "grilled minced kebab"},
+   "moods": {"value": ["hearty", "festive"], "reason": "barbecue"},
+   "servings": {"value": 4, "reason": "800g lamb, 12 kebabs"},
+   "difficulty": {"value": "medium", "reason": "kneading, chilling, shaping"}
+  },
+  "mdb-53263": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "crunchy"], "reason": "pilau, pine nuts"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-pot rice"},
+   "servings": {"value": 4, "reason": "500g lamb, 250g rice"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53264": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "seared skewers"},
+   "moods": {"value": ["festive", "hearty"], "reason": "party skewers"},
+   "servings": {"value": 4, "reason": "15 skewers"},
+   "difficulty": {"value": "easy", "reason": "marinate and griddle"}
+  },
+  "mdb-53265": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "pink chops"},
+   "moods": {"value": ["festive", "hearty"], "reason": "barbecue"},
+   "servings": {"value": 4, "reason": "8 chops"},
+   "difficulty": {"value": "easy", "reason": "marinate and barbecue"}
+  },
+  "mdb-53267": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "tender", "creamy"], "reason": "couscous, aubergine, goat's cheese"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer salad"},
+   "servings": {"value": 2, "reason": "140g couscous"},
+   "difficulty": {"value": "easy", "reason": "grill and soak"}
+  },
+  "mdb-53268": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "walnuts"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp chicken, walnut sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "roast with sauce"},
+   "servings": {"value": 4, "reason": "8 thighs"},
+   "difficulty": {"value": "medium", "reason": "roast plus blended sauce"}
+  },
+  "mdb-53270": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy"], "reason": "grilled lamb, yogurt"},
+   "moods": {"value": ["fresh", "light"], "reason": "quick pitta supper"},
+   "servings": {"value": 4, "reason": "4 steaks"},
+   "difficulty": {"value": "easy", "reason": "grill and stuff"}
+  },
+  "mdb-53271": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.bitter": {"value": 0, "reason": "walnuts are mild"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "moist loaf, dates"},
+   "moods": {"value": ["comfort"], "reason": "teatime loaf"},
+   "servings": {"value": 10, "reason": "900g loaf"},
+   "difficulty": {"value": "easy", "reason": "one bowl"}
+  },
+  "mdb-53272": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy"], "reason": "griddled bread"},
+   "moods": {"value": ["comfort"], "reason": "fresh bread"},
+   "servings": {"value": 8, "reason": "16 flatbreads"},
+   "difficulty": {"value": "medium", "reason": "yeast dough and griddling"}
+  },
+  "mdb-53273": {
+   "textures": {"value": ["tender", "crispy", "creamy"], "reason": "roast aubergine, crisp bread, cheese"},
+   "moods": {"value": ["fresh", "light"], "reason": "warm salad"},
+   "servings": {"value": 2, "reason": "2 aubergines, 1 flatbread"},
+   "difficulty": {"value": "easy", "reason": "roast and dress"}
+  },
+  "mdb-53274": {
+   "flavor.bitter": {"value": 1, "reason": "tahini"},
+   "flavor.umami": {"value": 1, "reason": "griddled aubergine"},
+   "textures": {"value": ["tender", "creamy"], "reason": "soft aubergine, yogurt dressing"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby veg"},
+   "servings": {"value": 4, "reason": "2 large aubergines"},
+   "difficulty": {"value": "easy", "reason": "griddle and dress"}
+  },
+  "mdb-53275": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "veg salad"},
+   "textures": {"value": ["tender"], "reason": "roast sweet potato"},
+   "moods": {"value": ["fresh", "light"], "reason": "picnic salad"},
+   "servings": {"value": 6, "reason": "1.2kg sweet potato"},
+   "difficulty": {"value": "easy", "reason": "roast and dress"}
+  }
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "batch": 26,
+ "recipes": {
+  "mdb-53296": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "crispy"], "reason": "dumplings, crisp shallots"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Christmas Eve pierogi"},
+   "servings": {"value": 4, "reason": "350g flour"},
+   "difficulty": {"value": "hard", "reason": "dough, filling, shaping, frying shallots"}
+  },
+  "mdb-53297": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "fresh salad"},
+   "textures": {"value": ["crunchy"], "reason": "leaves, pomegranate seeds"},
+   "moods": {"value": ["fresh", "light"], "reason": "bright salad"},
+   "servings": {"value": 4, "reason": "250g tomatoes, 100g leaves"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "toss"}
+  },
+  "mdb-53298": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "crispy"], "reason": "fried yeast doughnuts"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "Fat Thursday doughnuts"},
+   "servings": {"value": 12, "reason": "500g flour"},
+   "difficulty": {"value": "hard", "reason": "enriched dough, frying, filling"}
+  },
+  "mdb-53299": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "tender"], "reason": "breaded patties"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family dinner"},
+   "servings": {"value": 4, "reason": "8 patties"},
+   "difficulty": {"value": "easy", "reason": "mix and fry"}
+  },
+  "mdb-53300": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "long-cooked stew"},
+   "moods": {"value": ["hearty", "festive"], "reason": "national stew"},
+   "servings": {"value": 8, "reason": "1.4kg meat"},
+   "difficulty": {"value": "medium", "reason": "several stages, long cook"}
+  },
+  "mdb-53301": {
+   "flavor.sweet": {"value": 1, "reason": "golden onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "creamy", "saucy"], "reason": "creamy paprika stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "winter goulash"},
+   "servings": {"value": 6, "reason": "800g pork"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53302": {
+   "flavor.salty": {"value": 3, "reason": "15g salt rub"},
+   "textures": {"value": ["tender", "crispy"], "reason": "slow pork, crackling"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Easter roast"},
+   "servings": {"value": 8, "reason": "2kg shoulder"},
+   "difficulty": {"value": "medium", "reason": "long roast, tying"}
+  },
+  "mdb-53303": {
+   "textures": {"value": ["smooth", "creamy"], "reason": "set mousse"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "berry dessert"},
+   "servings": {"value": 6, "reason": "500ml cream"},
+   "difficulty": {"value": "medium", "reason": "gelatine setting"}
+  },
+  "mdb-53304": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy"], "reason": "marble sponge"},
+   "moods": {"value": ["comfort", "festive"], "reason": "party bakes"},
+   "servings": {"value": 12, "reason": "mini bundt tin"},
+   "difficulty": {"value": "easy", "reason": "creamed sponge"}
+  },
+  "mdb-53305": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "chewy"], "reason": "rice-stuffed leaves"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas veg main"},
+   "servings": {"value": 3, "reason": "6 leaves"},
+   "difficulty": {"value": "medium", "reason": "blanching and rolling leaves"}
+  },
+  "mdb-53306": {
+   "flavor.sweet": {"value": 1, "reason": "beetroot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["brothy", "tender"], "reason": "meaty beet soup"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "big pot of soup"},
+   "servings": {"value": 10, "reason": "5 litres water"},
+   "difficulty": {"value": "medium", "reason": "long simmer, many stages"}
+  },
+  "mdb-53307": {
+   "flavor.salty": {"value": 2, "reason": "salted ferment"},
+   "flavor.sweet": {"value": 1, "reason": "beetroot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "fermentation"},
+   "moods": {"value": ["fresh"], "reason": "tangy ferment"},
+   "servings": {"value": 12, "reason": "large jar, condiment"},
+   "difficulty": {"value": "medium", "reason": "weeks of fermenting"}
+  },
+  "mdb-53308": {
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "flavor.bitter": {"value": 1, "reason": "rye, caraway"},
+   "textures": {"value": ["chewy"], "reason": "dense rye loaf"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "homemade bread"},
+   "servings": {"value": 10, "reason": "one loaf"},
+   "difficulty": {"value": "medium", "reason": "kneading and proving"}
+  },
+  "mdb-53309": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "crisp veg, sour cream"},
+   "moods": {"value": ["fresh", "light"], "reason": "cooling salad"},
+   "servings": {"value": 4, "reason": "one cucumber, one fennel"},
+   "difficulty": {"value": "easy", "reason": "slice and dress"}
+  },
+  "mdb-53310": {
+   "flavor.umami": {"value": 0, "reason": "bread"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "soft braided loaf"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Sabbath bread"},
+   "servings": {"value": 10, "reason": "500g flour"},
+   "difficulty": {"value": "hard", "reason": "braiding and two rises"}
+  },
+  "mdb-53311": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["brothy", "tender"], "reason": "beef and beet soup"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "national soup"},
+   "servings": {"value": 10, "reason": "2 litres stock, 2.5kg potatoes"},
+   "difficulty": {"value": "medium", "reason": "stock then vegetable base"}
+  },
+  "mdb-53312": {
+   "flavor.salty": {"value": 1, "reason": "celery salt"},
+   "flavor.sweet": {"value": 1, "reason": "carrot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 0, "reason": "raw slaw"},
+   "textures": {"value": ["crunchy", "creamy"], "reason": "mayo slaw"},
+   "moods": {"value": ["fresh"], "reason": "barbecue side"},
+   "servings": {"value": 8, "reason": "half a cabbage"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "slice and mix"}
+  },
+  "mdb-53313": {
+   "flavor.umami": {"value": 1, "reason": "egg, garlic"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried beet fritters"},
+   "moods": {"value": ["fresh", "light"], "reason": "fritters with salad"},
+   "servings": {"value": 2, "reason": "6 latkes"},
+   "difficulty": {"value": "easy", "reason": "mix, fry, bake"}
+  },
+  "mdb-53315": {
+   "flavor.bitter": {"value": 0, "reason": "sweet-sour, not bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised cabbage"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "winter braise"},
+   "servings": {"value": 4, "reason": "8 kabanos"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-53316": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy"], "reason": "thick pancakes"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "berry pancakes"},
+   "servings": {"value": 4, "reason": "about 12 pancakes"},
+   "difficulty": {"value": "easy", "reason": "blend and fry"}
+  }
+ }
+}
