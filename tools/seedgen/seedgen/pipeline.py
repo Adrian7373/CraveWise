@@ -110,6 +110,29 @@ def add_extra_ingredients(recipes, overrides: dict, table: IngredientTable) -> l
     return errors
 
 
+def remap_lines(recipes, overrides: dict, table: IngredientTable) -> list[str]:
+    """Applies `remapLines` from overrides.json: [{"rawName", "rawMeasure", "ingredientId"}]. Points one
+    source line at a different ingredient when the shared synonym is wrong for that recipe (e.g. 'Pepper'
+    meaning a bell pepper, or Mutabbaq's 'Mincemeat' meaning minced meat). rawName and rawMeasure must
+    both match exactly one line (case-insensitive), so a remap can't silently hit the wrong line."""
+    by_id = table.by_id
+    errors = []
+    for r in recipes:
+        for remap in overrides.get(r.id, {}).get("remapLines", []):
+            iid = remap.get("ingredientId")
+            if iid not in by_id:
+                errors.append(f"overrides {r.id}: remapLines id {iid!r} not in ingredients.json")
+                continue
+            name, measure = norm(remap.get("rawName", "")), norm(remap.get("rawMeasure", ""))
+            hits = [l for l in r.lines if norm(l.raw_name) == name and norm(l.raw_measure) == measure]
+            if len(hits) != 1:
+                errors.append(f"overrides {r.id}: remapLines {remap.get('rawName')!r} / {remap.get('rawMeasure')!r} "
+                              f"matched {len(hits)} lines, expected 1")
+                continue
+            hits[0].ingredient_id = iid
+    return errors
+
+
 def tag_all(table: IngredientTable):
     """Normalize, run rules, load AI answers and overrides, merge. Shared by tags/review/build."""
     import json
@@ -120,7 +143,8 @@ def tag_all(table: IngredientTable):
     allowed = N.allowed_cuisines()
     v = vocab.load()
     overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
-    errors = add_extra_ingredients(recipes, overrides, table)
+    errors = remap_lines(recipes, overrides, table)
+    errors += add_extra_ingredients(recipes, overrides, table)
     proposals = {r.id: rules.propose(r, allowed) for r in recipes}
     answers, ai_errors = ai.load_answers(v, allowed)
     errors += ai_errors

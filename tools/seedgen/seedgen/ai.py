@@ -92,7 +92,7 @@ def write_todos(recipes: list[Recipe], rules: dict[str, dict[str, Proposal]], ov
 
 def flat_override(o: dict) -> dict[str, object]:
     """overrides.json entry → {field: value} with flavor split per axis."""
-    flat = {k: v for k, v in o.items() if k not in ("flavor", "reviewed", "notes", "extraIngredients")}
+    flat = {k: v for k, v in o.items() if k not in ("flavor", "reviewed", "notes", "extraIngredients", "remapLines")}
     for axis, v in (o.get("flavor") or {}).items():
         flat[f"flavor.{axis}"] = v
     return flat

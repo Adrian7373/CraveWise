@@ -749,5 +749,47 @@
   "reviewed": false,
   "prepMinutes": 30,
   "notes": "audit: the balls can be eaten straight away; setting overnight is optional"
+ },
+ "mdb-53223": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Mincemeat", "rawMeasure": "500g", "ingredientId": "beef_mince"}
+  ],
+  "notes": "ingredient review: method says 'minced meat'; the shared 'Mincemeat' synonym is the sweet fruit mix"
+ },
+ "mdb-52796": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Pepper", "rawMeasure": "1 red", "ingredientId": "red_pepper"}
+  ],
+  "notes": "ingredient review: '1 red Pepper' is a bell pepper (the pinch stays black pepper)"
+ },
+ "mdb-53063": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Pepper", "rawMeasure": "1", "ingredientId": "red_pepper"}
+  ],
+  "notes": "ingredient review: chivito's '1 Pepper' is a bell pepper"
+ },
+ "mdb-53326": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Pepper", "rawMeasure": "1/2", "ingredientId": "red_pepper"}
+  ],
+  "notes": "ingredient review: method says 'halved bell pepper' (the to-taste line stays black pepper)"
+ },
+ "mdb-53539": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Pepper", "rawMeasure": "1/2 cup", "ingredientId": "red_pepper"}
+  ],
+  "notes": "ingredient review: '1/2 cup Pepper' is chopped bell pepper (method fries it with the onions)"
+ },
+ "mdb-53541": {
+  "reviewed": false,
+  "remapLines": [
+   {"rawName": "Pepper", "rawMeasure": "2 tablespoons", "ingredientId": "red_pepper"}
+  ],
+  "notes": "ingredient review: '2 tablespoons Pepper' is chopped bell pepper (the 1/4 tsp stays black pepper)"
  }
 }
