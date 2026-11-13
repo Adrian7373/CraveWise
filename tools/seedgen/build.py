@@ -6,6 +6,8 @@
     python tools/seedgen/build.py report          # Phase A+B stats (dedupe, measures, cuisines)
     python tools/seedgen/build.py tags            # rules + AI + overrides; queues out/ai-todo/batch-NNN.md
     python tools/seedgen/build.py review          # out/review-top50.md, out/audit.md, out/provenance.json
+    python tools/seedgen/build.py nutrition       # FDC matches -> curation/nutrition.json + nutrition.review.md
+    python tools/seedgen/build.py fdc "flour all purpose"   # search FDC descriptions for hand pins
     python tools/seedgen/build.py show 52772 …    # print meals as the pipeline sees them
 
 See CLAUDE.md "Seed pipeline" for the layout and review workflow.
@@ -23,7 +25,7 @@ from seedgen import fetch  # noqa: E402
 
 def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(prog="build.py", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("command", nargs="?", default="build", choices=["build", "fetch", "ingredients", "report", "show", "tags", "review"])
+    p.add_argument("command", nargs="?", default="build", choices=["build", "fetch", "ingredients", "report", "show", "tags", "review", "nutrition", "fdc"])
     p.add_argument("ids", nargs="*")
     p.add_argument("--refresh", action="store_true", help="re-download cached TheMealDB responses")
     p.add_argument("--allow-unreviewed", action="store_true",
@@ -44,6 +46,16 @@ def main(argv: list[str]) -> int:
         return pipeline.cmd_tags()
     if a.command == "review":
         return pipeline.cmd_review()
+    if a.command == "fdc":  # fdc "query one" "query two": search SR Legacy descriptions
+        from seedgen import nutrition as NU
+        foods = NU.load_sr()
+        for q in a.ids:
+            print(f"## {q}")
+            for fid, desc in NU.search(q, foods):
+                print(f"  {fid}  {desc}")
+        return 0
+    if a.command == "nutrition":
+        return pipeline.cmd_nutrition()
     if a.command == "show":
         return pipeline.cmd_show(a.ids)
     return pipeline.cmd_build(allow_unreviewed=a.allow_unreviewed)
