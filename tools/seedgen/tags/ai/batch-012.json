@@ -1,0 +1,146 @@
+{
+ "batch": 12,
+ "recipes": {
+  "mdb-52980": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "tender"], "reason": "kale mash"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Dutch winter mash"},
+   "servings": {"value": 4, "reason": "1.5kg potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and mash"}
+  },
+  "mdb-52981": {
+   "flavor.sweet": {"value": 1, "reason": "peas, carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "thick winter soup"},
+   "servings": {"value": 6, "reason": "2 litres"},
+   "difficulty": {"value": "easy", "reason": "long simmer"}
+  },
+  "mdb-52987": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "toasted bread, melted cheese"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "grilled sandwich"},
+   "servings": {"value": 4, "reason": "4 sandwiches"},
+   "cookMinutes": {"value": 10, "reason": "toasting in a skillet"},
+   "difficulty": {"value": "easy", "reason": "assemble and toast"}
+  },
+  "mdb-52988": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["tender", "chewy"], "reason": "steamed fruit pudding"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Christmas pudding"},
+   "servings": {"value": 12, "reason": "1kg raisins, large pudding"},
+   "difficulty": {"value": "medium", "reason": "long steaming"}
+  },
+  "mdb-52989": {
+   "textures": {"value": ["creamy", "crunchy"], "reason": "custard, cream, almonds"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Christmas leftovers trifle"},
+   "servings": {"value": 8, "reason": "trifle bowl"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "assemble layers"}
+  },
+  "mdb-52990": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "fruit cake with pecans"},
+   "moods": {"value": ["festive"], "reason": "Christmas cake"},
+   "servings": {"value": 16, "reason": "20cm deep cake"},
+   "difficulty": {"value": "medium", "reason": "long slow bake"}
+  },
+  "mdb-52991": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "shortbread pastry, mincemeat"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Christmas bake"},
+   "servings": {"value": 18, "reason": "18 pies"},
+   "difficulty": {"value": "medium", "reason": "pastry lids by hand"}
+  },
+  "mdb-52992": {
+   "textures": {"value": ["creamy", "tender"], "reason": "mash, meatloaf"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "meat and mash"},
+   "servings": {"value": 2, "reason": "meal kit for 2 (amounts doubled for 4)"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52993": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "roast potatoes and broccoli"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "traybake dinner"},
+   "servings": {"value": 2, "reason": "2 chicken breasts, meal kit for 2"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52994": {
+   "textures": {"value": ["tender", "saucy"], "reason": "pan sauce over chops"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "autumn dinner"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52995": {
+   "flavor.salty": {"value": 2, "reason": "BBQ sauce and ketchup"},
+   "textures": {"value": ["saucy", "crispy"], "reason": "saucy pork, roast wedges"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "messy sandwich"},
+   "servings": {"value": 2, "reason": "meal kit for 2"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52996": {
+   "textures": {"value": ["creamy", "tender"], "reason": "mash, melted cheese"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy chicken"},
+   "servings": {"value": 2, "reason": "2 chicken breasts"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52997": {
+   "flavor.sweet": {"value": 1, "reason": "lime and sugar pickle"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "pickled veg, beef"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "rice bowl"},
+   "servings": {"value": 2, "reason": "1 cup rice, meal kit for 2"},
+   "difficulty": {"value": "easy", "reason": "meal-kit steps"}
+  },
+  "mdb-52998": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "brothy"], "reason": "boiled beef and veg"},
+   "moods": {"value": ["hearty", "festive"], "reason": "St Patrick's Day"},
+   "servings": {"value": 6, "reason": "3lb brisket"},
+   "difficulty": {"value": "easy", "reason": "boil and simmer"}
+  },
+  "mdb-52999": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp sausages, soft greens"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "traybake"},
+   "servings": {"value": 4, "reason": "8 sausages"},
+   "difficulty": {"value": "easy", "reason": "one dish"}
+  },
+  "mdb-53000": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "mash over veg gravy"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "veg shepherd's pie"},
+   "servings": {"value": 10, "reason": "6lb potatoes, 12 cups veg"},
+   "difficulty": {"value": "hard", "reason": "many components, long prep"}
+  },
+  "mdb-53005": {
+   "flavor.salty": {"value": 1, "reason": "salted crust"},
+   "textures": {"value": ["flaky", "tender"], "reason": "pie crust, soft fruit"},
+   "moods": {"value": ["fresh", "comfort"], "reason": "summer fruit pie"},
+   "servings": {"value": 8, "reason": "one pie"},
+   "difficulty": {"value": "medium", "reason": "double crust from scratch"}
+  },
+  "mdb-53007": {
+   "flavor.salty": {"value": 1, "reason": "butter base"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "baked cheesecake, biscuit base"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "honey and citrus"},
+   "servings": {"value": 10, "reason": "23cm dish"},
+   "difficulty": {"value": "easy", "reason": "mix and bake"}
+  },
+  "mdb-53008": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "baked stuffed tomatoes"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby Greek dish"},
+   "servings": {"value": 4, "reason": "4 tomatoes"},
+   "difficulty": {"value": "medium", "reason": "hollowing and stuffing"}
+  },
+  "mdb-53009": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "grilled skewers"},
+   "moods": {"value": ["fresh", "festive"], "reason": "barbecue skewers"},
+   "servings": {"value": 4, "reason": "750g lamb"},
+   "difficulty": {"value": "easy", "reason": "marinate and grill"}
+  }
+ }
+}

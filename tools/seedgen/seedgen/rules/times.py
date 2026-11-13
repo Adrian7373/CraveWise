@@ -16,7 +16,7 @@ import re
 from ..tags import Proposal
 from ..timers import find_seconds
 
-PASSIVE = re.compile(r"marinat|soak|chill|refrigerat|fridge|freez|\brest(?:ing)?\b|\bprove\b|\bproof(?:ing)?\b|"
+PASSIVE = re.compile(r"marinat|soak|chill|refrigerat|fridge|freez|\brest(?:ing)?\b|\bprove\b|(?<![-\w])proof(?:ing)?\b|"
                      r"\bleave to rise|\b(?:let|allow)(?: it)? (?:to )?rise|"
                      r"leave (?:it |them )?to (?:stand|cool|set|infuse)|set aside for|cool (?:completely|for)|"
                      r"stand for|overnight|infuse|steep", re.I)

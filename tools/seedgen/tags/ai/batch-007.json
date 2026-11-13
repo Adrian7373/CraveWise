@@ -1,0 +1,154 @@
+{
+ "batch": 7,
+ "recipes": {
+  "mdb-52867": {
+   "flavor.umami": {"value": 1, "reason": "tomatoes, roast veg"},
+   "textures": {"value": ["saucy", "tender"], "reason": "bean and veg chilli"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "quick filling chilli"},
+   "servings": {"value": 2, "reason": "one can beans, one grain pouch"},
+   "difficulty": {"value": "easy", "reason": "4 ingredients"}
+  },
+  "mdb-52868": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "tomato, beans"},
+   "textures": {"value": ["saucy", "tender"], "reason": "thick bean curry"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "cheap curry"},
+   "servings": {"value": 2, "reason": "one can beans"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-52869": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.umami": {"value": 1, "reason": "lentils"},
+   "textures": {"value": ["creamy", "tender"], "reason": "tahini-coated lentils"},
+   "moods": {"value": ["fresh", "light"], "reason": "lemony veg and lentils"},
+   "servings": {"value": 2, "reason": "250g pack lentils"},
+   "difficulty": {"value": "easy", "reason": "one wok"}
+  },
+  "mdb-52870": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "roast chickpeas"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp chickpeas, avocado"},
+   "moods": {"value": ["fresh", "light"], "reason": "zesty wraps"},
+   "servings": {"value": 2, "reason": "4 tortillas"},
+   "difficulty": {"value": "easy", "reason": "roast and assemble"}
+  },
+  "mdb-52871": {
+   "flavor.sour": {"value": 0, "reason": "mirin is sweet"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy"], "reason": "thick udon"},
+   "moods": {"value": ["comfort"], "reason": "noodle stir-fry"},
+   "servings": {"value": 2, "reason": "250g udon"},
+   "difficulty": {"value": "easy", "reason": "boil and stir-fry"}
+  },
+  "mdb-52873": {
+   "flavor.sweet": {"value": 1, "reason": "root veg"},
+   "flavor.bitter": {"value": 1, "reason": "red wine, herbs"},
+   "textures": {"value": ["tender", "fluffy", "saucy"], "reason": "stew with dumplings"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "winter stew"},
+   "servings": {"value": 4, "reason": "750g beef"},
+   "difficulty": {"value": "medium", "reason": "long braise plus dumplings"}
+  },
+  "mdb-52874": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, onion"},
+   "flavor.bitter": {"value": 1, "reason": "red wine"},
+   "textures": {"value": ["flaky", "tender", "saucy"], "reason": "puff lid over braised beef"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "pie night"},
+   "servings": {"value": 6, "reason": "1kg beef"},
+   "difficulty": {"value": "medium", "reason": "2-hour filling then pastry"}
+  },
+  "mdb-52875": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["flaky", "creamy"], "reason": "shortcrust, creamy filling"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "creamy pie"},
+   "servings": {"value": 6, "reason": "3 breasts plus ham, big pie"},
+   "difficulty": {"value": "hard", "reason": "poaching, sauce and homemade pastry"}
+  },
+  "mdb-52876": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["flaky", "saucy"], "reason": "pastry over mince"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "classic pie"},
+   "servings": {"value": 4, "reason": "500g mince, 1 litre dish"},
+   "difficulty": {"value": "medium", "reason": "filling must cool before pastry"}
+  },
+  "mdb-52877": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "textures": {"value": ["flaky", "tender"], "reason": "pastry, slow lamb"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "meat and potato pie"},
+   "servings": {"value": 4, "reason": "500g lamb"},
+   "difficulty": {"value": "medium", "reason": "simmer then pie"}
+  },
+  "mdb-52878": {
+   "textures": {"value": ["flaky", "tender", "saucy"], "reason": "pastry, braised beef"},
+   "moods": {"value": ["hearty", "festive"], "reason": "rich pub classic"},
+   "servings": {"value": 6, "reason": "900g beef"}
+  },
+  "mdb-52879": {
+   "flavor.sweet": {"value": 1, "reason": "carrots, shallots"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["creamy", "tender"], "reason": "rich mash top"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "French cottage pie"},
+   "servings": {"value": 6, "reason": "1.5kg potato, 600g chicken"},
+   "difficulty": {"value": "medium", "reason": "filling, mash, bake"}
+  },
+  "mdb-52880": {
+   "flavor.salty": {"value": 2, "reason": "seasoned mince, lard pastry"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "hot-water crust"},
+   "moods": {"value": ["hearty"], "reason": "spiced meat pie"},
+   "servings": {"value": 8, "reason": "1kg lamb"}
+  },
+  "mdb-52881": {
+   "textures": {"value": ["flaky", "saucy", "tender"], "reason": "puff lid, gravy filling"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "British pie"},
+   "servings": {"value": 4, "reason": "one pie"},
+   "difficulty": {"value": "medium", "reason": "long simmer, cool, pastry"}
+  },
+  "mdb-52882": {
+   "flavor.sweet": {"value": 1, "reason": "milk, leeks"},
+   "textures": {"value": ["creamy", "flaky"], "reason": "mash over flaked fish"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family fish pie"},
+   "servings": {"value": 6, "reason": "750g fish, 6 eggs"},
+   "difficulty": {"value": "medium", "reason": "mash, sauce, fish, assembly"}
+  },
+  "mdb-52884": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.sour": {"value": 0, "reason": "nothing sour"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "slow lamb under crisp potatoes"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Lancashire classic"},
+   "servings": {"value": 6, "reason": "900g lamb"},
+   "difficulty": {"value": "easy", "reason": "brown, layer, bake"}
+  },
+  "mdb-52886": {
+   "flavor.salty": {"value": 0, "reason": "pinch only"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "steamed suet sponge"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "school pudding"},
+   "servings": {"value": 6, "reason": "20cm roll"},
+   "difficulty": {"value": "medium", "reason": "wrapping and 90-minute steam"}
+  },
+  "mdb-52887": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 3, "reason": "smoked haddock, egg"},
+   "textures": {"value": ["fluffy", "flaky"], "reason": "rice, flaked fish"},
+   "moods": {"value": ["comfort"], "reason": "brunch classic"},
+   "servings": {"value": 4, "reason": "300g rice, 4 eggs"},
+   "difficulty": {"value": "easy", "reason": "rice, poach, boil eggs"}
+  },
+  "mdb-52888": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "rough puff, currants"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "teatime treat"},
+   "servings": {"value": 12, "reason": "about 12 cakes"},
+   "difficulty": {"value": "hard", "reason": "rough puff pastry folding"}
+  },
+  "mdb-52889": {
+   "textures": {"value": ["tender", "smooth"], "reason": "juice-soaked bread"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer berries"},
+   "servings": {"value": 6, "reason": "1.25 litre basin"},
+   "difficulty": {"value": "medium", "reason": "lining a basin, overnight set"}
+  }
+ }
+}

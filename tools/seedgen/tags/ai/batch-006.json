@@ -1,0 +1,152 @@
+{
+ "batch": 6,
+ "recipes": {
+  "mdb-52842": {
+   "flavor.sweet": {"value": 0, "reason": "savoury soup"},
+   "flavor.bitter": {"value": 1, "reason": "broccoli, blue cheese"},
+   "moods": {"value": ["comfort"], "reason": "warming soup"},
+   "servings": {"value": 4, "reason": "1 litre stock"},
+   "difficulty": {"value": "easy", "reason": "simmer and blend"}
+  },
+  "mdb-52845": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "meatloaf with saucy beans"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "family bake"},
+   "servings": {"value": 4, "reason": "500g mince"},
+   "difficulty": {"value": "easy", "reason": "mix, shape, bake"}
+  },
+  "mdb-52846": {
+   "flavor.sweet": {"value": 1, "reason": "sweetcorn"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "white sauce under crisp potato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "hotpot"},
+   "servings": {"value": 2, "reason": "250g chicken"},
+   "difficulty": {"value": "easy", "reason": "roux and bake"}
+  },
+  "mdb-52847": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "slow-cooked pork, crumb top"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "slow bean stew"},
+   "servings": {"value": 4, "reason": "350g pork, 400g beans"},
+   "difficulty": {"value": "easy", "reason": "brown, then oven"}
+  },
+  "mdb-52848": {
+   "flavor.bitter": {"value": 0, "reason": "treacle is sweet here"},
+   "textures": {"value": ["saucy", "tender"], "reason": "beans in tomato sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "cheap filling stew"},
+   "servings": {"value": 4, "reason": "8 sausages"},
+   "difficulty": {"value": "easy", "reason": "5 ingredients"}
+  },
+  "mdb-52849": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "ricotta filling, tomato sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "cheesy bake"},
+   "servings": {"value": 8, "reason": "2 or more dishes, 1kg spinach"},
+   "difficulty": {"value": "medium", "reason": "sauce, filling, piping tubes"}
+  },
+  "mdb-52850": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["light", "fresh"], "reason": "quick one-pan couscous"},
+   "servings": {"value": 2, "reason": "200g chicken, 200g couscous"},
+   "difficulty": {"value": "easy", "reason": "one pan, 15 minutes"}
+  },
+  "mdb-52851": {
+   "flavor.sweet": {"value": 1, "reason": "peanut butter"},
+   "textures": {"value": ["creamy", "saucy"], "reason": "peanut yogurt sauce"},
+   "moods": {"value": ["comfort"], "reason": "quick curry"},
+   "servings": {"value": 4, "reason": "4 breasts"},
+   "difficulty": {"value": "easy", "reason": "paste and simmer"}
+  },
+  "mdb-52852": {
+   "flavor.sweet": {"value": 0, "reason": "savoury salad"},
+   "flavor.bitter": {"value": 0, "reason": "spinach is mild"},
+   "textures": {"value": ["crispy", "tender"], "reason": "roast potatoes, eggs"},
+   "moods": {"value": ["fresh", "light"], "reason": "main-course salad"},
+   "servings": {"value": 4, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "roast, boil, toss"}
+  },
+  "mdb-52853": {
+   "flavor.salty": {"value": 0, "reason": "pinch of salt only"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "blended mousse"},
+   "moods": {"value": ["light", "indulgent"], "reason": "lighter chocolate dessert"},
+   "servings": {"value": 4, "reason": "small cups"},
+   "cookMinutes": {"value": 0, "reason": "no cooking"},
+   "difficulty": {"value": "easy", "reason": "blend"}
+  },
+  "mdb-52855": {
+   "flavor.umami": {"value": 0, "reason": "sweet"},
+   "textures": {"value": ["fluffy", "crunchy"], "reason": "soft pancakes, pecans"},
+   "moods": {"value": ["light", "fresh"], "reason": "3-ingredient pancakes"},
+   "servings": {"value": 1, "reason": "4 small pancakes"},
+   "difficulty": {"value": "easy", "reason": "mash and fry"}
+  },
+  "mdb-52856": {
+   "textures": {"value": ["crunchy", "flaky"], "reason": "nutty filling, pastry"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "holiday pie"},
+   "servings": {"value": 10, "reason": "one large pie"},
+   "difficulty": {"value": "medium", "reason": "homemade pastry, blind bake"}
+  },
+  "mdb-52857": {
+   "flavor.salty": {"value": 1, "reason": "half tsp salt"},
+   "textures": {"value": ["smooth", "flaky"], "reason": "custard filling, pastry"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Thanksgiving pie"},
+   "servings": {"value": 8, "reason": "22cm tart"},
+   "difficulty": {"value": "medium", "reason": "blind bake plus filling"}
+  },
+  "mdb-52859": {
+   "flavor.salty": {"value": 1, "reason": "buttery base"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "set lime cream, biscuit base"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "zingy lime dessert"},
+   "servings": {"value": 8, "reason": "22cm tart"},
+   "difficulty": {"value": "easy", "reason": "biscuit base, whisked filling"}
+  },
+  "mdb-52860": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy"], "reason": "fudgy brownies"},
+   "moods": {"value": ["indulgent"], "reason": "chocolate treat"},
+   "servings": {"value": 16, "reason": "20x30cm tray"},
+   "difficulty": {"value": "easy", "reason": "one-pan batter"}
+  },
+  "mdb-52861": {
+   "flavor.salty": {"value": 2, "reason": "peanut butter, brittle"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "set filling, brittle"},
+   "moods": {"value": ["indulgent"], "reason": "rich dessert"},
+   "servings": {"value": 10, "reason": "20cm cake tin"},
+   "cookMinutes": {"value": 5, "reason": "melting butter and syrup"},
+   "difficulty": {"value": "medium", "reason": "gelatine set"}
+  },
+  "mdb-52862": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "saucy"], "reason": "dumpling topping on fruit"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "summer fruit pudding"},
+   "servings": {"value": 6, "reason": "6 peaches"},
+   "difficulty": {"value": "easy", "reason": "fruit plus rubbed topping"}
+  },
+  "mdb-52863": {
+   "flavor.sweet": {"value": 1, "reason": "peppers, carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["saucy", "tender"], "reason": "veg and lentil stew"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "one-pot casserole"},
+   "servings": {"value": 4, "reason": "250g lentils"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-52864": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy"], "reason": "rolled pasta, crumb top"},
+   "moods": {"value": ["festive", "comfort"], "reason": "vegetarian centrepiece"},
+   "servings": {"value": 6, "reason": "350g sheets, 500g mushrooms"},
+   "difficulty": {"value": "hard", "reason": "rolling and baking a filled pasta roll"}
+  },
+  "mdb-52866": {
+   "flavor.sweet": {"value": 1, "reason": "roast squash"},
+   "flavor.bitter": {"value": 0, "reason": "sage is mild"},
+   "flavor.umami": {"value": 1, "reason": "roast garlic"},
+   "textures": {"value": ["creamy", "crispy"], "reason": "squash sauce, crisp sage"},
+   "moods": {"value": ["comfort"], "reason": "autumn pasta"},
+   "servings": {"value": 4, "reason": "350g linguine"},
+   "difficulty": {"value": "easy", "reason": "roast and blend"}
+  }
+ }
+}

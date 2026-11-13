@@ -1,0 +1,145 @@
+{
+ "batch": 5,
+ "recipes": {
+  "mdb-52817": {
+   "flavor.bitter": {"value": 1, "reason": "charred aubergine"},
+   "flavor.umami": {"value": 1, "reason": "tomato, chickpeas"},
+   "textures": {"value": ["tender", "creamy"], "reason": "soft aubergine, yogurt"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "herby veg main"},
+   "servings": {"value": 4, "reason": "6 small aubergines"},
+   "difficulty": {"value": "easy", "reason": "one skillet"}
+  },
+  "mdb-52818": {
+   "flavor.sweet": {"value": 1, "reason": "peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "cheesy macaroni"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "one-pot mac and cheese"},
+   "servings": {"value": 6, "reason": "500g macaroni"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-52820": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "fried cutlet with curry sauce"},
+   "servings": {"value": 4, "reason": "4 breasts"},
+   "difficulty": {"value": "medium", "reason": "sauce plus breading and frying"}
+  },
+  "mdb-52821": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "spicy coconut noodle soup"},
+   "servings": {"value": 2, "reason": "100g noodles, 150g prawns"},
+   "difficulty": {"value": "easy", "reason": "one pan, 15 minutes"}
+  },
+  "mdb-52822": {
+   "flavor.bitter": {"value": 0, "reason": "horseradish is hot, not bitter"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "puffed batter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "British classic"},
+   "servings": {"value": 4, "reason": "8 sausages"},
+   "difficulty": {"value": "easy", "reason": "batter and bake"}
+  },
+  "mdb-52823": {
+   "textures": {"value": ["creamy", "tender"], "reason": "risotto"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "lemony seafood risotto"},
+   "servings": {"value": 2, "reason": "150g rice"},
+   "cookMinutes": {"value": 30, "reason": "stirring risotto"},
+   "difficulty": {"value": "medium", "reason": "constant stirring and timing fish"}
+  },
+  "mdb-52824": {
+   "flavor.sweet": {"value": 1, "reason": "carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "crispy", "fluffy"], "reason": "roast beef, Yorkshire puddings"},
+   "moods": {"value": ["hearty", "festive", "comfort"], "reason": "Sunday roast"},
+   "servings": {"value": 4, "reason": "8 slices beef, 8 puddings"},
+   "difficulty": {"value": "medium", "reason": "several components timed together"}
+  },
+  "mdb-52826": {
+   "flavor.bitter": {"value": 1, "reason": "ancho, balsamic"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-braised beef"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "big pot of chilli"},
+   "servings": {"value": 8, "reason": "1kg beef, 300g chorizo, 2 tins beans"},
+   "difficulty": {"value": "medium", "reason": "long low braise"}
+  },
+  "mdb-52827": {
+   "textures": {"value": ["tender", "creamy", "crunchy"], "reason": "coconut curry, peanuts"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich mild curry"},
+   "servings": {"value": 4, "reason": "600g beef"},
+   "difficulty": {"value": "easy", "reason": "brown then oven braise"}
+  },
+  "mdb-52828": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "noodles, peanuts, cucumber"},
+   "moods": {"value": ["fresh", "light"], "reason": "noodle bowl with herbs"},
+   "servings": {"value": 4, "reason": "1.5lb pork"},
+   "difficulty": {"value": "easy", "reason": "marinate, bake, assemble"}
+  },
+  "mdb-52829": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "toasted bread, gooey filling"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "double-carb cheese"},
+   "servings": {"value": 8, "reason": "16 bread slices"},
+   "difficulty": {"value": "medium", "reason": "mac and cheese then sandwiches"}
+  },
+  "mdb-52830": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crunchy", "tender", "creamy"], "reason": "hard shells, shredded chicken"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party tacos"},
+   "servings": {"value": 6, "reason": "12 taco shells"},
+   "difficulty": {"value": "easy", "reason": "slow cooker does the work"}
+  },
+  "mdb-52833": {
+   "textures": {"value": ["creamy", "crunchy"], "reason": "set filling, pretzel base"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "showy no-bake dessert"},
+   "servings": {"value": 10, "reason": "20cm cheesecake"},
+   "difficulty": {"value": "easy", "reason": "no-bake"}
+  },
+  "mdb-52835": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "chewy"], "reason": "silky pasta"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "clotted cream sauce"},
+   "servings": {"value": 2, "reason": "250g fettuccine"},
+   "difficulty": {"value": "easy", "reason": "10-minute sauce"}
+  },
+  "mdb-52836": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "toasted noodles, seafood"},
+   "moods": {"value": ["festive", "hearty"], "reason": "Spanish sharing pan"},
+   "servings": {"value": 4, "reason": "350g noodles"},
+   "difficulty": {"value": "hard", "reason": "prepping several shellfish"}
+  },
+  "mdb-52837": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 1, "reason": "olives"},
+   "textures": {"value": ["saucy", "chewy"], "reason": "spaghetti in fish sauce"},
+   "moods": {"value": ["comfort"], "reason": "storecupboard pasta"},
+   "servings": {"value": 4, "reason": "300g spaghetti"},
+   "difficulty": {"value": "easy", "reason": "quick pan sauce"}
+  },
+  "mdb-52838": {
+   "flavor.bitter": {"value": 1, "reason": "red wine, rosemary"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow-cooked duck ragu"},
+   "moods": {"value": ["comfort", "festive"], "reason": "weekend ragu"},
+   "servings": {"value": 6, "reason": "4 duck legs, 600g pasta"},
+   "difficulty": {"value": "medium", "reason": "long braise, shredding"}
+  },
+  "mdb-52839": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "pasta, sugar snaps"},
+   "moods": {"value": ["fresh", "light"], "reason": "zesty prawn pasta"},
+   "servings": {"value": 4, "reason": "280g linguine, 24 prawns"},
+   "difficulty": {"value": "easy", "reason": "quick stir-fry"}
+  },
+  "mdb-52840": {
+   "flavor.sweet": {"value": 1, "reason": "milk, onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["creamy", "brothy"], "reason": "creamy soup"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "chowder"},
+   "servings": {"value": 4, "reason": "1.5kg clams"},
+   "difficulty": {"value": "medium", "reason": "cleaning and shelling clams"}
+  },
+  "mdb-52841": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort"], "reason": "tomato soup"},
+   "servings": {"value": 8, "reason": "1.5kg tomatoes, 1 litre water"},
+   "difficulty": {"value": "easy", "reason": "simmer and blend"}
+  }
+ }
+}

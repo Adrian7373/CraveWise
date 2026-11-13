@@ -1,0 +1,157 @@
+{
+ "batch": 4,
+ "recipes": {
+  "mdb-52782": {
+   "flavor.bitter": {"value": 0, "reason": "sweet spices"},
+   "textures": {"value": ["tender", "saucy"], "reason": "stuffed vine leaves in tomato"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "baked stuffed leaves"},
+   "servings": {"value": 4, "reason": "method says serves four"},
+   "difficulty": {"value": "hard", "reason": "rolling 50 vine leaves"}
+  },
+  "mdb-52783": {
+   "flavor.bitter": {"value": 1, "reason": "fennel and red wine"},
+   "textures": {"value": ["saucy", "chewy"], "reason": "rigatoni in sausage ragu"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "rich pasta"},
+   "servings": {"value": 4, "reason": "500g rigatoni"},
+   "difficulty": {"value": "medium", "reason": "ragu plus gremolata"}
+  },
+  "mdb-52784": {
+   "flavor.umami": {"value": 2, "reason": "tomato, cocoa, lentils"},
+   "textures": {"value": ["saucy", "tender"], "reason": "thick chilli"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "filling veggie chilli"},
+   "servings": {"value": 6, "reason": "1.5 cups lentils plus squash"},
+   "difficulty": {"value": "medium", "reason": "roast squash, cook lentils, chilli"}
+  },
+  "mdb-52785": {
+   "flavor.salty": {"value": 2, "reason": "salted twice"},
+   "flavor.bitter": {"value": 1, "reason": "mustard seed, turmeric"},
+   "textures": {"value": ["smooth", "saucy"], "reason": "thick soupy dal"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "everyday dal"},
+   "servings": {"value": 4, "reason": "1 cup dal"},
+   "difficulty": {"value": "easy", "reason": "boil dal, quick tadka"}
+  },
+  "mdb-52786": {
+   "flavor.salty": {"value": 2, "reason": "peanuts and peanut butter"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "marshmallow and nuts"},
+   "moods": {"value": ["indulgent"], "reason": "fudge treat"},
+   "servings": {"value": 16, "reason": "8-inch pan of squares"},
+   "cookMinutes": {"value": 5, "reason": "microwave melting"},
+   "difficulty": {"value": "easy", "reason": "melt, mix, set"}
+  },
+  "mdb-52787": {
+   "textures": {"value": ["smooth", "chewy"], "reason": "fudge with marshmallows"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "gifting fudge"},
+   "servings": {"value": 16, "reason": "8-inch pan of squares"},
+   "cookMinutes": {"value": 5, "reason": "microwave melting"},
+   "difficulty": {"value": "easy", "reason": "melt and layer"}
+  },
+  "mdb-52788": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["chewy"], "reason": "oaty flapjack"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "uses Christmas pudding"},
+   "servings": {"value": 12, "reason": "scored into 12 squares"},
+   "difficulty": {"value": "easy", "reason": "melt, stir, bake"}
+  },
+  "mdb-52792": {
+   "flavor.salty": {"value": 1, "reason": "buttered bread"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "tender"], "reason": "custard-soaked bread"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "nursery pudding"},
+   "servings": {"value": 4, "reason": "1 litre dish"},
+   "difficulty": {"value": "easy", "reason": "layer and bake"}
+  },
+  "mdb-52793": {
+   "flavor.salty": {"value": 1, "reason": "butter in sauce"},
+   "textures": {"value": ["fluffy", "saucy"], "reason": "sponge in toffee sauce"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "rich pudding"},
+   "servings": {"value": 7, "reason": "seven mini pudding tins"},
+   "difficulty": {"value": "medium", "reason": "soaked dates, sponges, sauce"}
+  },
+  "mdb-52794": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy"], "reason": "sponge"},
+   "moods": {"value": ["indulgent"], "reason": "chocolate cake"},
+   "servings": {"value": 8, "reason": "one cake"},
+   "difficulty": {"value": "easy", "reason": "one bowl"}
+  },
+  "mdb-52795": {
+   "flavor.salty": {"value": 2, "reason": "seasoned curry"},
+   "flavor.sweet": {"value": 1, "reason": "fried onion"},
+   "textures": {"value": ["creamy", "saucy", "tender"], "reason": "cream and yogurt gravy"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "creamy curry"},
+   "servings": {"value": 6, "reason": "1.2kg chicken"},
+   "difficulty": {"value": "medium", "reason": "fried onions, layered spicing"}
+  },
+  "mdb-52796": {
+   "flavor.sweet": {"value": 1, "reason": "squash"},
+   "flavor.bitter": {"value": 0, "reason": "broccoli is mild"},
+   "textures": {"value": ["creamy", "tender"], "reason": "alfredo sauce"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "creamy pasta"},
+   "servings": {"value": 6, "reason": "16oz pasta, 5 breasts"},
+   "difficulty": {"value": "medium", "reason": "chicken, veg, sauce and pasta"}
+  },
+  "mdb-52797": {
+   "textures": {"value": ["tender", "crunchy"], "reason": "potatoes and pine nuts"},
+   "moods": {"value": ["fresh", "light"], "reason": "herby salad"},
+   "servings": {"value": 4, "reason": "650g potatoes"},
+   "difficulty": {"value": "easy", "reason": "boil and toss"}
+  },
+  "mdb-52807": {
+   "flavor.salty": {"value": 1, "reason": "lightly salted"},
+   "flavor.sweet": {"value": 1, "reason": "onion, tomato"},
+   "flavor.bitter": {"value": 1, "reason": "charred aubergine"},
+   "flavor.umami": {"value": 1, "reason": "smoky aubergine"},
+   "textures": {"value": ["smooth", "saucy"], "reason": "mashed smoky aubergine"},
+   "moods": {"value": ["comfort"], "reason": "home-style curry"},
+   "servings": {"value": 3, "reason": "one large aubergine"},
+   "difficulty": {"value": "easy", "reason": "roast, mash, fry"}
+  },
+  "mdb-52809": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "flaky"], "reason": "fried stuffed fish"},
+   "moods": {"value": ["hearty"], "reason": "fiery fish fry"},
+   "servings": {"value": 4, "reason": "4 mackerel"},
+   "cookMinutes": {"value": 15, "reason": "shallow frying"},
+   "difficulty": {"value": "medium", "reason": "spice paste, stuffing whole fish"}
+  },
+  "mdb-52810": {
+   "flavor.bitter": {"value": 1, "reason": "white wine, zest"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised shanks"},
+   "moods": {"value": ["comfort", "festive"], "reason": "slow braise for guests"},
+   "servings": {"value": 4, "reason": "4 shanks"}
+  },
+  "mdb-52811": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, tomato"},
+   "textures": {"value": ["brothy", "tender"], "reason": "bread-thickened soup"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "peasant soup"},
+   "servings": {"value": 4, "reason": "4 bread slices"},
+   "difficulty": {"value": "easy", "reason": "simmer then bake"}
+  },
+  "mdb-52812": {
+   "flavor.sweet": {"value": 1, "reason": "carrots, onions"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "slow pot roast"},
+   "moods": {"value": ["comfort", "hearty", "festive"], "reason": "Sunday pot roast"},
+   "servings": {"value": 8, "reason": "4-5lb brisket"},
+   "difficulty": {"value": "medium", "reason": "long but simple braise"}
+  },
+  "mdb-52815": {
+   "flavor.sweet": {"value": 1, "reason": "carrot"},
+   "flavor.bitter": {"value": 1, "reason": "thyme, bay"},
+   "flavor.umami": {"value": 1, "reason": "lentils"},
+   "textures": {"value": ["tender"], "reason": "soft lentils"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "simple lentil side"},
+   "servings": {"value": 6, "reason": "2.25 cups lentils"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-52816": {
+   "flavor.sweet": {"value": 1, "reason": "carrot"},
+   "flavor.bitter": {"value": 1, "reason": "roasted aubergine"},
+   "flavor.umami": {"value": 1, "reason": "lentils"},
+   "textures": {"value": ["tender", "crunchy"], "reason": "soft aubergine, pine nuts"},
+   "moods": {"value": ["hearty", "fresh"], "reason": "veg main with herbs"},
+   "servings": {"value": 4, "reason": "2 aubergines"},
+   "difficulty": {"value": "medium", "reason": "lentils plus roasting"}
+  }
+ }
+}

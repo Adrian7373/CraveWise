@@ -1,0 +1,153 @@
+{
+ "batch": 9,
+ "recipes": {
+  "mdb-52916": {
+   "flavor.salty": {"value": 1, "reason": "butter caramel"},
+   "textures": {"value": ["flaky", "tender"], "reason": "puff pastry, caramel pears"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "spiced caramel tart"},
+   "servings": {"value": 6, "reason": "20cm pan"},
+   "difficulty": {"value": "medium", "reason": "caramel and flipping"}
+  },
+  "mdb-52917": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "smooth", "crunchy"], "reason": "custard under burnt sugar"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "dinner-party dessert"},
+   "servings": {"value": 6, "reason": "6 yolks, 568ml cream"},
+   "difficulty": {"value": "medium", "reason": "water bath and caramelising"}
+  },
+  "mdb-52918": {
+   "flavor.bitter": {"value": 0, "reason": "fennel is sweet-anise"},
+   "textures": {"value": ["brothy", "tender"], "reason": "fish stew"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "Provencal seafood stew"},
+   "servings": {"value": 2, "reason": "6 prawns, 200g fish"},
+   "difficulty": {"value": "medium", "reason": "shell stock, several fish"}
+  },
+  "mdb-52919": {
+   "flavor.sweet": {"value": 1, "reason": "fennel, cream"},
+   "textures": {"value": ["creamy", "tender"], "reason": "creamy gratin"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich side"},
+   "servings": {"value": 2, "reason": "2 ramekins"},
+   "difficulty": {"value": "easy", "reason": "simmer and bake"}
+  },
+  "mdb-52920": {
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chicken in tomato sauce"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "simple braise"},
+   "servings": {"value": 4, "reason": "4 chicken legs"},
+   "difficulty": {"value": "easy", "reason": "one pot, 7 ingredients"}
+  },
+  "mdb-52921": {
+   "flavor.sweet": {"value": 1, "reason": "roasted peppers"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "layered omelettes with cream cheese"},
+   "moods": {"value": ["fresh", "festive"], "reason": "picnic or buffet showpiece"},
+   "servings": {"value": 6, "reason": "10 eggs"},
+   "difficulty": {"value": "medium", "reason": "several omelettes stacked and chilled"}
+  },
+  "mdb-52922": {
+   "flavor.sweet": {"value": 1, "reason": "carrot, fennel"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "sieved bisque"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "luxurious soup"},
+   "servings": {"value": 4, "reason": "1 litre stock"},
+   "difficulty": {"value": "medium", "reason": "shell stock and sieving"}
+  },
+  "mdb-52923": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.bitter": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "pastry, gooey filling"},
+   "moods": {"value": ["indulgent"], "reason": "sweet tarts"},
+   "servings": {"value": 18, "reason": "18-20 tarts"},
+   "difficulty": {"value": "easy", "reason": "bought pastry"}
+  },
+  "mdb-52924": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["crunchy", "creamy", "smooth"], "reason": "three-layer bar"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "no-bake treat"},
+   "servings": {"value": 16, "reason": "20cm square tin"},
+   "difficulty": {"value": "medium", "reason": "three chilled layers"}
+  },
+  "mdb-52925": {
+   "flavor.sweet": {"value": 1, "reason": "peas, carrots"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "ham and pea soup"},
+   "servings": {"value": 8, "reason": "2 litres, 1kg ham"},
+   "difficulty": {"value": "easy", "reason": "long simmer"}
+  },
+  "mdb-52926": {
+   "textures": {"value": ["flaky", "tender"], "reason": "double-crust pie"},
+   "moods": {"value": ["festive", "comfort"], "reason": "Christmas Eve pie in Quebec"},
+   "servings": {"value": 6, "reason": "20-23cm pie"},
+   "difficulty": {"value": "medium", "reason": "filling and double crust"}
+  },
+  "mdb-52927": {
+   "flavor.salty": {"value": 4, "reason": "4-day salt cure"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "smoked brisket"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "deli project"},
+   "servings": {"value": 12, "reason": "whole brisket"},
+   "difficulty": {"value": "hard", "reason": "multi-day cure and smoking"}
+  },
+  "mdb-52928": {
+   "flavor.salty": {"value": 1, "reason": "dough salt"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "fried dough"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "fairground treat"},
+   "servings": {"value": 12, "reason": "12 pieces"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, deep frying"}
+  },
+  "mdb-52929": {
+   "flavor.salty": {"value": 1, "reason": "pinch salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried doughnut holes"},
+   "moods": {"value": ["indulgent"], "reason": "doughnuts"},
+   "servings": {"value": 6, "reason": "2 cups flour, teaspoon-size balls"},
+   "cookMinutes": {"value": 20, "reason": "frying in batches"},
+   "difficulty": {"value": "medium", "reason": "deep frying at temperature"}
+  },
+  "mdb-52930": {
+   "flavor.salty": {"value": 2, "reason": "seasoned mince"},
+   "flavor.sweet": {"value": 2, "reason": "creamed corn"},
+   "textures": {"value": ["creamy", "tender"], "reason": "mash, corn, mince layers"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Quebec shepherd's pie"},
+   "servings": {"value": 4, "reason": "450g beef"},
+   "difficulty": {"value": "easy", "reason": "layer and bake"}
+  },
+  "mdb-52931": {
+   "flavor.salty": {"value": 1, "reason": "1 tsp salt"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "smooth"], "reason": "set sugar custard"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "very sweet pie"},
+   "servings": {"value": 8, "reason": "9-inch pie"},
+   "difficulty": {"value": "easy", "reason": "one batter"}
+  },
+  "mdb-52932": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["fluffy", "saucy"], "reason": "cake in maple sauce"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "maple pudding"},
+   "servings": {"value": 12, "reason": "13x9 pan"},
+   "difficulty": {"value": "easy", "reason": "batter plus poured sauce"}
+  },
+  "mdb-52933": {
+   "flavor.sweet": {"value": 1, "reason": "caramelised onion"},
+   "textures": {"value": ["tender", "chewy"], "reason": "grated potato bake"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Acadian casserole"},
+   "servings": {"value": 12, "reason": "4kg potatoes, 1.5kg chicken"},
+   "difficulty": {"value": "medium", "reason": "juicing potatoes, long bake"}
+  },
+  "mdb-52934": {
+   "flavor.sweet": {"value": 1, "reason": "peppers, onion"},
+   "flavor.bitter": {"value": 0, "reason": "olives are briny"},
+   "textures": {"value": ["tender", "saucy"], "reason": "chicken with pepper rice"},
+   "moods": {"value": ["hearty", "festive"], "reason": "family one-pot"},
+   "servings": {"value": 6, "reason": "1.5kg chicken, 300g rice"},
+   "difficulty": {"value": "medium", "reason": "browning in batches, oven finish"}
+  },
+  "mdb-52935": {
+   "flavor.sour": {"value": 1, "reason": "mustard, Worcestershire"},
+   "textures": {"value": ["tender", "creamy"], "reason": "steak in cream sauce"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "date-night steak"},
+   "servings": {"value": 4, "reason": "4 fillets"},
+   "difficulty": {"value": "medium", "reason": "pan sauce with flambe"}
+  }
+ }
+}

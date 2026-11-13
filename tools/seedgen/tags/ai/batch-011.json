@@ -1,0 +1,156 @@
+{
+ "batch": 11,
+ "recipes": {
+  "mdb-52960": {
+   "flavor.bitter": {"value": 0, "reason": "spinach is mild"},
+   "flavor.umami": {"value": 2, "reason": "seared salmon"},
+   "textures": {"value": ["crispy", "creamy"], "reason": "crisp salmon, avocado"},
+   "moods": {"value": ["fresh", "light"], "reason": "warm salad"},
+   "servings": {"value": 4, "reason": "divided between four plates"},
+   "difficulty": {"value": "easy", "reason": "slice and pan-fry"}
+  },
+  "mdb-52961": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "fluffy"], "reason": "light ricotta pudding"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rum-scented pudding"},
+   "servings": {"value": 8, "reason": "25cm tin"},
+   "difficulty": {"value": "easy", "reason": "mix, fold whites, bake"}
+  },
+  "mdb-52962": {
+   "flavor.umami": {"value": 3, "reason": "smoked salmon, egg yolk"},
+   "textures": {"value": ["creamy", "tender"], "reason": "hollandaise, poached eggs"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "brunch treat"},
+   "servings": {"value": 2, "reason": "2 muffins, 4 eggs"},
+   "difficulty": {"value": "hard", "reason": "hollandaise and poaching"}
+  },
+  "mdb-52963": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "tomato, egg, feta"},
+   "textures": {"value": ["saucy", "tender"], "reason": "eggs in tomato sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "brunch skillet"},
+   "servings": {"value": 2, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-52964": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "flaky"], "reason": "spiced rice, flaked haddock"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "brunch rice"},
+   "servings": {"value": 6, "reason": "450g rice, 750g haddock"},
+   "difficulty": {"value": "easy", "reason": "rice, poach, eggs"}
+  },
+  "mdb-52965": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "pan-fried potatoes"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "breakfast side"},
+   "servings": {"value": 2, "reason": "3 potatoes"},
+   "difficulty": {"value": "easy", "reason": "dice and fry"}
+  },
+  "mdb-52966": {
+   "flavor.salty": {"value": 1, "reason": "butter, caramel"},
+   "textures": {"value": ["crispy", "chewy"], "reason": "rice krispies in caramel"},
+   "moods": {"value": ["indulgent"], "reason": "kids' treat"},
+   "servings": {"value": 16, "reason": "20cm tin squares"},
+   "cookMinutes": {"value": 10, "reason": "melting only"},
+   "difficulty": {"value": "easy", "reason": "melt, mix, set"}
+  },
+  "mdb-52967": {
+   "flavor.umami": {"value": 0, "reason": "sweet dough"},
+   "textures": {"value": ["crispy", "fluffy"], "reason": "fried puffy dough"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "breakfast doughnut"},
+   "servings": {"value": 10, "reason": "750g flour"},
+   "difficulty": {"value": "medium", "reason": "kneading and deep frying"}
+  },
+  "mdb-52968": {
+   "flavor.salty": {"value": 2, "reason": "salted while roasting"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["tender", "chewy"], "reason": "roast goat, stiff ugali"},
+   "moods": {"value": ["hearty", "festive"], "reason": "nyama choma gathering"},
+   "servings": {"value": 4, "reason": "1kg goat"},
+   "difficulty": {"value": "medium", "reason": "roasting plus ugali"}
+  },
+  "mdb-52969": {
+   "flavor.sweet": {"value": 1, "reason": "peppers"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 2, "reason": "tomato, egg"},
+   "textures": {"value": ["saucy", "tender"], "reason": "eggs in pepper sauce"},
+   "moods": {"value": ["comfort", "fresh"], "reason": "brunch skillet"},
+   "servings": {"value": 2, "reason": "4 eggs"},
+   "difficulty": {"value": "easy", "reason": "one pan"}
+  },
+  "mdb-52970": {
+   "flavor.bitter": {"value": 1, "reason": "whole orange peel"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy"], "reason": "olive oil sponge"},
+   "moods": {"value": ["fresh", "comfort"], "reason": "citrus cake"},
+   "servings": {"value": 10, "reason": "23cm cake"},
+   "difficulty": {"value": "easy", "reason": "blend and fold"}
+  },
+  "mdb-52971": {
+   "flavor.sweet": {"value": 1, "reason": "pumpkin, onion"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "flavor.umami": {"value": 1, "reason": "fried veg, egg"},
+   "textures": {"value": ["tender", "crispy"], "reason": "fried veg mash"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "street-food plate"},
+   "servings": {"value": 4, "reason": "5 potatoes"},
+   "difficulty": {"value": "medium", "reason": "frying several veg separately"}
+  },
+  "mdb-52972": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "meaty soup"},
+   "servings": {"value": 6, "reason": "1 litre stock, 500g lamb"},
+   "difficulty": {"value": "easy", "reason": "one pot"}
+  },
+  "mdb-52973": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "chickpea soup"},
+   "servings": {"value": 4, "reason": "1.5L stock"},
+   "difficulty": {"value": "easy", "reason": "simmer"}
+  },
+  "mdb-52974": {
+   "flavor.sweet": {"value": 1, "reason": "onions"},
+   "flavor.bitter": {"value": 1, "reason": "saffron"},
+   "textures": {"value": ["tender", "saucy"], "reason": "braised lamb"},
+   "moods": {"value": ["hearty", "festive"], "reason": "saffron lamb"},
+   "servings": {"value": 4, "reason": "750g lamb"},
+   "difficulty": {"value": "easy", "reason": "brown and simmer"}
+  },
+  "mdb-52975": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried filo parcels"},
+   "moods": {"value": ["light", "fresh"], "reason": "filo snacks with salad"},
+   "servings": {"value": 4, "reason": "24 rounds"},
+   "difficulty": {"value": "medium", "reason": "folding filo parcels"}
+  },
+  "mdb-52976": {
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "chewy"], "reason": "nut biscuits"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "Eid biscuits"},
+   "servings": {"value": 12, "reason": "about 24 biscuits"},
+   "difficulty": {"value": "easy", "reason": "mix, roll, bake"}
+  },
+  "mdb-52977": {
+   "flavor.sweet": {"value": 1, "reason": "carrot"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["smooth"], "reason": "blended lentil soup"},
+   "moods": {"value": ["comfort", "light"], "reason": "everyday soup"},
+   "servings": {"value": 4, "reason": "5 cups liquid"},
+   "difficulty": {"value": "easy", "reason": "simmer and blend"}
+  },
+  "mdb-52978": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "buttery potato, raw veg"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "loaded potato"},
+   "servings": {"value": 2, "reason": "2 large potatoes"},
+   "cookMinutes": {"value": 60, "reason": "baking large potatoes"},
+   "difficulty": {"value": "easy", "reason": "bake and stuff"}
+  },
+  "mdb-52979": {
+   "textures": {"value": ["crispy", "creamy"], "reason": "crumbed outside, ragout inside"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "bar snack"},
+   "servings": {"value": 6, "reason": "about 30 balls"},
+   "difficulty": {"value": "hard", "reason": "set ragout, crumb, deep fry"}
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "batch": 10,
+ "recipes": {
+  "mdb-52936": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "fluffy"], "reason": "flaked fish, dumplings"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "Jamaican breakfast classic"},
+   "servings": {"value": 4, "reason": "450g salt cod"},
+   "difficulty": {"value": "medium", "reason": "soaking, double-boiling, dumplings"}
+  },
+  "mdb-52938": {
+   "flavor.salty": {"value": 2, "reason": "seasoned beef"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["flaky", "tender"], "reason": "turmeric pastry, mince"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "handheld pies"},
+   "servings": {"value": 12, "reason": "10-12 patties"}
+  },
+  "mdb-52939": {
+   "textures": {"value": ["tender"], "reason": "steamed greens"},
+   "moods": {"value": ["light", "fresh"], "reason": "greens side"},
+   "servings": {"value": 4, "reason": "1 bunch greens"},
+   "difficulty": {"value": "easy", "reason": "saute and steam"}
+  },
+  "mdb-52940": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "stewed chicken"},
+   "moods": {"value": ["comfort", "hearty"], "reason": "Sunday stew"},
+   "servings": {"value": 4, "reason": "one whole chicken"},
+   "difficulty": {"value": "medium", "reason": "marinade, browning, stewing"}
+  },
+  "mdb-52941": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "thick bean soup"},
+   "servings": {"value": 8, "reason": "2 litres, 2lb beef"},
+   "difficulty": {"value": "medium", "reason": "soaking, boiling meats, dumplings"}
+  },
+  "mdb-52942": {
+   "flavor.sweet": {"value": 1, "reason": "roast fennel and pepper"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender"], "reason": "rice and roast veg"},
+   "moods": {"value": ["fresh", "hearty"], "reason": "vegan paella"},
+   "servings": {"value": 4, "reason": "300g rice"},
+   "difficulty": {"value": "easy", "reason": "roast veg, simmer rice"}
+  },
+  "mdb-52943": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["tender", "saucy"], "reason": "pressure-cooked oxtail"},
+   "moods": {"value": ["hearty", "comfort"], "reason": "rich stew"},
+   "servings": {"value": 2, "reason": "450g oxtail"},
+   "difficulty": {"value": "medium", "reason": "pressure cooker"}
+  },
+  "mdb-52944": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "crunchy"], "reason": "fried fish, pickled veg"},
+   "moods": {"value": ["fresh", "festive"], "reason": "tangy Easter fish"},
+   "servings": {"value": 4, "reason": "2lb snapper"},
+   "difficulty": {"value": "medium", "reason": "frying whole fish"}
+  },
+  "mdb-52946": {
+   "textures": {"value": ["crunchy", "saucy"], "reason": "peanuts, water chestnuts"},
+   "moods": {"value": ["hearty"], "reason": "quick stir-fry"},
+   "servings": {"value": 4, "reason": "400g prawns"},
+   "difficulty": {"value": "easy", "reason": "wok in 10 minutes"}
+  },
+  "mdb-52949": {
+   "textures": {"value": ["crispy", "saucy"], "reason": "fried pork in glossy sauce"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "takeaway favourite"},
+   "servings": {"value": 2, "reason": "200g pork"},
+   "difficulty": {"value": "medium", "reason": "marinate and deep fry"}
+  },
+  "mdb-52950": {
+   "textures": {"value": ["tender", "saucy"], "reason": "velveted beef"},
+   "moods": {"value": ["hearty"], "reason": "takeaway stir-fry"},
+   "servings": {"value": 2, "reason": "half pound beef"},
+   "cookMinutes": {"value": 15, "reason": "fry beef, then veg"},
+   "difficulty": {"value": "easy", "reason": "simple stir-fry"}
+  },
+  "mdb-52951": {
+   "textures": {"value": ["crispy", "saucy"], "reason": "battered chicken in sauce"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "fried takeaway"},
+   "servings": {"value": 3, "reason": "1.5 breasts"},
+   "difficulty": {"value": "medium", "reason": "batter, deep fry, sauce"}
+  },
+  "mdb-52952": {
+   "textures": {"value": ["chewy", "tender"], "reason": "noodles and beef"},
+   "moods": {"value": ["comfort"], "reason": "noodle stir-fry"},
+   "servings": {"value": 2, "reason": "quarter pound noodles"},
+   "cookMinutes": {"value": 15, "reason": "boil noodles, stir-fry"},
+   "difficulty": {"value": "easy", "reason": "wok"}
+  },
+  "mdb-52953": {
+   "textures": {"value": ["chewy", "tender"], "reason": "wide rice noodles"},
+   "moods": {"value": ["comfort"], "reason": "noodle stir-fry"},
+   "servings": {"value": 2, "reason": "8oz prawns"},
+   "difficulty": {"value": "easy", "reason": "soak overnight, quick wok"}
+  },
+  "mdb-52954": {
+   "moods": {"value": ["comfort", "light"], "reason": "hot and sour broth"},
+   "servings": {"value": 4, "reason": "2.5 cups stock"},
+   "cookMinutes": {"value": 10, "reason": "boil and thicken"},
+   "difficulty": {"value": "easy", "reason": "one wok"}
+  },
+  "mdb-52955": {
+   "moods": {"value": ["light", "comfort"], "reason": "simple broth"},
+   "servings": {"value": 3, "reason": "3 cups stock"},
+   "cookMinutes": {"value": 10, "reason": "boil and stir in egg"},
+   "difficulty": {"value": "easy", "reason": "10-minute soup"}
+  },
+  "mdb-52956": {
+   "flavor.salty": {"value": 1, "reason": "lightly salted"},
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "textures": {"value": ["smooth", "creamy"], "reason": "rice porridge"},
+   "moods": {"value": ["comfort", "light"], "reason": "gentle porridge"},
+   "servings": {"value": 4, "reason": "8 cups water"},
+   "difficulty": {"value": "easy", "reason": "slow simmer"}
+  },
+  "mdb-52957": {
+   "textures": {"value": ["flaky", "creamy"], "reason": "puff pastry, cream cheese"},
+   "moods": {"value": ["indulgent", "fresh"], "reason": "fruit pastries"},
+   "servings": {"value": 9, "reason": "18 pastries"},
+   "difficulty": {"value": "medium", "reason": "cutting and folding pastry frames"}
+  },
+  "mdb-52958": {
+   "flavor.salty": {"value": 2, "reason": "peanut butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy", "crunchy"], "reason": "crisp-edged cookies"},
+   "moods": {"value": ["indulgent"], "reason": "cookie treat"},
+   "servings": {"value": 6, "reason": "about 12 cookies"},
+   "difficulty": {"value": "easy", "reason": "3 ingredients"}
+  },
+  "mdb-52959": {
+   "flavor.bitter": {"value": 0, "reason": "fennel is sweet"},
+   "flavor.umami": {"value": 2, "reason": "salmon, tomatoes"},
+   "textures": {"value": ["tender", "flaky"], "reason": "baked salmon"},
+   "moods": {"value": ["fresh", "light"], "reason": "lemony fish traybake"},
+   "servings": {"value": 2, "reason": "350g salmon"},
+   "difficulty": {"value": "easy", "reason": "boil fennel, bake"}
+  }
+ }
+}

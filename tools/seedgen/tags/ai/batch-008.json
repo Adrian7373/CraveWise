@@ -1,0 +1,150 @@
+{
+ "batch": 8,
+ "recipes": {
+  "mdb-52890": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "tender"], "reason": "steamed suet roll"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "school pudding"},
+   "servings": {"value": 6, "reason": "250g flour roll"},
+   "difficulty": {"value": "medium", "reason": "rolling, wrapping, steam-baking"}
+  },
+  "mdb-52891": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["creamy", "crunchy"], "reason": "fool with nut biscuits"},
+   "moods": {"value": ["fresh", "indulgent"], "reason": "berries and cream"},
+   "servings": {"value": 6, "reason": "600g blackberries, 300ml cream"},
+   "difficulty": {"value": "medium", "reason": "biscuits plus compote and fool"}
+  },
+  "mdb-52892": {
+   "flavor.salty": {"value": 1, "reason": "butter pastry"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["flaky", "chewy"], "reason": "pastry, sticky filling"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "syrupy tart"},
+   "servings": {"value": 8, "reason": "18cm deep tart"},
+   "difficulty": {"value": "medium", "reason": "pastry with lattice"}
+  },
+  "mdb-52893": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "textures": {"value": ["crunchy", "tender"], "reason": "crumble over soft fruit"},
+   "moods": {"value": ["comfort"], "reason": "fruit crumble"},
+   "servings": {"value": 4, "reason": "300g apples"},
+   "difficulty": {"value": "easy", "reason": "rub-in crumble"}
+  },
+  "mdb-52894": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "sponge in marzipan"},
+   "moods": {"value": ["festive", "indulgent"], "reason": "teatime showpiece"},
+   "servings": {"value": 10, "reason": "one loaf cake"},
+   "difficulty": {"value": "hard", "reason": "two sponges, trimming, marzipan wrap"}
+  },
+  "mdb-52895": {
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["crispy", "tender"], "reason": "fried breakfast"},
+   "moods": {"value": ["hearty", "indulgent"], "reason": "fry-up"},
+   "servings": {"value": 1, "reason": "2 eggs, 2 sausages, 1 slice bread"},
+   "difficulty": {"value": "easy", "reason": "frying, timing"}
+  },
+  "mdb-52897": {
+   "flavor.bitter": {"value": 0, "reason": "walnuts are mild"},
+   "textures": {"value": ["fluffy", "creamy", "crunchy"], "reason": "moist cake, frosting, walnuts"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "celebration cake"},
+   "servings": {"value": 16, "reason": "26cm cake"},
+   "difficulty": {"value": "easy", "reason": "one-bowl batter"}
+  },
+  "mdb-52898": {
+   "flavor.salty": {"value": 1, "reason": "dough salt"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "sticky enriched buns"},
+   "moods": {"value": ["indulgent", "comfort"], "reason": "sweet buns"},
+   "servings": {"value": 12, "reason": "500g flour"},
+   "difficulty": {"value": "medium", "reason": "yeast dough, rolling"}
+  },
+  "mdb-52899": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy", "chewy"], "reason": "fruit cake"},
+   "moods": {"value": ["festive", "comfort"], "reason": "traditional fruit cake"},
+   "servings": {"value": 12, "reason": "20cm deep cake"},
+   "difficulty": {"value": "medium", "reason": "long slow bake"}
+  },
+  "mdb-52900": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["fluffy"], "reason": "plain sponge"},
+   "moods": {"value": ["comfort"], "reason": "simple teatime cake"},
+   "servings": {"value": 10, "reason": "18cm cake"},
+   "difficulty": {"value": "easy", "reason": "creamed sponge"}
+  },
+  "mdb-52901": {
+   "flavor.salty": {"value": 0, "reason": "dessert"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["crunchy", "fluffy"], "reason": "craggy outside, soft inside"},
+   "moods": {"value": ["comfort"], "reason": "simple bake"},
+   "servings": {"value": 12, "reason": "about 12 cakes"},
+   "difficulty": {"value": "easy", "reason": "rub-in, spoon out"}
+  },
+  "mdb-52902": {
+   "flavor.salty": {"value": 1, "reason": "butter"},
+   "flavor.umami": {"value": 0, "reason": "dessert"},
+   "textures": {"value": ["chewy"], "reason": "sticky ginger cake"},
+   "moods": {"value": ["comfort", "festive"], "reason": "Bonfire Night cake"},
+   "servings": {"value": 16, "reason": "22cm square tin"},
+   "difficulty": {"value": "easy", "reason": "melt and mix"}
+  },
+  "mdb-52906": {
+   "textures": {"value": ["flaky", "creamy"], "reason": "pastry, leek custard"},
+   "moods": {"value": ["comfort", "indulgent"], "reason": "rich tart"},
+   "servings": {"value": 6, "reason": "23cm tart"},
+   "difficulty": {"value": "hard", "reason": "homemade pastry, blind bake, custard"}
+  },
+  "mdb-52907": {
+   "flavor.salty": {"value": 4, "reason": "salt-cured overnight"},
+   "flavor.bitter": {"value": 0, "reason": "herbs are mild"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp skin, melting meat"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "bistro classic"},
+   "servings": {"value": 4, "reason": "4 duck legs"},
+   "difficulty": {"value": "medium", "reason": "curing and slow poaching in fat"}
+  },
+  "mdb-52910": {
+   "textures": {"value": ["flaky", "tender"], "reason": "puff pastry, caramel apples"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "dinner-party dessert"},
+   "servings": {"value": 2, "reason": "2 x 13cm tarts"},
+   "difficulty": {"value": "medium", "reason": "jelly, caramel, pastry"}
+  },
+  "mdb-52911": {
+   "textures": {"value": ["brothy", "tender"], "reason": "vegetable soup"},
+   "moods": {"value": ["fresh", "light"], "reason": "summer basil soup"},
+   "servings": {"value": 4, "reason": "1 litre stock"},
+   "difficulty": {"value": "easy", "reason": "15-minute soup"}
+  },
+  "mdb-52912": {
+   "flavor.sweet": {"value": 0, "reason": "savoury"},
+   "flavor.sour": {"value": 1, "reason": "goats cheese tang"},
+   "flavor.bitter": {"value": 0, "reason": "nothing bitter"},
+   "textures": {"value": ["fluffy", "creamy"], "reason": "souffle with cream"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "cheesy starter"},
+   "servings": {"value": 4, "reason": "4 ramekins"},
+   "difficulty": {"value": "hard", "reason": "souffle, twice baked"}
+  },
+  "mdb-52913": {
+   "textures": {"value": ["fluffy", "creamy"], "reason": "brioche around melting brie"},
+   "moods": {"value": ["indulgent", "festive"], "reason": "party sharing bake"},
+   "servings": {"value": 8, "reason": "one 250g brie"},
+   "difficulty": {"value": "medium", "reason": "brioche dough, 6-hour chill"}
+  },
+  "mdb-52914": {
+   "flavor.sweet": {"value": 1, "reason": "onions"},
+   "flavor.bitter": {"value": 0, "reason": "thyme is mild"},
+   "textures": {"value": ["crispy", "tender"], "reason": "crisp top, soft layers"},
+   "moods": {"value": ["comfort"], "reason": "potato side"},
+   "servings": {"value": 6, "reason": "1.5kg potatoes"},
+   "difficulty": {"value": "easy", "reason": "layer and bake"}
+  },
+  "mdb-52915": {
+   "textures": {"value": ["fluffy", "creamy"], "reason": "soft-set omelette"},
+   "moods": {"value": ["light", "comfort"], "reason": "quick eggs"},
+   "servings": {"value": 1, "reason": "3 eggs"},
+   "cookMinutes": {"value": 3, "reason": "omelette cooks in minutes"},
+   "difficulty": {"value": "medium", "reason": "technique for a soft roll"}
+  }
+ }
+}
