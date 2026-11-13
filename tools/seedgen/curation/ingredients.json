@@ -8,7 +8,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -27,7 +27,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -44,7 +44,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -61,7 +61,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -82,7 +82,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -101,7 +101,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -122,7 +122,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -145,7 +145,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -164,7 +164,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -183,7 +183,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -202,7 +202,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -223,7 +223,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -243,7 +243,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -262,7 +262,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Lamb Tagine uses 100g (dried) apricots, usually sulphured",
   "proposal": {
    "by": "rules",
@@ -279,7 +279,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -296,7 +296,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -316,7 +316,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -333,7 +333,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -356,7 +356,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -375,7 +375,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -394,7 +394,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -411,7 +411,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -430,7 +430,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -447,7 +447,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -464,7 +464,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -483,7 +483,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -500,7 +500,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -519,7 +519,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: many BBQ sauces list mustard; some add Worcestershire (fish); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -540,7 +540,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -560,7 +560,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -572,7 +572,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -591,7 +591,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -610,7 +610,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -632,7 +632,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -646,7 +646,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -665,7 +665,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -687,7 +687,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -709,7 +709,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: gravy granules/jars usually thickened with wheat; often celery; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -733,7 +733,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -752,7 +752,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -779,7 +779,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -801,7 +801,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -821,7 +821,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -838,7 +838,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -857,7 +857,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -874,7 +874,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -893,7 +893,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -912,7 +912,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -932,7 +932,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -952,7 +952,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -964,7 +964,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -983,7 +983,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1002,7 +1002,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -1021,7 +1021,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1040,7 +1040,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1064,7 +1064,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: split from vegetable_stock; flavour unknown (Raspeballer = meat cubes), so safe side: meat, celery, wheat; BRAND-DEPENDENT",
   "proposal": {
    "by": "review",
@@ -1077,12 +1077,14 @@
   "name": "Bouquet Garni",
   "synonyms": [],
   "aisle": "pantry",
-  "allergens": [],
+  "allergens": [
+   "celery"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +celery (safe side); classic bouquet garni often ties in a celery stalk or leaf",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -1100,7 +1102,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1121,7 +1123,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1140,13 +1142,14 @@
   ],
   "aisle": "bakery",
   "allergens": [
-   "gluten"
+   "gluten",
+   "soy"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "BRAND-DEPENDENT: may also contain milk/soy/sesame",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +soy; mainstream UK/US sliced bread lists soya flour. BRAND-DEPENDENT: may also contain milk/sesame",
   "proposal": {
    "addedSynonyms": [
     "Crusty Bread",
@@ -1167,7 +1170,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -1184,7 +1187,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fresh fruit, not bakery; not brand-dependent",
   "proposal": {
    "by": "rules",
@@ -1205,7 +1208,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1224,7 +1227,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1241,7 +1244,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1260,7 +1263,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1277,7 +1280,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1299,7 +1302,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1320,7 +1323,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1337,7 +1340,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: buckwheat is not a gluten grain ('wheat' regex); cross-contact possible",
   "proposal": {
    "by": "rules",
@@ -1354,7 +1357,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: buckwheat is not a gluten grain; BRAND-DEPENDENT: some flours are blended with wheat",
   "proposal": {
    "by": "rules",
@@ -1373,7 +1376,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1396,7 +1399,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: sesame-seed buns split out to sesame_seed_burger_bun; plain buns may still contain milk/sesame (BRAND-DEPENDENT)",
   "proposal": {
    "by": "rules",
@@ -1422,7 +1425,7 @@
   ],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -1442,7 +1445,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1463,7 +1466,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1480,7 +1483,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1500,7 +1503,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1519,7 +1522,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1536,7 +1539,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1553,7 +1556,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1570,7 +1573,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1589,7 +1592,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1608,7 +1611,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1627,7 +1630,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1646,7 +1649,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1667,7 +1670,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -1688,7 +1691,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -1705,7 +1708,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Jamaican browning (burnt sugar), no milk; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -1722,7 +1725,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1741,7 +1744,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1760,7 +1763,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1777,7 +1780,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1799,7 +1802,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1816,7 +1819,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: in Venezuelan Sancocho; almost certainly cassava (yuca)",
   "proposal": {
    "by": "rules",
@@ -1833,7 +1836,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1850,7 +1853,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1867,7 +1870,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1886,7 +1889,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1905,7 +1908,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1924,7 +1927,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1948,7 +1951,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1969,7 +1972,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -1992,7 +1995,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2009,7 +2012,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2030,7 +2033,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2051,7 +2054,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2073,7 +2076,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -2089,7 +2092,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2110,7 +2113,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2131,7 +2134,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2150,7 +2153,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: chicken offal -> poultry/chicken",
   "proposal": {
    "by": "rules",
@@ -2175,7 +2178,7 @@
   ],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -2196,7 +2199,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2217,7 +2220,7 @@
   ],
   "protein": "chicken",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2237,7 +2240,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2254,7 +2257,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2274,7 +2277,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: doubanjiang is broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -2294,7 +2297,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2315,7 +2318,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2332,7 +2335,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -2351,7 +2354,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: made with red wine vinegar; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -2368,7 +2371,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2388,7 +2391,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2407,7 +2410,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
@@ -2426,7 +2429,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -2446,7 +2449,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2470,7 +2473,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: most chips are milk/semi-sweet with soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -2491,7 +2494,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2512,7 +2515,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: some contain milk or sulphites"
  },
  {
@@ -2534,7 +2537,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: typically egg, suet, dried fruit, almonds, brandy/stout; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -2553,7 +2556,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2572,7 +2575,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2593,7 +2596,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2614,7 +2617,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2633,7 +2636,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2650,7 +2653,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2673,7 +2676,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2694,7 +2697,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2714,7 +2717,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2731,7 +2734,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2752,7 +2755,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2769,7 +2772,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2788,7 +2791,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2805,7 +2808,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2822,7 +2825,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2843,7 +2846,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2864,7 +2867,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2887,7 +2890,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2910,7 +2913,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2929,7 +2932,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2949,7 +2952,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2970,7 +2973,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -2991,7 +2994,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3010,7 +3013,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3031,7 +3034,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3048,7 +3051,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3067,7 +3070,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -3086,7 +3089,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3107,7 +3110,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3127,7 +3130,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3148,7 +3151,7 @@
   ],
   "protein": "cheese",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3168,7 +3171,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3187,7 +3190,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3210,7 +3213,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3227,7 +3230,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3248,7 +3251,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3269,7 +3272,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3286,7 +3289,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3307,7 +3310,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3328,7 +3331,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3350,7 +3353,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: traditional Cuban bread is made with lard; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3367,7 +3370,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3386,7 +3389,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3407,7 +3410,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3422,12 +3425,14 @@
    "Jamaican Curry Powder"
   ],
   "aisle": "spices",
-  "allergens": [],
+  "allergens": [
+   "mustard"
+  ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +mustard (safe side); many curry powders include mustard seed, same call as madras_paste. BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 13,
@@ -3449,7 +3454,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -3470,7 +3475,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: shelf powder; Bird's has no milk but instant mixes do, milk kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3487,7 +3492,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3509,7 +3514,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3531,7 +3536,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: many dark chocolates contain milk fat and soy lecithin; vegan bars exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3555,7 +3560,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: many contain milk fat and soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3574,7 +3579,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3594,7 +3599,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -3615,7 +3620,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3634,7 +3639,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3651,7 +3656,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3672,7 +3677,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3689,7 +3694,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3710,7 +3715,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -3730,7 +3735,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -3747,7 +3752,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3768,7 +3773,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3792,7 +3797,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: doner products commonly list wheat, soy and milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3812,7 +3817,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: broad bean + wheat flour; soy kept (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -3836,7 +3841,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -3852,7 +3857,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3873,7 +3878,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3892,7 +3897,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3913,7 +3918,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3930,7 +3935,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3949,7 +3954,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3966,7 +3971,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -3983,7 +3988,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4002,7 +4007,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4023,7 +4028,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4040,7 +4045,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4059,7 +4064,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4076,7 +4081,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4095,7 +4100,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4116,7 +4121,7 @@
   ],
   "protein": "duck",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4133,7 +4138,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4154,7 +4159,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4171,7 +4176,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stroopwafel syrup (sugar/glucose syrup), no wheat ('stroop' regex)",
   "proposal": {
    "by": "rules",
@@ -4199,7 +4204,7 @@
   ],
   "protein": "egg",
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -4225,7 +4230,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4252,7 +4257,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: ready-made Vietnamese egg rolls (cha gio) are usually pork, often shrimp; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -4276,7 +4281,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4297,7 +4302,7 @@
   ],
   "protein": "egg",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4320,7 +4325,7 @@
   ],
   "protein": "egg",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -4336,7 +4341,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4353,7 +4358,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4374,7 +4379,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4394,7 +4399,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Colman's English mustard contains wheat flour; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -4415,7 +4420,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4432,7 +4437,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4452,7 +4457,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: ready-made falafel often contains wheat flour and sesame; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -4471,7 +4476,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4488,7 +4493,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4509,7 +4514,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4528,7 +4533,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4545,7 +4550,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4562,7 +4567,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4581,7 +4586,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4598,7 +4603,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4619,7 +4624,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: salted condiment, not a protein source",
   "proposal": {
    "by": "rules",
@@ -4642,7 +4647,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4664,7 +4669,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fettuccine is often egg pasta; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -4683,7 +4688,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4704,7 +4709,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4727,7 +4732,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4750,7 +4755,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4769,7 +4774,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4790,7 +4795,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4811,7 +4816,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4830,7 +4835,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: flaxseed + water egg substitute; no egg",
   "proposal": {
    "by": "rules",
@@ -4851,7 +4856,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -4870,7 +4875,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4889,7 +4894,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4908,7 +4913,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4925,7 +4930,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4946,7 +4951,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4967,7 +4972,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -4984,7 +4989,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fresh fruit to serve",
   "proposal": {
    "by": "rules",
@@ -5001,7 +5006,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5018,7 +5023,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5035,7 +5040,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5057,7 +5062,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -5077,7 +5082,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5100,7 +5105,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Dutch/kebab garlic sauce is mayo- or yogurt-based; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -5122,7 +5127,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5143,7 +5148,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5163,7 +5168,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -5177,7 +5182,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: preservative; listed conservatively"
  },
  {
@@ -5189,7 +5194,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5206,7 +5211,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5223,7 +5228,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: 1 tsp spice blend in Gingerbread Waffles, not bread; BRAND-DEPENDENT: check a typical label",
   "proposal": {
    "by": "rules",
@@ -5242,7 +5247,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5259,7 +5264,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5278,7 +5283,7 @@
   ],
   "protein": "goat",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5299,7 +5304,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: not meat ('goat' regex); dairy aisle",
   "proposal": {
    "by": "rules",
@@ -5319,7 +5324,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: most gochujang contains wheat and soybean; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -5336,7 +5341,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5355,7 +5360,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5376,7 +5381,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5399,7 +5404,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: not meat ('graham' matched 'ham'); most graham crackers contain honey; BRAND-DEPENDENT: may contain milk/soy",
   "proposal": {
    "by": "rules",
@@ -5420,7 +5425,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5439,7 +5444,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: breakfast cereal (wheat + barley), pantry not produce; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5456,7 +5461,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5475,7 +5480,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5498,7 +5503,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5517,7 +5522,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
@@ -5534,7 +5539,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5553,7 +5558,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5570,7 +5575,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5587,7 +5592,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5606,7 +5611,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5623,7 +5628,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5640,7 +5645,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5659,7 +5664,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5681,7 +5686,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5698,7 +5703,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5715,7 +5720,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5734,7 +5739,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5751,7 +5756,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5768,7 +5773,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5787,7 +5792,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: nutmeg is a seed spice, not a peanut ('ground nut' regex misfire)",
   "proposal": {
    "by": "rules",
@@ -5804,7 +5809,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5823,7 +5828,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5845,7 +5850,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5869,7 +5874,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5886,7 +5891,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5907,7 +5912,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5928,7 +5933,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5951,7 +5956,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -5970,7 +5975,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -5989,7 +5994,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6006,7 +6011,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6028,7 +6033,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6049,7 +6054,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6068,7 +6073,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6089,7 +6094,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: common brands (e.g. Lee Kum Kee) include sesame paste; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -6110,7 +6115,7 @@
   ],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6127,7 +6132,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6144,7 +6149,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6165,7 +6170,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6184,7 +6189,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6203,7 +6208,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6226,7 +6231,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: custard-base ice creams contain egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -6246,7 +6251,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6268,7 +6273,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6285,7 +6290,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6302,7 +6307,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6319,7 +6324,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6341,7 +6346,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: cured pork, protein was missing; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6358,7 +6363,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6375,7 +6380,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6394,7 +6399,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6413,7 +6418,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6435,7 +6440,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6452,7 +6457,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6469,7 +6474,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6486,7 +6491,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6503,7 +6508,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: in Lamb Biryani 'khus khus' = Indian poppy seeds, not couscous; no gluten",
   "proposal": {
    "by": "rules",
@@ -6522,7 +6527,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6542,7 +6547,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6561,7 +6566,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6580,7 +6585,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6599,7 +6604,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6618,7 +6623,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6637,7 +6642,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6658,7 +6663,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6677,7 +6682,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6698,7 +6703,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6717,7 +6722,7 @@
   ],
   "protein": "lamb",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6739,7 +6744,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -6759,7 +6764,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6783,7 +6788,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: egg lasagne sheets are common; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -6800,7 +6805,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6820,7 +6825,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -6837,7 +6842,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6854,7 +6859,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6873,7 +6878,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6892,7 +6897,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6913,7 +6918,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6932,7 +6937,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6951,7 +6956,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6968,7 +6973,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -6987,7 +6992,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7008,7 +7013,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7029,7 +7034,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7046,7 +7051,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7065,7 +7070,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7086,7 +7091,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7105,7 +7110,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Patak's-style curry pastes list mustard; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7126,7 +7131,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7147,7 +7152,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7167,7 +7172,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7188,7 +7193,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7205,7 +7210,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7222,7 +7227,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7246,7 +7251,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: wheat biscuit, many brands contain milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7266,7 +7271,7 @@
   "contains": [],
   "protein": "tofu",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: marinades are usually soy sauce (wheat); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7283,7 +7288,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7308,7 +7313,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: UK Mars lists egg white and barley malt; soy lecithin in some markets; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7327,7 +7332,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7348,7 +7353,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7369,7 +7374,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: usually contains shrimp paste; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7383,15 +7388,16 @@
   "synonyms": [],
   "aisle": "condiments",
   "allergens": [
-   "eggs"
+   "eggs",
+   "mustard"
   ],
   "contains": [
    "egg"
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +mustard (safe side); many mayonnaises, and most French-style ones, contain mustard. BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 21,
@@ -7413,7 +7419,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -7432,7 +7438,7 @@
   ],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7454,7 +7460,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -7477,8 +7483,8 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "review: sweet mincemeat (dried fruit, suet), not beef; suet may be beef (safe side: meat); often almonds; BRAND-DEPENDENT. NB Mutabbaq uses this line for minced meat",
+  "reviewed": true,
+  "notes": "review: sweet mincemeat (dried fruit, suet), not beef; suet may be beef (safe side: meat); often almonds; BRAND-DEPENDENT. Mutabbaq's 'Mincemeat' line is remapped to beef_mince in overrides.json",
   "proposal": {
    "by": "rules",
    "uses": 2,
@@ -7498,7 +7504,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -7518,7 +7524,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -7534,7 +7540,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7553,7 +7559,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7572,7 +7578,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: packet mixed grains usually include spelt/wheat/barley; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7591,7 +7597,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7610,7 +7616,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: 5 mixed (bell) peppers in Pisto, produce not spices",
   "proposal": {
    "by": "rules",
@@ -7627,7 +7633,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7644,7 +7650,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7665,7 +7671,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7686,7 +7692,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7710,7 +7716,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: some are rice-based (no gluten); listed conservatively"
  },
  {
@@ -7722,7 +7728,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7745,7 +7751,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7762,7 +7768,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7779,7 +7785,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: mung beans + sugar; not soy ('bean paste' regex); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -7798,7 +7804,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7815,7 +7821,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7836,7 +7842,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7859,7 +7865,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7878,7 +7884,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -7899,7 +7905,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -7920,7 +7926,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: whole seed; not brand-dependent",
   "proposal": {
    "by": "rules",
@@ -7942,7 +7948,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: naan is usually made with yogurt/milk; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -7965,7 +7971,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -7989,7 +7995,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: used for lo mein / mee goreng (egg noodles) and instant ramen; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -8004,15 +8010,17 @@
   "aisle": "pantry",
   "allergens": [
    "eggs",
+   "milk",
    "tree_nuts"
   ],
   "contains": [
+   "dairy",
    "egg"
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +milk (often made with butter); eggs kept (safe side) though classic nougatine has none",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -8035,7 +8043,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: oats are an EU-14 gluten cereal; certified GF oats exist",
   "proposal": {
    "by": "rules",
@@ -8054,7 +8062,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -8071,7 +8079,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -8088,7 +8096,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8105,7 +8113,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8122,7 +8130,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8139,7 +8147,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8156,7 +8164,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8173,7 +8181,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8198,7 +8206,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: soy lecithin; milk kept (may-contain); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -8217,7 +8225,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8240,7 +8248,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8259,7 +8267,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: a mushroom, not shellfish",
   "proposal": {
    "by": "rules",
@@ -8282,7 +8290,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: most contain wheat + soy"
  },
  {
@@ -8296,7 +8304,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8315,7 +8323,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fresh pepper, produce not spices",
   "proposal": {
    "by": "rules",
@@ -8332,7 +8340,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8352,7 +8360,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8371,7 +8379,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8388,7 +8396,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8409,7 +8417,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: usually contains shrimp paste; some add peanuts; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -8428,7 +8436,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8449,7 +8457,7 @@
   ],
   "protein": "cheese",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8470,7 +8478,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8487,7 +8495,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8507,7 +8515,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -8533,7 +8541,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -8553,7 +8561,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8572,7 +8580,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8589,7 +8597,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8606,7 +8614,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8627,7 +8635,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8646,7 +8654,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8663,7 +8671,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8686,7 +8694,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8700,13 +8708,16 @@
   "synonyms": [],
   "aisle": "pantry",
   "allergens": [
+   "milk",
    "peanuts"
   ],
-  "contains": [],
+  "contains": [
+   "dairy"
+  ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +milk; most peanut brittle is made with butter. BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -8724,7 +8735,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8751,7 +8762,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: biscuits are wheat-based, usually with butter and egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -8770,7 +8781,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8791,7 +8802,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8814,7 +8825,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -8828,7 +8839,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8848,7 +8859,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8867,7 +8878,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8888,7 +8899,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8909,7 +8920,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8930,7 +8941,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8949,7 +8960,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -8966,7 +8977,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -8988,7 +8999,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9011,7 +9022,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9030,7 +9041,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9051,7 +9062,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9070,7 +9081,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9087,7 +9098,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9104,7 +9115,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9123,7 +9134,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9145,7 +9156,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9164,7 +9175,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9183,7 +9194,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9205,7 +9216,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: UK 'plain' = dark; often milk fat + soy lecithin; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -9229,7 +9240,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9246,7 +9257,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9263,7 +9274,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9280,7 +9291,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9302,7 +9313,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: kabanos is a pork sausage (was untagged); same food as kabanos_sausage",
   "proposal": {
    "by": "rules",
@@ -9319,7 +9330,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9338,7 +9349,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9357,7 +9368,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9377,7 +9388,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9399,7 +9410,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9421,7 +9432,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9443,7 +9454,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9463,7 +9474,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9486,7 +9497,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9508,7 +9519,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9528,7 +9539,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9550,7 +9561,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9567,7 +9578,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -9583,7 +9594,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9613,7 +9624,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9632,7 +9643,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9652,7 +9663,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: cured pork, protein was missing",
   "proposal": {
    "by": "rules",
@@ -9673,7 +9684,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9695,7 +9706,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: all-butter puff is common; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -9712,7 +9723,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9729,7 +9740,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9746,7 +9757,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9763,7 +9774,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9784,7 +9795,7 @@
   ],
   "protein": "cheese",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9801,7 +9812,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9818,7 +9829,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9839,7 +9850,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9861,7 +9872,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9878,7 +9889,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9897,7 +9908,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9914,7 +9925,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -9931,7 +9942,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -9953,7 +9964,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -9976,7 +9987,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -9995,7 +10006,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10015,7 +10026,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10032,7 +10043,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10049,7 +10060,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10070,7 +10081,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10091,7 +10102,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10112,7 +10123,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10131,7 +10142,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10150,7 +10161,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fresh berries; sulphites only apply to dried currants",
   "proposal": {
    "by": "rules",
@@ -10171,7 +10182,7 @@
   ],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: traditional refried beans use lard; vegetarian tins exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -10188,7 +10199,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10205,7 +10216,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10222,7 +10233,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10241,7 +10252,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10260,7 +10271,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Kellogg's Rice Krispies contain barley malt flavouring; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -10284,7 +10295,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10303,7 +10314,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10324,7 +10335,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10345,7 +10356,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10366,7 +10377,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10385,7 +10396,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10402,7 +10413,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10421,7 +10432,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10438,7 +10449,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10455,7 +10466,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10472,7 +10483,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10491,7 +10502,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: green vegetable pod, not a protein legume",
   "proposal": {
    "by": "rules",
@@ -10510,7 +10521,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10529,7 +10540,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10548,7 +10559,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10567,7 +10578,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10584,7 +10595,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10601,7 +10612,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10620,7 +10631,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -10636,7 +10647,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10653,7 +10664,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10672,7 +10683,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Lizano lists mustard (unverified label, safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -10694,7 +10705,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -10718,7 +10729,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10741,7 +10752,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10760,7 +10771,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10779,7 +10790,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10805,7 +10816,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: UK sausages usually contain rusk (wheat) and sulphite preservative; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -10822,7 +10833,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10839,7 +10850,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10856,7 +10867,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10873,7 +10884,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10896,7 +10907,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10920,7 +10931,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -10944,7 +10955,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10961,7 +10972,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -10982,7 +10993,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: unspecified 'seeds' in Danish rye bread often include sesame (safe side)",
   "proposal": {
    "by": "rules",
@@ -11003,7 +11014,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: removed sulphites ('raisin' matched inside 'raising')",
   "proposal": {
    "by": "rules",
@@ -11024,7 +11035,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11044,7 +11055,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -11065,7 +11076,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11084,7 +11095,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11106,7 +11117,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: split from burger_bun so sesame isn't lost (Big Mac, Chick-Fil-A); BRAND-DEPENDENT: may contain milk",
   "proposal": {
    "by": "review",
@@ -11125,7 +11136,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11145,7 +11156,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11167,7 +11178,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Shaoxing is brewed with a wheat starter and is often salted; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -11191,7 +11202,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11210,7 +11221,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11229,7 +11240,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11253,7 +11264,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: usually made with butter; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -11270,7 +11281,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11289,7 +11300,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11310,7 +11321,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11331,7 +11342,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11352,7 +11363,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: condiment, not the dish's protein (allergen kept); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -11375,7 +11386,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: condiment, not the dish's protein; review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -11394,7 +11405,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11413,7 +11424,7 @@
   "contains": [],
   "protein": "tofu",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11434,7 +11445,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11455,7 +11466,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11474,7 +11485,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Liege syrup = apples/pears/sugar, no wheat",
   "proposal": {
    "by": "rules",
@@ -11495,7 +11506,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11516,7 +11527,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11537,7 +11548,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11560,7 +11571,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11583,7 +11594,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11602,7 +11613,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11619,7 +11630,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11636,7 +11647,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -11659,7 +11670,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11680,7 +11691,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11700,7 +11711,7 @@
   ],
   "protein": "pork",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -11721,7 +11732,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11743,7 +11754,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "Tamari is usually gluten-free; keep separate id"
  },
  {
@@ -11757,7 +11768,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11776,7 +11787,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11797,7 +11808,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -11809,7 +11820,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: ground spice blend, no flour; BRAND-DEPENDENT: check a typical label",
   "proposal": {
    "by": "rules",
@@ -11826,7 +11837,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11846,7 +11857,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11863,7 +11874,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11886,7 +11897,7 @@
   ],
   "protein": "shellfish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11905,7 +11916,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Huy Fong sriracha lists sodium bisulfite; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -11922,7 +11933,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11939,7 +11950,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11960,7 +11971,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -11979,7 +11990,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12001,7 +12012,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12020,7 +12031,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": ""
  },
  {
@@ -12037,7 +12048,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12056,7 +12067,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12077,7 +12088,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12099,7 +12110,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -12118,7 +12129,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12135,7 +12146,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12156,7 +12167,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12173,7 +12184,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12192,7 +12203,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12213,7 +12224,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: often preserved with sulphur dioxide; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -12230,7 +12241,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12247,7 +12258,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12264,7 +12275,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12283,7 +12294,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: jarred pickled peppers; may contain sulphites (BRAND-DEPENDENT)",
   "proposal": {
    "by": "rules",
@@ -12302,7 +12313,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: fresh vegetable; brand flag was a 'sweet' regex misfire",
   "proposal": {
    "by": "rules",
@@ -12323,7 +12334,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12340,7 +12351,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: plain vegetable; brand flag was a 'sweet' regex misfire",
   "proposal": {
    "by": "rules",
@@ -12361,7 +12372,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12382,7 +12393,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12402,7 +12413,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12419,7 +12430,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12436,7 +12447,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12455,7 +12466,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12474,7 +12485,7 @@
   "contains": [],
   "protein": "tofu",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12493,7 +12504,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12516,7 +12527,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: nam prik pao contains dried shrimp + fish sauce; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -12537,7 +12548,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Thai curry pastes usually contain shrimp paste; vegan brands exist; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -12556,7 +12567,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12575,7 +12586,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12596,7 +12607,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: snack aisle; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -12615,7 +12626,7 @@
   "contains": [],
   "protein": "tofu",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12637,7 +12648,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -12658,7 +12669,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: Heinz (UK) lists 'spice and herb extracts (contain celery)'; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -12677,7 +12688,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12694,7 +12705,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12711,7 +12722,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12732,7 +12743,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12749,7 +12760,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12770,7 +12781,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12789,7 +12800,7 @@
   ],
   "protein": "turkey",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12808,7 +12819,7 @@
   ],
   "protein": "turkey",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: turkey ham is turkey, not pork ('ham' regex); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12828,7 +12839,7 @@
   ],
   "protein": "turkey",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12845,7 +12856,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12865,7 +12876,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12884,7 +12895,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12905,7 +12916,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -12927,7 +12938,7 @@
   ],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12944,7 +12955,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12961,7 +12972,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -12978,7 +12989,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13001,7 +13012,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13020,7 +13031,7 @@
   ],
   "protein": "beef",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13037,7 +13048,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13056,7 +13067,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13076,7 +13087,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13097,7 +13108,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: unspecified plant milk (rijstevlaai); covers soy/almond/oat (safe side); BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -13121,7 +13132,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -13141,7 +13152,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: shelf fat, pantry not produce",
   "proposal": {
    "by": "rules",
@@ -13163,7 +13174,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: stock cubes/concentrates commonly list celery and wheat; added both (safe side). GF stock exists - human call; 'Bouillon Cubes' moved to bouillon_cube (flavour unknown); BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -13182,7 +13193,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13202,7 +13213,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: vinaigrettes usually contain mustard and wine vinegar; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -13221,7 +13232,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13243,7 +13254,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13264,7 +13275,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "addedSynonyms": [
@@ -13283,7 +13294,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: aquatic vegetable corm, not a tree nut",
   "proposal": {
    "by": "rules",
@@ -13300,7 +13311,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13319,7 +13330,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -13341,7 +13352,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -13365,7 +13376,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
   "proposal": {
    "by": "rules",
@@ -13389,7 +13400,7 @@
   ],
   "protein": "fish",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13408,7 +13419,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13429,7 +13440,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": true,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13452,7 +13463,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13471,7 +13482,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13488,7 +13499,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13507,7 +13518,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13521,13 +13532,14 @@
   "synonyms": [],
   "aisle": "bakery",
   "allergens": [
-   "gluten"
+   "gluten",
+   "soy"
   ],
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
-  "notes": "BRAND-DEPENDENT: check a typical label for hidden allergens",
+  "reviewed": true,
+  "notes": "review 2026-11-14: +soy; mainstream UK/US wholegrain loaves list soya flour. BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
    "uses": 1,
@@ -13546,7 +13558,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: made with white wine/vinegar, labels list sulphites; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -13565,7 +13577,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13587,7 +13599,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: most wonton wrappers contain egg; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -13606,7 +13618,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13629,7 +13641,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "review: UK Lea & Perrins uses barley malt vinegar -> gluten; anchovy -> fish; BRAND-DEPENDENT",
   "proposal": {
    "by": "rules",
@@ -13646,7 +13658,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13666,7 +13678,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13683,7 +13695,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13700,7 +13712,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13717,7 +13729,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13736,7 +13748,7 @@
   "contains": [],
   "protein": "legumes",
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13760,7 +13772,7 @@
   ],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13777,7 +13789,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13796,7 +13808,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
@@ -13813,7 +13825,7 @@
   "contains": [],
   "protein": null,
   "isPantryStaple": false,
-  "reviewed": false,
+  "reviewed": true,
   "notes": "",
   "proposal": {
    "by": "rules",
