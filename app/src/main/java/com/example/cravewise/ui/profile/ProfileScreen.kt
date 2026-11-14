@@ -35,16 +35,30 @@ import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.SectionHeader
 import com.example.cravewise.ui.designsystem.ViaSays
 import com.example.cravewise.ui.theme.CraveWiseTheme
+import com.example.cravewise.data.photos.RecipePhotosState
+import com.example.cravewise.ui.photos.RecipePhotosActions
+import com.example.cravewise.ui.photos.RecipePhotosPanel
+import com.example.cravewise.ui.photos.RecipePhotosViewModel
+import com.example.cravewise.ui.photos.eyebrowText
 
 @Composable
 fun ProfileScreen(
     onOpenFavorites: () -> Unit,
     onOpenDesignSystem: () -> Unit,
     viewModel: ProfileViewModel = hiltViewModel(),
+    photosViewModel: RecipePhotosViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val photos by photosViewModel.state.collectAsStateWithLifecycle()
     ProfileScreen(
         state = state,
+        photos = photos,
+        photoActions = RecipePhotosActions(
+            onDownload = photosViewModel::download,
+            onCancel = photosViewModel::cancel,
+            onRemove = photosViewModel::removeAll,
+            onAllowMobileData = photosViewModel::setAllowMobileData,
+        ),
         actions = ProfileActions(
             onToggleAllergen = viewModel::toggleAllergen,
             onToggleDiet = viewModel::toggleDiet,
@@ -73,7 +87,12 @@ class ProfileActions(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen(state: ProfileUiState, actions: ProfileActions) {
+fun ProfileScreen(
+    state: ProfileUiState,
+    actions: ProfileActions,
+    photos: RecipePhotosState = RecipePhotosState(),
+    photoActions: RecipePhotosActions = RecipePhotosActions({}, {}, {}, {}),
+) {
     val cs = MaterialTheme.colorScheme
     Scaffold(
         containerColor = cs.background,
@@ -130,6 +149,13 @@ fun ProfileScreen(state: ProfileUiState, actions: ProfileActions) {
             item("spice") {
                 Section("Spice tolerance", eyebrow = profile.maxSpice?.let { SPICE_LABELS[it] } ?: "Not set") {
                     SpiceEditor(profile.maxSpice, actions.onSetMaxSpice)
+                }
+            }
+            if (photos.total > 0) {
+                item("photos") {
+                    Section("Recipe photos", eyebrow = eyebrowText(photos)) {
+                        RecipePhotosPanel(photos, photoActions)
+                    }
                 }
             }
             item("links") {

@@ -55,6 +55,9 @@ import com.example.cravewise.ui.designsystem.ViaSays
 import com.example.cravewise.ui.recipe.PreviewRecipes
 import com.example.cravewise.ui.recipe.RecipeSummaryCard
 import com.example.cravewise.ui.theme.CraveWiseTheme
+import com.example.cravewise.data.photos.RecipePhotosState
+import com.example.cravewise.ui.photos.PhotoPrompt
+import com.example.cravewise.ui.photos.RecipePhotosViewModel
 
 @Composable
 fun HomeScreen(
@@ -66,10 +69,15 @@ fun HomeScreen(
     onOpenFavorites: () -> Unit,
     onOpenProfile: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
+    photosViewModel: RecipePhotosViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val photos by photosViewModel.state.collectAsStateWithLifecycle()
     HomeScreen(
         state = state,
+        photos = photos,
+        onDownloadPhotos = photosViewModel::download,
+        onDismissPhotos = photosViewModel::dismissPrompt,
         onCookWithWhatIHave = onCookWithWhatIHave,
         onHelpMeDecide = onHelpMeDecide,
         onSmartSearch = onSmartSearch,
@@ -91,6 +99,9 @@ fun HomeScreen(
     onBrowse: (BrowseRoute) -> Unit,
     onOpenFavorites: () -> Unit,
     onOpenProfile: () -> Unit,
+    photos: RecipePhotosState = RecipePhotosState(promptDismissed = true),
+    onDownloadPhotos: () -> Unit = {},
+    onDismissPhotos: () -> Unit = {},
 ) {
     val cs = MaterialTheme.colorScheme
     val gutter = Modifier.padding(horizontal = 20.dp)
@@ -126,6 +137,9 @@ fun HomeScreen(
                         )
                     }
                 }
+            } else if (photos.shouldPrompt) {
+                // One Via per screen: the one-time photo ask takes the greeting's place.
+                item("via") { PhotoPrompt(photos, onDownload = onDownloadPhotos, onNotNow = onDismissPhotos, modifier = gutter) }
             } else {
                 item("via") { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.", gutter) }
             }
@@ -189,6 +203,7 @@ fun HomeScreen(
                                 recipe,
                                 onClick = { onRecipeClick(recipe.id) },
                                 modifier = Modifier.width(260.dp),
+                                titleMinLines = 2,
                             )
                         }
                     }
@@ -299,6 +314,17 @@ private fun HomeScreenPreview() = CraveWiseTheme {
         ),
         onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {},
         onBrowse = {}, onOpenFavorites = {}, onOpenProfile = {},
+    )
+}
+
+@CravePreviews
+@Composable
+private fun HomePhotoPromptPreview() = CraveWiseTheme {
+    HomeScreen(
+        state = HomeUiState(isLoading = false, featured = PreviewRecipes.summaries),
+        onCookWithWhatIHave = {}, onHelpMeDecide = {}, onSmartSearch = {}, onRecipeClick = {},
+        onBrowse = {}, onOpenFavorites = {}, onOpenProfile = {},
+        photos = RecipePhotosState(total = 789),
     )
 }
 

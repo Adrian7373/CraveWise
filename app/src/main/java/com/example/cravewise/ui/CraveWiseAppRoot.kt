@@ -70,7 +70,9 @@ import com.example.cravewise.ui.onboarding.OnboardingScreen
 import com.example.cravewise.ui.pantry.PantryScreen
 import com.example.cravewise.ui.profile.ProfileScreen
 import com.example.cravewise.ui.quiz.DecideQuizScreen
+import com.example.cravewise.ui.recipe.LocalRecipePhotos
 import com.example.cravewise.ui.recipe.RecipeDetailScreen
+import androidx.compose.runtime.CompositionLocalProvider
 import com.example.cravewise.ui.search.SearchScreen
 import com.example.cravewise.ui.shopping.ShoppingListScreen
 
@@ -89,15 +91,18 @@ private val TOP_LEVEL_DESTINATIONS: Map<NavKey, TopLevelDestination> = linkedMap
 fun CraveWiseAppRoot(appViewModel: AppViewModel = hiltViewModel()) {
     val onboardingComplete by appViewModel.onboardingComplete.collectAsStateWithLifecycle()
     val catalog by appViewModel.catalogStatus.collectAsStateWithLifecycle()
+    val photos by appViewModel.recipePhotos.collectAsStateWithLifecycle()
     if (catalog is CatalogStatus.Failed) {
         CatalogErrorScreen(onRetry = appViewModel::retryCatalog)
         return
     }
-    when (onboardingComplete) {
-        // Brief: DataStore answers almost at once. A plain canvas avoids flashing onboarding.
-        null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
-        false -> OnboardingScreen()
-        true -> CraveWiseTabs(appViewModel)
+    CompositionLocalProvider(LocalRecipePhotos provides photos) {
+        when (onboardingComplete) {
+            // Brief: DataStore answers almost at once. A plain canvas avoids flashing onboarding.
+            null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
+            false -> OnboardingScreen()
+            true -> CraveWiseTabs(appViewModel)
+        }
     }
 }
 

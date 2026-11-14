@@ -78,6 +78,9 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.datastore.preferences)
 
+    // Opt-in recipe photo pack download (Wi-Fi constraint, survives the app closing)
+    implementation(libs.androidx.work.runtime.ktx)
+
     // Serialization / images
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.coil.compose)

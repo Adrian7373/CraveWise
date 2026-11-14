@@ -6,7 +6,10 @@ import com.example.cravewise.data.repository.ProfileRepository
 import com.example.cravewise.data.repository.ShoppingRepository
 import com.example.cravewise.data.seed.CatalogStatus
 import com.example.cravewise.data.seed.SeedImporter
+import com.example.cravewise.data.photos.PhotoStore
+import com.example.cravewise.ui.recipe.RecipePhotoLookup
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
@@ -19,7 +22,14 @@ class AppViewModel @Inject constructor(
     profiles: ProfileRepository,
     shopping: ShoppingRepository,
     private val seeder: SeedImporter,
+    photoStore: PhotoStore,
 ) : ViewModel() {
+
+    /** Downloaded recipe photos, provided to every screen through `LocalRecipePhotos`. */
+    val recipePhotos: StateFlow<RecipePhotoLookup> =
+        photoStore.downloaded
+            .map { ids -> RecipePhotoLookup(ids, photoStore::fileFor) }
+            .stateIn(viewModelScope, SharingStarted.Eagerly, RecipePhotoLookup(photoStore.downloaded.value, photoStore::fileFor))
 
     init {
         // Start the (usually no-op) catalog check right away so a failure shows up even before

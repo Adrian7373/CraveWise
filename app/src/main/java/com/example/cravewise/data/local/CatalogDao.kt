@@ -37,6 +37,9 @@ data class IngredientWithSynonyms(
 /** One (recipe, ingredient) pair, for pantry matching without loading full recipes. */
 data class RecipeIngredientRef(val recipeId: String, val ingredientId: String)
 
+/** A recipe's TheMealDB thumbnail URL (no size suffix), for the opt-in photo pack. */
+data class RecipePhotoUrl(val id: String, val imageUrl: String)
+
 @Dao
 abstract class CatalogDao {
 
@@ -61,6 +64,13 @@ abstract class CatalogDao {
 
     @Query("SELECT COUNT(*) FROM recipes")
     abstract suspend fun recipeCount(): Int
+
+    /** Recipes with a photo to download (opt-in photo pack). */
+    @Query("SELECT id, imageUrl FROM recipes WHERE imageUrl IS NOT NULL ORDER BY id")
+    abstract suspend fun recipePhotoUrls(): List<RecipePhotoUrl>
+
+    @Query("SELECT COUNT(*) FROM recipes WHERE imageUrl IS NOT NULL")
+    abstract fun observePhotoCount(): Flow<Int>
 
     /** Recipe ids whose FTS row matches [match] (FTS4 MATCH syntax, e.g. `title:curr*`). */
     @Query("SELECT recipeId FROM recipe_fts WHERE recipe_fts MATCH :match")

@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Cook-mode timer alarm. Normal permission, granted at install. No INTERNET: the app is fully offline. -->
+    <!-- Cook-mode timer alarm. Normal permission, granted at install. -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!--
+        Network is used for one thing only: the opt-in recipe photo pack (PhotoDownloadWorker).
+        Recipes, search and everything else stay bundled and work offline.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".CraveWiseApplication"
