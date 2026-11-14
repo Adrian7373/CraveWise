@@ -20,6 +20,10 @@ class RecipePhotosViewModel @Inject constructor(
     val state: StateFlow<RecipePhotosState> =
         photos.observe().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), RecipePhotosState(promptDismissed = true))
 
+    init {
+        viewModelScope.launch { photos.requeueIfWaiting() }
+    }
+
     fun download() {
         viewModelScope.launch { photos.download() }
     }

@@ -115,6 +115,18 @@ class PhotoRepository @Inject constructor(
         }
     }
 
+    /**
+     * Re-queues a download that is still waiting, so it picks up the current network rule. A job
+     * queued by 1.0 (UNMETERED constraint) survives the app update and would otherwise keep
+     * waiting forever on metered Wi-Fi.
+     */
+    suspend fun requeueIfWaiting() {
+        val state = work.getWorkInfosForUniqueWorkFlow(WORK_NAME).first().lastOrNull()?.state
+        if (state == WorkInfo.State.ENQUEUED || state == WorkInfo.State.BLOCKED) {
+            enqueue(preferences.data.first()[ALLOW_MOBILE_DATA] ?: false, ExistingWorkPolicy.REPLACE)
+        }
+    }
+
     suspend fun dismissPrompt() {
         preferences.edit { it[PROMPT_DISMISSED] = true }
     }
