@@ -5,12 +5,14 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import androidx.work.BackoffPolicy
 import androidx.work.Constraints
 import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.example.cravewise.data.local.CatalogDao
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +21,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -116,14 +119,22 @@ class PhotoRepository @Inject constructor(
         preferences.edit { it[PROMPT_DISMISSED] = true }
     }
 
+    /**
+     * Always just CONNECTED: the Wi-Fi-only rule is checked by the worker itself (by transport, see
+     * [PhotoDownloadWorker.onAllowedNetwork]). An UNMETERED constraint never fires on Wi-Fi the
+     * system flags as metered (phone hotspots, pocket Wi-Fi, or a network the user marked metered,
+     * which some OEM skins do by default), so the pack sat on "Waiting for Wi-Fi" forever.
+     */
     private fun enqueue(allowMobileData: Boolean, policy: ExistingWorkPolicy) {
         val request = OneTimeWorkRequestBuilder<PhotoDownloadWorker>()
             .setConstraints(
                 Constraints.Builder()
-                    .setRequiredNetworkType(if (allowMobileData) NetworkType.CONNECTED else NetworkType.UNMETERED)
+                    .setRequiredNetworkType(NetworkType.CONNECTED)
                     .setRequiresStorageNotLow(true)
                     .build(),
             )
+            .setInputData(workDataOf(PhotoDownloadWorker.KEY_ALLOW_MOBILE_DATA to allowMobileData))
+            .setBackoffCriteria(BackoffPolicy.LINEAR, WIFI_RETRY_SECONDS, TimeUnit.SECONDS)
             .build()
         work.enqueueUniqueWork(WORK_NAME, policy, request)
     }
@@ -137,6 +148,8 @@ class PhotoRepository @Inject constructor(
 
     private companion object {
         const val WORK_NAME = "recipe-photo-pack"
+        /** How soon to look again when the worker finds itself on mobile data without permission. */
+        const val WIFI_RETRY_SECONDS = 30L
         val ALLOW_MOBILE_DATA = booleanPreferencesKey("photos_allow_mobile_data")
         val PROMPT_DISMISSED = booleanPreferencesKey("photos_prompt_dismissed")
     }
