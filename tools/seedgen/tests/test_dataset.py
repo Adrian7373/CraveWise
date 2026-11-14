@@ -57,7 +57,8 @@ class ValidatorTest(unittest.TestCase):
         data = build()
         self.assertEqual(problems(data), [])
         self.assertEqual([i["id"] for i in data["ingredients"]], ["beef", "soy_sauce"])
-        self.assertIsNone(data["recipes"][0]["imageUrl"])
+        # The thumbnail URL ships so the app can offer an opt-in photo download.
+        self.assertEqual(data["recipes"][0]["imageUrl"], "https://x/t.jpg")
 
     def test_unknown_ingredient_id(self):
         r = recipe("1")
@@ -148,7 +149,7 @@ class DeterminismTest(unittest.TestCase):
         data = build()
         text = D.dumps(data)
         m = D.manifest(data, text, unreviewed=False)
-        self.assertEqual((m["version"], m["file"]), (2, "dataset.json"))
+        self.assertEqual((m["version"], m["file"]), (D.DATASET_VERSION, "dataset.json"))
         self.assertEqual(m["counts"]["recipes"], 2)
         self.assertEqual(m["counts"]["lines"], 4)
         self.assertEqual(len(m["sha256"]), 64)

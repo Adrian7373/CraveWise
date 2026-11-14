@@ -1,8 +1,9 @@
 """Phase F: assemble, validate and write the app's seed files (assets/seed/dataset.json + manifest.json).
 
 The output mirrors `data/seed/SeedModels.kt` exactly. Derived tags (allergens, diets, proteins) are NOT
-written: the app derives them on import from the ingredient table (safety rule). Provenance and image
-URLs stay in out/, never in the dataset.
+written: the app derives them on import from the ingredient table (safety rule). Provenance stays in
+out/. `imageUrl` is TheMealDB's thumbnail URL (no size suffix); the app downloads photos only when the
+user opts in, and never needs them to work.
 
 Output is deterministic: keys sorted, ingredients and recipes sorted by id, set-like lists sorted,
 no timestamps. Re-running with unchanged inputs gives a byte-identical file.
@@ -14,7 +15,7 @@ import json
 
 from .tags import FIELDS, FLAVORS, validate_value
 
-DATASET_VERSION = 2
+DATASET_VERSION = 3
 DATASET_FILE = "dataset.json"
 MANIFEST_FILE = "manifest.json"
 SOURCE_NAME = "TheMealDB"
@@ -46,7 +47,7 @@ def recipe_seed(r, values: dict, grams: dict) -> dict:
         "servings": values.get("servings"), "prepMinutes": values.get("prepMinutes"),
         "cookMinutes": values.get("cookMinutes"), "difficulty": values.get("difficulty"),
         "ingredients": lines, "steps": list(r.steps),
-        "imageUrl": None,  # no network in the app; thumbnails live in out/provenance.json only
+        "imageUrl": getattr(r, "thumb_url", None),  # opt-in photo download in the app
         "source": {"name": SOURCE_NAME, "sourceId": r.meal_id, "url": r.source_url, "originalUrl": r.original_url},
     }
 
