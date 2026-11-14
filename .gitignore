@@ -13,5 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Release signing secrets and keys
+keystore.properties
+*.jks
+*.keystore
 __pycache__/
 /tools/seedgen/raw/fdc/

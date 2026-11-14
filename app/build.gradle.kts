@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -5,6 +7,15 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.room)
+}
+
+/**
+ * Release signing comes from keystore.properties in the repo root (gitignored; see the comments
+ * in that file). Without it, release builds still assemble but come out unsigned.
+ */
+val releaseSigning: Properties = Properties().apply {
+    val file = rootProject.file("keystore.properties")
+    if (file.exists()) file.inputStream().use(::load)
 }
 
 android {
@@ -23,8 +34,20 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        releaseSigning.getProperty("storeFile")?.let { path ->
+            create("release") {
+                storeFile = file(path)
+                storePassword = releaseSigning.getProperty("storePassword")
+                keyAlias = releaseSigning.getProperty("keyAlias")
+                keyPassword = releaseSigning.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             optimization {
                 enable = true
                 packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
@@ -37,6 +60,8 @@ android {
     }
     buildFeatures {
         compose = true
+        // BuildConfig.DEBUG hides developer tools in release; VERSION_NAME shows in Profile > About.
+        buildConfig = true
     }
 }
 
