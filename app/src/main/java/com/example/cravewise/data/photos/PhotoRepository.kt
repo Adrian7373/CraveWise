@@ -36,6 +36,8 @@ data class RecipePhotosState(
     val job: PhotoJob = PhotoJob.Idle,
     /** Photos that failed on the last run (only meaningful while [job] is Failed). */
     val failed: Int = 0,
+    /** The last run stopped before starting because the phone is out of space (job is Failed). */
+    val noSpace: Boolean = false,
     /** Off by default: the pack only downloads on Wi-Fi (unmetered) unless the user allows data. */
     val allowMobileData: Boolean = false,
     /** The one-time Home prompt was answered (either way). */
@@ -83,6 +85,8 @@ class PhotoRepository @Inject constructor(
             job = info.toJob(),
             failed = info?.takeIf { it.state == WorkInfo.State.FAILED }
                 ?.outputData?.getInt(PhotoDownloadWorker.KEY_FAILED, 0) ?: 0,
+            noSpace = info?.takeIf { it.state == WorkInfo.State.FAILED }
+                ?.outputData?.getBoolean(PhotoDownloadWorker.KEY_NO_SPACE, false) ?: false,
             allowMobileData = prefs[ALLOW_MOBILE_DATA] ?: false,
             promptDismissed = prefs[PROMPT_DISMISSED] ?: false,
         )
@@ -136,13 +140,16 @@ class PhotoRepository @Inject constructor(
      * [PhotoDownloadWorker.onAllowedNetwork]). An UNMETERED constraint never fires on Wi-Fi the
      * system flags as metered (phone hotspots, pocket Wi-Fi, or a network the user marked metered,
      * which some OEM skins do by default), so the pack sat on "Waiting for Wi-Fi" forever.
+     *
+     * No STORAGE_NOT_LOW either: OEMs set "low" far above what a ~29 MB pack needs (Realme flags
+     * anything under ~10 GB free), which also left the job waiting forever. The worker checks real
+     * free space and fails with [PhotoDownloadWorker.KEY_NO_SPACE] instead.
      */
     private fun enqueue(allowMobileData: Boolean, policy: ExistingWorkPolicy) {
         val request = OneTimeWorkRequestBuilder<PhotoDownloadWorker>()
             .setConstraints(
                 Constraints.Builder()
                     .setRequiredNetworkType(NetworkType.CONNECTED)
-                    .setRequiresStorageNotLow(true)
                     .build(),
             )
             .setInputData(workDataOf(PhotoDownloadWorker.KEY_ALLOW_MOBILE_DATA to allowMobileData))

@@ -48,6 +48,11 @@ class PhotoDownloadWorker(context: Context, params: WorkerParameters) : Coroutin
         deps.seedImporter().ensureSeededSafely()
         val todo = deps.catalogDao().recipePhotoUrls().filterNot { store.has(it.id) }
         if (todo.isEmpty()) return Result.success()
+        // Real free-space check instead of a STORAGE_NOT_LOW constraint (see PhotoRepository.enqueue).
+        val needBytes = todo.size * PHOTO_BYTES_ESTIMATE + SPACE_MARGIN_BYTES
+        if (applicationContext.filesDir.usableSpace < needBytes) {
+            return Result.failure(workDataOf(KEY_NO_SPACE to true))
+        }
         if (!onAllowedNetwork()) return Result.retry()
 
         val done = AtomicInteger(0)
@@ -111,6 +116,10 @@ class PhotoDownloadWorker(context: Context, params: WorkerParameters) : Coroutin
         const val KEY_TOTAL = "total"
         const val KEY_FAILED = "failed"
         const val KEY_ALLOW_MOBILE_DATA = "allow_mobile_data"
+        const val KEY_NO_SPACE = "no_space"
+        /** Generous per-photo estimate (`/medium` averages ~37 KB) plus headroom left for the phone. */
+        private const val PHOTO_BYTES_ESTIMATE = 64L * 1024
+        private const val SPACE_MARGIN_BYTES = 100L * 1024 * 1024
         private const val PARALLEL = 4
         private const val TIMEOUT_MS = 15_000
 

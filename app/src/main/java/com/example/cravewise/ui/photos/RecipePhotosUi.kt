@@ -166,6 +166,8 @@ fun statusText(s: RecipePhotosState): String = when {
     s.job == PhotoJob.Running -> "Downloading ${s.downloaded} of ${s.total} photos. You can leave the app; it keeps going."
     s.job == PhotoJob.WaitingForNetwork && s.allowMobileData -> "Waiting for a connection. Photos download as soon as you're online."
     s.job == PhotoJob.WaitingForNetwork -> "Waiting for Wi-Fi. Photos download as soon as you're connected."
+    s.job == PhotoJob.Failed && s.noSpace ->
+        "Your phone is nearly full. Free up about ${s.estimatedMegabytes + 100} MB, then try again."
     s.job == PhotoJob.Failed ->
         "${s.failed} ${if (s.failed == 1) "photo" else "photos"} couldn't download. Check your connection and try again."
     s.isComplete -> "All ${s.total} photos are on this phone and work offline."
