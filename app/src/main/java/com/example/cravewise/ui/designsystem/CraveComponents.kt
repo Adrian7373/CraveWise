@@ -52,8 +52,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
@@ -70,6 +73,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import com.example.cravewise.ui.theme.CraveTheme
 import com.example.cravewise.ui.theme.Flavor
 import kotlin.math.roundToInt
@@ -441,9 +445,119 @@ fun MatchBadge(percent: Int, modifier: Modifier = Modifier) {
     }
 }
 
+/** Backdrop pattern for [RecipeArt]; picked from the art seed so neighbouring cards differ. */
+enum class RecipeArtPattern { Dots, Stripes, Rays }
+
 /**
- * Recipe card for browse, pantry results and search. The tinted icon tile stands in for a photo
- * until the dataset lands; swap it for an AsyncImage then and keep the divider below it.
+ * Placeholder dish art until recipes have photos: a flavor-tinted backdrop with a printed
+ * pattern and an ink-outlined "plate" sticker holding the dish icon. [seed] (e.g. the recipe id's
+ * hash) picks the pattern and its offset, so the same recipe always looks the same.
+ */
+@Composable
+fun RecipeArt(
+    icon: ImageVector,
+    accent: Color,
+    modifier: Modifier = Modifier,
+    seed: Int = 0,
+    plateSize: Dp = 64.dp,
+) {
+    val pattern = RecipeArtPattern.entries[Math.floorMod(seed, RecipeArtPattern.entries.size)]
+    val shift = Math.floorMod(seed / RecipeArtPattern.entries.size, 7) / 7f
+    Box(
+        modifier
+            .clipToBounds()
+            .background(accent.copy(alpha = 0.22f))
+            .drawBehind { drawArtPattern(pattern, accent.copy(alpha = 0.38f), shift) },
+        contentAlignment = Alignment.Center,
+    ) {
+        CraveSurface(shape = CircleShape, color = accent, hardShadow = true) {
+            Box(Modifier.size(plateSize), contentAlignment = Alignment.Center) {
+                // Flavor accents are bright in both themes, like saffron, so they take saffron's ink.
+                Icon(
+                    icon,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                    modifier = Modifier.size(plateSize * 0.56f),
+                )
+            }
+        }
+    }
+}
+
+private fun DrawScope.drawArtPattern(pattern: RecipeArtPattern, color: Color, shift: Float) {
+    when (pattern) {
+        RecipeArtPattern.Dots -> {
+            val step = 18.dp.toPx()
+            val r = 3.dp.toPx()
+            var row = 0
+            var y = step * shift
+            while (y < size.height + step) {
+                var x = if (row % 2 == 0) 0f else step / 2
+                while (x < size.width + step) {
+                    drawCircle(color, r, Offset(x, y))
+                    x += step
+                }
+                y += step
+                row++
+            }
+        }
+        RecipeArtPattern.Stripes -> {
+            val step = 22.dp.toPx()
+            val w = 6.dp.toPx()
+            var x = -size.height + step * shift
+            while (x < size.width + step) {
+                drawLine(color, Offset(x, size.height), Offset(x + size.height, 0f), strokeWidth = w)
+                x += step
+            }
+        }
+        RecipeArtPattern.Rays -> {
+            val c = center
+            val reach = size.maxDimension
+            val rays = 16
+            val sweep = 360f / rays
+            for (i in 0 until rays step 2) {
+                drawArc(
+                    color = color,
+                    startAngle = i * sweep + shift * sweep,
+                    sweepAngle = sweep,
+                    useCenter = true,
+                    topLeft = Offset(c.x - reach, c.y - reach),
+                    size = Size(reach * 2, reach * 2),
+                )
+            }
+        }
+    }
+}
+
+/**
+ * A recipe photo cropped to fill, over its [RecipeArt]. The art shows while the photo decodes and
+ * stays if it fails, so a broken file never leaves an empty box.
+ */
+@Composable
+fun RecipePhotoOrArt(
+    photo: Any?,
+    icon: ImageVector,
+    accent: Color,
+    seed: Int,
+    modifier: Modifier = Modifier,
+    plateSize: Dp = 64.dp,
+) {
+    Box(modifier) {
+        RecipeArt(icon, accent, Modifier.matchParentSize(), seed = seed, plateSize = plateSize)
+        if (photo != null) {
+            AsyncImage(
+                model = photo,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.matchParentSize(),
+            )
+        }
+    }
+}
+
+/**
+ * Recipe card for browse, pantry results and search. Shows the downloaded [photo] when there is
+ * one, else the [RecipeArt] placeholder.
  */
 @Composable
 fun RecipeCard(
@@ -457,19 +571,23 @@ fun RecipeCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     matchPercent: Int? = null,
+    /** Seeds [RecipeArt]'s pattern, e.g. the recipe id's hash. */
+    artSeed: Int = 0,
+    /** A downloaded photo (any Coil model, e.g. a File). Null keeps the [RecipeArt] placeholder. */
+    photo: Any? = null,
+    /**
+     * Pass 2 for cards side by side in a horizontal row (shelves, favorites strip): every card then
+     * reserves two title lines, so the row is even and the meta lines line up.
+     */
+    titleMinLines: Int = 1,
     /** Extra rows under the meta line, e.g. missing-ingredient pills on pantry results. */
     footer: (@Composable ColumnScope.() -> Unit)? = null,
 ) {
     val extras = CraveTheme.extras
     CraveSurface(onClick = onClick, modifier = modifier.fillMaxWidth()) {
         Column {
-            Box(
-                Modifier
-                    .fillMaxWidth()
-                    .height(120.dp)
-                    .background(Brush.linearGradient(listOf(accent.copy(alpha = 0.40f), accent.copy(alpha = 0.12f)))),
-            ) {
-                Icon(art, contentDescription = null, tint = accent, modifier = Modifier.size(56.dp).align(Alignment.Center))
+            Box(Modifier.fillMaxWidth().height(120.dp)) {
+                RecipePhotoOrArt(photo, art, accent, artSeed, Modifier.matchParentSize())
                 if (matchPercent != null) {
                     MatchBadge(matchPercent, Modifier.align(Alignment.TopStart).padding(12.dp))
                 }
@@ -477,7 +595,13 @@ fun RecipeCard(
             HorizontalDivider(thickness = extras.borderWidth, color = extras.borderColor)
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(cuisine, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                Text(title, style = MaterialTheme.typography.titleLarge, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(
+                    title,
+                    style = MaterialTheme.typography.titleLarge,
+                    minLines = titleMinLines,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     MetaItem(Icons.Outlined.Schedule, "$minutes min")
                     MetaItem(Icons.Outlined.SignalCellularAlt, difficulty)

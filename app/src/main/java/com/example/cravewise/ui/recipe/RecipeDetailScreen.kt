@@ -50,7 +50,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.tooling.preview.Preview
@@ -365,17 +364,8 @@ private fun LazyListScope.methodItems(recipe: Recipe, actions: DetailActions, to
 
 @Composable
 private fun RecipeHero(recipe: Recipe) {
-    val accent = CraveTheme.extras.flavor[recipe.summary.flavor.dominant]
     CraveSurface(Modifier.fillMaxWidth(), hardShadow = false) {
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .height(180.dp)
-                .background(Brush.linearGradient(listOf(accent.copy(alpha = 0.40f), accent.copy(alpha = 0.12f)))),
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(recipe.summary.artIcon, contentDescription = null, tint = accent, modifier = Modifier.size(88.dp))
-        }
+        RecipeSummaryArt(recipe.summary, Modifier.fillMaxWidth().height(180.dp), plateSize = 96.dp)
     }
 }
 

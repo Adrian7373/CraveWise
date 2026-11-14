@@ -27,6 +27,7 @@ import androidx.compose.material.icons.outlined.Eco
 import androidx.compose.material.icons.outlined.Kitchen
 import androidx.compose.material.icons.outlined.LightMode
 import androidx.compose.material.icons.outlined.Quiz
+import androidx.compose.material.icons.outlined.Cake
 import androidx.compose.material.icons.outlined.RamenDining
 import androidx.compose.material.icons.outlined.SoupKitchen
 import androidx.compose.material.icons.outlined.WarningAmber
@@ -341,6 +342,7 @@ private fun CardSection() {
     val flavor = CraveTheme.extras.flavor
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         SectionHeader("Cards", eyebrow = "07 · Recipes", actionLabel = "See all")
+        RecipeArtRow()
         RecipeCard(
             title = "Spicy Garlic Ramen",
             cuisine = "Japanese",
@@ -498,6 +500,28 @@ private fun RecipeCardPreview() = CravePreviewSurface {
         onClick = {},
     )
 }
+
+/** One [RecipeArt] per pattern (seeds 0, 1, 2), each with a different flavor accent. */
+@Composable
+private fun RecipeArtRow() {
+    val flavor = CraveTheme.extras.flavor
+    val samples = listOf(
+        Icons.Outlined.SoupKitchen to flavor.umami,
+        Icons.Outlined.RamenDining to flavor.spicy,
+        Icons.Outlined.Cake to flavor.sweet,
+    )
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        samples.forEachIndexed { seed, (icon, accent) ->
+            CraveSurface(Modifier.weight(1f), hardShadow = false) {
+                RecipeArt(icon, accent, Modifier.fillMaxWidth().height(96.dp), seed = seed, plateSize = 48.dp)
+            }
+        }
+    }
+}
+
+@CravePreviews
+@Composable
+private fun RecipeArtPreview() = CravePreviewSurface { RecipeArtRow() }
 
 @CravePreviews
 @Composable
