@@ -44,8 +44,11 @@ def _fmt(v) -> str:
     return ", ".join(v) if isinstance(v, list) else str(v)
 
 
-def provenance(merged: dict) -> dict:
-    return {rid: prov for rid, (_, prov, _) in sorted(merged.items())}
+def provenance(merged: dict, recipes: list[Recipe] = ()) -> dict:
+    """Per recipe: where each tag came from, plus `_source` (TheMealDB page, original page and the
+    thumbnail URL). Thumbnails live here only: the app has no network, so the dataset ships none."""
+    src = {r.id: {"url": r.source_url, "originalUrl": r.original_url, "thumbUrl": r.thumb_url} for r in recipes}
+    return {rid: ({"_source": src[rid]} if rid in src else {}) | prov for rid, (_, prov, _) in sorted(merged.items())}
 
 
 def review_sheet(ids: list[str], recipes: dict[str, Recipe], merged: dict, overrides: dict, by_id: dict) -> str:

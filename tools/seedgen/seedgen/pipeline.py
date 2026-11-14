@@ -188,7 +188,7 @@ def cmd_review() -> int:
     (OUT / "review-top50.md").write_text(review.review_sheet(ids, rmap, merged, overrides, by_id), encoding="utf-8")
     (OUT / "audit.md").write_text(
         review.audit(recipes, merged, by_id, vocab.load(), N.allowed_cuisines(), errors), encoding="utf-8")
-    review.write_json(OUT / "provenance.json", review.provenance(merged))
+    review.write_json(OUT / "provenance.json", review.provenance(merged, recipes))
     print(f"review: {len(ids)} recipes -> out/review-top50.md, audit -> out/audit.md, provenance -> out/provenance.json")
     return 0
 
@@ -270,5 +270,44 @@ def cmd_nutrition() -> int:
 
 
 def cmd_build(allow_unreviewed: bool = False) -> int:
-    print("build: tagging (Phase C), nutrition (Phase E) and dataset output (Phase F) are not wired yet.")
-    return 1
+    """normalize -> rules -> AI + overrides -> nutrition -> validate -> assets/seed/{dataset,manifest}.json.
+    (build.py runs the cached fetch first.) Writes nothing to assets if validation fails."""
+    import json
+    from . import dataset as D, review, vocab
+    from .paths import ASSET_DIR, OUT
+    table = IngredientTable.load()
+    recipes, proposals, answers, overrides, merged, errors = tag_all(table)
+    per100, grams, _ = nutrition_for(table, recipes)
+    data = D.assemble(table.items, recipes, merged, per100, grams)
+    reviewed = {i["id"]: bool(i.get("reviewed")) for i in table.items}
+    problems = D.validate(data, vocab=vocab.load(), cuisines=N.allowed_cuisines(), reviewed=reviewed,
+                          tag_errors=errors, allow_unreviewed=allow_unreviewed)
+    if problems:
+        print(f"build: FAILED, {len(problems)} problem(s); nothing written:")
+        for p in problems:
+            print("  - " + p)
+        return 1
+    unreviewed = sorted(i["id"] for i in data["ingredients"] if not reviewed.get(i["id"]))
+    text = D.dumps(data)
+    m = D.manifest(data, text, unreviewed=bool(unreviewed))
+    ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    old_manifest = ASSET_DIR / D.MANIFEST_FILE
+    if old_manifest.exists():
+        old = json.loads(old_manifest.read_text(encoding="utf-8"))
+        if old.get("version") == m["version"] and old.get("sha256") not in (None, m["sha256"]):
+            print(f"build: NOTE the content changed but the version is still {m['version']}. Installed apps only "
+                  f"re-seed on a version change: bump DATASET_VERSION in seedgen/dataset.py before shipping.")
+    (ASSET_DIR / D.DATASET_FILE).write_bytes(text.encode("utf-8"))
+    old_manifest.write_bytes(D.manifest_dumps(m).encode("utf-8"))
+    review.write_json(OUT / "provenance.json", review.provenance(merged, recipes))
+    c = m["counts"]
+    print(f"build: v{m['version']} -> {ASSET_DIR / D.DATASET_FILE} ({len(text.encode('utf-8')):,} bytes, "
+          f"sha256 {m['sha256'][:12]}): {c['recipes']} recipes, {c['ingredients']} ingredients "
+          f"({c['ingredientsWithNutrition']} with nutrition), {c['lines']} lines ({c['linesWeighed']} weighed)")
+    unused = sorted({i["id"] for i in table.items} - {i["id"] for i in data["ingredients"]})
+    if unused:
+        print(f"build: {len(unused)} ingredient(s) in ingredients.json not used by any recipe (not shipped): {unused}")
+    if unreviewed:
+        print(f"build: WARNING --allow-unreviewed: {len(unreviewed)} unreviewed ingredient(s) shipped, manifest "
+              f"flagged `unreviewed: true`. LOCAL TESTING ONLY: {unreviewed}")
+    return 0
