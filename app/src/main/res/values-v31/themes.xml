@@ -1,0 +1,8 @@
+<resources>
+    <!-- Android 12+ system splash: Via on a saffron disc over the app's canvas. -->
+    <style name="Theme.CraveWise" parent="Base.Theme.CraveWise">
+        <item name="android:windowSplashScreenBackground">@color/window_canvas</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/ic_launcher_background</item>
+    </style>
+</resources>

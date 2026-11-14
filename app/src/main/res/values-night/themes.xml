@@ -1,3 +1,5 @@
 <resources>
-    <style name="Theme.CraveWise" parent="android:Theme.Material.NoActionBar" />
+    <style name="Base.Theme.CraveWise" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/window_canvas</item>
+    </style>
 </resources>
