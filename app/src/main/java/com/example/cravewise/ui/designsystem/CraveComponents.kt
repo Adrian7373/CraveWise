@@ -3,7 +3,6 @@ package com.example.cravewise.ui.designsystem
 import android.content.res.Configuration
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -701,64 +700,4 @@ fun SectionHeader(
     }
 }
 
-// ---------------------------------------------------------------------------------------------
-// Via the panda
-// ---------------------------------------------------------------------------------------------
-
-/** Via, framed on the artwork's own backdrop color with the ink outline. */
-@Composable
-fun ViaMascot(size: Dp, modifier: Modifier = Modifier) {
-    val extras = CraveTheme.extras
-    Image(
-        painter = painterResource(extras.mascot),
-        contentDescription = "Via the panda",
-        contentScale = ContentScale.Crop,
-        modifier = modifier
-            .size(size)
-            .clip(extras.mascotShape)
-            .background(extras.mascotBackdrop)
-            .border(extras.borderWidth, extras.borderColor, extras.mascotShape),
-    )
-}
-
-/** Via speaking: avatar + speech bubble. Use for tips, quiz prompts and guidance. */
-@Composable
-fun ViaSays(message: String, modifier: Modifier = Modifier, avatarSize: Dp = 56.dp) {
-    Row(modifier, verticalAlignment = Alignment.Bottom) {
-        ViaMascot(avatarSize)
-        Spacer(Modifier.width(10.dp))
-        CraveSurface(
-            shape = MaterialTheme.shapes.large.copy(bottomStart = CornerSize(4.dp)),
-            modifier = Modifier.weight(1f),
-        ) {
-            Text(message, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(14.dp))
-        }
-    }
-}
-
-/** Empty / no-results state starring Via. Always offer a next step. */
-@Composable
-fun ViaEmptyState(
-    title: String,
-    body: String,
-    actionLabel: String,
-    onAction: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Column(
-        modifier = modifier.fillMaxWidth().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        ViaMascot(160.dp)
-        Text(title, style = MaterialTheme.typography.headlineSmall, textAlign = TextAlign.Center)
-        Text(
-            body,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Center,
-        )
-        Spacer(Modifier.height(4.dp))
-        CraveButton(actionLabel, onClick = onAction)
-    }
-}
+// Via the panda lives in ViaComponents.kt.

@@ -81,8 +81,9 @@ internal val CraveShapes = Shapes(
 )
 
 private fun extrasFor(colors: ColorScheme, dark: Boolean) = CraveExtras(
-    mascot = R.drawable.via,
-    mascotBackdrop = ViaBackdrop,
+    mascot = R.drawable.via_avatar,
+    // Same saffron disc as the launcher icon, so the avatar reads as the app's face.
+    mascotBackdrop = colors.secondaryContainer,
     mascotShape = RoundedCornerShape(28.dp),
     buttonShape = RoundedCornerShape(16.dp),
     chipShape = CircleShape,

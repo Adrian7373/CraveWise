@@ -11,10 +11,8 @@ import androidx.compose.ui.graphics.Color
 
 internal val InkNavy = Color(0xFF1E1B2E)
 internal val PaperCream = Color(0xFFF6EDE4)
+/** Also the launcher icon / splash disc behind Via (res/values/colors.xml mirrors it). */
 internal val Saffron = Color(0xFFFFC233)
-
-/** Flat background baked into the Via artwork (res/drawable-nodpi/via.png). */
-internal val ViaBackdrop = Color(0xFFF5E2D2)
 
 internal val LightColors: ColorScheme = lightColorScheme(
     primary = Color(0xFFD23B1F),

@@ -138,7 +138,7 @@ private fun HeroSection() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        ViaMascot(size = 200.dp)
+        ViaFigure(ViaPose.Hello, height = 200.dp)
         Text("Noodle Pop", style = MaterialTheme.typography.displaySmall, textAlign = TextAlign.Center)
         Text(
             "Bold sticker energy: playful, loud, and fun to tap",
@@ -404,7 +404,20 @@ private fun CardSection() {
 private fun ViaSection() {
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         SectionHeader("Via moments", eyebrow = "08 · Mascot")
+        // One look everywhere: the avatar, or one of the full-body poses.
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.Bottom) {
+            ViaMascot(56.dp)
+            ViaPose.entries.forEach { ViaFigure(it, height = 80.dp) }
+        }
+        ViaHero(
+            headline = "Good evening, chef!",
+            minHeight = 240.dp,
+            actions = { CraveButton("Set spice level", onClick = {}, variant = CraveButtonVariant.Outline) },
+        ) {
+            Text("How brave is your tongue? Tell me your heat limit.", style = MaterialTheme.typography.bodyMedium)
+        }
         ViaSays("Not sure what you're craving? Answer 5 quick questions and I'll pick for you.")
+        ViaSpeechBubble(BubbleTail.End) { Text("A bubble can point either way.", style = MaterialTheme.typography.bodyMedium) }
         CraveSurface(Modifier.fillMaxWidth(), color = MaterialTheme.colorScheme.surfaceContainerLow) {
             ViaEmptyState(
                 title = "No matches yet",

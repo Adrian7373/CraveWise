@@ -14,7 +14,9 @@ and **one mascot (Via the panda)**. Light and dark themes are both first-class.
 | Reusable components + `@CravePreviews` | `ui/designsystem/CraveComponents.kt` |
 | Cooking components + layout tokens (`CraveLayout`, `readableWidth`) | `ui/designsystem/CraveCookComponents.kt` |
 | Living catalog screen + component previews | `ui/designsystem/DesignSystemCatalogScreen.kt` |
-| Via artwork | `app/src/main/res/drawable-nodpi/via.png` (flat backdrop `#F5E2D2`) |
+| Via components (`ViaPose`, `ViaFigure`, `ViaMascot`, `ViaSpeechBubble`, `ViaSays`, `ViaEmptyState`, `ViaHero`) | `ui/designsystem/ViaComponents.kt` |
+| Via artwork | `app/src/main/res/drawable-nodpi/via_avatar.webp` + `via_<pose>.webp` (transparent cutouts) |
+| Launcher icon / splash | `res/mipmap-*/ic_launcher_*.webp` (Via on saffron), `res/values*/colors.xml` mirrors the canvas + saffron |
 
 The catalog is reachable in-app via **Profile → "Design system catalog"** (`DesignCatalogRoute`).
 
@@ -74,7 +76,10 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `RecipeArt` | Placeholder dish art when a recipe has no photo: flavor-tinted backdrop with a seeded pattern (dots / stripes / rays) and an ink-outlined plate sticker holding the dish icon. Used by `RecipeCard` and the recipe detail hero |
 | `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard action key (e.g. add the top pantry suggestion; `imeAction` picks Done/Search), and `onClear` to show a × while there's text |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |
-| `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results/error states (error copy says what happened and offers "Try again") |
+| `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar (head crop on a saffron disc), speech-bubble tips, empty/no-results/error states with a full-body pose (error copy says what happened and offers "Try again") |
+| `ViaPose`, `ViaFigure` | The full-body poses: `Hello` (greetings, Home), `Thinking` (empty/error, the default), `Shopping`, `Celebrate` (done/picked). Size by height only |
+| `ViaSpeechBubble` | Sticker bubble with a tail toward Via (`BubbleTail.Start`/`End`). Takes any content (text plus a link) |
+| `ViaHero` | Home's hero: saffron panel about 30% of the window tall (`viaHeroHeight()`), a big Via peeking up from the bottom edge, a headline and a bubble with at most one action. Via pops in once per visit |
 | `ServingsStepper` | − N servings + control (recipe detail). Flat container; the buttons are the actions |
 | `StepProgress` | Segmented progress through cook-mode steps |
 | `CookTimerCard` | A running/paused/done kitchen timer with pause, +1 min and dismiss. It turns tomato when done |
@@ -87,6 +92,10 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 - **Via has a voice:** upbeat, short, food puns welcome ("slurp-worthy"). Use `ViaSays` for
   guidance and `ViaEmptyState` whenever a list or search can be empty. Always include a next action.
   At most one Via per screen.
+- **Via has one look:** the flat-sticker style (ink outline, white sticker border, tomato cap,
+  saffron scarf). Use the avatar or a `ViaPose`; never redraw, stretch or recolor it. A new pose
+  is generated in the same style (Higgsfield, from the same character prompt), cut out to a
+  transparent WebP and added to `ViaPose`.
 - **Safety first:** allergen and diet warnings use `errorContainer` plus an icon. Never show them
   with color alone, and never put them in a Via joke.
 - Screens own their `Scaffold` and use `containerColor = colorScheme.background` and a

@@ -80,6 +80,7 @@ import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.StepProgress
 import com.example.cravewise.ui.designsystem.ViaEmptyState
+import com.example.cravewise.ui.designsystem.ViaPose
 import com.example.cravewise.ui.recipe.PreviewRecipes
 import com.example.cravewise.ui.theme.CraveWiseTheme
 import com.example.cravewise.ui.theme.cookStep
@@ -291,6 +292,7 @@ private fun CookPane(
                         body = "That's every step. Plate it up and dig in, chef.",
                         actionLabel = "Back to recipe",
                         onAction = actions.onExit,
+                        pose = ViaPose.Celebrate,
                     )
                 }
             }
