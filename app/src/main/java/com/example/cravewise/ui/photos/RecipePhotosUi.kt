@@ -34,7 +34,6 @@ import com.example.cravewise.ui.designsystem.CraveButton
 import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.CraveSurface
-import com.example.cravewise.ui.designsystem.ViaSays
 import com.example.cravewise.ui.theme.CraveWiseTheme
 
 class RecipePhotosActions(
@@ -44,27 +43,7 @@ class RecipePhotosActions(
     val onAllowMobileData: (Boolean) -> Unit,
 )
 
-/** The one-time Home ask. Replaces Home's generic Via line, so the screen still has one Via. */
-@Composable
-fun PhotoPrompt(state: RecipePhotosState, onDownload: () -> Unit, onNotNow: () -> Unit, modifier: Modifier = Modifier) {
-    Column(modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        ViaSays(
-            "Want real dish photos instead of my doodles? One download of about ${state.estimatedMegabytes} MB on " +
-                "Wi-Fi, then they work offline.",
-        )
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            CraveButton(
-                "Download photos",
-                onClick = onDownload,
-                variant = CraveButtonVariant.Secondary,
-                icon = Icons.Outlined.Download,
-                modifier = Modifier.weight(1f),
-            )
-            Spacer(Modifier.width(8.dp))
-            TextButton(onClick = onNotNow) { Text("Not now", style = MaterialTheme.typography.labelLarge) }
-        }
-    }
-}
+// The one-time Home ask lives in Home's Via hero (HomeScreen.HomeHero).
 
 /** Profile's "Recipe photos" panel: status, the one action that fits it, and the network rule. */
 @Composable
@@ -230,10 +209,4 @@ private fun PhotosPanelFailedPreview() = CraveWiseTheme {
         previewActions,
         Modifier.padding(16.dp),
     )
-}
-
-@CravePreviews
-@Composable
-private fun PhotoPromptPreview() = CraveWiseTheme {
-    PhotoPrompt(RecipePhotosState(total = 789), onDownload = {}, onNotNow = {}, modifier = Modifier.padding(16.dp))
 }

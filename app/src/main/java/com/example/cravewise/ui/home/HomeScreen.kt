@@ -1,7 +1,14 @@
 package com.example.cravewise.ui.home
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
@@ -21,20 +28,28 @@ import androidx.compose.material.icons.outlined.Cake
 import androidx.compose.material.icons.outlined.Cookie
 import androidx.compose.material.icons.outlined.DinnerDining
 import androidx.compose.material.icons.outlined.Kitchen
-import androidx.compose.material.icons.outlined.LocalFireDepartment
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.Quiz
 import androidx.compose.material.icons.outlined.RiceBowl
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Tapas
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -51,12 +66,12 @@ import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.SectionHeader
-import com.example.cravewise.ui.designsystem.ViaSays
+import com.example.cravewise.ui.designsystem.ViaHero
+import com.example.cravewise.ui.theme.CraveTheme
 import com.example.cravewise.ui.recipe.PreviewRecipes
 import com.example.cravewise.ui.recipe.RecipeSummaryCard
 import com.example.cravewise.ui.theme.CraveWiseTheme
 import com.example.cravewise.data.photos.RecipePhotosState
-import com.example.cravewise.ui.photos.PhotoPrompt
 import com.example.cravewise.ui.photos.RecipePhotosViewModel
 
 @Composable
@@ -124,61 +139,60 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.readableWidth(),
         ) {
-            if (state.askSpice) {
-                item("via") {
-                    Column(gutter, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                        ViaSays("How brave is your tongue? Set your spice level and I'll keep the heat just right.")
-                        CraveButton(
-                            "Set my spice level",
-                            onClick = onOpenProfile,
-                            variant = CraveButtonVariant.Outline,
-                            icon = Icons.Outlined.LocalFireDepartment,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                    }
-                }
-            } else if (photos.shouldPrompt) {
-                // One Via per screen: the one-time photo ask takes the greeting's place.
-                item("via") { PhotoPrompt(photos, onDownload = onDownloadPhotos, onNotNow = onDismissPhotos, modifier = gutter) }
-            } else {
-                item("via") { ViaSays("Hungry?! Tell me what's in your kitchen and I'll find something slurp-worthy.", gutter) }
+            // Via's hero is the one Via on Home: the spice nudge and the one-time photo ask take
+            // over its bubble instead of stacking a second Via.
+            item("via") {
+                HomeHero(
+                    state = state,
+                    photos = photos,
+                    onOpenProfile = onOpenProfile,
+                    onDownloadPhotos = onDownloadPhotos,
+                    onDismissPhotos = onDismissPhotos,
+                    modifier = gutter,
+                )
             }
-            item {
+            item("question") {
                 Text(
                     "What are we cooking today?",
                     style = MaterialTheme.typography.headlineMedium,
-                    modifier = gutter.padding(top = 8.dp),
+                    modifier = gutter.padding(top = 16.dp),
                 )
             }
-            item {
+            item("pantry") {
+                // The main action keeps the tomato fill; the other two stay quiet so the hero leads.
                 FeatureCard(
                     icon = Icons.Outlined.Kitchen,
                     title = "Cook with what I have",
                     subtitle = "Enter your ingredients and see what you can make",
                     container = cs.primary,
                     content = cs.onPrimary,
+                    badge = cs.onPrimary.copy(alpha = 0.16f),
                     onClick = onCookWithWhatIHave,
                     modifier = gutter,
                 )
             }
-            item {
+            item("decide") {
                 FeatureCard(
                     icon = Icons.Outlined.Quiz,
                     title = "Help me decide",
                     subtitle = "Answer a few quick questions and get picks",
-                    container = cs.secondaryContainer,
-                    content = cs.onSecondaryContainer,
+                    container = CraveTheme.extras.cardColor,
+                    content = cs.onSurface,
+                    badge = cs.secondaryContainer,
+                    onBadge = cs.onSecondaryContainer,
                     onClick = onHelpMeDecide,
                     modifier = gutter,
                 )
             }
-            item {
+            item("search") {
                 FeatureCard(
                     icon = Icons.Outlined.Search,
                     title = "Smart search",
                     subtitle = "Try \"something salty\" or \"quick spicy dinner\"",
-                    container = cs.tertiaryContainer,
-                    content = cs.onTertiaryContainer,
+                    container = CraveTheme.extras.cardColor,
+                    content = cs.onSurface,
+                    badge = cs.tertiaryContainer,
+                    onBadge = cs.onTertiaryContainer,
                     onClick = onSmartSearch,
                     modifier = gutter,
                 )
@@ -273,6 +287,72 @@ private val MealType.icon: ImageVector
         MealType.Snack -> Icons.Outlined.Cookie
     }
 
+/**
+ * Home's hero: Via greets, then says the most useful thing right now. Priority: the spice nudge
+ * (until set), the one-time photo ask, else a daily tip the user can flip through.
+ */
+@Composable
+private fun HomeHero(
+    state: HomeUiState,
+    photos: RecipePhotosState,
+    onOpenProfile: () -> Unit,
+    onDownloadPhotos: () -> Unit,
+    onDismissPhotos: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val headline = remember { greeting() }
+    var tip by rememberSaveable { mutableIntStateOf(tipOfTheDay()) }
+    val bubbleText = MaterialTheme.typography.bodyMedium
+    // Ink on saffron: tomato links would be too low-contrast on the hero.
+    val onHeroText = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.onSecondaryContainer)
+    when {
+        state.askSpice -> ViaHero(
+            headline = headline,
+            modifier = modifier,
+            actions = {
+                CraveButton("Set spice level", onClick = onOpenProfile, variant = CraveButtonVariant.Outline)
+            },
+        ) {
+            Text("How brave is your tongue? Tell me your heat limit and I'll keep every pick just right.", style = bubbleText)
+        }
+        photos.shouldPrompt -> ViaHero(
+            headline = headline,
+            modifier = modifier,
+            actions = {
+                CraveButton(
+                    "Get photos",
+                    onClick = onDownloadPhotos,
+                    variant = CraveButtonVariant.Outline,
+                    icon = Icons.Outlined.Download,
+                )
+                TextButton(onClick = onDismissPhotos, colors = onHeroText) {
+                    Text("Not now", style = MaterialTheme.typography.labelLarge)
+                }
+            },
+        ) {
+            Text(
+                "Want real dish photos instead of my doodles? About ${photos.estimatedMegabytes} MB once, on Wi-Fi.",
+                style = bubbleText,
+            )
+        }
+        else -> ViaHero(
+            headline = headline,
+            modifier = modifier,
+            actions = {
+                TextButton(onClick = { tip = (tip + 1) % HOME_TIPS.size }, colors = onHeroText) {
+                    Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text("Another tip", style = MaterialTheme.typography.labelLarge)
+                }
+            },
+        ) {
+            AnimatedContent(targetState = tip, transitionSpec = { fadeIn() togetherWith fadeOut() }, label = "tip") { i ->
+                Text(HOME_TIPS[i], style = bubbleText)
+            }
+        }
+    }
+}
+
 @Composable
 private fun FeatureCard(
     icon: ImageVector,
@@ -280,8 +360,10 @@ private fun FeatureCard(
     subtitle: String,
     container: Color,
     content: Color,
+    badge: Color,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    onBadge: Color = content,
 ) {
     CraveSurface(
         onClick = onClick,
@@ -290,7 +372,12 @@ private fun FeatureCard(
         modifier = modifier.fillMaxWidth(),
     ) {
         Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
-            Icon(icon, contentDescription = null, modifier = Modifier.size(32.dp))
+            Box(
+                Modifier.size(48.dp).clip(CircleShape).background(badge),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(icon, contentDescription = null, tint = onBadge, modifier = Modifier.size(26.dp))
+            }
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {
                 Text(title, style = MaterialTheme.typography.titleMedium)
