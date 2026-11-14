@@ -104,8 +104,8 @@ object PantryMatcher {
     }
 
     /**
-     * Quick-add suggestions: the non-staple ingredients used by the most recipes, skipping what
-     * the pantry already lists. Ties sort by name.
+     * Quick-add suggestions: the ingredients used by the most recipes, skipping what the pantry
+     * lists or assumes (so eggs show up while "Eggs, milk & butter" is off). Ties sort by name.
      */
     fun popularIngredients(
         recipeIngredients: Map<String, List<String>>,
@@ -118,7 +118,7 @@ object PantryMatcher {
             .groupingBy { it }
             .eachCount()
             .mapNotNull { (id, count) -> ingredients[id]?.let { it to count } }
-            .filter { (ingredient, _) -> !ingredient.isPantryStaple && !pantry.contains(ingredient.id) }
+            .filter { (ingredient, _) -> !pantry.owns(ingredient) }
             .sortedWith(compareByDescending<Pair<Ingredient, Int>> { it.second }.thenBy { it.first.name.lowercase() })
             .take(limit)
             .map { it.first }

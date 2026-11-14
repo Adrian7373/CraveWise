@@ -1,6 +1,19 @@
 package com.example.cravewise.ui.pantry
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.material.icons.outlined.BakeryDining
+import androidx.compose.material.icons.outlined.EggAlt
+import androidx.compose.material.icons.outlined.ExpandLess
+import androidx.compose.material.icons.outlined.ExpandMore
+import androidx.compose.material.icons.outlined.Grain
+import androidx.compose.material.icons.outlined.SoupKitchen
+import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material.icons.outlined.WaterDrop
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.ui.graphics.vector.ImageVector
+import com.example.cravewise.domain.model.StapleGroup
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -79,7 +92,7 @@ fun PantryScreen(
             onAdd = viewModel::add,
             onRemove = viewModel::remove,
             onClear = viewModel::clearPantry,
-            onAssumeStaples = viewModel::setAssumeStaples,
+            onStapleGroup = viewModel::setStapleGroup,
             onRecipeClick = onRecipeClick,
             onBrowse = onBrowse,
             onOpenProfile = onOpenProfile,
@@ -95,7 +108,7 @@ class PantryActions(
     val onAdd: (String) -> Unit,
     val onRemove: (String) -> Unit,
     val onClear: () -> Unit,
-    val onAssumeStaples: (Boolean) -> Unit,
+    val onStapleGroup: (StapleGroup, Boolean) -> Unit,
     val onRecipeClick: (String) -> Unit,
     val onBrowse: () -> Unit,
     val onOpenProfile: () -> Unit,
@@ -154,7 +167,7 @@ fun PantryScreen(state: PantryUiState, actions: PantryActions) {
                 item("quick-add") { QuickAddSection(state.quickAdd, actions.onAdd) }
             }
             if (state.staples.isNotEmpty()) {
-                item("basics") { BasicsToggle(state.assumeStaples, state.staples, actions.onAssumeStaples) }
+                item("basics") { BasicsPanel(state.staples, actions.onStapleGroup) }
             }
             if (state.hasPantry) {
                 results(state, showAllShopping, { showAllShopping = !showAllShopping }, actions)
@@ -225,29 +238,91 @@ private fun AddChip(ingredient: Ingredient, onAdd: (String) -> Unit) {
     )
 }
 
+/**
+ * "Basics I keep": one switch per [StapleGroup], so someone with a spice rack but no eggs isn't
+ * told they can cook an omelette. Collapsed it's a one-line summary of what's being counted.
+ */
 @Composable
-private fun BasicsToggle(assume: Boolean, staples: List<Ingredient>, onChange: (Boolean) -> Unit) {
-    CraveSurface(
-        modifier = Modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.medium,
-        hardShadow = false,
-        onClick = { onChange(!assume) },
-    ) {
-        Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text("I have the basics", style = MaterialTheme.typography.titleMedium)
-                Text(
-                    staples.joinToString(", ") { it.name },
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+private fun BasicsPanel(shelves: List<StapleShelf>, onChange: (StapleGroup, Boolean) -> Unit) {
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val cs = MaterialTheme.colorScheme
+    val on = shelves.filter { it.assumed }
+    CraveSurface(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, hardShadow = false) {
+        Column {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clickable(onClickLabel = if (expanded) "Hide basics" else "Choose basics") { expanded = !expanded }
+                    .padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Text("Basics I keep", style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        when {
+                            on.isEmpty() -> "None counted. Recipes will list every basic as missing."
+                            on.size == shelves.size -> "Counting all of them as yours"
+                            else -> "Counting " + on.joinToString(", ") { it.group.label.lowercase() }
+                        },
+                        style = MaterialTheme.typography.bodySmall,
+                        color = cs.onSurfaceVariant,
+                    )
+                }
+                Spacer(Modifier.width(12.dp))
+                Icon(
+                    if (expanded) Icons.Outlined.ExpandLess else Icons.Outlined.ExpandMore,
+                    contentDescription = null,
                 )
             }
-            Spacer(Modifier.width(12.dp))
-            // The whole row toggles; the switch only mirrors state so taps aren't handled twice.
-            Switch(checked = assume, onCheckedChange = null)
+            if (expanded) {
+                shelves.forEach { shelf ->
+                    HorizontalDivider(color = cs.outlineVariant)
+                    StapleRow(shelf, onToggle = { onChange(shelf.group, !shelf.assumed) })
+                }
+            }
         }
     }
 }
+
+@Composable
+private fun StapleRow(shelf: StapleShelf, onToggle: () -> Unit) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            // The whole row toggles; the switch only mirrors state so taps aren't handled twice.
+            .toggleable(value = shelf.assumed, role = Role.Switch, onValueChange = { onToggle() })
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            shelf.group.icon,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(24.dp),
+        )
+        Spacer(Modifier.width(16.dp))
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Text(shelf.group.label, style = MaterialTheme.typography.labelLarge)
+            Text(
+                shelf.items.joinToString(", ") { it.name },
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Spacer(Modifier.width(12.dp))
+        Switch(checked = shelf.assumed, onCheckedChange = null)
+    }
+}
+
+private val StapleGroup.icon: ImageVector
+    get() = when (this) {
+        StapleGroup.Essentials -> Icons.Outlined.WaterDrop
+        StapleGroup.Spices -> Icons.Outlined.Grain
+        StapleGroup.Baking -> Icons.Outlined.BakeryDining
+        StapleGroup.Sauces -> Icons.Outlined.SoupKitchen
+        StapleGroup.Aromatics -> Icons.Outlined.Spa
+        StapleGroup.Fridge -> Icons.Outlined.EggAlt
+    }
 
 private fun LazyListScope.results(
     state: PantryUiState,
@@ -387,12 +462,17 @@ private const val SHOPPING_PREVIEW = 3
 // Previews
 // ---------------------------------------------------------------------------------------------
 
-private val previewActions = PantryActions({}, {}, {}, {}, {}, {}, {}, {}, {})
+private val previewActions = PantryActions({}, {}, {}, {}, {}, { _, _ -> }, {}, {}, {})
 
 private object PreviewPantry {
     private val lines = PreviewRecipes.recipe.ingredients
     val ingredients = lines.map { it.ingredient }
     val staples = ingredients.filter { it.id in setOf("salt", "garlic") }.map { it.copy(isPantryStaple = true) }
+    val shelves = listOf(
+        StapleShelf(StapleGroup.Essentials, staples.filter { it.id == "salt" }, assumed = true),
+        StapleShelf(StapleGroup.Aromatics, staples.filter { it.id == "garlic" }, assumed = true),
+        StapleShelf(StapleGroup.Fridge, listOf(lines.first().ingredient.copy(id = "egg", name = "Egg")), assumed = false),
+    )
     val beef = ingredients.first { it.id == "beef" }
     val lemon = ingredients.first { it.id == "lemon" }
     val soy = ingredients.first { it.id == "soy_sauce" }
@@ -414,7 +494,7 @@ private fun PantryResultsPreview() = CraveWiseTheme {
         state = PantryUiState(
             isLoading = false,
             pantryItems = listOf(PreviewPantry.beef, PreviewPantry.soy),
-            staples = PreviewPantry.staples,
+            staples = PreviewPantry.shelves,
             quickAdd = listOf(PreviewPantry.lemon),
             results = PreviewPantry.results,
         ),
@@ -430,7 +510,7 @@ private fun PantryEmptyPreview() = CraveWiseTheme {
             isLoading = false,
             query = "gar",
             suggestions = PreviewPantry.ingredients.filter { it.id == "garlic" },
-            staples = PreviewPantry.staples,
+            staples = PreviewPantry.shelves,
             quickAdd = PreviewPantry.ingredients,
         ),
         actions = previewActions,
@@ -444,7 +524,7 @@ private fun PantryNoMatchesPreview() = CraveWiseTheme {
         state = PantryUiState(
             isLoading = false,
             pantryItems = listOf(PreviewPantry.lemon),
-            staples = PreviewPantry.staples,
+            staples = PreviewPantry.shelves,
         ),
         actions = previewActions,
     )

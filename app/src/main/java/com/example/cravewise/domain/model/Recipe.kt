@@ -40,20 +40,27 @@ data class Ingredient(
 )
 
 /**
- * What the user says they have. [ingredientIds] is newest first. With [assumeStaples] on,
- * ingredients flagged `isPantryStaple` (salt, oil, ...) count as owned without being listed.
+ * What the user says they have. [ingredientIds] is newest first. Staples (salt, oil, ...) in one
+ * of the [assumedStaples] groups count as owned without being listed (see [StapleGroup]).
  */
 data class Pantry(
     val ingredientIds: List<String> = emptyList(),
-    val assumeStaples: Boolean = true,
+    val assumedStaples: Set<StapleGroup> = StapleGroup.entries.toSet(),
 ) {
+    /** All staple groups on (true) or off (false). */
+    constructor(ingredientIds: List<String>, assumeStaples: Boolean) :
+        this(ingredientIds, if (assumeStaples) StapleGroup.entries.toSet() else emptySet())
+
     private val idSet: Set<String> = ingredientIds.toHashSet()
 
     /** Explicitly listed by the user (staples not included). */
     fun contains(ingredientId: String): Boolean = ingredientId in idSet
 
-    fun owns(ingredient: Ingredient): Boolean =
-        ingredient.id in idSet || (assumeStaples && ingredient.isPantryStaple)
+    /** Counted as owned without being listed: an always-owned item, or a staple in an assumed group. */
+    fun assumes(ingredient: Ingredient): Boolean =
+        StapleGroup.isAlwaysOwned(ingredient) || StapleGroup.of(ingredient)?.let { it in assumedStaples } == true
+
+    fun owns(ingredient: Ingredient): Boolean = ingredient.id in idSet || assumes(ingredient)
 
     val isEmpty: Boolean get() = ingredientIds.isEmpty()
 }

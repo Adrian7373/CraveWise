@@ -14,6 +14,7 @@ import com.example.cravewise.domain.PantryResults
 import com.example.cravewise.domain.model.Ingredient
 import com.example.cravewise.domain.model.Pantry
 import com.example.cravewise.domain.model.RecipeSummary
+import com.example.cravewise.domain.model.StapleGroup
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -29,9 +30,8 @@ data class PantryUiState(
     val suggestions: List<Ingredient> = emptyList(),
     /** Listed ingredients that still exist in the catalog, newest first. */
     val pantryItems: List<Ingredient> = emptyList(),
-    val assumeStaples: Boolean = true,
-    /** Catalog staples (salt, oil, ...), shown next to the "assume basics" switch. */
-    val staples: List<Ingredient> = emptyList(),
+    /** Staple groups that have catalog items, in [StapleGroup] order, each with its switch state. */
+    val staples: List<StapleShelf> = emptyList(),
     /** Popular non-staples not yet listed. */
     val quickAdd: List<Ingredient> = emptyList(),
     val results: PantryResults = PantryResults(),
@@ -43,6 +43,9 @@ data class PantryUiState(
     val hasPantry: Boolean get() = pantryItems.isNotEmpty()
 }
 
+/** One "basics" switch: a [StapleGroup] and the staples it covers. */
+data class StapleShelf(val group: StapleGroup, val items: List<Ingredient>, val assumed: Boolean)
+
 /** Catalog inputs to matching; changes only on a re-seed. */
 private data class PantryCatalog(
     val recipes: List<RecipeSummary>,
@@ -50,7 +53,10 @@ private data class PantryCatalog(
     val ingredients: List<Ingredient>,
 ) {
     val byId: Map<String, Ingredient> = ingredients.associateBy { it.id }
-    val staples: List<Ingredient> = ingredients.filter { it.isPantryStaple }
+    val staples: Map<StapleGroup, List<Ingredient>> = ingredients
+        .mapNotNull { ing -> StapleGroup.of(ing)?.let { it to ing } }
+        .groupBy({ it.first }, { it.second })
+        .mapValues { (_, items) -> items.sortedBy { it.name.lowercase() } }
 }
 
 @HiltViewModel
@@ -121,8 +127,8 @@ class PantryViewModel @Inject constructor(
         viewModelScope.launch { pantry.clear() }
     }
 
-    fun setAssumeStaples(assume: Boolean) {
-        viewModelScope.launch { pantry.setAssumeStaples(assume) }
+    fun setStapleGroup(group: StapleGroup, assumed: Boolean) {
+        viewModelScope.launch { pantry.setStapleGroup(group, assumed) }
     }
 
     /** Puts a match's missing ingredients (with the recipe's amounts) on the shopping list. */
@@ -139,8 +145,9 @@ class PantryViewModel @Inject constructor(
             query = q,
             suggestions = IngredientSearch.suggest(q, c.ingredients, exclude = listedIds),
             pantryItems = listed,
-            assumeStaples = p.assumeStaples,
-            staples = c.staples,
+            staples = StapleGroup.entries.mapNotNull { group ->
+                c.staples[group]?.let { StapleShelf(group, it, assumed = group in p.assumedStaples) }
+            },
             quickAdd = PantryMatcher.popularIngredients(c.recipeIngredients, c.byId, p, QUICK_ADD_COUNT),
             results = results,
         )
