@@ -69,7 +69,9 @@ Headings are Black weight with -0.5sp tracking, titles ExtraBold, labels Bold, b
 | `SpiceMeter`, `FlavorProfile`, `MatchBadge` | Recipe data display |
 | `AllergenNotice` | A recipe's allergen summary (error colors + icon), or a neutral "none listed, check labels" note |
 | `ProfileConflictNotice` | Recipe detail banner when a recipe breaks the user's food profile (error colors + block icon, one bullet per reason) |
-| `RecipeCard` | Any recipe in a list (browse, pantry results, search). Optional `matchPercent` badge and `footer` slot (e.g. missing-ingredient pills) |
+| `RecipeCard` | Any recipe in a list (browse, pantry results, search). Optional `matchPercent` badge and `footer` slot (e.g. missing-ingredient pills). Pass `artSeed` (the recipe id's hash). In horizontal rows (shelves, favorites strip) pass `titleMinLines = 2` so every card is the same height |
+| `RecipePhotoOrArt` | A downloaded recipe photo (cropped to fill) over its `RecipeArt`, which shows while the photo loads or if it fails. `RecipeCard`'s `photo` param uses it |
+| `RecipeArt` | Placeholder dish art when a recipe has no photo: flavor-tinted backdrop with a seeded pattern (dots / stripes / rays) and an ink-outlined plate sticker holding the dish icon. Used by `RecipeCard` and the recipe detail hero |
 | `CraveSearchField` | Free-text search input. Pass `onSubmit` to handle the keyboard action key (e.g. add the top pantry suggestion; `imeAction` picks Done/Search), and `onClear` to show a × while there's text |
 | `SectionHeader` | Section titles, with an optional eyebrow and action |
 | `ViaMascot`, `ViaSays`, `ViaEmptyState` | Mascot avatar, speech-bubble tips, empty/no-results/error states (error copy says what happened and offers "Try again") |
