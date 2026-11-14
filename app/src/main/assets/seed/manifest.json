@@ -1,1 +1,12 @@
-{"version": 1, "file": "dataset.json"}
+{
+ "counts": {
+  "ingredients": 706,
+  "ingredientsWithNutrition": 537,
+  "lines": 8176,
+  "linesWeighed": 7744,
+  "recipes": 789
+ },
+ "file": "dataset.json",
+ "sha256": "94b84ae6b2ffe4f0a1f58b3a4842ba69168c37ede8d6cefc7b3cd674159048d7",
+ "version": 2
+}

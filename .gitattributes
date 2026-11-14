@@ -1,0 +1,2 @@
+# Generated seed files are hashed (manifest.json sha256): keep their bytes exactly as build.py wrote them.
+app/src/main/assets/seed/*.json -text
