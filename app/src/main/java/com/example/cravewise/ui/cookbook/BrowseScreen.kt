@@ -1,6 +1,25 @@
 package com.example.cravewise.ui.cookbook
 
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.material.icons.outlined.ArrowUpward
+import androidx.compose.material.icons.outlined.Tune
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import com.example.cravewise.ui.designsystem.CraveButton
+import com.example.cravewise.ui.designsystem.CraveButtonVariant
+import com.example.cravewise.ui.designsystem.SectionHeader
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -70,6 +89,7 @@ fun BrowseScreen(
             onToggleQuick = viewModel::toggleQuick,
             onClearFilters = viewModel::clearFilters,
             onOpenProfile = onOpenProfile,
+            onShelf = viewModel::applyShelf,
         ),
     )
 }
@@ -83,12 +103,20 @@ class BrowseActions(
     val onToggleQuick: () -> Unit,
     val onClearFilters: () -> Unit,
     val onOpenProfile: () -> Unit,
+    val onShelf: (BrowseShelf) -> Unit,
 )
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
     val cs = MaterialTheme.colorScheme
+    val gridState = rememberLazyGridState()
+    val scope = rememberCoroutineScope()
+    val scrollToTop: () -> Unit = { scope.launch { gridState.animateScrollToItem(0) } }
+    // "See all" on a shelf filters in place; Back returns to the shelves before leaving.
+    BackHandler(enabled = state.backClearsFilters) { actions.onClearFilters() }
+    // A new filter starts at the top, not mid-way down the previous list.
+    LaunchedEffect(state.filter) { gridState.scrollToItem(0) }
     Scaffold(
         containerColor = cs.background,
         topBar = {
@@ -112,17 +140,20 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
         val filter = state.filter
         // Adaptive grid: one column on phones and in a tablet's list pane, more when full-width.
         // Headers span every column; chip rows bleed past the gutter so they scroll edge to edge.
+        // Top padding goes on the grid itself (not contentPadding) so the sticky bar pins just
+        // under the top app bar instead of behind it.
         LazyVerticalGrid(
             columns = GridCells.Adaptive(CraveLayout.CardMinWidth),
+            state = gridState,
             contentPadding = PaddingValues(
                 start = CraveLayout.Gutter,
                 end = CraveLayout.Gutter,
-                top = padding.calculateTopPadding() + 4.dp,
+                top = 4.dp,
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize().padding(top = padding.calculateTopPadding()),
         ) {
             fullWidthItem("meal-types") {
                 ChipRow {
@@ -162,24 +193,20 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
                     }
                 }
             }
-            fullWidthItem("count") {
-                Row(
-                    Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    val n = state.results.size
-                    Text(
-                        if (n == 1) "1 recipe" else "$n recipes",
-                        style = MaterialTheme.typography.labelLarge,
-                        color = cs.onSurfaceVariant,
-                        modifier = Modifier.weight(1f),
-                    )
-                    if (!filter.isEmpty) {
-                        TextButton(onClick = actions.onClearFilters) {
-                            Text("Clear filters", style = MaterialTheme.typography.labelLarge)
-                        }
-                    }
-                }
+            if (state.showShelves) {
+                shelves(state.shelves, actions)
+                return@LazyVerticalGrid
+            }
+            // Pinned while the chip rows scroll away, so the count and a way back to the
+            // filters are always one tap off.
+            stickyHeader("count") {
+                val filtersOffScreen by remember { derivedStateOf { gridState.firstVisibleItemIndex >= FILTER_ROWS } }
+                ResultsBar(
+                    count = state.results.size,
+                    showFiltersButton = filtersOffScreen,
+                    onFilters = scrollToTop,
+                    onClear = actions.onClearFilters.takeIf { !filter.isEmpty },
+                )
             }
             if (state.results.isEmpty() && state.hiddenByProfile) {
                 fullWidthItem("empty") {
@@ -203,7 +230,101 @@ fun BrowseScreen(state: BrowseUiState, actions: BrowseActions) {
             items(state.results, key = { it.id }) { recipe ->
                 RecipeSummaryCard(recipe, onClick = { actions.onRecipeClick(recipe.id) })
             }
+            if (state.results.size > END_NOTE_MIN) {
+                fullWidthItem("end") { EndOfList(state.results.size, onBackToTop = scrollToTop) }
+            }
         }
+    }
+}
+
+/** Chip rows above the results (meal types, cuisines, quick + diets). */
+private const val FILTER_ROWS = 3
+
+/** Short lists end on their own; long ones get an explicit end and a way back up. */
+private const val END_NOTE_MIN = 6
+
+private fun LazyGridScope.shelves(shelves: List<BrowseShelf>, actions: BrowseActions) {
+    shelves.forEach { shelf ->
+        fullWidthItem("shelf-head-${shelf.key}") {
+            SectionHeader(
+                shelf.title,
+                eyebrow = if (shelf.count == 1) "1 recipe" else "${shelf.count} recipes",
+                actionLabel = "See all",
+                onAction = { actions.onShelf(shelf) },
+                modifier = Modifier.padding(top = 16.dp),
+            )
+        }
+        fullWidthItem("shelf-${shelf.key}") {
+            LazyRow(
+                modifier = Modifier.bleed(CraveLayout.Gutter),
+                contentPadding = PaddingValues(horizontal = CraveLayout.Gutter),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                items(shelf.picks, key = { it.id }) { recipe ->
+                    RecipeSummaryCard(
+                        recipe,
+                        onClick = { actions.onRecipeClick(recipe.id) },
+                        modifier = Modifier.width(ShelfCardWidth),
+                        titleMinLines = 2,
+                    )
+                }
+            }
+        }
+    }
+}
+
+private val ShelfCardWidth = 260.dp
+
+@Composable
+private fun ResultsBar(count: Int, showFiltersButton: Boolean, onFilters: () -> Unit, onClear: (() -> Unit)?) {
+    val cs = MaterialTheme.colorScheme
+    Row(
+        Modifier
+            .bleed(CraveLayout.Gutter)
+            .background(cs.background)
+            .padding(horizontal = CraveLayout.Gutter)
+            .heightIn(min = 48.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            if (count == 1) "1 recipe" else "$count recipes",
+            style = MaterialTheme.typography.labelLarge,
+            color = cs.onSurfaceVariant,
+            modifier = Modifier.weight(1f),
+        )
+        if (showFiltersButton) {
+            TextButton(onClick = onFilters) {
+                Icon(Icons.Outlined.Tune, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text("Filters", style = MaterialTheme.typography.labelLarge)
+            }
+        }
+        if (onClear != null) {
+            TextButton(onClick = onClear) {
+                Text("Clear filters", style = MaterialTheme.typography.labelLarge)
+            }
+        }
+    }
+}
+
+@Composable
+private fun EndOfList(count: Int, onBackToTop: () -> Unit) {
+    Column(
+        Modifier.fillMaxWidth().padding(top = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Text(
+            "That's all $count recipes",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        CraveButton(
+            "Back to top",
+            onClick = onBackToTop,
+            variant = CraveButtonVariant.Outline,
+            icon = Icons.Outlined.ArrowUpward,
+        )
     }
 }
 
@@ -232,7 +353,26 @@ private fun Modifier.bleed(horizontal: Dp) = layout { measurable, constraints ->
     layout(constraints.maxWidth, placeable.height) { placeable.place(-extra, 0) }
 }
 
-private val previewActions = BrowseActions({}, {}, {}, {}, {}, {}, {}, {})
+private val previewActions = BrowseActions({}, {}, {}, {}, {}, {}, {}, {}, {})
+
+@CravePreviews
+@Composable
+private fun BrowseShelvesPreview() = CraveWiseTheme {
+    val all = PreviewRecipes.summaries
+    BrowseScreen(
+        state = BrowseUiState(
+            isLoading = false,
+            results = all,
+            mealTypes = listOf(MealType.Main, MealType.Dessert),
+            cuisines = listOf("British", "Filipino", "Thai"),
+            shelves = listOf(
+                BrowseShelf("quick", "Ready in 30 minutes", 120, all, BrowseFilter(maxMinutes = 30)),
+                BrowseShelf("meal-Main", "Mains", 412, all, BrowseFilter(mealType = MealType.Main)),
+            ),
+        ),
+        actions = previewActions,
+    )
+}
 
 @CravePreviews
 @Composable
