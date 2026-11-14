@@ -50,6 +50,14 @@ First builds can take several minutes while dependencies download. Configuration
 - All dependency versions live in `gradle/libs.versions.toml`.
 - Icons come from `material-icons-extended` (pinned 1.7.8, outside the Compose BOM).
 
+## Release APK
+
+- `.\gradlew.bat :app:assembleRelease` gives `app/build/outputs/apk/release/app-release.apk` (R8 on, about 4 MB). Distribution is APK only for now (no AAB/Play).
+- Signing reads `keystore.properties` in the repo root (gitignored, along with `*.jks`). It points at the upload key outside the repo (`%USERPROFILE%\.android-keys\cravewise-upload.jks`, alias `cravewise`). Without the file, release builds come out unsigned. Losing the key means installed apps can't be updated, so it must be backed up.
+- Debug and release builds use different keys, so switching between them on a device needs an uninstall (which wipes app data).
+- `buildConfig = true`: `BuildConfig.DEBUG` hides the design-system catalog entry in release, and `VERSION_NAME` shows in Profile > About. Bump `versionCode`/`versionName` for every APK you hand out.
+- Launcher icon and Android 12+ splash are Via on saffron (`mipmap-*/ic_launcher_*.webp`, adaptive with a monochrome layer). The window background matches the Compose canvas (`values*/colors.xml`), so launch doesn't flash white.
+
 ## Architecture
 
 MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't exist yet):
@@ -70,7 +78,7 @@ MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't ex
 - `NavigationSuiteScaffold` consumes the bar/rail insets for `NavDisplay`.
 - Each screen owns its own inner `Scaffold` + `TopAppBar`, which handles the status-bar inset.
 
-**Theme / design system:** "Noodle Pop". Tokens live in `ui/theme/` (fixed brand palette, no dynamic color on purpose); reusable components and the catalog live in `ui/designsystem/`. The mascot is Via the panda. XML themes are window-only (`android:Theme.Material.*.NoActionBar`); all styling happens in Compose. Follow the rules in the design doc below: theme tokens only, `@CravePreviews` on every component, and every new component added to the catalog.
+**Theme / design system:** "Noodle Pop". Tokens live in `ui/theme/` (fixed brand palette, no dynamic color on purpose); reusable components and the catalog live in `ui/designsystem/`. The mascot is Via the panda. XML themes are window-only (`android:Theme.Material.*.NoActionBar`, plus window background and v31 splash); all styling happens in Compose. Via is one flat-sticker character everywhere: the avatar (`via_avatar`) or a `ViaPose` (hello/thinking/shopping/celebrate), all in `ui/designsystem/ViaComponents.kt`. Home opens with `ViaHero` (about 30% of the window; Via's bubble shows the spice nudge, the one-time photo ask, or a daily tip from `home/HomeTips.kt`). Follow the rules in the design doc below: theme tokens only, `@CravePreviews` on every component, and every new component added to the catalog.
 
 @docs/DESIGN.md
 
