@@ -71,6 +71,45 @@ MVVM + unidirectional data flow, with Hilt for DI. Planned layers (most don't ex
 
 @docs/DESIGN.md
 
+## Seed pipeline (`tools/seedgen/`)
+
+Offline Python 3.10+ (stdlib only) tool that builds the catalog from TheMealDB + USDA FDC and writes `app/src/main/assets/seed/dataset.json` + `manifest.json`. The app never fetches anything.
+
+```
+python tools/seedgen/build.py                    # full build: fetch (cached) → normalize → rules → AI + overrides → nutrition → validate → assets
+python tools/seedgen/build.py --allow-unreviewed # LOCAL TEST ONLY: ships unreviewed ingredients, flags the manifest (SeedAssetTest fails on it)
+python tools/seedgen/build.py ingredients        # propose entries for new raw ingredient strings + curation/ingredients.review.md
+python tools/seedgen/build.py tags               # rules + AI + overrides; queues out/ai-todo/batch-NNN.md for gaps
+python tools/seedgen/build.py review             # out/review-top50.md, out/audit.md, out/provenance.json
+python tools/seedgen/build.py nutrition          # FDC matching → curation/nutrition.json + nutrition.review.md
+python tools/seedgen/build.py fdc "query"        # search FDC descriptions (for hand pins)
+python tools/seedgen/build.py show 52772         # a meal as the pipeline sees it
+python -m unittest discover -s tools/seedgen/tests
+```
+
+Layout:
+- `raw/mealdb/`: cached API responses (committed; `fetch --refresh` re-downloads).
+- `raw/fdc/`: the SR Legacy CSV zip and `sr_index.json` (gitignored; download URL in `seedgen/nutrition.py`).
+- `curation/`: **hand-edited inputs**:
+  - `ingredients.json`: canonical ids, synonyms, aisle, allergens, contains, protein, staple, `reviewed`.
+  - `overrides.json`: per-recipe tag fixes, `remapLines`, `extraIngredients`.
+  - `nutrition_pins.json` and `portions.json`.
+  - `cuisines.json`, `exclude.json`, `top50.json`.
+  - `nutrition.json` and the `*.review.md` files are generated.
+- `tags/ai/batch-NNN.json`: cached AI tag answers (Claude Code answers the `out/ai-todo` batches; committed, never redone).
+- `out/`: generated reports and `provenance.json`. Provenance holds each field's source and the TheMealDB thumbnail URLs. None of it goes into the app.
+- `seedgen/`: one module per phase. `pipeline.tag_all` is the shared loader, `pipeline.nutrition_for` computes grams/nutrition, and `dataset.py` handles assembly, the schema mirror of `SeedModels.kt`, the validator and the manifest.
+
+Rules:
+- **Tag precedence, per field:** override > confident rule (≥0.7) > AI > weak rule. Vocabulary comes from `Vocabulary.kt` (parsed by `seedgen/vocab.py`), so the two can't drift.
+- **Safety:** allergens, diets and proteins are never tagged. The app derives them on import from the ingredient table (`DietRules`), and `diet.py` is only a preview copy for review sheets.
+- **`remapLines`** (`[{rawName, rawMeasure, ingredientId}]`) points one source line at a different ingredient when the shared synonym is wrong for that recipe (e.g. "Pepper" meaning bell pepper). It must match exactly one line. **`extraIngredients`** (`[{ingredientId, rawMeasure}]`) adds a line TheMealDB forgot. It counts for allergens like any other line. Bad entries fail the build.
+- **Allergen gate:** a new ingredient is proposed with `reviewed: false`. Check its aisle, allergens and contains in `ingredients.json`, then set `reviewed: true`. The build refuses any used ingredient that isn't reviewed. (The `reviewed` flags in `overrides.json` only track the top-50 tag review and are not a gate.)
+- **Review workflow:** `ingredients` → review ingredients → `tags` → answer AI batches → `review` → fix tags in `overrides.json` → `nutrition` → pin doubtful matches → `build`.
+- **Validation fails the build** and lists every problem: unknown/unmapped ingredient ids, vocabulary violations, flavor outside 0–5, missing or negative times, duplicate ids, synonym clashes, unreviewed ingredients, `tag_all` errors, and output that doesn't match `SeedModels`. If anything fails, nothing is written.
+- **Output is deterministic:** sorted keys, ids, sets and synonyms, and no timestamps. A rerun with no input changes gives the same bytes. `.gitattributes` keeps the seed JSON free of CRLF conversion because the manifest stores its sha256.
+- **Shipping a change:** installed apps only re-seed when the version changes. Bump `DATASET_VERSION` in `seedgen/dataset.py`; the build prints a note when the content changed at the same version. Recipes ship `imageUrl: null` (no network), so the app shows placeholder art.
+
 ## Product decisions (agreed with the user)
 
 - **Local-only, no accounts.** Recipe data is the app's own curated dataset, maintained as JSON and shipped as a pre-filled Room database. No backend for now. Audience is 10–20 testers; Supabase can come later, at publish time.
