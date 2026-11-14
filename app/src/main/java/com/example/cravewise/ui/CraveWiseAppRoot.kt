@@ -211,11 +211,18 @@ private fun CraveWiseTabs(appViewModel: AppViewModel) {
         containerColor = MaterialTheme.colorScheme.background,
         navigationItems = {
             TOP_LEVEL_DESTINATIONS.forEach { (route, destination) ->
+                val selected = route == navigationState.topLevelRoute
                 NavigationSuiteItem(
-                    selected = route == navigationState.topLevelRoute,
+                    selected = selected,
                     onClick = { navigator.navigate(route) },
                     icon = { Icon(destination.icon, contentDescription = null) },
-                    label = { Text(destination.label) },
+                    // The saffron pill marks the tab; the label stays ink so it's readable on cream.
+                    label = {
+                        Text(
+                            destination.label,
+                            color = if (selected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    },
                     badge = if (route == ShoppingRoute && shoppingCount > 0) {
                         { Badge { Text(if (shoppingCount > 99) "99+" else "$shoppingCount") } }
                     } else {

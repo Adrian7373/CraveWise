@@ -12,7 +12,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -20,7 +23,18 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.AcUnit
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.BakeryDining
+import androidx.compose.material.icons.outlined.Eco
+import androidx.compose.material.icons.outlined.Egg
+import androidx.compose.material.icons.outlined.Inventory2
+import androidx.compose.material.icons.outlined.LocalDrink
+import androidx.compose.material.icons.outlined.Public
+import androidx.compose.material.icons.outlined.SetMeal
+import androidx.compose.material.icons.outlined.ShoppingBag
+import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material.icons.outlined.WaterDrop
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.DeleteOutline
 import androidx.compose.material.icons.outlined.MoreVert
@@ -32,6 +46,8 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -56,6 +72,8 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
@@ -77,7 +95,10 @@ import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.CraveSearchField
 import com.example.cravewise.ui.designsystem.CraveSurface
 import com.example.cravewise.ui.designsystem.SectionHeader
+import com.example.cravewise.ui.designsystem.CraveLayout
 import com.example.cravewise.ui.designsystem.ViaEmptyState
+import com.example.cravewise.ui.designsystem.ViaFigure
+import com.example.cravewise.ui.designsystem.ViaPose
 import com.example.cravewise.ui.recipe.PreviewRecipes
 import com.example.cravewise.ui.theme.CraveTheme
 import com.example.cravewise.ui.theme.CraveWiseTheme
@@ -144,6 +165,12 @@ fun ShoppingListScreen(state: ShoppingUiState, actions: ShoppingActions) {
     Scaffold(
         containerColor = cs.background,
         snackbarHost = { SnackbarHost(snackbar) },
+        // The finish action stays in reach however long the list is.
+        bottomBar = {
+            if (!state.isLoading && state.list.basket.isNotEmpty()) {
+                DoneShoppingBar(state.list.basket.size, actions.onFinishShopping)
+            }
+        },
         topBar = {
             TopAppBar(
                 title = { Text("Shopping list", style = MaterialTheme.typography.headlineSmall) },
@@ -195,19 +222,18 @@ fun ShoppingListScreen(state: ShoppingUiState, actions: ShoppingActions) {
                         body = "Add missing ingredients from any recipe, or type something above. I'll sort it all by aisle.",
                         actionLabel = "Browse recipes",
                         onAction = actions.onBrowse,
+                        pose = ViaPose.Shopping,
                     )
                 }
                 return@LazyColumn
             }
+            item("progress") { ShoppingProgress(list) }
             if (state.recipes.isNotEmpty()) {
                 item("recipes") { RecipeStrip(state.recipes, actions.onRemoveRecipe) }
             }
             item("to-buy-header") {
-                SectionHeader(
-                    "To buy",
-                    eyebrow = itemCount(list.toBuyCount),
-                    modifier = Modifier.padding(top = 8.dp),
-                )
+                // Counts live in the progress card above; headers stay plain.
+                SectionHeader("To buy", modifier = Modifier.padding(top = 8.dp))
             }
             if (list.sections.isEmpty()) {
                 item("all-in-basket") {
@@ -223,28 +249,70 @@ fun ShoppingListScreen(state: ShoppingUiState, actions: ShoppingActions) {
             }
             if (list.basket.isNotEmpty()) {
                 item("basket-header") {
-                    SectionHeader(
-                        "In the basket",
-                        eyebrow = itemCount(list.basket.size),
-                        modifier = Modifier.padding(top = 16.dp),
-                    )
+                    SectionHeader("In the basket", modifier = Modifier.padding(top = 16.dp))
                 }
                 item("basket") { RowCard(list.basket, actions) }
-                item("done") {
-                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        CraveButton(
-                            "Done shopping",
-                            onClick = actions.onFinishShopping,
-                            icon = Icons.Outlined.ShoppingBasket,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                        Text(
-                            "Clears the basket and adds those ingredients to My Kitchen.",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = cs.onSurfaceVariant,
-                        )
-                    }
-                }
+            }
+        }
+    }
+}
+
+/** How far along the trip is, with Via and the basket. The one Via on a non-empty list. */
+@Composable
+private fun ShoppingProgress(list: ShoppingListView) {
+    val cs = MaterialTheme.colorScheme
+    val inBasket = list.basket.size
+    val total = list.toBuyCount + inBasket
+    CraveSurface(
+        modifier = Modifier.fillMaxWidth(),
+        color = cs.secondaryContainer,
+        contentColor = cs.onSecondaryContainer,
+        hardShadow = false,
+    ) {
+        Row(Modifier.padding(start = 20.dp, top = 16.dp, bottom = 16.dp, end = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(
+                    if (list.toBuyCount == 0) "All in the basket!" else "${itemCount(list.toBuyCount)} to buy",
+                    style = MaterialTheme.typography.titleLarge,
+                )
+                Text("$inBasket of $total in the basket", style = MaterialTheme.typography.bodyMedium)
+                LinearProgressIndicator(
+                    progress = { if (total == 0) 0f else inBasket.toFloat() / total },
+                    color = cs.primary,
+                    trackColor = CraveTheme.extras.cardColor,
+                    drawStopIndicator = {},
+                    modifier = Modifier.fillMaxWidth().height(8.dp).clip(CircleShape),
+                )
+            }
+            Spacer(Modifier.width(12.dp))
+            ViaFigure(ViaPose.Shopping, height = 104.dp)
+        }
+    }
+}
+
+@Composable
+private fun DoneShoppingBar(inBasket: Int, onFinish: () -> Unit) {
+    val cs = MaterialTheme.colorScheme
+    Surface(color = cs.background) {
+        Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+            Column(
+                Modifier
+                    .widthIn(max = CraveLayout.ReadableWidth)
+                    .fillMaxWidth()
+                    .padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 12.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                CraveButton(
+                    "Done shopping",
+                    onClick = onFinish,
+                    icon = Icons.Outlined.ShoppingBasket,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Text(
+                    "Moves ${itemCount(inBasket)} from the basket into My Kitchen.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = cs.onSurfaceVariant,
+                )
             }
         }
     }
@@ -317,6 +385,13 @@ private fun RecipeStrip(recipes: List<RecipeSummary>, onRemove: (RecipeSummary) 
 private fun AisleGroup(section: AisleSection, actions: ShoppingActions) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                section.aisle.icon,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(20.dp),
+            )
+            Spacer(Modifier.width(8.dp))
             Text(section.aisle.label, style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
             Text(
                 "${section.rows.size}",
@@ -399,6 +474,22 @@ private fun ShoppingRowContent(row: ShoppingRow, onToggle: () -> Unit) {
 }
 
 private fun itemCount(n: Int) = if (n == 1) "1 item" else "$n items"
+
+/** A quick visual anchor per aisle, so the eye finds Produce vs. Dairy without reading. */
+private val Aisle.icon: ImageVector
+    get() = when (this) {
+        Aisle.Produce -> Icons.Outlined.Eco
+        Aisle.MeatSeafood -> Icons.Outlined.SetMeal
+        Aisle.DairyEggs -> Icons.Outlined.Egg
+        Aisle.Bakery -> Icons.Outlined.BakeryDining
+        Aisle.Pantry -> Icons.Outlined.Inventory2
+        Aisle.Spices -> Icons.Outlined.Spa
+        Aisle.Condiments -> Icons.Outlined.WaterDrop
+        Aisle.Frozen -> Icons.Outlined.AcUnit
+        Aisle.Beverages -> Icons.Outlined.LocalDrink
+        Aisle.International -> Icons.Outlined.Public
+        Aisle.Other -> Icons.Outlined.ShoppingBag
+    }
 
 // ---------------------------------------------------------------------------------------------
 // Previews
