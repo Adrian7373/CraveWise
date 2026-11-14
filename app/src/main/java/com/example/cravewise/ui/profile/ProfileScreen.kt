@@ -4,6 +4,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -33,7 +36,9 @@ import com.example.cravewise.ui.designsystem.CraveButtonVariant
 import com.example.cravewise.ui.designsystem.CravePreviews
 import com.example.cravewise.ui.designsystem.readableWidth
 import com.example.cravewise.ui.designsystem.SectionHeader
-import com.example.cravewise.ui.designsystem.ViaSays
+import com.example.cravewise.BuildConfig
+import com.example.cravewise.ui.designsystem.CraveSurface
+import com.example.cravewise.ui.designsystem.ViaMascot
 import com.example.cravewise.ui.theme.CraveWiseTheme
 import com.example.cravewise.data.photos.RecipePhotosState
 import com.example.cravewise.ui.photos.RecipePhotosActions
@@ -92,6 +97,8 @@ fun ProfileScreen(
     actions: ProfileActions,
     photos: RecipePhotosState = RecipePhotosState(),
     photoActions: RecipePhotosActions = RecipePhotosActions({}, {}, {}, {}),
+    showDesignCatalog: Boolean = BuildConfig.DEBUG,
+    appVersion: String = BuildConfig.VERSION_NAME,
 ) {
     val cs = MaterialTheme.colorScheme
     Scaffold(
@@ -121,7 +128,7 @@ fun ProfileScreen(
             modifier = Modifier.readableWidth(),
         ) {
             item("via") {
-                ViaSays("Tell me what to keep off your plate. I'll hide those recipes everywhere in the app.")
+                ProfileSummaryCard(profileSummary(profile, state.hated.size))
             }
             item("allergies") {
                 Section("Allergies", eyebrow = countLabel(profile.allergens.size, "avoided")) {
@@ -167,29 +174,57 @@ fun ProfileScreen(
                         icon = Icons.Outlined.FavoriteBorder,
                         modifier = Modifier.fillMaxWidth(),
                     )
-                    // Temporary entry point while the design direction is being chosen.
-                    CraveButton(
-                        "Design system catalog",
-                        onClick = actions.onOpenDesignSystem,
-                        variant = CraveButtonVariant.Outline,
-                        icon = Icons.Outlined.Palette,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                }
-            }
-            item("credits") {
-                Section("Credits", eyebrow = "Data sources") {
-                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                        Text(
-                            "Nutrition estimates: USDA FoodData Central (SR Legacy).",
-                            style = MaterialTheme.typography.bodyMedium,
-                        )
-                        Text(
-                            "Recipes adapted from TheMealDB (testing only).",
-                            style = MaterialTheme.typography.bodyMedium,
+                    // A developer tool: debug builds only, never in the release APK's UI.
+                    if (showDesignCatalog) {
+                        CraveButton(
+                            "Design system catalog",
+                            onClick = actions.onOpenDesignSystem,
+                            variant = CraveButtonVariant.Outline,
+                            icon = Icons.Outlined.Palette,
+                            modifier = Modifier.fillMaxWidth(),
                         )
                     }
                 }
+            }
+            item("about") {
+                Section("About", eyebrow = "CraveWise $appVersion") {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(
+                            "Everything works offline. Your food profile, kitchen and lists stay on this phone.",
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                        Text(
+                            "Nutrition estimates: USDA FoodData Central (SR Legacy).",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = cs.onSurfaceVariant,
+                        )
+                        Text(
+                            "Recipes and photos adapted from TheMealDB.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = cs.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** Via's read-back of the rules: what's hidden, in one sentence. The one Via on Profile. */
+@Composable
+private fun ProfileSummaryCard(summary: String) {
+    CraveSurface(
+        modifier = Modifier.fillMaxWidth(),
+        color = MaterialTheme.colorScheme.secondaryContainer,
+        contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+        hardShadow = false,
+    ) {
+        Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+            ViaMascot(72.dp)
+            Spacer(Modifier.width(16.dp))
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("Your food rules", style = MaterialTheme.typography.titleMedium)
+                Text(summary, style = MaterialTheme.typography.bodyMedium)
             }
         }
     }
