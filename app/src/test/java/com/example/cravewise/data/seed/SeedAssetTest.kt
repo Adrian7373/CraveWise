@@ -3,10 +3,15 @@ package com.example.cravewise.data.seed
 import com.example.cravewise.data.local.TagType
 import com.example.cravewise.domain.model.Allergen
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.boolean
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.io.File
+import java.security.MessageDigest
 
 /**
  * Guards the bundled dataset (output of tools/seedgen/build.py) so a bad export fails CI instead
@@ -22,6 +27,32 @@ class SeedAssetTest {
 
     @Test fun `manifest and dataset versions match`() {
         assertEquals(manifest.version, dataset.version)
+    }
+
+    @Test fun `manifest is a shippable build and its hash matches the dataset`() {
+        val raw = json.parseToJsonElement(File(dir, "manifest.json").readText()).jsonObject
+        assertFalse(
+            "dataset was built with --allow-unreviewed; rebuild after the allergen review",
+            raw["unreviewed"]?.jsonPrimitive?.boolean == true,
+        )
+        raw["sha256"]?.jsonPrimitive?.content?.let { expected ->
+            val actual = MessageDigest.getInstance("SHA-256").digest(File(dir, manifest.file).readBytes())
+                .joinToString("") { "%02x".format(it) }
+            assertEquals("dataset.json changed without re-running build.py", expected, actual)
+        }
+    }
+
+    @Test fun `nutrition and line grams survive the mapping`() {
+        val rows = SeedMapper.map(dataset)
+        assertEquals(
+            dataset.ingredients.count { it.nutrition != null },
+            rows.ingredients.count { it.per100g != null },
+        )
+        assertEquals(
+            dataset.recipes.sumOf { r -> r.ingredients.count { it.grams != null } },
+            rows.lines.count { it.grams != null },
+        )
+        assertTrue("no ingredient has nutrition", rows.ingredients.any { it.per100g != null })
     }
 
     @Test fun `dataset maps to rows without errors`() {

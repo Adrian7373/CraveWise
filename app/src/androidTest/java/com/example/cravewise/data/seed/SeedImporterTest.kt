@@ -4,6 +4,8 @@ import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.cravewise.data.local.CraveDatabase
+import com.example.cravewise.data.local.FavoriteEntity
+import com.example.cravewise.data.local.PantryItemEntity
 import com.example.cravewise.data.repository.OfflineRecipeRepository
 import com.example.cravewise.domain.model.Allergen
 import com.example.cravewise.domain.model.Diet
@@ -79,6 +81,27 @@ class SeedImporterTest {
         assertTrue(importer(files(2, "Better Omelette")).ensureSeeded())
         assertEquals("Better Omelette", db.catalogDao().observeRecipesWithTags().first().single().recipe.title)
         assertEquals(2, db.catalogDao().datasetMeta()?.version)
+    }
+
+    /** The real bundled dataset (tools/seedgen output) replacing an older catalog on upgrade. */
+    @Test fun bundledDatasetReplacesOldCatalogRebuildsSearchAndKeepsUserData() = runBlocking {
+        importer(files(1, "Omelette")).ensureSeeded()
+        db.favoritesDao().insert(FavoriteEntity("r1", 1))
+        db.pantryDao().insert(PantryItemEntity("egg", 2))
+
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val bundled = SeedImporter(db.catalogDao(), AssetSeedFileReader(context), Dispatchers.IO)
+        assertTrue(bundled.ensureSeeded())
+
+        val dao = db.catalogDao()
+        val recipes = dao.recipeCount()
+        assertTrue("expected the full catalog, got $recipes", recipes > 500)
+        assertEquals(recipes, dao.searchIndexCount())
+        assertTrue(dao.searchRecipeIds("title:carbonara*").isNotEmpty())
+        assertTrue(dao.observeIngredientsWithSynonyms().first().count { it.ingredient.per100g != null } > 100)
+        assertTrue(dao.datasetMeta()!!.version >= 2)
+        assertEquals(listOf("r1"), db.favoritesDao().observeFavoriteIds().first())
+        assertEquals(listOf("egg"), db.pantryDao().observeIngredientIds().first())
     }
 
     @Test fun synonymsResolveToCanonicalId() = runBlocking {
